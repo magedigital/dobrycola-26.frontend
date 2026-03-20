@@ -20,6 +20,7 @@
         "import-notation": null,
         "property-no-vendor-prefix": null,
         "custom-property-pattern": null,
-        "font-family-no-missing-generic-family-keyword": null
+        "font-family-no-missing-generic-family-keyword": null,
+        "value-no-vendor-prefix": null
     }
 }
