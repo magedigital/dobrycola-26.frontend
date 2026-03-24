@@ -1,0 +1,215 @@
+.indexApp {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 50rem 0 40rem;
+
+    @include mob {
+        padding: 52rem 0 40rem;
+    }
+
+    &::before {
+        position: absolute;
+        top: -246rem;
+        right: 0;
+        z-index: 1;
+        width: 510rem;
+        height: 954rem;
+        content: "";
+        pointer-events: none;
+
+        @include bg("/media/app-decor-right.svg", contain, left top);
+
+        @include mob {
+            top: 27rem;
+            right: -52rem;
+            z-index: 5;
+            width: 300rem;
+            height: 600rem;
+        }
+    }
+
+    &__inner {
+        align-items: center;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        width: 926rem;
+        margin-left: 28rem;
+        padding: 47rem 60rem 94rem;
+        border-radius: 64rem;
+
+        @include bg("/media/app-back.svg", cover, center top);
+
+        @include mob {
+            width: calc(100% + 8rem);
+            margin-left: 0;
+            padding: 39rem 16rem 38rem;
+            border-radius: 45rem;
+
+            @include bg("/media/app-back-mob.svg", cover, center top);
+        }
+
+        &::before {
+            position: absolute;
+            top: -288rem;
+            right: 100%;
+            z-index: 1;
+            width: 810rem;
+            height: 866rem;
+            margin-right: -352rem;
+            content: "";
+
+            @include bg("/media/app-decor-left.svg", contain, right top);
+
+            @include mob {
+                top: -82rem;
+                right: auto;
+                left: -236rem;
+                width: 500rem;
+                height: 590rem;
+                margin-right: 0;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            top: 140rem;
+            left: 138rem;
+            z-index: 3;
+            width: 186rem;
+            height: 364rem;
+            content: "";
+
+            @include bg("/media/app-phone.png", contain, left top);
+
+            @include mob {
+                top: 174rem;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+        }
+    }
+
+    &__head {
+        align-items: center;
+        margin-bottom: 26rem;
+    }
+
+    &__title {
+        margin-bottom: 8rem;
+        color: #fff;
+        font-size: 28rem;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include mob {
+            margin-bottom: 12rem;
+            font-size: 20.5rem;
+        }
+    }
+
+    &__subTitle {
+        color: #fff;
+        font-size: 16rem;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include mob {
+            font-size: 14.2rem;
+        }
+    }
+
+    &__info {
+        position: relative;
+        z-index: 1;
+        width: 365rem;
+        margin: 200rem 60rem 0 auto;
+        padding: 50rem 34rem;
+        background: #d300b4;
+        border-radius: 36rem;
+
+        @include mob {
+            z-index: 4;
+            width: calc(100% - 18rem);
+            margin: 310rem auto 0;
+            padding: 64rem 36rem 92rem;
+            border-radius: 31rem;
+        }
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            right: 32rem;
+            z-index: 2;
+            width: 80rem;
+            height: 80rem;
+            margin-top: 6rem;
+            transform: translate(0, -50%);
+            content: "";
+
+            @include bg("/media/logo-app.png", contain, center);
+
+            @include mob {
+                top: 43rem;
+                right: 51rem;
+                width: 74rem;
+                height: 74rem;
+                transform: translate(0, 0);
+            }
+        }
+
+        &::after {
+            position: absolute;
+            right: 3rem;
+            bottom: 3rem;
+            z-index: 3;
+            width: 68rem;
+            height: 68rem;
+            transform: translate(50%, 50%);
+            content: "";
+
+            @include bg("/media/18plus.svg", contain, center);
+
+            @include mob {
+                right: auto;
+                bottom: -12rem;
+                left: 36rem;
+                transform: translate(0, 0);
+            }
+        }
+
+        &Text {
+            color: #fff;
+            font-size: 20rem;
+            font-family: Onest;
+            line-height: 1.3;
+
+            @include mob {
+                display: inline;
+                border-bottom: 1rem solid rgba(#fff, 0.72);
+            }
+        }
+
+        &Qr {
+            position: absolute;
+            bottom: 100%;
+            left: -64rem;
+            z-index: 3;
+            width: 202rem;
+            height: 202rem;
+            margin-bottom: -30rem;
+            padding: 27rem;
+            background: #fff;
+            border-radius: 36rem;
+
+            &Thumb {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}

@@ -1,0 +1,241 @@
+.indexHeader {
+    position: relative;
+    width: 100%;
+    padding: 196rem 0 74rem;
+
+    @include bg("/media/back-main-1.jpg", 100% auto, center top);
+
+    @include mob {
+        height: auto;
+        padding: 90rem 0 80rem;
+
+        @include bg("/media/back-main-1-mob.jpg", 100% auto, center top);
+    }
+
+    & {
+        background-color: #c50018;
+    }
+
+    &__inner {
+        position: relative;
+        align-items: center;
+    }
+
+    &__content {
+        align-items: flex-end;
+        width: 610rem;
+        margin: 0 0 0 auto;
+
+        @include mob {
+            width: 100%;
+        }
+
+        &Title {
+            width: 100%;
+            height: 100rem;
+            margin: 0 -32rem 18rem 0;
+
+            @include bg("/media/index-title.svg", contain, right top);
+
+            @include mob {
+                width: 100%;
+                height: 61rem;
+                margin: 0 auto 16rem 0;
+
+                @include bg("/media/index-title-mob.svg", contain, left top);
+            }
+        }
+
+        &Text {
+            max-width: 506rem;
+            color: #5d279e;
+            font-size: 16rem;
+            line-height: 1.4;
+            text-align: right;
+            text-transform: uppercase;
+
+            @include mob {
+                max-width: 100%;
+                font-size: 13rem;
+                line-height: 1.4;
+                text-align: left;
+            }
+
+            & span {
+                color: #d557d7;
+            }
+        }
+    }
+
+    &__slider {
+        position: relative;
+        z-index: 2;
+        width: 560rem;
+        margin: 200rem 0 0 -34rem;
+
+        @include mob {
+            width: 100%;
+            margin: 430rem 0 0;
+        }
+
+        &::before {
+            position: absolute;
+            top: -52rem;
+            left: 50%;
+            z-index: -1;
+            width: 230rem;
+            height: 230rem;
+            margin-left: -12rem;
+            transform: translate(-50%, 0);
+            content: "";
+
+            @include bg("/media/prize-back-1.svg", contain, center);
+
+            @include mob {
+                top: -42rem;
+                width: 158rem;
+                height: 158rem;
+                margin-left: 0;
+            }
+        }
+
+        &Items {
+            display: inline-flex;
+        }
+
+        &Item {
+            position: relative;
+            z-index: 1;
+            width: 146rem;
+            height: 166rem;
+            margin-right: 48rem;
+            transition: $trans;
+
+            @include mob {
+                width: 104rem;
+                height: 130rem;
+                margin-right: 32rem;
+            }
+
+            &Inner {
+                position: relative;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                transition: $trans;
+                will-change: transform;
+
+                &::after {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    z-index: 2;
+                    width: 140rem;
+                    height: 24rem;
+                    margin-left: 10rem;
+                    transform: translate(-50%, 0);
+                    opacity: 0.64;
+                    transition: $trans;
+                    content: "";
+                    pointer-events: none;
+                    will-change: transform;
+
+                    @include bg("/media/prize-shadow.png", contain, center top);
+
+                    @include mob {
+                        margin-bottom: 10rem;
+                    }
+                }
+            }
+
+            &:not([data-show]) &Inner {
+                opacity: 0;
+            }
+
+            &[data-active] &Inner {
+                transform: scale(1.6);
+
+                &::after {
+                    margin-left: 0;
+                    transform: translate(-50%, 13rem) scale(1.5);
+                    opacity: 1;
+
+                    @include mob {
+                        transform: translate(-50%, 6rem) scale(1);
+                    }
+                }
+            }
+
+            &Thumb {
+                position: relative;
+                z-index: 3;
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center top;
+                user-select: none;
+                pointer-events: none;
+            }
+        }
+    }
+
+    &__circle {
+        position: absolute;
+        top: 214rem;
+        right: -72rem;
+        z-index: 3;
+        width: 386rem;
+        height: 386rem;
+
+        @include mob {
+            top: 334rem;
+            right: -70rem;
+            width: 210rem;
+            height: 210rem;
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 16rem 16rem 33rem 0 rgba(#7c0000, 0.35);
+            content: "";
+        }
+
+        &Back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            will-change: transform;
+
+            @include bg("/media/circle-pattern.png", contain, center);
+        }
+
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 2;
+            width: 230rem;
+            height: 230rem;
+            transform: translate(-50%, -50%);
+            content: "";
+
+            @include bg("/media/circle-text.svg", contain, center);
+
+            @include mob {
+                width: 124rem;
+                height: 124rem;
+            }
+        }
+    }
+}

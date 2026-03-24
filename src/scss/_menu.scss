@@ -1,0 +1,280 @@
+.menu {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+
+    &__wrapper {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+
+        &::before {
+            position: absolute;
+            top: -120rem;
+            right: -120rem;
+            z-index: -1;
+            width: 684rem;
+            height: 684rem;
+            content: "";
+            pointer-events: none;
+
+            @include bg("/media/back-pattern-4.svg", contain, center);
+
+            @include mob {
+                top: 176rem;
+                right: -264rem;
+                width: 550rem;
+                height: 550rem;
+            }
+        }
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        padding: 24rem 0;
+
+        @include mob {
+            position: relative;
+            padding: 20rem 0;
+        }
+
+        &Btn {
+            width: 50rem;
+            height: 40rem;
+            margin-right: 30rem;
+
+            @include icon(#fff);
+
+            @include mob {
+                width: 36rem;
+                height: 32rem;
+            }
+        }
+
+        &Logo {
+            width: 167rem;
+            height: 53rem;
+
+            @include icon(#fff);
+
+            @include mob {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 120rem;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        width: 100%;
+        padding-top: 6rem;
+
+        @include mob {
+            flex-direction: column-reverse;
+            margin-bottom: 18rem;
+            padding: 22rem 0 0;
+        }
+
+        &Nav {
+            width: calc(100% - 510rem);
+            padding-right: 42rem;
+
+            @include mob {
+                width: 100%;
+                padding-right: 0;
+            }
+        }
+
+        &Actions {
+            width: 510rem;
+
+            @include mob {
+                width: 100%;
+                margin-bottom: 22rem;
+            }
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        height: 246rem;
+        margin: 18rem 0 0;
+        padding-left: 6rem;
+        column-gap: 20rem;
+
+        @include mob {
+            height: auto;
+            padding: 0 0 0 16rem;
+        }
+
+        &Item {
+            position: relative;
+            margin-bottom: 36rem;
+            padding-left: 38rem;
+            color: #fff;
+            font-size: 16rem;
+            text-transform: uppercase;
+            transition: $trans;
+
+            @include hover {
+                &:hover {
+                    color: #ff6bc9;
+
+                    & circle {
+                        fill: #ff6bc9;
+                    }
+
+                    & path {
+                        fill: #fff;
+                    }
+                }
+            }
+
+            @include mob {
+                margin-bottom: 34rem;
+                padding-left: 39rem;
+                font-size: 18rem;
+            }
+
+            & i {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 22rem;
+                height: 22rem;
+                transform: translate(0, -50%);
+
+                @include mob {
+                    width: 23rem;
+                    height: 23rem;
+                }
+            }
+        }
+    }
+
+    &__actions {
+        width: 100%;
+
+        &Button {
+            width: 100%;
+            height: 60rem;
+
+            @include mob {
+                height: 62rem;
+            }
+
+            & + & {
+                margin-top: 20rem;
+            }
+        }
+    }
+
+    &__games {
+        width: 100%;
+        margin-bottom: 24rem;
+        padding: 32rem 32rem 36rem;
+        border-radius: 24rem;
+
+        @include bg("/media/games-back.svg", 100% auto, center top);
+
+        @include mob {
+            padding: 16rem;
+            border-radius: 26rem;
+
+            @include bg("/media/games-back-mob.svg", 100% auto, center top);
+        }
+
+        &Title {
+            width: 100%;
+            margin-bottom: 30rem;
+            padding: 18rem;
+            color: #fff;
+            font-size: 16rem;
+            line-height: 1.1;
+            text-align: center;
+            text-transform: uppercase;
+            background: #c50018;
+            border-radius: 8rem;
+
+            @include mob {
+                padding: 15rem;
+                font-size: 18rem;
+                border-radius: 14rem;
+            }
+        }
+
+        &Items {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            @include mob {
+                flex-wrap: wrap;
+                width: calc(100% + 14rem);
+                margin-bottom: -22rem;
+                margin-left: -7rem;
+            }
+        }
+
+        &Item {
+            width: 194rem;
+            margin: 0 47rem;
+
+            @include mob {
+                width: calc(50% - 20rem);
+                margin: 0 10rem 25rem;
+            }
+
+            @include hover {
+                &:hover &Head {
+                    transform: scale(1.05);
+                }
+
+                &:hover &Title {
+                    color: #ff6bc9;
+                }
+            }
+
+            &Head {
+                width: 100%;
+                margin-bottom: 24rem;
+                transition: $trans;
+                will-change: transform;
+                aspect-ratio: 1;
+
+                @include bg("/media/menu-game-back.svg", contain, center);
+
+                @include mob {
+                    margin-bottom: 11rem;
+                }
+            }
+
+            &Thumb {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            &Title {
+                width: 100%;
+                color: #fff;
+                font-size: 13rem;
+                line-height: 1.1;
+                text-align: center;
+                text-transform: uppercase;
+                transition: $trans;
+
+                @include mob {
+                    font-size: 14rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,80 @@
+import React from 'react';
+
+import Button from '@components/button/Button.tsx';
+import Default from '@components/default/Default.tsx';
+import List from '@components/list/List.tsx';
+
+import codeMoreHandler from './methods/codeMoreHandler.ts';
+
+import ChequesI from './types.ts';
+
+import renderOffer from './renders/renderOffer.tsx';
+
+class Cheques extends Default<ChequesI['props'], ChequesI['state']> implements ChequesI {
+    parent: ChequesI['parent'];
+
+    constructor(props: ChequesI['props']) {
+        super(props);
+        this.state = {
+            currentCodesCount: 10,
+        };
+        this.parent = React.createRef();
+    }
+
+    codeMoreHandler = codeMoreHandler;
+
+    renderOffer = renderOffer;
+
+    render() {
+        const { currentCodesCount } = this.state;
+        const { setRenderKey, data } = this.props;
+        const allChecks = data?.checks || [];
+        const checks = allChecks
+            .map((item) => ({
+                _id: item.id,
+                date: item.date,
+                fd: item.fd,
+                status: item.status,
+                result: item.result,
+            }))
+            .filter((item, key) => key < currentCodesCount);
+        const hasMore = allChecks.length > currentCodesCount;
+
+        console.log(checks, setRenderKey);
+
+        return (
+            <div className="profile__block _codes _FULL_W _COL _COL_H_CENTER">
+                {this.renderOffer()}
+                <div className="profile__blockHead _COL _COL_H_CENTER">
+                    <h3 className="profile__blockTitle _PROFILE-TITLE">МОИ Чеки из «Пятёрочки»</h3>
+                </div>
+                <div className="profile__blockTable _FULL_W">
+                    {/* <Table name="cheques" items={checks} callback={setRenderKey} /> */}
+                </div>
+                <List
+                    renderKey={`${!!hasMore}`}
+                    items={hasMore ? [{ _id: 'button' }] : []}
+                    parentClass="profile__blockDynamicButtonWrapper"
+                    itemStyleProps={[]}
+                    parentStyleProps={['width']}
+                    parentRealStyleProps={['width']}
+                    render={() => ({
+                        item: (
+                            <div className="profile__blockDynamicButton">
+                                <Button
+                                    className="_purpleEmpty"
+                                    onClick={this.codeMoreHandler.bind(this)}
+                                >
+                                    Показать еще
+                                </Button>
+                            </div>
+                        ),
+                    })}
+                    resizeWidth={true}
+                />
+            </div>
+        );
+    }
+}
+
+export default Cheques;

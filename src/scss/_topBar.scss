@@ -1,0 +1,131 @@
+.topBar {
+    width: 100%;
+    padding: 24rem 0;
+
+    @include mob {
+        padding: 20rem 0;
+    }
+
+    &._mobMenu {
+        height: 100%;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    &._fix {
+        padding: 18rem 0;
+
+        @include mob {
+            padding: 16rem 0;
+        }
+    }
+
+    &__inner {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+
+        &Btn {
+            width: 50rem;
+            height: 26rem;
+            margin-right: 30rem;
+
+            @include mob {
+                width: 40rem;
+            }
+
+            @include icon(#de261f);
+        }
+
+        &Thumb {
+            width: 167rem;
+            height: 53rem;
+
+            @include mob {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 120rem;
+                transform: translate(-50%, -50%);
+            }
+
+            @include icon(#c50018);
+        }
+    }
+
+    &._fix &__logo,
+    &._popup &__logo,
+    &._inner &__logo {
+        @include icon(#fff);
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        margin-top: -6rem;
+        margin-left: auto;
+
+        @include mob {
+            flex-direction: column;
+            width: 100%;
+            margin-top: 0;
+        }
+    }
+
+    &__action {
+        position: relative;
+        z-index: 1;
+        height: 56rem;
+        padding: 10rem 23rem;
+        color: #fff;
+        font-size: 13rem;
+        text-transform: uppercase;
+        border: 2rem solid #000;
+        border-radius: 8rem;
+        box-shadow: 8rem 8rem 0 0 #000;
+
+        @include button(0.96);
+
+        & + & {
+            margin-left: 16rem;
+
+            @include mob {
+                margin-top: 32rem;
+                margin-left: 0;
+            }
+        }
+
+        &._reg {
+            background: #5d279e;
+
+            @include hover {
+                &:hover {
+                    background: #8200cc;
+                }
+            }
+        }
+
+        &._profile {
+            background: #ff49b8;
+
+            @include hover {
+                &:hover {
+                    background: #ff6bc9;
+                }
+            }
+        }
+    }
+
+    &__profile {
+        width: 32rem;
+        height: 32rem;
+        margin-left: auto;
+        object-fit: contain;
+    }
+}
