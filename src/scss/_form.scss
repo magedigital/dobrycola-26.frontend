@@ -15,7 +15,7 @@
             margin-top: 16rem;
 
             @include mob {
-                margin-top: 18rem;
+                margin-top: 12rem;
             }
         }
     }
@@ -41,5 +41,10 @@
 
     &__button {
         // min-width: 240rem;
+
+        @include mob {
+            width: 210rem;
+            height: 68rem;
+        }
     }
 }

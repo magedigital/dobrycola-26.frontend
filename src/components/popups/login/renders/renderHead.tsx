@@ -11,7 +11,7 @@ const renderHead: I['renderHead'] = function () {
             <div className="popup__title">Вход в Личный кабинет</div>
             <p className="popup__description">Необходима авторизация</p>
             <Media check={(d) => d === 'desktop'}>
-                <div className="popup__close _CLICK" onClick={this.close.bind(this)}>
+                <div className="closeBtn popup__close _CLICK" onClick={this.close.bind(this)}>
                     <Icon name="popup-close" />
                 </div>
             </Media>

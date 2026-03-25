@@ -32,6 +32,10 @@ const changePage: I['changePage'] = function ({
         href = '';
     }
 
+    if (isPopstate) {
+        appStore.getState().setPrevPageUrl(undefined);
+    }
+
     if (!isPopstate && !start) {
         appStore.getState().setPrevPageUrl(savePrevPage ? window.location.pathname : undefined);
     }

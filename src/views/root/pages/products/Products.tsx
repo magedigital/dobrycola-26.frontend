@@ -16,9 +16,10 @@ class Products extends Page<ProductsI['props'], ProductsI['state']> implements P
 
     constructor(props: ProductsI['props']) {
         super(props);
+        const content = getLocalContent('products');
         this.state = {
-            content: getLocalContent('products'),
-            isInit: false,
+            content,
+            isInit: !!content,
         };
 
         this.parent = React.createRef();
@@ -32,13 +33,12 @@ class Products extends Page<ProductsI['props'], ProductsI['state']> implements P
 
     render() {
         const { content } = this.state;
-        const { authUser } = this.props;
 
         return this.renderPage({
             render: () =>
-                authUser && content ? (
+                content ? (
                     <>
-                        <Header content={content} authUser={authUser} />
+                        <Header content={content} />
                     </>
                 ) : null,
             className: '_inner',

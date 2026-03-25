@@ -9,39 +9,39 @@
 
     &__slider {
         position: relative;
-        margin-bottom: 28rem;
-        padding: 0 120rem;
+        margin-bottom: 36rem;
+        padding: 0 100rem;
 
         @include mob {
-            margin-bottom: 32rem;
-            padding: 0 20rem;
+            margin-bottom: 30rem;
+            padding: 0 12rem;
         }
 
         &Button {
             position: absolute;
             top: 50%;
             z-index: 3;
-            width: 62rem;
-            height: 62rem;
-            background: #ffe7a5;
+            width: 64rem;
+            height: 64rem;
+            background: #ff49b8;
             border-radius: 50%;
             transform: translate(0, -50%);
 
             &._prev {
-                left: 30rem;
-                padding-right: 4rem;
+                left: 6rem;
+                padding-right: 2rem;
             }
 
             &._next {
-                right: 30rem;
-                padding-left: 4rem;
+                right: 6rem;
+                padding-left: 2rem;
             }
 
             &Icon {
                 width: 26rem;
                 height: 26rem;
 
-                @include icon(#c50018);
+                @include icon(#fff);
             }
         }
 
@@ -72,13 +72,13 @@
 
         &Item {
             width: 280rem;
-            height: 396rem;
+            height: 388rem;
             margin-right: 30rem;
             transition: $trans;
 
             @include mob {
                 width: 330rem;
-                height: 460rem;
+                height: 454rem;
                 margin-right: 12rem;
             }
 
@@ -91,20 +91,32 @@
 
         &MobButtons {
             margin-top: 26rem;
+
+            @include mob {
+                margin-top: 18rem;
+            }
         }
 
         &MobItems {
-            margin: 0 17rem;
-            color: #fff;
-            font-weight: 700;
+            margin: 0 18rem;
+            color: #5d279e;
+            font-weight: 900;
             font-size: 18rem;
+            font-family: Onest;
         }
 
         &MobButton {
             width: 22rem;
-            height: 18rem;
+            height: 22rem;
 
-            @include icon(#fff);
+            @include icon(#5d279e);
+        }
+    }
+
+    &__button {
+        @include mob {
+            width: 230rem;
+            height: 64rem;
         }
     }
 

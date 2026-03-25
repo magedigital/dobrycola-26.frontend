@@ -14,6 +14,7 @@ import renderBar from './renders/renderBar.tsx';
 import renderHead from './renders/renderHead.tsx';
 import renderTable from './renders/renderTable.tsx';
 import renderTableCol from './renders/renderTableCol.tsx';
+import renderTableEmpty from './renders/renderTableEmpty.tsx';
 
 class Header extends Default<HeaderI['props'], HeaderI['state']> implements HeaderI {
     parent: HeaderI['parent'];
@@ -38,6 +39,7 @@ class Header extends Default<HeaderI['props'], HeaderI['state']> implements Head
     getWinnersList = getWinnersList;
 
     renderTableCol = renderTableCol;
+    renderTableEmpty = renderTableEmpty;
 
     renderHead = renderHead;
     renderBar = renderBar;

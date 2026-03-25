@@ -9,28 +9,32 @@ const renderCards: I['renderCards'] = function () {
     const { content } = this.props;
 
     return (
-        <div className="rules _COL _COL_H_CENTER _FULL_W">
+        <>
             <div className="rules__cards">
                 {content?.components.howto.steps.map((step, key) => {
                     const { title, description, thumb } = step;
 
                     return (
-                        <div className="rules__card" key={key}>
-                            {key !== content.components.howto.steps.length - 1 && (
-                                <i className="rules__cardNext">
-                                    <Icon name="arrow-card-next" />
-                                </i>
-                            )}
-                            <div className="rules__cardHead _FULL_W">
-                                <img src={thumb} alt="" className="rules__cardImage" />
-                                <div className="rules__cardNumber _COL _COL_CENTER">{key + 1}</div>
-                            </div>
-                            <div className="rules__cardContent _FULL_W _COL">
-                                <div className="rules__cardTitle">{title}</div>
-                                <p
-                                    className="rules__cardDescription"
-                                    dangerouslySetInnerHTML={{ __html: description }}
-                                ></p>
+                        <div className="rules__cardsItem" key={key}>
+                            <div className="rules__card">
+                                {key !== content.components.howto.steps.length - 1 && (
+                                    <i className="rules__cardNext">
+                                        <Icon name="arrow-card-next" />
+                                    </i>
+                                )}
+                                <div className="rules__cardHead _FULL_W">
+                                    <img src={thumb} alt="" className="rules__cardImage" />
+                                    <div className="rules__cardNumber _COL _COL_CENTER">
+                                        {key + 1}
+                                    </div>
+                                </div>
+                                <div className="rules__cardContent _FULL_W _COL">
+                                    <div className="rules__cardTitle">{title}</div>
+                                    <p
+                                        className="rules__cardDescription"
+                                        dangerouslySetInnerHTML={{ __html: description }}
+                                    ></p>
+                                </div>
                             </div>
                         </div>
                     );
@@ -41,12 +45,12 @@ const renderCards: I['renderCards'] = function () {
                     onClick={() => {
                         // changePage({ pageName: 'regCode' });
                     }}
-                    className="_white"
+                    className="_darkPinkColor _boldBorder"
                 >
                     Участвовать
                 </Button>
             </div>
-        </div>
+        </>
     );
 };
 

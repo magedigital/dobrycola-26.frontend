@@ -215,9 +215,14 @@
     color: #5d279e;
     font-size: 28rem;
     line-height: 1.2;
+    text-transform: uppercase;
 
     @include mob {
         font-size: 37rem;
+
+        &._inner {
+            font-size: 21rem;
+        }
     }
 
     &._mediumSize {
@@ -231,9 +236,14 @@
     &._sub {
         color: #d300b4;
         font-size: 16rem;
+        text-transform: none;
 
         @include mob {
             font-size: 23rem;
+
+            &._inner {
+                font-size: 15.5rem;
+            }
         }
     }
 }

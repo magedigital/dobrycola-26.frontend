@@ -3,6 +3,7 @@ import React from 'react';
 import Fade from '@components/fade/Fade.tsx';
 import List from '@components/list/List.tsx';
 import LoaderBlock from '@components/loaderBlock/LoaderBlock.tsx';
+import Media from '@components/media/Media.tsx';
 
 import Menu from '../../../views/root/components/menu/Menu.tsx';
 import TopBar from '../../../views/root/components/topBar/TopBar.tsx';
@@ -19,13 +20,19 @@ const renderPopupContent = function (
     return (
         <div className="popup__wrapperBox">
             <div className="popup__topBar">
-                <TopBar mode="popup" setMenuState={this.setMenuState.bind(this)} />
+                <TopBar
+                    mode="popup"
+                    setMenuState={this.setMenuState.bind(this)}
+                    pageCloseHandler={this.close.bind(this)}
+                />
             </div>
             <Fade isShow={!!isMenuShow} className="popup__menu">
                 <Menu setState={this.setMenuState.bind(this)} />
             </Fade>
             <div className="popup__inner _COL">
-                {(data.canClose ?? true) && this.renderClose()}
+                <Media check={(d) => d === 'desktop'}>
+                    {(data.canClose ?? true) && this.renderClose()}
+                </Media>
                 {data.render({ id: data.id })}
                 {typeof isInit === 'boolean' && (
                     <LoaderBlock

@@ -1,6 +1,6 @@
 import { WinnerT, WinnersDataT } from '@api/requests/winners';
 import DefaultI from '@components/default/types';
-import { TableRenderRowT } from '@components/table/types';
+import { TableRenderEmptyT, TableRenderRowT } from '@components/table/types';
 
 import { winnerTableCols } from './static/table';
 
@@ -23,6 +23,7 @@ interface HeaderI extends DefaultI<PropsT, StateT> {
     getWinnersList(this: HeaderI): WinnerT[];
 
     renderTableCol: TableRenderRowT<WinnerT, keyof typeof winnerTableCols>;
+    renderTableEmpty: TableRenderEmptyT;
 
     renderHead(this: HeaderI): React.ReactNode;
     renderBar(this: HeaderI): React.ReactNode;

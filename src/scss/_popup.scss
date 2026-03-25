@@ -17,21 +17,41 @@
 
         &Box {
             position: relative;
+            z-index: 1;
             display: inline-flex;
             flex-direction: column;
             width: 100%;
             min-height: var(--wheight);
             padding: 32rem;
+            overflow: hidden;
 
             @include mob {
                 display: block;
                 padding: 78rem 16rem 24rem;
+            }
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                min-height: 850rem;
+                content: "";
+
+                @include bg("/media/inner/back-inner-popup.svg", contain, center);
+
+                @include mob {
+                    display: none;
+                }
             }
         }
     }
 
     &._minHeight &__wrapperBox {
         padding-top: 120rem;
+        padding-bottom: 60rem;
 
         @include mob {
             padding-top: 78rem;
@@ -62,17 +82,6 @@
         }
     }
 
-    &._calcPopup &__inner {
-        width: 888rem;
-        height: 630rem;
-        background: none;
-
-        @include mob {
-            width: 100%;
-            height: auto;
-        }
-    }
-
     &__inner {
         position: relative;
         z-index: 1;
@@ -96,6 +105,7 @@
             align-items: center;
             width: 100%;
             padding: 32rem 40rem 42rem;
+            overflow: hidden;
             transition: $trans;
 
             &._empty {
@@ -119,29 +129,15 @@
     }
 
     &._chequePopup &__inner {
-        width: 500rem;
+        width: 604rem;
     }
 
     &__close {
         position: absolute;
         top: 20rem;
         right: 20rem;
-        z-index: 2;
-        width: 40rem;
-        height: 40rem;
+        z-index: 10;
         margin-left: 12rem;
-        padding: 8rem;
-        background: #fff;
-        border-radius: 11rem;
-
-        @include icon(#8200cc);
-        @include button(0.95);
-
-        @include mob {
-            inset: auto 0 100% auto;
-            margin-bottom: 22rem;
-            padding: 9rem;
-        }
     }
 
     &__height {
@@ -176,14 +172,20 @@
 
     &__head {
         justify-content: center;
+        min-height: 80rem;
         margin: -32rem -40rem 28rem;
         padding: 23rem 20rem 21rem;
-        background: #fbac2f;
         border-radius: 24rem;
+
+        @include bg("/media/inner/back-popup-text.svg", cover, center top);
 
         @include mob {
             margin: -20rem -14rem 24rem;
         }
+    }
+
+    &__head {
+        background-color: #fbac2f;
     }
 
     &__title {
@@ -226,13 +228,17 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-bottom: -16rem;
+        margin-bottom: 8rem;
 
         &Field {
-            margin-bottom: 16rem;
+            margin-bottom: 8rem;
 
             &._short {
                 width: calc(50% - 8rem);
+            }
+
+            & .field__support {
+                font-size: 16rem;
             }
 
             &Link {
@@ -254,7 +260,7 @@
     }
 
     &__start {
-        margin: 20rem 0 28rem;
+        margin: 20rem 0 46rem;
 
         &Title {
             max-width: 80%;
@@ -272,9 +278,10 @@
 
         &Area {
             position: relative;
+            height: 180rem;
             padding: 30rem;
-            background: #f3f3f3;
-            border-radius: 16rem;
+            background: #f9ecfd;
+            border-radius: 8rem;
 
             &Border {
                 position: absolute;
@@ -286,22 +293,22 @@
                 pointer-events: none;
 
                 & .dashedBorder__rect {
-                    rx: 16rem;
-                    ry: 16rem;
-                    stroke: #c10f2f;
+                    stroke: #8200cc;
+                    rx: 8rem;
+                    ry: 8rem;
                 }
             }
 
             &Icon {
                 width: 36rem;
                 height: 36rem;
-                margin-bottom: 12rem;
+                margin-bottom: 18rem;
 
-                @include icon(#c10f2f);
+                @include icon(#8200cc);
             }
 
             &Text {
-                color: #5d279e;
+                color: #222221;
                 font-weight: 600;
                 font-size: 16rem;
                 font-family: Onest;
@@ -348,10 +355,10 @@
         position: relative;
         z-index: 1;
         min-height: 100rem;
-        margin: 8rem 0 0;
+        margin: 0 0 26rem;
         padding: 20rem;
-        background: #f3f3f3;
-        border-radius: 16rem;
+        background: #f9ecfd;
+        border-radius: 8rem;
 
         &Border {
             position: absolute;
@@ -363,9 +370,9 @@
             pointer-events: none;
 
             & .dashedBorder__rect {
-                stroke: #5d279e;
-                rx: 16rem;
-                ry: 16rem;
+                stroke: #8200cc;
+                rx: 8rem;
+                ry: 8rem;
             }
         }
 
@@ -375,9 +382,10 @@
 
         &Text {
             max-width: 80%;
-            color: #6c1100;
-            font-weight: 500;
+            color: #222221;
+            font-weight: 600;
             font-size: 16rem;
+            font-family: Onest;
             line-height: 1.3;
             text-align: center;
 
@@ -430,13 +438,14 @@
     &__final {
         position: relative;
         justify-content: center;
-        min-height: 146rem;
+        min-height: 180rem;
+        margin: 50rem 0 0;
         padding: 32rem;
-        background: #fff;
-        border-radius: 30rem;
+        background: #ccfffd;
+        border-radius: 8rem;
 
         &._bottom {
-            margin-bottom: 32rem;
+            margin-bottom: 40rem;
         }
 
         @include mob {
@@ -463,17 +472,18 @@
             margin-bottom: 16rem;
             color: #5d279e;
             font-weight: 600;
-            font-size: 30rem;
+            font-size: 20rem;
             line-height: 1.3;
             text-align: center;
+            text-transform: uppercase;
         }
 
         &Text {
-            color: #5d279e;
+            color: #222221;
             font-weight: 500;
-            font-size: 16rem;
+            font-size: 18rem;
             font-family: Onest;
-            line-height: 1.3;
+            line-height: 1.2;
             text-align: center;
         }
     }
@@ -482,9 +492,9 @@
         position: relative;
         width: 100%;
         margin-bottom: 40rem;
-        padding: 30rem;
-        background: #fff;
-        border-radius: 20rem;
+        padding: 48rem 30rem;
+        background: #f9ecfd;
+        border-radius: 8rem;
 
         &Border {
             position: absolute;
@@ -496,17 +506,18 @@
             pointer-events: none;
 
             & .dashedBorder__rect {
-                stroke: #c10f2f;
-                rx: 20rem;
-                ry: 20rem;
+                stroke: #8200cc;
+                rx: 8rem;
+                ry: 8rem;
             }
         }
 
         &Text {
             margin-bottom: 16rem;
-            color: #5d279e;
-            font-weight: 500;
-            font-size: 30rem;
+            color: #222221;
+            font-weight: 600;
+            font-size: 20rem;
+            font-family: Onest;
             line-height: 1.3;
             text-align: center;
         }
@@ -676,6 +687,15 @@
 
     &__button {
         height: 63rem;
+
+        &._autoHeight {
+            height: auto;
+
+            & .button {
+                padding-right: 22rem;
+                padding-left: 22rem;
+            }
+        }
 
         &._fix {
             width: calc(50% - 10rem);

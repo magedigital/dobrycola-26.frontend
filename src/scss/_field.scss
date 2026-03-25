@@ -25,7 +25,7 @@
         height: 60rem;
 
         @include mob {
-            height: 66rem;
+            height: 58rem;
         }
     }
 
@@ -39,6 +39,10 @@
 
     &._file &__box {
         height: 160rem;
+
+        @include mob {
+            height: 150rem;
+        }
     }
 
     &._checkbox &__box {

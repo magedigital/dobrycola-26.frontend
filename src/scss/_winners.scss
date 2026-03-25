@@ -15,6 +15,7 @@
 
         &Title {
             margin-bottom: 10rem;
+            text-align: center;
         }
 
         &Info {
@@ -27,7 +28,7 @@
                 display: inline-block;
                 color: #d300b4;
                 line-height: 1;
-                border-bottom: 1rem solid rgba(#d300b4, 0.72);
+                border-bottom: 1rem solid rgba(#ff49b8, 0.72);
             }
         }
     }
@@ -51,6 +52,7 @@
             justify-content: flex-start;
             height: auto;
             margin-bottom: 36rem;
+            padding: 0 4rem;
         }
 
         &Block {
@@ -62,6 +64,7 @@
 
             @include mob {
                 flex-direction: column;
+                align-items: flex-start;
                 height: auto;
 
                 & + & {
@@ -101,6 +104,10 @@
 
             &:nth-child(2) &Field {
                 width: 340rem;
+
+                @include mob {
+                    width: 100%;
+                }
             }
 
             &Support {
@@ -149,17 +156,22 @@
         z-index: 1;
         width: 100%;
 
+        @include mob {
+            width: calc(100% + 20rem);
+            margin-left: -10rem;
+        }
+
         &Inner {
             width: 100%;
-            margin-bottom: 50rem;
-
-            @include mob {
-                margin-bottom: 40rem;
-            }
         }
 
         &Button {
             width: 240rem;
+            margin-top: 50rem;
+
+            @include mob {
+                margin-top: 40rem;
+            }
         }
     }
 }

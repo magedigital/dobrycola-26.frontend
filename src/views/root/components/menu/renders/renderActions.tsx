@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Button from '@components/button/Button.tsx';
+import { appStore } from '@store/store.tsx';
 
 import I from '../types.ts';
 
@@ -15,6 +16,7 @@ const renderActions: I['renderActions'] = function () {
                 <Button
                     className="_purpleColor"
                     onClick={() => {
+                        appStore.getState().setPopup({ name: 'chequePopup' });
                         setState(false);
                     }}
                 >

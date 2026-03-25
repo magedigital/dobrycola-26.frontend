@@ -1,10 +1,10 @@
 import React from 'react';
 
 export default (
-    <svg viewBox="0 0 16 24" fill="none">
+    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
-            d="M0.878906 12L12.293 23.4141L15.1211 20.5859L6.53516 12L15.1211 3.41406L12.293 0.585938L0.878906 12Z"
-            fill="#C50018"
+            d="M0 5.88379L5.88379 11.7676L7.65137 10L3.53516 5.88379L7.65137 1.76758L5.88379 0L0 5.88379Z"
+            fill="#7A2799"
             className="icon__fill"
         />
     </svg>

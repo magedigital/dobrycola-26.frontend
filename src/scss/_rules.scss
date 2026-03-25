@@ -4,48 +4,58 @@
     padding: 4rem 0 0;
 
     @include mob {
-        padding: 4rem 0 0;
+        padding: 4rem 0 20rem;
+    }
+
+    &__head {
+        margin-bottom: 50rem;
+
+        @include mob {
+            margin-bottom: 32rem;
+        }
+
+        &Title {
+            margin-bottom: 9rem;
+
+            @include mob {
+                margin-bottom: 10rem;
+            }
+        }
     }
 
     &__cards {
         display: flex;
-        padding: 0 32rem 0 60rem;
+        width: 100%;
+        margin-bottom: 28rem;
+        padding: 0 40rem;
 
         @include mob {
             flex-direction: column;
             align-items: flex-start;
             width: 100%;
-            padding: 0 14rem 0 24rem;
+            padding: 0 9rem;
+        }
+
+        &Item {
+            width: calc(100% / 5);
+            padding: 0 20rem;
+
+            @include mob {
+                width: 100%;
+                padding: 0;
+            }
         }
     }
 
     &__card {
         position: relative;
-        width: 16%;
-        margin-right: 40rem;
 
         @include mob {
             display: flex;
             align-items: stretch;
             width: 100%;
             margin-right: 0;
-            margin-bottom: 60rem;
-
-            // &:nth-child(1) {
-            //     margin-bottom: 62rem;
-            // }
-
-            // &:nth-child(2) {
-            //     margin-bottom: 62rem;
-            // }
-
-            // &:nth-child(3) {
-            //     margin-bottom: 66rem;
-            // }
-
-            // &:nth-child(4) {
-            //     margin-bottom: 66rem;
-            // }
+            margin-bottom: 58rem;
         }
 
         @include desk {
@@ -57,15 +67,15 @@
 
         &Next {
             position: absolute;
-            top: 174rem;
-            right: -20rem;
+            top: 128rem;
+            right: -28rem;
             z-index: 2;
-            width: 24rem;
-            height: 24rem;
+            width: 36rem;
+            height: 36rem;
 
             @include mob {
-                width: 28rem;
-                height: 28rem;
+                width: 34rem;
+                height: 34rem;
                 transform: translate(-50%, 0) rotate(90deg);
                 inset: auto auto -49rem 50%;
             }
@@ -74,9 +84,9 @@
         &Head {
             position: relative;
             z-index: 1;
-            width: 180rem;
-            height: 180rem;
-            margin-bottom: 54rem;
+            width: 100%;
+            aspect-ratio: 1;
+            margin-bottom: 26rem;
             border-radius: 50%;
 
             @include mob {
@@ -96,15 +106,15 @@
 
         &Number {
             position: absolute;
-            bottom: -40rem;
-            left: -4rem;
+            bottom: -15rem;
+            left: 0;
             z-index: 2;
             width: 72rem;
             height: 72rem;
-            color: #c50018;
+            color: #5d279e;
             font-weight: 600;
             font-size: 28rem;
-            background: #fff;
+            background: #ff49b8;
             border-radius: 50%;
 
             @include mob {
@@ -120,7 +130,7 @@
             @include mob {
                 justify-content: center;
                 width: calc(100% - 158rem);
-                padding: 4rem 0 0 17rem;
+                padding: 0 0 0 17rem;
             }
         }
 
@@ -132,15 +142,15 @@
 
         &Title {
             margin-bottom: 10rem;
-            color: #ffe09e;
+            color: #5d279e;
             font-weight: 600;
-            font-size: 20rem;
-            line-height: 1.25;
+            font-size: 16rem;
+            line-height: 1.4;
             text-transform: uppercase;
 
             @include mob {
-                margin-bottom: 4rem;
-                font-size: 21rem;
+                margin-bottom: 6rem;
+                font-size: 17.5rem;
             }
         }
 
@@ -151,9 +161,10 @@
         }
 
         &Description {
-            color: #fff;
-            font-weight: 400;
+            color: #222221;
+            font-weight: 600;
             font-size: 16rem;
+            font-family: Onest;
             line-height: 1.3;
 
             @include mob {
@@ -162,9 +173,17 @@
             }
 
             & a {
-                color: #fff7ae;
+                display: inline-block;
+                color: #d300b4;
+                font-weight: 600;
+                font-family: Onest;
+                line-height: 1;
                 white-space: nowrap;
-                border-bottom: 1rem solid rgba(#fff7ae, 0.4);
+                border-bottom: 1rem solid rgba(#d300b4, 0.6);
+
+                @include mob {
+                    border-width: 2rem;
+                }
             }
         }
     }
@@ -175,7 +194,7 @@
         margin: 24rem 0 0;
 
         @include mob {
-            width: 196rem;
+            height: 66rem;
             margin: 0;
         }
     }

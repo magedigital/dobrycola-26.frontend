@@ -19,6 +19,8 @@ const icons = [
     'arrow-next-long',
     'arrow-prev-long',
     'arrow-card-next',
+    'arrow-next-thin',
+    'arrow-prev-thin',
     'copy',
     'download',
 ] as const;

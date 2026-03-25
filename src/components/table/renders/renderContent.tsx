@@ -1,55 +1,43 @@
 import React from 'react';
 
-import Media from '@components/media/Media.tsx';
+import List from '@components/list/List.tsx';
 
 import I from '../types.ts';
 
 const renderContent: I['renderContent'] = function () {
-    const { rows, cols, render, isMobRows } = this.props;
+    const { rows, emptyId, renderEmpty } = this.props;
 
     return (
         <div className="table__content">
-            {rows.map((r) => (
-                <div className="table__row" key={r.id}>
-                    <Media check={(d) => d === 'desktop' || !isMobRows}>
-                        {Object.keys(cols).map((n) => (
-                            <div
-                                className={this.getClass('table__rowCol _COL', this.setClass(n))}
-                                key={n}
-                                style={{ width: `${this.getColWidth(n)}%` }}
-                            >
-                                {render({ row: r, name: n })}
-                            </div>
-                        ))}
-                    </Media>
-                    <Media check={(d) => d === 'mobile' && !!isMobRows}>
-                        <div className="table__rowMob">
-                            {Object.keys(cols).map((n) => (
-                                <div className={this.getClass('table__rowMobRow')} key={n}>
-                                    <div
-                                        className={this.getClass(
-                                            'table__rowMobCol _head _COL',
-                                            this.setClass(n),
-                                        )}
-                                        key={n}
-                                    >
-                                        {cols[n].title}
-                                    </div>
-                                    <div
-                                        className={this.getClass(
-                                            'table__rowMobCol _COL',
-                                            this.setClass(n),
-                                        )}
-                                        key={n}
-                                    >
-                                        {render({ row: r, name: n })}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </Media>
-                </div>
-            ))}
+            {renderEmpty && (
+                <List
+                    renderKey={!rows.length ? emptyId : undefined}
+                    items={emptyId && !rows.length ? [{ _id: emptyId }] : []}
+                    parentClass="table__empty"
+                    itemClass="table__emptyItem"
+                    itemStyleProps={[]}
+                    parentStyleProps={[]}
+                    parentRealStyleProps={[]}
+                    render={({ item }) => ({
+                        item: <div>{renderEmpty({ id: item._id })}</div>,
+                    })}
+                    startShowSmooth={true}
+                />
+            )}
+            <List
+                renderKey={rows.map((r) => r.id).join('')}
+                items={rows.map((r) => ({ _id: r.id, ...r }))}
+                parentClass="table__contentRows"
+                itemClass="table__contentRowsItem"
+                itemStyleProps={['top']}
+                parentStyleProps={['width']}
+                parentRealStyleProps={['width']}
+                render={(d) => ({
+                    item: this.renderRow({ ...d }),
+                })}
+                minHeight={rows.length ? undefined : 200}
+                resizeWidth={true}
+            />
         </div>
     );
 };

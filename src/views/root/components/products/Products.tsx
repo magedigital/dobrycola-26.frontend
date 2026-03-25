@@ -54,7 +54,7 @@ class Products extends Default<ProductsI['props'], ProductsI['state']> implement
                 {!is5ka && (
                     <div className="products__button">
                         <Button
-                            className="_white"
+                            className="_darkPinkColor _boldBorder _mediumSize"
                             onClick={() => {
                                 // changePage({ pageName: 'regCode' });
                             }}

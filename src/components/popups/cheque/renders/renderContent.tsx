@@ -25,6 +25,9 @@ const renderContent: I['renderContent'] = function (this: I) {
                 allItems={Object.keys(chequeFormSteps)}
                 currentItem={currentStep}
                 resizeWidth={true}
+                callback={() => {
+                    this.resizeHandler();
+                }}
             />
         </div>
     );

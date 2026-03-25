@@ -14,10 +14,12 @@ type PropsT = {
 export default function Start({ setStep, uploadQRCode }: PropsT): React.ReactNode {
     return (
         <>
-            <div className="popup__title">Регистрация чека</div>
+            <div className="popup__head _COL _COL_H_CENTER">
+                <div className="popup__title">Регистрация чека</div>
+            </div>
             <div className="popup__start _COL _COL_H_CENTER">
                 <div
-                    className="popup__startArea _FULL_W _COL _COL_H_CENTER _CLICK"
+                    className="popup__startArea _FULL_W _COL _COL_CENTER _CLICK"
                     onClick={() => {
                         setStep('scan');
                     }}
@@ -29,29 +31,28 @@ export default function Start({ setStep, uploadQRCode }: PropsT): React.ReactNod
                         <Icon name="scan" />
                     </i>
                     <p className="popup__startAreaText">
-                        Нажми, чтобы
-                        <br />
-                        отсканировать QR-код с чека
+                        Нажми, чтобы отсканировать <br />
+                        QR-код с чека
                     </p>
                 </div>
             </div>
             <div className="popup__buttons _ROW">
-                <div className="popup__button _big">
+                <div className="popup__button _autoHeight">
                     <Button
                         onClick={() => {
                             setStep('form', 'typing');
                         }}
-                        className="_subColor _mediumSize"
+                        className="_darkPinkColor _boldBorder"
                     >
                         Ввести данные <br className="_DESKTOP" />
                         вручную
                     </Button>
                 </div>
-                <div className="popup__button _big">
+                <div className="popup__button _autoHeight">
                     <Button
                         isLabel={true}
                         onClick={() => undefined}
-                        className="_subColor _mediumSize"
+                        className="_purpleColor _boldBorder"
                     >
                         <input
                             type="file"

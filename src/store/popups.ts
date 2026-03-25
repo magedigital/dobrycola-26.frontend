@@ -33,8 +33,8 @@ type PopupsReducersT = {
 
 const popups = {
     chequePopup: {
-        check: (s: StoreT) => !!s.authUser || s.isAuthProcess,
-        redirectPageName: 'index',
+        check: (s: StoreT) => !!s.authUser || s.isAuthProcess || true,
+        redirectPageName: 'profile',
     },
     loginPopup: {
         check: (s: StoreT) => !s.authUser || s.isAuthProcess,

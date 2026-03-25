@@ -15,11 +15,11 @@ const renderFoot: I['renderFoot'] = function () {
             <div className="popup__buttons _FULL_W _ROW _ROW_CENTER">
                 <div className="popup__button">
                     <Button
-                        className="_backColor"
+                        className="_boldBorder _darkPinkColor"
                         onClick={this.sendForm.bind(this)}
                         loading={loadingKey === 'send'}
                     >
-                        Отправить
+                        отправить на проверку
                     </Button>
                 </div>
             </div>

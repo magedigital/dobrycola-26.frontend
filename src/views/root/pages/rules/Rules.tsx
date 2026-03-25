@@ -16,14 +16,16 @@ class Rules extends Page<RulesI['props'], RulesI['state']> implements RulesI {
 
     constructor(props: RulesI['props']) {
         super(props);
+        const content = getLocalContent('main');
         this.state = {
-            content: getLocalContent('main'),
-            isInit: false,
+            content,
+            isInit: !!content,
         };
 
         this.parent = React.createRef();
     }
 
+    pageName = 'rules';
     mode = 'inner' as const;
 
     pageInit = pageInit;
@@ -32,13 +34,12 @@ class Rules extends Page<RulesI['props'], RulesI['state']> implements RulesI {
 
     render() {
         const { content } = this.state;
-        const { authUser } = this.props;
 
         return this.renderPage({
             render: () =>
-                authUser && content ? (
+                content ? (
                     <>
-                        <Header content={content} authUser={authUser} />
+                        <Header content={content} />
                     </>
                 ) : null,
             className: '_inner',

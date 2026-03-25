@@ -16,6 +16,9 @@ const resizeHandler: I['resizeHandler'] = async function () {
     const p = getRealParams({
         parent: this.parent.current!,
         elem: '.popup__innerBox',
+        width: this.parent.current!.offsetWidth,
+        height: this.parent.current!.offsetHeight,
+        // isNotRemove: true,
     }) as any;
 
     const diffHeight = parentHeight - p.height - topBarHeight - setPxFromRem(120);

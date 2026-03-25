@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Default from '@components/default/Default.tsx';
+import Icon from '@components/icon/Icon.tsx';
 import Media from '@components/media/Media.tsx';
 
 import TopBarI from './types.ts';
@@ -23,7 +24,7 @@ class TopBar extends Default<TopBarI['props'], TopBarI['state']> implements TopB
     renderActions = renderActions;
 
     render() {
-        const { className, mode } = this.props;
+        const { className, mode, pageCloseHandler } = this.props;
 
         return (
             <div
@@ -33,7 +34,7 @@ class TopBar extends Default<TopBarI['props'], TopBarI['state']> implements TopB
                 <div className="topBar__inner _INNER">
                     {this.renderLogo()}
                     <Media check={(d) => d === 'desktop'}>{this.renderActions()}</Media>
-                    <Media check={(d) => d === 'mobile' && mode !== 'popup'}>
+                    <Media check={(d) => d === 'mobile' && !mode}>
                         <img
                             src={require('@media/user-profile.svg').default}
                             alt=""
@@ -42,6 +43,11 @@ class TopBar extends Default<TopBarI['props'], TopBarI['state']> implements TopB
                                 AppRouter.changePage({ pageName: 'profile' });
                             }}
                         />
+                    </Media>
+                    <Media check={(d) => d === 'mobile' && !!mode}>
+                        <div className="closeBtn topBar__close" onClick={pageCloseHandler}>
+                            <Icon name="popup-close" />
+                        </div>
                     </Media>
                 </div>
             </div>

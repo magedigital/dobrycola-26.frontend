@@ -9,7 +9,7 @@ const renderBack: I['renderBack'] = function () {
         <div className="product__back _FULL _COL _COL_H_CENTER">
             <p className="product__backText _main">{product.description.header.title}</p>
             <p
-                className="product__backText"
+                className="product__backText _default"
                 dangerouslySetInnerHTML={{ __html: product.description.header.description }}
             ></p>
             <div className="product__backButton">

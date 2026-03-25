@@ -22,7 +22,7 @@ class Header extends Default<HeaderI['props'], HeaderI['state']> implements Head
 
     render() {
         return (
-            <div ref={this.parent} className="productsHeader _SECTION">
+            <div ref={this.parent} className="rules _SECTION">
                 {this.renderHead()}
                 {this.renderCards()}
             </div>

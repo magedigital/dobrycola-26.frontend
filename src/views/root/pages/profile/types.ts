@@ -122,6 +122,10 @@ type ProfileContentT = {
     };
 };
 
+type ProfileChzCodeT = {
+    id: string;
+};
+
 type ProfileMerchT = {
     title: string;
     thumb: string;
@@ -153,4 +157,5 @@ export type {
     ProfilePrizeT,
     ProfileContentT,
     ProfileMerchT,
+    ProfileChzCodeT,
 };

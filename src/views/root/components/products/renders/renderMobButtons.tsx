@@ -30,7 +30,7 @@ const renderMobButtons: I['renderMobButtons'] = function () {
                                 }
                             }}
                         >
-                            <Icon name={key === 'prev' ? 'arrow-prev-long' : 'arrow-next-long'} />
+                            <Icon name={key === 'prev' ? 'arrow-prev-thin' : 'arrow-next-thin'} />
                         </div>
                     );
                 })}

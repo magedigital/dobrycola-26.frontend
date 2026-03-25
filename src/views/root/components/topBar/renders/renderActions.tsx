@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { appStore } from '@store/store.tsx';
+
 import I from '../types.ts';
 
 import { AppRouter } from '../../../../../index.tsx';
@@ -12,6 +14,7 @@ const renderActions: I['renderActions'] = function () {
             <div
                 className="topBar__action _reg _ROW _ROW_CENTER _CLICK"
                 onClick={() => {
+                    appStore.getState().setPopup({ name: 'chequePopup' });
                     setMenuState(false);
                 }}
             >

@@ -13,12 +13,14 @@ type PropsT = {
 export default function Final({ setStep }: PropsT): React.ReactNode {
     return (
         <>
+            <div className="popup__head _COL _COL_H_CENTER">
+                <div className="popup__title">Регистрация чека</div>
+            </div>
             <div className="popup__final _FULL_W _COL _COL_H_CENTER _bottom">
                 <div className="popup__finalTitle">Спасибо!</div>
                 <div className="popup__finalText">
-                    Твой чек отправлен на проверку. <br className="_DESKTOP" />
-                    Ты получишь ответ на E-mail в течение <br className="_DESKTOP" />
-                    3-х дней.
+                    Ваш чек отправлен на проверку. <br className="_DESKTOP" />
+                    Вы получите ответ на E-mail в течение 3-х дней.
                 </div>
             </div>
             <div className="popup__buttons _ROW">
@@ -27,7 +29,7 @@ export default function Final({ setStep }: PropsT): React.ReactNode {
                         onClick={() => {
                             setStep('start', undefined);
                         }}
-                        className="_backColor"
+                        className="_boldBorder _darkPinkColor"
                     >
                         Ещё чек
                     </Button>
@@ -44,7 +46,7 @@ export default function Final({ setStep }: PropsT): React.ReactNode {
                             //     window.Telegram.WebApp?.close();
                             // }
                         }}
-                        className="_backColor"
+                        className="_boldBorder _purpleColor"
                     >
                         Закрыть окно
                     </Button>

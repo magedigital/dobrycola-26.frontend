@@ -26,9 +26,6 @@ const renderStep: I['renderStep'] = function (id) {
                 <ScanError
                     setStep={this.setStep.bind(this)}
                     uploadQRCode={this.uploadQRCode.bind(this)}
-                    updateListRender={async () => {
-                        await this.asyncSetState({ updateListRenderKey: new Date().getTime() });
-                    }}
                 />
             )}
             {id === 'form' && (

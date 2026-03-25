@@ -8,6 +8,7 @@ import TableI from './types.ts';
 
 import renderContent from './renders/renderContent.tsx';
 import renderHead from './renders/renderHead.tsx';
+import renderRow from './renders/renderRow.tsx';
 
 class Table extends Default<TableI['props'], TableI['state']> implements TableI {
     parent: TableI['parent'];
@@ -23,6 +24,7 @@ class Table extends Default<TableI['props'], TableI['state']> implements TableI 
 
     renderHead = renderHead;
     renderContent = renderContent;
+    renderRow = renderRow;
 
     render() {
         const { name } = this.props;

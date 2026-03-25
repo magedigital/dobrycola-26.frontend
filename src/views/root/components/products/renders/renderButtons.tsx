@@ -11,7 +11,7 @@ const renderButtons: I['renderButtons'] = function () {
             {(['prev', 'next'] as const).map((key) => (
                 <div className={`products__sliderButton _CLICK _COL _COL_CENTER _${key}`} key={key}>
                     <i className="products__sliderButtonIcon">
-                        <Icon name={key === 'prev' ? 'arrow-prev-short' : 'arrow-next-short'} />
+                        <Icon name={key === 'prev' ? 'arrow-prev-long' : 'arrow-next-long'} />
                     </i>
                 </div>
             ))}

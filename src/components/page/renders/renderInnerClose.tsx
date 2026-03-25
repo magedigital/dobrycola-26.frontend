@@ -9,7 +9,7 @@ const renderInnerClose: I['renderInnerClose'] = function () {
 
     return (
         <div
-            className={this.getClass('page__close _CLICK', isCloseMove && '_move')}
+            className={this.getClass('closeBtn page__close _CLICK', isCloseMove && '_move')}
             onClick={this.close.bind(this)}
         >
             <Icon name="popup-close" />

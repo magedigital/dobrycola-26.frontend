@@ -4,6 +4,7 @@ import PageI from '@components/page/types';
 type PropsT = {
     mode?: 'popup' | 'inner';
     setMenuState: PageI['setMenuState'];
+    pageCloseHandler?: () => void;
 };
 
 type StateT = {};

@@ -1,9 +1,9 @@
 import React from 'react';
 
 export default (
-    <svg viewBox="0 0 16 14" fill="none">
+    <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
-            d="M15.8135 7L9.10645 13.707L7.69238 12.293L11.9854 8H-0.000976562V6H11.9854L7.69238 1.70703L9.10645 0.292969L15.8135 7Z"
+            d="M24.8018 11.4004L13.6133 22.8008L10.7588 20L17.2354 13.4004L0 13.4004L0 9.40039L17.2354 9.40039L10.7588 2.80078L13.6133 0L24.8018 11.4004Z"
             fill="white"
             className="icon__fill"
         />

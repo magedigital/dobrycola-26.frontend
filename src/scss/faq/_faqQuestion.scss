@@ -27,7 +27,7 @@
                 display: flex;
                 align-items: center;
                 min-height: 44rem;
-                padding: 0 32rem 0 53rem;
+                padding: 0 32rem 0 44rem;
             }
         }
 
@@ -39,7 +39,6 @@
             height: 48rem;
             padding-bottom: 1rem;
             color: #fff;
-            font-weight: 600;
             font-size: 18rem;
             background: #d300b4;
             border-radius: 10rem;
@@ -47,10 +46,10 @@
             @include mob {
                 top: 50%;
                 left: 2rem;
-                width: 38rem;
-                height: 38rem;
-                font-weight: 600;
-                font-size: 22rem;
+                width: 32rem;
+                height: 32rem;
+                font-size: 12rem;
+                border-radius: 6rem;
                 transform: translate(0, -50%);
             }
         }
@@ -64,7 +63,7 @@
 
             @include mob {
                 padding: 3rem 0;
-                font-size: 21rem;
+                font-size: 16rem;
                 line-height: 1.15;
             }
         }
@@ -81,7 +80,7 @@
             @include icon(#8200cc);
 
             @include mob {
-                top: 18rem;
+                top: 12rem;
                 right: 2rem;
                 width: 20rem;
                 height: 20rem;

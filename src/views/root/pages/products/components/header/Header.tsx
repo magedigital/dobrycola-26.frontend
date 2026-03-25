@@ -11,6 +11,7 @@ class Header extends Default<HeaderI['props'], HeaderI['state']> implements Head
 
     constructor(props: HeaderI['props']) {
         super(props);
+
         this.state = {};
 
         this.parent = React.createRef();
@@ -21,7 +22,10 @@ class Header extends Default<HeaderI['props'], HeaderI['state']> implements Head
 
         return (
             <div ref={this.parent} className="productsHeader _SECTION">
-                <Products products={content.components.products} />
+                <h1 className="productsHeader__title _TITLE _inner">Продукты-участники</h1>
+                <div className="productsHeader__content">
+                    <Products products={content.components.products} />
+                </div>
             </div>
         );
     }

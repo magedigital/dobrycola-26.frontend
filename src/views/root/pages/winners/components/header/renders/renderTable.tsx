@@ -8,7 +8,7 @@ import I from '../types.ts';
 import { winnerTableCols } from '../static/table.ts';
 
 const renderTable: I['renderTable'] = function () {
-    const { limit } = this.state;
+    const { limit, searchPhone, searchWeek } = this.state;
     const allWinners = this.getWinnersList();
     const hasMore = allWinners.length > limit;
     const winners = allWinners.filter((w, i) => i < limit);
@@ -22,12 +22,14 @@ const renderTable: I['renderTable'] = function () {
                     cols={winnerTableCols}
                     render={this.renderTableCol.bind(this)}
                     isMobRows={true}
+                    emptyId={searchPhone?.length === 4 ? 'phone' : searchWeek || 'empty'}
+                    renderEmpty={this.renderTableEmpty.bind(this)}
                 />
             </div>
             {hasMore && (
                 <div className="winners__tableButton">
                     <Button
-                        className="_whiteColor"
+                        className="_whiteColor _boldBorder"
                         onClick={() => {
                             this.setState({ limit: limit + this.step });
                         }}

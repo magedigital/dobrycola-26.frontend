@@ -22,7 +22,7 @@ class Header extends Default<HeaderI['props'], HeaderI['state']> implements Head
 
         return (
             <div ref={this.parent} className="faqHeader _SECTION">
-                <h1 className="faqHeader__title _TITLE">ВОПРОС-ОТВЕТ</h1>
+                <h1 className="faqHeader__title _TITLE _inner">ВОПРОС-ОТВЕТ</h1>
                 <div className="faqHeader__items _FULL_W">
                     {questions.map((question, index) => (
                         <div className="faqHeader__item _FULL_W" key={index}>

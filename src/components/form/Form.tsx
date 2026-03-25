@@ -4,6 +4,7 @@ import Button from '@components/button/Button.tsx';
 import Editor from '@components/editor/Editor.tsx';
 import Error from '@components/error/Error.tsx';
 import Field from '@components/field/Field.tsx';
+import Media from '@components/media/Media.tsx';
 
 import changePropsCb from './methods/changePropsCb.ts';
 import init from './methods/init.ts';
@@ -69,13 +70,24 @@ class Form extends Editor<FormI['props'], FormI['state']> implements FormI {
                 {requiredText && <div className="form__required">{requiredText}</div>}
                 <Error className="form__error" error={error?.text} />
                 <div className="form__button">
-                    <Button
-                        className={this.getClass(button.className, '_bigSize')}
-                        onClick={this.sendForm.bind(this)}
-                        loading={loadingKey === 'send'}
-                    >
-                        {button.text}
-                    </Button>
+                    <Media check={(d) => d === 'desktop'}>
+                        <Button
+                            className={this.getClass(button.className, '_bigSize')}
+                            onClick={this.sendForm.bind(this)}
+                            loading={loadingKey === 'send'}
+                        >
+                            {button.text}
+                        </Button>
+                    </Media>
+                    <Media check={(d) => d === 'mobile'}>
+                        <Button
+                            className={this.getClass(button.className, '_mediumSize')}
+                            onClick={this.sendForm.bind(this)}
+                            loading={loadingKey === 'send'}
+                        >
+                            {button.text}
+                        </Button>
+                    </Media>
                 </div>
             </div>
         );

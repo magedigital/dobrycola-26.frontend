@@ -40,7 +40,9 @@ class Form extends Editor<FormI['props'], FormI['state']> implements FormI {
     render() {
         return (
             <>
-                <div className="popup__title _bottom">Регистрация чека</div>
+                <div className="popup__head _COL _COL_H_CENTER">
+                    <div className="popup__title">Регистрация чека</div>
+                </div>
                 {this.renderFields()}
                 {this.renderUploadField()}
                 {this.renderFoot()}
