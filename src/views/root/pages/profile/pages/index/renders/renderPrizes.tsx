@@ -19,7 +19,7 @@ const renderPrizes: I['renderPrizes'] = function () {
                         <Link
                             className="profile__blockPrize _COL _COL_H_CENTER"
                             key={key}
-                            pageName={'game-inner'}
+                            pageName="gameInner"
                             ids={{ 1: name.toString() }}
                         >
                             <div className="profile__blockPrizeHead">

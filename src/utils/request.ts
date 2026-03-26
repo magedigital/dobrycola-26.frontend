@@ -2,6 +2,8 @@ import axios, { AxiosError, AxiosRequestConfig } from 'axios';
 
 import { enums } from '@global/enums';
 
+import { setError } from '../views/root/components/errors/utils/errorHandler';
+
 import { getCookie, setCookie } from './cookies';
 
 type RequestParamsT<T = ObjT> = {
@@ -56,10 +58,15 @@ export default async function request<T extends any>({
         return response.data;
     } catch (e) {
         const error = e as AxiosError;
+        const errorData = error?.response?.data ?? error;
 
         checkResponse(error.response?.data);
 
-        return Promise.reject(error?.response?.data ?? error);
+        if (errorData) {
+            setError({ text: errorData.errorText, type: 'error' });
+        }
+
+        return Promise.reject(errorData);
     }
 }
 

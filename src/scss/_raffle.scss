@@ -1,0 +1,506 @@
+.raffle {
+    position: relative;
+    width: 100%;
+    padding-bottom: 168rem;
+    transition: $trans;
+
+    @include mob {
+        padding-bottom: 204rem;
+    }
+
+    &._result {
+        padding-bottom: 304rem;
+
+        &._auth {
+            padding-bottom: 270rem;
+
+            @include mob {
+                padding-bottom: 230rem;
+            }
+        }
+
+        @include mob {
+            padding-bottom: 274rem;
+        }
+    }
+
+    &__head {
+        width: 100%;
+        margin-bottom: 18rem;
+
+        &Title {
+            margin-bottom: 12rem;
+        }
+    }
+
+    &__fires {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 100;
+        width: 400rem;
+        height: 400rem;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: $trans;
+        pointer-events: none;
+
+        // background: #000;
+
+        @include mob {
+            width: 320rem;
+            height: 320rem;
+            margin-top: -38rem;
+        }
+    }
+
+    &._complete:not(._result) &__fires {
+        opacity: 1;
+    }
+
+    &__inner {
+        width: 100%;
+    }
+
+    &__slider {
+        position: relative;
+        width: calc(100% + 230rem);
+        margin-left: -115rem;
+        transition: $trans;
+
+        &:not(._ready) {
+            opacity: 0;
+        }
+
+        @include mob {
+            width: calc(100% + 590rem);
+            margin: 44rem 0 8rem -295rem;
+        }
+
+        &Inner {
+            width: 100%;
+        }
+
+        &Items {
+            position: relative;
+            z-index: 3;
+            display: inline-flex;
+        }
+
+        &Item {
+            position: relative;
+            z-index: 1;
+            width: 266rem;
+            height: 286rem;
+            padding: 32rem;
+            transition: $trans;
+            will-change: transform;
+
+            @include mob {
+                width: 190rem;
+                height: 274rem;
+                margin-right: 0;
+                padding: 0;
+            }
+
+            &:not([data-cur]) {
+                &::after {
+                    opacity: 0;
+                }
+            }
+
+            &Head {
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                margin-bottom: 18rem;
+                padding: 10rem;
+                user-select: none;
+                pointer-events: none;
+                aspect-ratio: 1;
+
+                @include mob {
+                    margin-bottom: 32rem;
+                }
+
+                &::before {
+                    position: absolute;
+                    bottom: -10rem;
+                    left: 50%;
+                    z-index: -2;
+                    width: 160rem;
+                    height: 80rem;
+                    background: rgba(#4e2d61, 0.11);
+                    border-radius: 50%;
+                    transform: translate(-50%, 0);
+                    filter: blur(10rem);
+                    transition: $trans;
+                    content: "";
+
+                    @include mob {
+                        bottom: -12rem;
+                        width: 180rem;
+                        height: 90rem;
+                    }
+                }
+
+                &::after {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    z-index: -1;
+                    width: 200rem;
+                    height: 200rem;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    transition: $trans;
+                    content: "";
+
+                    @include bg("/media/inner/prize-win-back.svg", contain, center);
+                }
+            }
+
+            &Image {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                transition: $trans;
+                will-change: transform;
+            }
+
+            &Name {
+                display: flex;
+                align-items: center;
+                height: 34rem;
+                color: #fff;
+                font-size: 17rem;
+                line-height: 1.2;
+                text-align: center;
+                text-transform: uppercase;
+                transition: $trans;
+
+                @include mob {
+                    font-size: 17rem;
+                }
+            }
+        }
+    }
+
+    &._complete &__slider {
+        &Item:not([data-cur]) {
+            opacity: 0;
+        }
+    }
+
+    &__sliderItem[data-cur] &__sliderItemHead::before {
+        background: rgba(#4e2d61, 0.16);
+
+        @include mob {
+            transform: translate(-50%, 30rem);
+        }
+    }
+
+    &__sliderItem:not([data-cur]) &__sliderItemImage {
+        transform: scale(0.8);
+
+        @include mob {
+            transform: scale(.8);
+        }
+    }
+
+    &__sliderItem:not([data-cur]) &__sliderItemName {
+        @include mob {
+            opacity: 0;
+        }
+    }
+
+    &__sliderItem[data-cur] &__sliderItemImage {
+        transform: scale(1.12);
+
+        @include mob {
+            transform: scale(1.3);
+        }
+    }
+
+    &._complete &__sliderItem[data-cur] {
+        transform: translate(0, 70rem) scale(1.6);
+
+        @include mob {
+            transform: translate(0, 84rem) scale(1.4);
+        }
+    }
+
+    &._complete &__sliderItem[data-cur] &__sliderItemImage {
+        transform: scale(0.8);
+    }
+
+    &._complete &__sliderItem[data-cur] &__sliderItemHead {
+        &::before {
+            opacity: 0;
+        }
+
+        &::after {
+            opacity: 1;
+            animation: spin 1 2s ease-in-out;
+
+            @keyframes spin {
+                0% {
+                    transform: translate(-50%, -50%) rotate(0deg);
+                }
+
+                100% {
+                    transform: translate(-50%, -50%) rotate(720deg);
+                }
+            }
+        }
+    }
+
+    &._result &__sliderItem[data-cur] {
+        transform: none;
+    }
+
+    &._result &__sliderItem[data-cur] &__sliderItemImage {
+        transform: scale(0.8);
+    }
+
+    &._complete &__spinner {
+        opacity: 0;
+    }
+
+    &__spinner {
+        position: absolute;
+        bottom: -730rem;
+        left: 50%;
+        z-index: 2;
+        width: 820rem;
+        height: 820rem;
+        transform: translate(-50%, 0);
+        transition: $trans;
+        pointer-events: none;
+        will-change: transform;
+
+        @include mob {
+            bottom: -480rem;
+            width: 620rem;
+            height: 620rem;
+        }
+
+        &Arrow {
+            position: absolute;
+            top: -38rem;
+            left: 50%;
+            z-index: 2;
+            width: 106rem;
+            height: 72rem;
+            margin-left: 6rem;
+            transform: translate(-50%, 0);
+            opacity: 0;
+            transition: $trans;
+
+            @include bg("/media/inner/arrow-carousel.png", contain, center top);
+
+            @include mob {
+                margin-left: 5rem;
+            }
+        }
+
+        &Back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+
+            &::before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: -1;
+                width: 110%;
+                height: 110%;
+                transform: translate(-50%, -50%);
+                content: "";
+
+                @include bg("/media/inner/carousel-big-shadow.png", contain, center);
+            }
+
+            &Image {
+                position: relative;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    &._start &__spinner {
+        &Arrow {
+            opacity: 1;
+        }
+    }
+
+    &._start &__startForm {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &__startForm {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        z-index: 2;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        transform: translate(-50%, 0);
+        transition: $trans;
+
+        @include mob {
+            width: 100%;
+            padding-bottom: 24rem;
+        }
+
+        &Checkbox {
+            margin-bottom: 38rem;
+            padding: 6rem 9rem 6rem 6rem;
+            background: rgba(#fff, 0.3);
+            border-radius: 8rem;
+
+            @include mob {
+                width: 100%;
+                margin-bottom: 64rem;
+                padding: 8rem 10rem 8rem 8rem;
+            }
+        }
+
+        &Button {
+            width: 180rem;
+            height: 64rem;
+
+            @include mob {
+                width: 236rem;
+                height: 72rem;
+            }
+
+            & .button {
+                @include mob {
+                    font-size: 16rem;
+                }
+            }
+        }
+    }
+
+    &:not(._result) &__resultForm {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &__resultForm {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        align-items: center;
+        justify-content: center;
+        width: 560rem;
+        padding: 36rem;
+        background: #d300b4;
+        border-radius: 24rem;
+        transform: translate(-50%, 0);
+        transition: $trans;
+
+        @include mob {
+            bottom: 16rem;
+            width: calc(100%);
+            padding: 14rem 12rem 26rem;
+            border-radius: 28rem;
+        }
+
+        &Info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 13rem 24rem;
+            background: #8200cc;
+            border-radius: 12rem;
+            counter-reset: testCount;
+
+            @include mob {
+                height: auto;
+            }
+
+            &Title {
+                width: 100%;
+                margin-bottom: 10rem;
+                color: #fbac2f;
+                font-weight: 600;
+                font-size: 16rem;
+                line-height: 1.35;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            &Text {
+                position: relative;
+                width: 100%;
+                color: #fff;
+                font-weight: 500;
+                font-size: 16rem;
+                font-family: Onest;
+                line-height: 1.4;
+                counter-increment: testCount;
+
+                &._center {
+                    text-align: center;
+                }
+
+                &._list {
+                    padding-left: 16rem;
+
+                    @include mob {
+                        padding-left: 17rem;
+                    }
+                }
+
+                &._list::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    color: #fff;
+                    font-weight: 500;
+                    font-size: 16rem;
+                    line-height: 1.35;
+                    content: counter(testCount) ".";
+                }
+            }
+        }
+
+        &Field {
+            width: 100%;
+            height: 54rem;
+            margin-top: 24rem;
+
+            @include mob {
+                height: 64rem;
+            }
+        }
+
+        &Button {
+            height: 64rem;
+            margin-top: 24rem;
+
+            @include mob {
+                margin-top: 20rem;
+            }
+
+            & .button {
+                @include mob {
+                    font-size: 16rem;
+                }
+            }
+        }
+    }
+}

@@ -77,10 +77,13 @@ const pages = {
     game: {
         links: ['game'],
     },
-    'game-inner': {
+    gameInner: {
         links: [],
         level: 1,
         parentName: 'game',
+    },
+    raffle: {
+        links: ['raffle'],
     },
 } as const;
 

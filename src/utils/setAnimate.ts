@@ -2,6 +2,9 @@ type TimingT = (data: number) => number;
 
 const makeEaseInOut: TimingT = (timeFraction) =>
     timeFraction > 0.5 ? 4 * Math.pow(timeFraction - 1, 3) + 1 : 4 * Math.pow(timeFraction, 3);
+const makeEaseOut: TimingT = (t) => (t <= 0.5 ? t : Math.pow(t - 1, 3) + 1);
+
+export { makeEaseOut };
 
 export default function setAnimate({
     progress: startProgress = 0,

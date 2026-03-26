@@ -101,6 +101,18 @@
         background-color: #ffae83;
     }
 
+    &._innerReverse._inner &__scrollContent {
+        @include bg("/media/inner/carousel-back.svg", 100% auto, center top);
+
+        @include mob {
+            @include bg("/media/inner/carousel-back-mob.svg", 100% auto, center top);
+        }
+    }
+
+    &._innerReverse._inner &__scrollContent {
+        background-color: #ff49b8;
+    }
+
     &._inner &__scrollInner {
         padding: 132rem 0 100rem;
 

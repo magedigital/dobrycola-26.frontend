@@ -238,6 +238,10 @@
         font-size: 16rem;
         text-transform: none;
 
+        &._lightColor {
+            color: #fff;
+        }
+
         @include mob {
             font-size: 23rem;
 

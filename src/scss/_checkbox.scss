@@ -36,11 +36,27 @@
             }
 
             & a {
+                display: inline-block;
                 color: #d300b4;
                 font-weight: 600;
                 font-family: Onest;
                 line-height: 1;
                 border-bottom: 1px solid rgba(#d300b4, 0.5);
+            }
+        }
+    }
+
+    &._mediumSize &__view {
+        @include mob {
+            padding-left: 53rem;
+        }
+
+        &Inner {
+            font-size: 14rem;
+
+            @include mob {
+                font-size: 15.5rem;
+                line-height: 1.4;
             }
         }
     }
@@ -51,8 +67,8 @@
         }
 
         & a {
-            color: #fff;
-            border-bottom: 1px solid rgba(#fff, 0.32);
+            color: #8200cc;
+            border-bottom: 1px solid rgba(#8200cc, 0.5);
         }
     }
 
@@ -84,7 +100,24 @@
         }
     }
 
+    &._mediumSize &__box {
+        @include mob {
+            left: 0;
+            width: 36rem;
+            height: 36rem;
+        }
+
+        &Icon {
+            @include mob {
+                width: 23rem;
+                height: 23rem;
+            }
+        }
+    }
+
     &._whiteColor &__box {
+        border-color: #fff;
+
         @include icon(#5d279e);
     }
 

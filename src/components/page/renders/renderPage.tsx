@@ -20,6 +20,7 @@ const renderPage: I['renderPage'] = function ({ render, className }) {
                 className,
                 isInit === false && '_loading',
                 isPopupShow && '_disabled',
+                this.mode === 'inner' && '_inner',
             )}
         >
             <div className={this.getClass('page__topBar _fix', isFixBarShow ? '_show' : '')}>

@@ -23,9 +23,11 @@ class Profile extends Page<ProfileI['props'], ProfileI['state']> implements Prof
     constructor(props: ProfileI['props']) {
         super(props);
 
+        const content = getLocalContent('profile');
+
         this.state = {
-            isInit: false,
-            content: getLocalContent('profile'),
+            isInit: !!content,
+            content,
         };
 
         this.getContent = this.getContent.bind(this);

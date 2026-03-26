@@ -7,6 +7,7 @@ import Faq from '../pages/faq/Faq.tsx';
 import Index from '../pages/index/Index.tsx';
 import Products from '../pages/products/Products.tsx';
 import Profile from '../pages/profile/Profile.tsx';
+import Raffle from '../pages/raffle/Raffle.tsx';
 import Rules from '../pages/rules/Rules.tsx';
 import Winners from '../pages/winners/Winners.tsx';
 
@@ -49,6 +50,11 @@ const pages = {
     rules: {
         render(this: I) {
             return <Rules />;
+        },
+    },
+    raffle: {
+        render(this: I) {
+            return <Raffle />;
         },
     },
 } as const;

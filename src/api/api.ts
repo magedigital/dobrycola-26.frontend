@@ -29,4 +29,7 @@ export const API = {
         SEND: '/SendParticipantInfo',
         UPLOAD: '/UploadParticipantFile',
     },
+    RAFFLE: {
+        START: '/XMASWelcomeRaffle',
+    },
 };
