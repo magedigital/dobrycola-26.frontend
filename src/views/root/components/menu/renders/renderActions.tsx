@@ -16,7 +16,7 @@ const renderActions: I['renderActions'] = function () {
                 <Button
                     className="_purpleColor"
                     onClick={() => {
-                        appStore.getState().setPopup({ name: 'chequePopup' });
+                        appStore.getState().setPopup({ name: 'codePopup' });
                         setState(false);
                     }}
                 >

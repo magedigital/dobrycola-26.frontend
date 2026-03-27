@@ -8,18 +8,18 @@ const fakePrize = {
 };
 
 const renderSlider: I['renderSlider'] = function () {
-    // const { curIndex, prize, items = [] } = this.state;
-     const {
-        curIndex = 10,
-        prize = {
-            id: this.gameId,
-            image: 'https://dev.2025-summer.dobrycola-promo.srv08.ru/upload/iblock/7d3/jvf3jb2rh6umefpyny3rak7alpzq6wn4.png',
-            name: 'Prize',
-            date: new Date().getTime(),
-            index: curIndex,
-        },
-        items = [],
-    } = this.state;
+    const { curIndex, prize, items = [] } = this.state;
+    //  const {
+    //     curIndex = 10,
+    //     prize = {
+    //         id: this.gameId,
+    //         image: 'https://dev.2025-summer.dobrycola-promo.srv08.ru/upload/iblock/7d3/jvf3jb2rh6umefpyny3rak7alpzq6wn4.png',
+    //         name: 'Prize',
+    //         date: new Date().getTime(),
+    //         index: curIndex,
+    //     },
+    //     items = [],
+    // } = this.state;
 
     return (
         <div className={`raffle__slider ${items.length ? '_ready' : ''}`}>

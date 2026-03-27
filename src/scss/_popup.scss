@@ -141,11 +141,8 @@
     }
 
     &__height {
-        min-height: 150rem;
-
-        @include mob {
-            min-height: auto;
-        }
+        min-height: 180rem;
+        padding-bottom: 20rem;
     }
 
     &__steps {

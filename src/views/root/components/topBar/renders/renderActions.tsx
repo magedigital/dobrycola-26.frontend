@@ -14,7 +14,7 @@ const renderActions: I['renderActions'] = function () {
             <div
                 className="topBar__action _reg _ROW _ROW_CENTER _CLICK"
                 onClick={() => {
-                    appStore.getState().setPopup({ name: 'chequePopup' });
+                    appStore.getState().setPopup({ name: 'codePopup' });
                     setMenuState(false);
                 }}
             >

@@ -18,7 +18,7 @@ const start: I['start'] = async function () {
     await this.asyncSetState({ loadingKey: 'start' });
 
     try {
-        // await this.startGame({ play: true });
+        await this.startGame({ play: true });
         await this.asyncSetState({ isStart: true, loadingKey: undefined });
 
         this.startCarusel();

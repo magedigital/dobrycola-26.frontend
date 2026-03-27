@@ -1,10 +1,9 @@
-import { authRequests } from '@api/requests/auth.ts';
+import { codeRequests } from '@api/requests/code.ts';
 
 import I from '../types.ts';
 
 const sendForm: I['sendForm'] = async function () {
     const { form } = this.state;
-    const { setStep } = this.props;
 
     if (!form) {
         return;
@@ -13,12 +12,7 @@ const sendForm: I['sendForm'] = async function () {
     await this.asyncSetState({ loadingKey: 'send' });
 
     try {
-        const response = await authRequests.registration({ login: form.login });
-
-        await setStep('code', {
-            login: form.login!,
-            mailService: response.mailService,
-        });
+        await codeRequests.reg({ code: form.code! });
     } catch (e) {}
 
     await this.asyncSetState({ loadingKey: undefined });

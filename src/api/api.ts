@@ -30,6 +30,9 @@ export const API = {
         UPLOAD: '/UploadParticipantFile',
     },
     RAFFLE: {
-        START: '/XMASWelcomeRaffle',
+        START: '/WelcomeRaffle',
+    },
+    CODE: {
+        REG: '/CodeRegistration',
     },
 };
