@@ -5,6 +5,7 @@ import Pages from '@components/pages/Pages.tsx';
 
 import I from '../types.ts';
 
+import { AppRouter } from '../../../../../index.tsx';
 import { profilePages } from '../static/pages.tsx';
 
 const renderPages: I['renderPages'] = function () {
@@ -32,7 +33,7 @@ const renderPages: I['renderPages'] = function () {
                 itemClass="profile__pagesItem"
                 context={this}
                 pages={profilePages}
-                filter={(n) => n === 'profile'}
+                filter={(n) => AppRouter.pages[n].parentName === 'profile'}
                 parentStyleProps={['width']}
                 parentRealStyleProps={['width']}
                 renderKey={pagesRenderKey}

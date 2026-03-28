@@ -18,7 +18,7 @@ const renderContent: I['renderContent'] = function () {
                         key={key}
                     >
                         <div className="profileRaffle__sliderButtonIcon">
-                            <Icon name={key === 'prev' ? 'arrow-prev-short' : 'arrow-next-short'} />
+                            <Icon name={key === 'prev' ? 'arrow-prev-long' : 'arrow-next-long'} />
                         </div>
                     </div>
                 ))}
@@ -45,7 +45,7 @@ const renderContent: I['renderContent'] = function () {
                 </div>
             </div>
             <div className="profileRaffle__button">
-                <Button onClick={buttonOnClick} className="_purple">
+                <Button onClick={buttonOnClick} className="_darkPinkColor _boldBorder _mediumSize">
                     {buttonText}
                 </Button>
             </div>

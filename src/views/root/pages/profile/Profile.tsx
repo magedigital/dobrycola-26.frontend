@@ -26,7 +26,7 @@ class Profile extends Page<ProfileI['props'], ProfileI['state']> implements Prof
         const content = getLocalContent('profile');
 
         this.state = {
-            isInit: !!content,
+            isInit: false,
             content,
         };
 
@@ -62,6 +62,7 @@ class Profile extends Page<ProfileI['props'], ProfileI['state']> implements Prof
                         {this.renderContent()}
                     </>
                 ) : null,
+            className: '_profile',
         });
     }
 }

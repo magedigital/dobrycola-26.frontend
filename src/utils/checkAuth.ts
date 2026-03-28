@@ -83,7 +83,7 @@ export default async function checkAuth({ redirect }: ParamsT): Promise<void> {
         pageName = 'profile';
     }
 
-    if (pageName && 0) {
+    if (pageName) {
         AppRouter.changePage({ pageName, ids });
     }
 }

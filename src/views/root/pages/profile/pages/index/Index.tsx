@@ -9,6 +9,8 @@ import IndexI from './types.ts';
 import renderCodes from './renders/renderCodes.tsx';
 import renderPrizes from './renders/renderPrizes.tsx';
 import renderRaffles from './renders/renderRaffles.tsx';
+import renderTableCol from './renders/renderTableCol.tsx';
+import renderTableEmpty from './renders/renderTableEmpty.tsx';
 
 class Index extends Default<IndexI['props'], IndexI['state']> implements IndexI {
     parent: IndexI['parent'];
@@ -26,6 +28,9 @@ class Index extends Default<IndexI['props'], IndexI['state']> implements IndexI 
     renderCodes = renderCodes;
     renderRaffles = renderRaffles;
     renderPrizes = renderPrizes;
+
+    renderTableCol = renderTableCol;
+    renderTableEmpty = renderTableEmpty;
 
     render() {
         return (

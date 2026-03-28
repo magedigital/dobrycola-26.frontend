@@ -6,6 +6,7 @@ import Icon from '@components/icon/Icon.tsx';
 import Link from '@components/link/Link.tsx';
 import LoaderBlock from '@components/loaderBlock/LoaderBlock.tsx';
 import Media from '@components/media/Media.tsx';
+import { appStore } from '@store/store.tsx';
 
 import I from '../types.ts';
 
@@ -32,7 +33,7 @@ const renderMain: I['renderMain'] = function () {
                                 >
                                     Скопировано
                                 </Fade>
-                                ID {authUser?.userId}
+                                ID {authUser.userId}
                                 <i
                                     className="profile__mainCopyIcon _CLICK"
                                     onClick={(e) => {
@@ -101,51 +102,33 @@ const renderMain: I['renderMain'] = function () {
                         У тебя <span className="profile__mainScoreCount">{data?.balance || 0}</span>{' '}
                         {data?.balanceTitle}
                     </div>
-                    <Link
-                        className="profile__mainLink _blue"
-                        pageName="index"
-                        callback={() => {
-                            // sendGoal('profileHistory');
-                        }}
-                    >
-                        История
-                    </Link>
+                    <div className="profile__mainLink _blue _CLICK">История</div>
                 </div>
             </div>
             <div className="profile__mainButtons">
                 <div className="profile__mainButtonsInner">
                     <div className="profile__mainButton">
                         <Button
-                            className="_purple"
+                            className="_darkPinkColor _boldBorder _minSize"
                             onClick={() => {
+                                appStore.getState().setPopup({ name: 'codePopup' });
                                 // sendGoal('regCodeBtn, profileRegCodeBtn', true);
                             }}
                         >
-                            ЗАРЕГИСТРИРОВАТЬ КОД
-                        </Button>
-                    </div>
-                    <div className="profile__mainButton">
-                        <Button
-                            className="_red"
-                            onClick={() => {
-                                // changePage({ pageName: 'cheque' });
-                                // sendGoal('regCheckBtn, profileRegCheckBtn', true);
-                            }}
-                        >
-                            ЗАРЕГИСТРИРОВАТЬ ЧЕК
+                            зарегистрировать код
                         </Button>
                     </div>
                 </div>
                 <div className="profile__mainButtonsInner _invite">
                     <div className="profile__mainButton">
                         <Button
-                            className="_pink"
+                            className="_blueColor _boldBorder _minSize"
                             onClick={() => {
                                 // changePage({ pageName: 'invite' });
                                 // sendGoal('inviteFriendBtn');
                             }}
                         >
-                            ПРИГЛАСИ ДРУГА - ПОЛУЧИ БАЛЛ
+                            ПРИГЛАСИ ДРУГА
                         </Button>
                     </div>
                 </div>

@@ -233,6 +233,16 @@
         }
     }
 
+    &._profile {
+        font-size: 20rem;
+
+        &._back {
+            padding: 10rem 16rem;
+            background: rgba(#ff49b8, 0.25);
+            border-radius: 8rem;
+        }
+    }
+
     &._sub {
         color: #d300b4;
         font-size: 16rem;

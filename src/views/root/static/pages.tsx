@@ -57,6 +57,11 @@ const pages = {
             return <Raffle />;
         },
     },
+    prizes: {
+        render(this: I) {
+            return <Prizes />;
+        },
+    },
 } as const;
 
 export default pages;

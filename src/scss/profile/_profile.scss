@@ -1,13 +1,11 @@
 .profile {
-    padding: 0 26rem;
-
-    @include mob {
-        padding: 10rem 0 0;
+    &__head {
+        margin-bottom: 32rem;
     }
 
     &__main {
-        margin-bottom: 48rem;
-        padding: 20rem;
+        margin-bottom: 40rem;
+        padding: 20rem 20rem 28rem;
         background: #fcfcfc;
         border-radius: 20rem;
 
@@ -17,7 +15,7 @@
 
         &Blocks {
             display: flex;
-            margin-bottom: 34rem;
+            margin-bottom: 42rem;
 
             @include mob {
                 flex-direction: column;
@@ -39,7 +37,7 @@
         &Block._score {
             align-items: flex-end;
             margin-left: auto;
-            padding-top: 10rem;
+            padding-top: 4rem;
 
             @include mob {
                 flex-direction: row;
@@ -54,10 +52,8 @@
             align-items: center;
             margin-bottom: 14rem;
             color: #2f2922;
-            font-weight: 600;
-            font-size: 24rem;
+            font-size: 22rem;
             line-height: 1.2;
-            text-transform: uppercase;
 
             @include mob {
                 flex-direction: column;
@@ -69,14 +65,15 @@
 
         &Copy {
             position: relative;
-            margin-right: 12rem;
-            padding: 6rem 34rem 6rem 12rem;
-            color: #6c1100;
-            font-weight: 600;
+            margin-right: 16rem;
+            padding: 4rem 34rem 4rem 10rem;
+            color: #2f2922;
+            font-weight: 900;
             font-size: 16rem;
+            font-family: Onest;
             line-height: 1.3;
-            background: #ffe7a5;
-            border-radius: 8rem;
+            background: #fbac2f;
+            border-radius: 4rem;
 
             @include mob {
                 margin: 10rem 0 0;
@@ -89,11 +86,11 @@
                 position: absolute;
                 top: 50%;
                 right: 10rem;
-                width: 17rem;
-                height: 17rem;
+                width: 16rem;
+                height: 16rem;
                 transform: translate(0, -50%);
 
-                @include icon(#fe431e);
+                @include icon(#8200cc);
 
                 @include mob {
                     width: 19rem;
@@ -126,10 +123,11 @@
         &Link {
             position: relative;
             display: inline-block;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 16rem;
-            line-height: 1;
-            border-bottom: 1px solid transparent;
+            font-family: Onest;
+            line-height: 0.85;
+            border-bottom: 1rem solid transparent;
             transition: $trans;
 
             &._loading {
@@ -141,8 +139,8 @@
             }
 
             &._pink {
-                color: #fe431e;
-                border-bottom-color: rgba(#fe431e, 0.64);
+                color: #d300b4;
+                border-bottom-color: rgba(#d300b4, 0.64);
             }
 
             &._purple {
@@ -155,8 +153,8 @@
             }
 
             &._blue {
-                color: #ff49b8;
-                border-bottom-color: rgba(#ff49b8, 0.64);
+                color: #10cfc9;
+                border-bottom-color: rgba(#10cfc9, 0.64);
             }
 
             & + & {
@@ -194,8 +192,9 @@
         &Score {
             margin-bottom: 12rem;
             color: #5d279e;
-            font-weight: 500;
+            font-weight: 900;
             font-size: 20rem;
+            font-family: Onest;
             text-transform: uppercase;
             transition: $trans;
 
@@ -209,10 +208,10 @@
                 display: inline-block;
                 min-width: 52rem;
                 margin: 0 4rem;
-                padding: 0 6rem;
+                padding: 0 9rem;
                 color: #fff;
                 font-weight: 700;
-                font-size: 22rem;
+                font-size: 24rem;
                 text-align: center;
 
                 @include mob {
@@ -227,7 +226,7 @@
                     z-index: -1;
                     width: 100%;
                     height: 52rem;
-                    background: linear-gradient(to top, #bd89ff, #ffb9bc);
+                    background: #d300b4;
                     border-radius: 360rem;
                     transform: translate(-50%, -50%);
                     content: "";
@@ -267,7 +266,7 @@
         }
 
         &Button {
-            height: 60rem;
+            height: 54rem;
             margin-right: 12rem;
 
             @include mob {
@@ -306,15 +305,15 @@
         }
 
         &Tab {
-            width: calc(calc(100% / 3) - 3rem);
-            padding: 19rem 20rem 18rem;
+            width: calc(calc(100% / 2) - 2rem);
+            padding: 16rem 20rem;
             color: #fff;
-            font-weight: 600;
-            font-size: 16rem;
+            font-weight: 500;
+            font-size: 14rem;
             white-space: nowrap;
             text-transform: uppercase;
-            background: #c50018;
-            border-radius: 14rem 14rem 0 0;
+            background: #d300b4;
+            border-radius: 8rem 8rem 0 0;
             transition: $trans;
 
             @include mob {
@@ -328,7 +327,7 @@
             }
 
             &._current {
-                color: #c50018;
+                color: #5d279e;
                 background: #fff;
             }
 
@@ -381,42 +380,21 @@
     &__block {
         position: relative;
         z-index: 1;
-        padding: 35rem 36rem;
+        padding: 32rem 36rem;
         overflow: hidden;
-        background: linear-gradient(to top, #ffd7d9, #dfcff4);
+        background: #ffe4d5;
         border-radius: 20rem;
-
-        &._ruffles {
-            background: #ffe1e6;
-        }
-
-        &._prizes {
-            background: linear-gradient(to top, #cdbce2, #ffd7d9);
-        }
 
         @include mob {
             padding: 18rem 10rem;
         }
 
-        &._codes,
-        &._prizes {
-            &::before {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                z-index: -1;
-                width: 100%;
-                height: 100%;
-                content: "";
-            }
-        }
-
         & + & {
-            margin-top: 36rem;
+            margin-top: 24rem;
         }
 
         &Head {
-            margin-bottom: 28rem;
+            margin-bottom: 34rem;
         }
 
         &Title {
@@ -424,14 +402,16 @@
         }
 
         &Description {
-            margin-top: 5rem;
-            padding: 4rem 10rem;
-            font-weight: 500;
+            margin-top: 7rem;
+            padding: 4rem 8rem;
+            color: #fff;
+            font-weight: 600;
             font-size: 16rem;
+            font-family: Onest;
             line-height: 1.3;
             text-align: center;
-            background: #ffe7a5;
-            border-radius: 360rem;
+            background: #ff49b8;
+            border-radius: 6rem;
 
             @include mob {
                 max-width: 87%;
@@ -511,9 +491,9 @@
         &Prizes {
             display: flex;
             align-items: stretch;
-            justify-content: space-between;
+            justify-content: center;
             width: 100%;
-            padding: 10rem 24rem 0;
+            padding: 10rem 24rem 12rem;
 
             @include mob {
                 flex-wrap: wrap;
@@ -524,22 +504,25 @@
 
         &Prize {
             position: relative;
-            width: 170rem;
+            width: 194rem;
+            margin: 0 50rem;
 
             @include mob {
                 width: 50%;
+                margin: 0;
                 margin-bottom: 20rem;
             }
 
             &Head {
                 position: relative;
-                width: 170rem;
-                height: 170rem;
-                margin-bottom: 16rem;
+                width: 100%;
+                margin-bottom: 24rem;
                 overflow: hidden;
+                background: #7a2799;
                 border-radius: 50%;
                 transition: $trans;
                 will-change: transform;
+                aspect-ratio: 1;
 
                 @include mob {
                     width: 146rem;
@@ -553,24 +536,14 @@
             }
 
             &Image {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 135%;
-                height: 135%;
-                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
                 transition: $trans;
-
-                @include mob {
-                    width: 115%;
-                    height: 115%;
-                }
             }
 
             &Content {
-                color: #5d279e;
-                font-weight: 600;
-                font-size: 16rem;
+                color: #222221;
+                font-size: 13rem;
                 line-height: 1.3;
                 text-align: center;
                 text-transform: uppercase;

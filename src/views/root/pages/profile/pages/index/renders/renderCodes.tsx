@@ -2,43 +2,41 @@ import React from 'react';
 
 import Button from '@components/button/Button.tsx';
 import List from '@components/list/List.tsx';
-import StringService from '@services/string/String.service.ts';
+import Table from '@components/table/Table.tsx';
 
 import I from '../types.ts';
 
+import { codeTableCols } from '../static/table.ts';
+
 const renderCodes: I['renderCodes'] = function () {
     const { currentCodesCount } = this.state;
-    const { setRenderKey, data } = this.props;
+    const { data, setRenderKey } = this.props;
     const allCodes = data?.codes || [];
     const codes = allCodes
         .map((item) => ({
-            _id: item.code,
-            code: item.code,
-            date: item.registered,
+            id: item.code,
+            ...item,
         }))
         .filter((item, key) => key < currentCodesCount);
     const hasMore = allCodes.length > currentCodesCount;
 
-    console.log(codes, setRenderKey);
-
     return (
         <div className="profile__block _codes _FULL_W _COL _COL_H_CENTER">
             <div className="profile__blockHead _COL _COL_H_CENTER">
-                <h3 className="profile__blockTitle _PROFILE-TITLE">МОИ КОДЫ</h3>
-                {data && data.balance < 10 && (
-                    <p className="profile__blockDescription">
-                        Для участия в еженедельных розыгрышах зарегистрируй ещё{' '}
-                        <span>{10 - data.balance}</span>{' '}
-                        {new StringService().getEndText(10 - data.balance, [
-                            'код',
-                            'кода',
-                            'кодов',
-                        ])}
-                    </p>
-                )}
+                <h3 className="profile__blockTitle _TITLE _profile">МОИ КОДЫ</h3>
+                <p className="profile__blockDescription">
+                    Каждый код даёт шанс на участие в розыгрыше
+                </p>
             </div>
             <div className="profile__blockTable _FULL_W">
-                {/* <Table name="codes" items={codes} callback={setRenderKey} /> */}
+                <Table
+                    name="codes"
+                    rows={codes}
+                    cols={codeTableCols}
+                    render={this.renderTableCol.bind(this)}
+                    renderEmpty={this.renderTableEmpty.bind(this)}
+                    renderListCb={setRenderKey}
+                />
             </div>
             {false && (
                 <List

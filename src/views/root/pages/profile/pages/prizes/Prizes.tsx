@@ -22,7 +22,7 @@ class Prizes extends Default<PrizesI['props'], PrizesI['state']> implements Priz
             <>
                 <div className="profile__block _codes _FULL_W _COL _COL_H_CENTER">
                     <div className="profile__blockHead _COL _COL_H_CENTER">
-                        <h3 className="profile__blockTitle _PROFILE-TITLE">МОИ призы</h3>
+                        <h3 className="profile__blockTitle _TITLE _profile">МОИ призы</h3>
                     </div>
                     {this.renderPrizes()}
                 </div>

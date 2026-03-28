@@ -9,7 +9,7 @@ const renderPrizes: I['renderPrizes'] = function () {
     return (
         <div className="profile__block _prizes _FULL_W _COL _COL_H_CENTER">
             <div className="profile__blockHead _COL _COL_H_CENTER">
-                <h3 className="profile__blockTitle _PROFILE-TITLE">Играй в Лосьвилле</h3>
+                <h3 className="profile__blockTitle _TITLE _profile _back">Играй и участвуй в розыгрыше специальных призов</h3>
             </div>
             <div className="profile__blockPrizes">
                 {(Object.keys(games) as (keyof typeof games)[]).map((name, key) => {

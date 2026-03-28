@@ -4,10 +4,9 @@ import I from '../types.ts';
 
 const renderContent: I['renderContent'] = function () {
     return (
-        <div className="profile _FULL_W">
+        <div className="page__content _FULL_W _COL _COL_H_CENTER">
             {this.renderHead()}
-            {this.renderMain()}
-            {this.renderPages()}
+            <div className="profile _FULL_W">{this.renderPages()}</div>
         </div>
     );
 };

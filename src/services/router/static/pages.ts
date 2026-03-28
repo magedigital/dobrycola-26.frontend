@@ -68,9 +68,6 @@ const pages = {
     rules: {
         links: ['rules'],
     },
-    prizes: {
-        links: ['prizes'],
-    },
     login: {
         links: ['login'],
     },
@@ -84,6 +81,34 @@ const pages = {
     },
     raffle: {
         links: ['raffle'],
+    },
+    prizes: {
+        links: ['prizes'],
+    },
+    'prizes-moment': {
+        links: ['', undefined, 'moment'],
+        level: 1,
+        parentName: 'prizes',
+    },
+    'prizes-balls': {
+        links: ['balls'],
+        level: 1,
+        parentName: 'prizes',
+    },
+    'prizes-week': {
+        links: ['week'],
+        level: 1,
+        parentName: 'prizes',
+    },
+    'prizes-spec': {
+        links: ['spec'],
+        level: 1,
+        parentName: 'prizes',
+    },
+    'prizes-main': {
+        links: ['main'],
+        level: 1,
+        parentName: 'prizes',
     },
 } as const;
 

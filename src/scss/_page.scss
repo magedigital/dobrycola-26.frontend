@@ -97,6 +97,10 @@
         }
     }
 
+    &._profile._inner &__scrollContent {
+        padding-bottom: 24rem;
+    }
+
     &._inner &__scrollContent {
         background-color: #ffae83;
     }

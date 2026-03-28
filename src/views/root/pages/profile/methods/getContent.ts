@@ -12,6 +12,7 @@ const getContent: I['getContent'] = async function () {
             data,
             content,
             pagesRenderKey: new Date().getTime().toString(),
+            isInit: true,
         });
     } catch (e) {}
 };

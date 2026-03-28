@@ -5,7 +5,7 @@ import List from '@components/list/List.tsx';
 import I from '../types.ts';
 
 const renderContent: I['renderContent'] = function () {
-    const { rows, emptyId, renderEmpty } = this.props;
+    const { rows, emptyId, renderEmpty, renderListCb } = this.props;
 
     return (
         <div className="table__content">
@@ -37,6 +37,7 @@ const renderContent: I['renderContent'] = function () {
                 })}
                 minHeight={rows.length ? undefined : 200}
                 resizeWidth={true}
+                callback={renderListCb}
             />
         </div>
     );

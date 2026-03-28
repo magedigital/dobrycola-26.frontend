@@ -11,6 +11,7 @@ type PropsT = {
     isMobRows?: boolean;
     emptyId?: string;
     renderEmpty?: TableRenderEmptyT;
+    renderListCb?: () => void;
 };
 
 type TableRenderRowT<T = any, K = any> = (d: { row: T; name: K }) => React.ReactNode;

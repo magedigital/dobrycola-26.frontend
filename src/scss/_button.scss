@@ -27,6 +27,11 @@
         font-size: 15rem;
     }
 
+    &._minSize {
+        padding: 14rem 16rem;
+        font-size: 12rem;
+    }
+
     &._boldBorder {
         border: 2rem solid #000;
         box-shadow: 6rem 6rem 0 0 #000;
@@ -82,6 +87,11 @@
                 background: #ff49b8;
             }
         }
+    }
+
+    &._blueColor {
+        color: #fff;
+        background: #10cfc9;
     }
 
     &__loader {
