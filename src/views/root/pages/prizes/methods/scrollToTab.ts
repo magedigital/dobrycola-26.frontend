@@ -1,14 +1,15 @@
-import setAnimate from '@functions/setAnimate.ts';
-import { PagesT } from '@global/types.ts';
-import pages from '@redux/pages.ts';
+import { appStore } from '@store/store.tsx';
+import setAnimate from '@utils/setAnimate.ts';
 
 import I from '../types.ts';
 
+import { AppRouter } from '../../../../../index.tsx';
+
 const scrollToTab: I['scrollToTab'] = function (force) {
-    const { storePages } = this.props;
-    const prizesCurrentPage = pages
-        .filter((page) => (page as PagesT).parentName === 'prizes')
-        .find((page) => storePages[page.name].isShow)?.name;
+    const storePages = appStore.getState().pages;
+    const prizesCurrentPage = (Object.keys(storePages) as (keyof typeof storePages)[]).find(
+        (n) => storePages[n].isShow && AppRouter.pages[n].parentName === 'prizes',
+    );
 
     if (!prizesCurrentPage) {
         return;

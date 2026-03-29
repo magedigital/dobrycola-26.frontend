@@ -55,6 +55,7 @@ class Pages extends Default<PagesI['props'], PagesI['state']> implements PagesI 
                 disabled={parentName ? !storePages[parentName].isShow : undefined}
                 allItems={this.getPages(true).map((page) => page._id)}
                 currentItem={pages[0]?._id}
+                resizeWidth={true}
             />
         );
     }

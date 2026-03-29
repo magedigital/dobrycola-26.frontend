@@ -2,15 +2,13 @@ import React from 'react';
 
 import Button from '@components/button/Button.tsx';
 import Icon from '@components/icon/Icon.tsx';
-import setSpacesInText from '@functions/setSpacesInText.ts';
+import StringService from '@services/string/String.service.ts';
 
 import I from '../types.ts';
 
 const renderContent: I['renderContent'] = function () {
     const { needSlider } = this.state;
     const { buttonText, buttonOnClick, items, name } = this.props;
-
-    // console.log(current);
 
     return (
         <div className="prizesPage__content _FULL_W _COL _COL_H_CENTER">
@@ -25,7 +23,7 @@ const renderContent: I['renderContent'] = function () {
                                 <i className="prizesPage__sliderButtonIcon">
                                     <Icon
                                         name={
-                                            key === 'prev' ? 'arrow-prev-short' : 'arrow-next-short'
+                                            key === 'prev' ? 'arrow-prev-long' : 'arrow-next-long'
                                         }
                                     />
                                 </i>
@@ -49,7 +47,7 @@ const renderContent: I['renderContent'] = function () {
                                         />
                                     </div>
 
-                                    {name === 'merch' && (
+                                    {name === 'merch' && false && (
                                         <div className="prizesPage__sliderItemBalls">
                                             {item.price}
                                         </div>
@@ -57,7 +55,7 @@ const renderContent: I['renderContent'] = function () {
                                 </div>
                                 <div className="prizesPage__sliderItemDescription">
                                     {item.title}{' '}
-                                    {name === 'merch' && item.description && (
+                                    {name === 'merch' && item.description && false && (
                                         <div className="prizesPage__sliderItemDescriptionInfo">
                                             <div className="prizesPage__sliderItemDescriptionInfoIcon _CLICK">
                                                 i
@@ -65,12 +63,14 @@ const renderContent: I['renderContent'] = function () {
                                             <div
                                                 className="prizesPage__sliderItemDescriptionInfoAlert"
                                                 dangerouslySetInnerHTML={{
-                                                    __html: setSpacesInText(item.description),
+                                                    __html: new StringService().setSpaces(
+                                                        item.description,
+                                                    ),
                                                 }}
                                             ></div>
                                         </div>
                                     )}
-                                    {name === 'weekly' && item.thumbsExtra && (
+                                    {name === 'weekly' && item.thumbsExtra && false && (
                                         <div className="prizesPage__sliderItemDescriptionInfo _weekly">
                                             <div className="prizesPage__sliderItemDescriptionInfoIcon _CLICK">
                                                 i
@@ -78,7 +78,7 @@ const renderContent: I['renderContent'] = function () {
                                             <div className="prizesPage__sliderItemDescriptionInfoWindow">
                                                 <div className="prizesPage__sliderItemDescriptionInfoWindowHead">
                                                     <img
-                                                        src={item.thumbsExtra[0][0]}
+                                                        src={item.thumbsExtra![0][0]}
                                                         alt=""
                                                         className="prizesPage__sliderItemDescriptionInfoWindowImage"
                                                     />
@@ -86,8 +86,8 @@ const renderContent: I['renderContent'] = function () {
                                                 <p
                                                     className="prizesPage__sliderItemDescriptionInfoWindowText"
                                                     dangerouslySetInnerHTML={{
-                                                        __html: setSpacesInText(
-                                                            item.thumbsExtra[0][1],
+                                                        __html: new StringService().setSpaces(
+                                                            item.thumbsExtra![0][1],
                                                         ),
                                                     }}
                                                 ></p>
@@ -101,7 +101,7 @@ const renderContent: I['renderContent'] = function () {
                 </div>
             </div>
             <div className="prizesPage__button">
-                <Button className="_purple" onClick={buttonOnClick}>
+                <Button className="_darkPinkColor _boldBorder" onClick={buttonOnClick}>
                     {buttonText}
                 </Button>
             </div>

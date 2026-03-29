@@ -1,6 +1,7 @@
-import Slider from '@classes/slider/Slider';
+import DefaultI from '@components/default/types';
+import Slider from '@services/slider/Slider';
 
-import { MainPrizeT } from '../../../index/types';
+import { PrizeT } from '../../../index/types';
 
 type PropsT = {
     title: string;
@@ -8,7 +9,7 @@ type PropsT = {
     description?: string;
     buttonText: string;
     buttonOnClick: () => void;
-    items: MainPrizeT[];
+    items: PrizeT[];
     name: string;
 };
 
@@ -17,11 +18,7 @@ type StateT = {
     current?: number;
 };
 
-interface PrizesPageI extends React.Component<PropsT, StateT> {
-    props: PropsT;
-    state: StateT;
-
-    parent: React.RefObject<HTMLDivElement | null>;
+interface PrizesPageI extends DefaultI<PropsT, StateT> {
     slider?: Slider;
 
     sliderInit(this: PrizesPageI): void;

@@ -42,6 +42,10 @@
                 font-family: Onest;
                 line-height: 1;
                 border-bottom: 1px solid rgba(#d300b4, 0.5);
+
+                @include mob {
+                    display: inline;
+                }
             }
         }
     }

@@ -57,11 +57,7 @@ type ProfileDataT = {
         attempts: number;
     };
     hasTransactions: boolean;
-    transactions: {
-        sum: string;
-        comment: string;
-        datetime: string;
-    }[];
+    transactions: ProfileTransactionT[];
     balance: number;
     balanceTitle: string;
     checks: ProfileCheckT[];
@@ -136,6 +132,12 @@ type ProfileMerchT = {
     custom?: '1';
 };
 
+type ProfileTransactionT = {
+    sum: string;
+    comment: string;
+    datetime: string;
+};
+
 interface ProfileI extends PageI<PropsT, StateT> {
     setPagesRenderKey(this: ProfileI): Promise<void>;
     copyHandler(this: ProfileI): Promise<void>;
@@ -158,4 +160,5 @@ export type {
     ProfileContentT,
     ProfileMerchT,
     ProfileChzCodeT,
+    ProfileTransactionT,
 };

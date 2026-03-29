@@ -10,7 +10,8 @@
         border-radius: 20rem;
 
         @include mob {
-            padding: 20rem 10rem;
+            padding: 22rem 10rem 44rem;
+            border-radius: 16rem;
         }
 
         &Blocks {
@@ -27,7 +28,7 @@
                 width: 100%;
 
                 &._info {
-                    margin-bottom: 28rem;
+                    margin-bottom: 32rem;
                     padding-bottom: 22rem;
                     border-bottom: 2rem solid #f3f3f3;
                 }
@@ -43,14 +44,14 @@
                 flex-direction: row;
                 align-items: center;
                 margin-left: 0;
-                padding-top: 14rem;
+                padding-top: 12rem;
             }
         }
 
         &Name {
             display: flex;
             align-items: center;
-            margin-bottom: 14rem;
+            margin-bottom: 16rem;
             color: #2f2922;
             font-size: 22rem;
             line-height: 1.2;
@@ -76,10 +77,10 @@
             border-radius: 4rem;
 
             @include mob {
-                margin: 10rem 0 0;
-                padding: 7rem 38rem 7rem 12rem;
+                margin: 12rem 0 0;
+                padding: 5rem 38rem 5rem 12rem;
                 font-size: 18rem;
-                border-radius: 14rem;
+                border-radius: 6rem;
             }
 
             &Icon {
@@ -136,6 +137,7 @@
 
             @include mob {
                 font-size: 18rem;
+                border-width: 2rem;
             }
 
             &._pink {
@@ -199,6 +201,7 @@
             transition: $trans;
 
             @include mob {
+                margin-top: -6rem;
                 margin-bottom: 0;
             }
 
@@ -243,6 +246,7 @@
 
             @include mob {
                 flex-direction: column-reverse;
+                padding: 0 12rem;
             }
 
             &Inner {
@@ -253,8 +257,8 @@
 
                     @include mob {
                         margin: 0;
-                        margin-bottom: 28rem;
-                        padding-bottom: 28rem;
+                        margin-bottom: 25rem;
+                        padding-bottom: 25rem;
                         border-bottom: 2rem solid #f3f3f3;
                     }
                 }
@@ -319,7 +323,9 @@
             @include mob {
                 flex: 1 auto;
                 width: auto;
-                padding: 18rem 5rem;
+                padding: 16rem 12rem;
+                font-size: 14.5rem;
+                border-radius: 14rem 14rem 0 0;
             }
 
             &._auto {
@@ -372,7 +378,7 @@
             }
 
             @include mob {
-                padding: 18rem 12rem;
+                padding: 23rem 12rem;
             }
         }
     }
@@ -386,7 +392,7 @@
         border-radius: 20rem;
 
         @include mob {
-            padding: 18rem 10rem;
+            padding: 26rem 10rem;
         }
 
         & + & {
@@ -394,7 +400,12 @@
         }
 
         &Head {
+            width: 100%;
             margin-bottom: 34rem;
+
+            @include mob {
+                margin-bottom: 28rem;
+            }
         }
 
         &Title {
@@ -414,7 +425,9 @@
             border-radius: 6rem;
 
             @include mob {
-                max-width: 87%;
+                max-width: 90%;
+                margin-top: 9rem;
+                padding: 4rem 14rem;
                 font-size: 17rem;
                 border-radius: 10rem;
             }
@@ -496,7 +509,8 @@
             padding: 10rem 24rem 12rem;
 
             @include mob {
-                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: center;
                 width: 100%;
                 padding: 0;
             }
@@ -508,9 +522,9 @@
             margin: 0 50rem;
 
             @include mob {
-                width: 50%;
+                width: 100%;
                 margin: 0;
-                margin-bottom: 20rem;
+                margin-bottom: 29rem;
             }
 
             &Head {
@@ -525,9 +539,9 @@
                 aspect-ratio: 1;
 
                 @include mob {
-                    width: 146rem;
-                    height: 146rem;
-                    margin-bottom: 16rem;
+                    width: 148rem;
+                    height: 148rem;
+                    margin-bottom: 20rem;
                 }
             }
 
@@ -550,6 +564,7 @@
 
                 @include mob {
                     max-width: 90%;
+                    font-size: 15rem;
                 }
             }
         }

@@ -17,7 +17,7 @@
 
     @include mob {
         padding: 14rem 26rem;
-        font-size: 18rem;
+        font-size: 15.5rem;
         border-radius: 10rem;
         box-shadow: 5rem 5rem 0 0 #000;
     }
@@ -30,6 +30,10 @@
     &._minSize {
         padding: 14rem 16rem;
         font-size: 12rem;
+
+        @include mob {
+            font-size: 15rem;
+        }
     }
 
     &._boldBorder {

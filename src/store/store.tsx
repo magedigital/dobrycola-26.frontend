@@ -4,9 +4,12 @@ import { useShallow } from 'zustand/shallow';
 import React from 'react';
 
 import UserT from '@api/entities/User';
+import { getLocalContent } from '@api/requests/content';
 import { enums } from '@global/enums';
 
 import { PageNamesT } from '../services/router/static/pages';
+import { MainContentT } from '../views/root/pages/index/types';
+import { ProfileDataT } from '../views/root/pages/profile/types';
 import { PopupsReducersT, PopupsT, createPopupsStore } from './popups';
 
 type StorePagesT = {
@@ -29,6 +32,8 @@ type StoreT = {
     isCookiesShow: boolean;
     currentPopup?: keyof PopupsT;
     isAuthProcess?: boolean;
+    mainContent?: MainContentT;
+    profileData?: ProfileDataT;
 } & PopupsT;
 
 type ReducersT = {
@@ -43,6 +48,8 @@ type ReducersT = {
     setCookiesState: (s: boolean) => void;
     setAuthProcess: (s: boolean) => void;
     setAuthUser: (u: UserT | undefined) => void;
+    setMainContent: (c: MainContentT) => void;
+    setProfileData: (c: ProfileDataT) => void;
 } & PopupsReducersT;
 
 const appStore = create<StoreT & ReducersT>((set) => ({
@@ -87,6 +94,9 @@ const appStore = create<StoreT & ReducersT>((set) => ({
         }
     })(),
     setAuthUser: (authUser) => set({ authUser, ...(authUser ? { isAuthCheck: true } : {}) }),
+    mainContent: getLocalContent('main'),
+    setMainContent: (c) => set({ mainContent: c }),
+    setProfileData: (d) => set({ profileData: d }),
     ...createPopupsStore(set),
 }));
 

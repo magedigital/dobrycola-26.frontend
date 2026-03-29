@@ -1,4 +1,4 @@
-import Slider from '@classes/slider/Slider.ts';
+import Slider from '@services/slider/Slider.ts';
 
 import I from '../types.ts';
 

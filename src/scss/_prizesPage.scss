@@ -1,0 +1,483 @@
+.prizesPage {
+    padding-bottom: 12rem;
+
+    @include mob {
+        padding-bottom: 16rem;
+    }
+
+    &__head {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 32rem;
+
+        @include mob {
+            margin-bottom: 24rem;
+        }
+
+        &Title {
+            color: #5d279e;
+            font-size: 20rem;
+            line-height: 1.3;
+            text-align: center;
+            text-transform: uppercase;
+
+            @include mob {
+                font-size: 20rem;
+            }
+        }
+
+        &Description {
+            margin-top: 6rem;
+            padding: 6rem 10rem;
+            color: #222221;
+            font-weight: 600;
+            font-size: 16rem;
+            font-family: Onest;
+            line-height: 1.3;
+            text-align: center;
+            background: #fbac2f;
+            border-radius: 6rem;
+
+            @include mob {
+                padding: 5rem 10rem;
+                font-size: 17rem;
+                border-radius: 7rem;
+            }
+
+            & b {
+                font-weight: 600;
+            }
+
+            & span {
+                position: relative;
+                z-index: 1;
+                display: inline-block;
+                padding: 0 9rem;
+                color: #fff;
+                font-weight: 600;
+                font-size: 13rem;
+
+                @include mob {
+                    padding: 0 9rem;
+                }
+
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    z-index: -1;
+                    width: 26rem;
+                    height: 26rem;
+                    background: #5d279e;
+                    border-radius: 50%;
+                    transform: translate(-50%, -50%);
+                    content: "";
+
+                    @include mob {
+                        width: 24rem;
+                        height: 24rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &__slider {
+        position: relative;
+        z-index: 3;
+        margin-bottom: 24rem;
+        padding: 0 88rem;
+
+        @include mob {
+            padding: 0 60rem;
+        }
+
+        &Button {
+            position: absolute;
+            top: 50%;
+            z-index: 3;
+            width: 48rem;
+            height: 48rem;
+            margin-top: -24rem;
+            background: #ff49b8;
+            border-radius: 50%;
+            transform: translate(0, -50%);
+            will-change: transform;
+
+            @include mob {
+                width: 40rem;
+                height: 40rem;
+                margin-top: -32rem;
+            }
+
+            &._prev {
+                left: 10rem;
+                padding-right: 1rem;
+
+                @include mob {
+                    left: 4rem;
+                }
+            }
+
+            &._next {
+                right: 10rem;
+                padding-left: 1rem;
+
+                @include mob {
+                    right: 4rem;
+                }
+            }
+
+            &Icon {
+                width: 19rem;
+                height: 19rem;
+
+                @include icon(#fff);
+
+                @include mob {
+                    width: 18rem;
+                    height: 18rem;
+                }
+            }
+        }
+
+        &Items {
+            display: inline-flex;
+        }
+
+        &Item {
+            width: 180rem;
+            margin-right: 48rem;
+            transition: $trans;
+
+            @include mob {
+                width: 230rem;
+                margin-right: 94rem;
+            }
+
+            &Head {
+                position: relative;
+                z-index: 1;
+                width: 180rem;
+                height: 180rem;
+                margin-bottom: 12rem;
+                background: #7a2799;
+                border-radius: 50%;
+
+                @include mob {
+                    width: 230rem;
+                    height: 230rem;
+                    margin-bottom: 16rem;
+                }
+
+                &Inner {
+                    // @include bg("/media/inners/prize-back.jpg", cover, center);
+
+                    position: relative;
+                    z-index: 1;
+                    overflow: hidden;
+                    border-radius: 50%;
+                }
+            }
+
+            &Image {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                transition: $trans;
+                user-select: none;
+                pointer-events: none;
+                will-change: transform;
+            }
+
+            &._withInfo &Head {
+                // margin-bottom: 32rem;
+            }
+
+            &Balls {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                z-index: 2;
+                padding: 4rem 8rem;
+                color: #5d279e;
+                font-weight: 900;
+                font-size: 12rem;
+                font-family: Onest;
+                white-space: nowrap;
+                text-transform: uppercase;
+                background: #fed5ff;
+                border-radius: 360rem;
+                transform: translate(-50%, 0);
+
+                @include mob {
+                    padding: 6rem 10rem;
+                    font-size: 14rem;
+                    border-radius: 7rem;
+                }
+            }
+
+            &Info {
+                position: absolute;
+                right: -20rem;
+                bottom: -20rem;
+                z-index: 2;
+                width: 88rem;
+                height: 88rem;
+                background: #10cfc9;
+                border-radius: 50%;
+
+                @include mob {
+                    right: -14rem;
+                    bottom: -14rem;
+                    width: 98rem;
+                    height: 98rem;
+                }
+
+                &Inner {
+                    color: #fff;
+                    font-weight: 600;
+                    font-size: 12rem;
+                    line-height: 1.3;
+                    text-align: center;
+
+                    @include mob {
+                        font-size: 13rem;
+                    }
+
+                    & span {
+                        position: relative;
+                        z-index: 1;
+                        display: inline-block;
+                        padding: 0 3rem;
+                        color: #fff;
+                        font-weight: 600;
+
+                        &::before {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            z-index: -1;
+                            width: 18rem;
+                            height: 18rem;
+                            background: #5d279e;
+                            border-radius: 50%;
+                            transform: translate(-50%, -50%);
+                            content: "";
+                        }
+                    }
+                }
+            }
+
+            &Description {
+                position: relative;
+                z-index: 3;
+                color: #222221;
+                font-size: 12rem;
+                line-height: 1.4;
+                text-align: center;
+                text-transform: uppercase;
+
+                @include mob {
+                    font-size: 15rem;
+                }
+
+                &Info {
+                    display: inline-block;
+
+                    &:not(._weekly) {
+                        position: relative;
+                        z-index: 10;
+                    }
+
+                    &Icon {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 16rem;
+                        height: 16rem;
+                        color: #fff;
+                        font-weight: 500;
+                        font-size: 11rem;
+                        background: #ff49b8;
+                        border-radius: 50%;
+                        transform: translate(0, -5rem);
+                        transition: $trans;
+
+                        &:hover {
+                            background: #ffd382;
+                        }
+                    }
+
+                    &Alert {
+                        position: absolute;
+                        bottom: 100%;
+                        left: 100%;
+                        z-index: 2;
+                        width: 302rem;
+                        margin: 0 0 10rem -18rem;
+                        padding: 20rem;
+                        color: #5d279e;
+                        font-weight: 400;
+                        font-size: 14rem;
+                        line-height: 1.3;
+                        text-align: left;
+                        text-transform: none;
+                        background: #fff;
+                        border-radius: 24rem;
+                        box-shadow: 0 16rem 16rem 0 rgba(#620000, 0.1);
+                        opacity: 0;
+                        transition: $trans;
+                        pointer-events: none;
+
+                        @include mob {
+                            left: 50%;
+                            width: 256rem;
+                            margin: 0 0 10rem;
+                            padding: 14rem;
+                            transform: translate(-50%, 0);
+                        }
+                    }
+
+                    &Icon:hover + &Alert {
+                        opacity: 1;
+                    }
+
+                    &Icon:not(:hover) + &Window {
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+
+                    &Window {
+                        position: absolute;
+                        bottom: 100%;
+                        left: 50%;
+                        z-index: 20;
+                        width: 196rem;
+                        margin-bottom: 6rem;
+                        padding: 20rem;
+                        background: #fff;
+                        border-radius: 24rem;
+                        box-shadow: 0 16rem 16rem 0 rgba(#620000, 0.1);
+                        transform: translate(-50%, 0);
+                        transition: $trans;
+
+                        &Head {
+                            position: relative;
+                            z-index: 1;
+                            height: 140rem;
+                            margin-bottom: 10rem;
+                            overflow: hidden;
+                            border-radius: 16rem;
+
+                            // @include bg("/media/inners/prize-back.jpg", cover, center);
+                        }
+
+                        &Image {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+
+                        &Text {
+                            color: #5d279e;
+                            font-weight: 400;
+                            font-size: 14rem;
+                            line-height: 1.3;
+                            text-align: center;
+                            text-transform: none;
+                        }
+                    }
+                }
+            }
+
+            &[data-alertReverse] &DescriptionInfoAlert {
+                @include desk {
+                    margin-left: -300rem;
+                }
+            }
+        }
+    }
+
+    &:not(._slider) &__sliderItems {
+        @include desk {
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    &:not(._slider) &__sliderItem {
+        margin-right: 0;
+    }
+
+    &:not(._slider) &__sliderItem + &__sliderItem {
+        margin-left: 48rem;
+    }
+
+    &._slider &__slider {
+        &Item {
+            @include desk {
+                &:not(._current) {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    &__sliderItem:hover &__sliderItemImage {
+        transform: scale(1.08);
+    }
+
+    &__button {
+        @include mob {
+            height: 68rem;
+        }
+    }
+
+    &__spec {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        width: 538rem;
+        height: 232rem;
+        margin-bottom: 30rem;
+        padding: 20rem;
+        color: #6c1100;
+        font-weight: 600;
+        font-size: 16rem;
+        text-transform: uppercase;
+        border-radius: 24rem;
+
+        // @include bg("/media/inners/prize-special.jpg", cover, center);
+
+        @include mob {
+            width: 100%;
+            height: auto;
+            padding: 16rem 16rem 46rem;
+            font-size: 20rem;
+            aspect-ratio: 1;
+
+            // @include bg("/media/inners/prize-special-mob.jpg", cover, center);
+        }
+    }
+
+    &__mainPrize {
+        width: 948rem;
+        height: 286rem;
+        margin-bottom: 32rem;
+        border-radius: 24rem;
+
+        // @include bg("/media/inners/prize-big.jpg", cover, center);
+
+        @include mob {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 0.75;
+            margin-bottom: 0;
+
+            // @include bg("/media/inners/prize-big-mob.jpg", cover, center);
+        }
+    }
+}

@@ -3,7 +3,7 @@ import I, { MenuNavItemT } from '../types.ts';
 const getNav: I['getNav'] = function () {
     const nav: MenuNavItemT[] = [];
 
-    nav.push({ text: 'ГЛАВНАЯ', name: 'index', type: 'ancor', ancorName: 'index' });
+    nav.push({ text: 'ГЛАВНАЯ', name: 'index', type: 'link', pageName: 'index' });
     nav.push({ text: 'Правила Акции', name: 'rules', type: 'link', pageName: 'rules' });
     nav.push({ text: 'Призы', name: 'prizes', type: 'link', pageName: 'prizes' });
     nav.push({ text: 'Победители', name: 'winners', type: 'link', pageName: 'winners' });

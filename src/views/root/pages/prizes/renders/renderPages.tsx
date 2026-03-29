@@ -5,6 +5,9 @@ import Pages from '@components/pages/Pages.tsx';
 
 import I from '../types.ts';
 
+import { AppRouter } from '../../../../../index.tsx';
+import { prizesPages } from '../static/pages.tsx';
+
 const renderPages: I['renderPages'] = function () {
     const { pagesRenderKey, content } = this.state;
 
@@ -12,8 +15,8 @@ const renderPages: I['renderPages'] = function () {
         <div className="profile__pages _FULL_W">
             <div className="profile__pagesTabsWrapper _FULL_W _NOSCROLL">
                 <div className="profile__pagesTabs _FULL_W">
-                    {(Object.keys(this.pages) as (keyof typeof this.pages)[]).map((name) => {
-                        const page = this.pages[name];
+                    {(Object.keys(prizesPages) as (keyof typeof prizesPages)[]).map((name) => {
+                        const page = prizesPages[name];
 
                         return (
                             <div className="profile__pagesTabWrapper" key={name} data-id={name}>
@@ -36,8 +39,8 @@ const renderPages: I['renderPages'] = function () {
                     parentClass="profile__pagesItems"
                     itemClass="profile__pagesItem"
                     context={this}
-                    pages={this.pages}
-                    filter={(page) => page.parentName === 'prizes'}
+                    pages={prizesPages}
+                    filter={(n) => AppRouter.pages[n].parentName === 'prizes'}
                     parentStyleProps={['width']}
                     parentRealStyleProps={['width']}
                     renderKey={pagesRenderKey}

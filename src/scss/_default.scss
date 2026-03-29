@@ -236,6 +236,11 @@
     &._profile {
         font-size: 20rem;
 
+        @include mob {
+            font-size: 18rem;
+            line-height: 1.4;
+        }
+
         &._back {
             padding: 10rem 16rem;
             background: rgba(#ff49b8, 0.25);

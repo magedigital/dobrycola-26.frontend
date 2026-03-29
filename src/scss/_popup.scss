@@ -117,6 +117,10 @@
                 pointer-events: none;
             }
 
+            &._block {
+                display: block;
+            }
+
             @include mob {
                 padding: 20rem 14rem 44rem;
             }
@@ -177,6 +181,7 @@
         @include bg("/media/inner/back-popup-text.svg", cover, center top);
 
         @include mob {
+            min-height: 72rem;
             margin: -20rem -14rem 24rem;
         }
     }
@@ -201,7 +206,7 @@
         }
 
         @include mob {
-            font-size: 24rem;
+            font-size: 22rem;
         }
     }
 
@@ -654,6 +659,77 @@
         }
     }
 
+    &__invite {
+        padding-bottom: 12rem;
+
+        &Text {
+            color: #222221;
+            font-weight: 600;
+            font-size: 18rem;
+            line-height: 1.3;
+            text-align: center;
+
+            @include mob {
+                font-size: 18rem;
+            }
+
+            & + & {
+                margin-top: 8rem;
+            }
+
+            &:not(._main) {
+                font-family: Onest;
+            }
+
+            &._main {
+                color: #5d279e;
+                font-weight: 500;
+                font-size: 16rem;
+                text-transform: uppercase;
+
+                @include mob {
+                    font-size: 18rem;
+                }
+            }
+
+            & a {
+                display: inline;
+                color: #ff49b8;
+                font-weight: 600;
+                font-family: Onest;
+                border-bottom: 1rem solid rgba(#ff49b8, 0.64);
+            }
+
+            & b {
+                color: #5d279e;
+                font-weight: 700;
+                line-height: 1.3;
+                text-align: center;
+
+                @include mob {
+                    display: block;
+                }
+            }
+        }
+
+        &Info {
+            width: 100%;
+            margin-top: 24rem;
+            padding: 24rem 32rem;
+            background: #ccfffd;
+            border-radius: 12rem;
+
+            @include mob {
+                padding-top: 20rem;
+            }
+        }
+    }
+
+    &__table {
+        width: 100%;
+        margin-bottom: 28rem;
+    }
+
     &__error {
         width: 100%;
         transition: $trans;
@@ -715,5 +791,25 @@
                 margin-left: 0;
             }
         }
+    }
+
+    &__dynamicButtons {
+        width: 100%;
+        margin-top: 20rem;
+
+        & .list__item {
+            width: 100%;
+
+            &Box {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    &__dynamicButton {
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 }

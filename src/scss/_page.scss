@@ -101,6 +101,15 @@
         padding-bottom: 24rem;
     }
 
+    &._prizes._inner &__scrollContent,
+    &._profile._inner &__scrollContent {
+        @include mob {
+            padding-right: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+        }
+    }
+
     &._inner &__scrollContent {
         background-color: #ffae83;
     }

@@ -5,6 +5,7 @@ import I from '../types.ts';
 import Anket from '../pages/anket/Anket.tsx';
 import Faq from '../pages/faq/Faq.tsx';
 import Index from '../pages/index/Index.tsx';
+import Prizes from '../pages/prizes/Prizes.tsx';
 import Products from '../pages/products/Products.tsx';
 import Profile from '../pages/profile/Profile.tsx';
 import Raffle from '../pages/raffle/Raffle.tsx';

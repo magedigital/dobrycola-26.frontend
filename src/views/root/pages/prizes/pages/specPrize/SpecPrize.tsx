@@ -1,17 +1,12 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
 import Button from '@components/button/Button.tsx';
-import CustomHead from '@components/customHead/CustomHead.tsx';
+import Default from '@components/default/Default.tsx';
 import Media from '@components/media/Media.tsx';
-import changePage from '@functions/changePage.ts';
 
 import SpecPrizeI from './types.ts';
 
-class SpecPrize
-    extends React.Component<SpecPrizeI['props'], SpecPrizeI['state']>
-    implements SpecPrizeI
-{
+class SpecPrize extends Default<SpecPrizeI['props'], SpecPrizeI['state']> implements SpecPrizeI {
     parent: SpecPrizeI['parent'];
 
     constructor(props: SpecPrizeI['props']) {
@@ -24,7 +19,7 @@ class SpecPrize
     render() {
         return (
             <div ref={this.parent} className="prizesPage _FULL_W _COL _COL_H_CENTER">
-                <CustomHead title="Призы - Специальный приз в игровых локациях" />
+                {/* <CustomHead title="Призы - Специальный приз в игровых локациях" /> */}
 
                 <div className="prizesPage__head _COL _COL_H_CENTER">
                     <h3 className="prizesPage__headTitle">
@@ -43,11 +38,11 @@ class SpecPrize
                         <Button
                             className="_purple"
                             onClick={() => {
-                                changePage({ pageName: 'index', query: { ancor: 'games' } });
+                                // changePage({ pageName: 'index', query: { ancor: 'games' } });
                             }}
                         >
-                            <Media current="desktop">Перейти К игровым локациям</Media>
-                            <Media current="mobile">К игровым локациям</Media>
+                            <Media check={(d) => d === 'desktop'}>Перейти К игровым локациям</Media>
+                            <Media check={(d) => d === 'mobile'}>К игровым локациям</Media>
                         </Button>
                     </div>
                 </div>
@@ -56,8 +51,4 @@ class SpecPrize
     }
 }
 
-function mapStateToProps() {
-    return {};
-}
-
-export default connect(mapStateToProps)(SpecPrize);
+export default SpecPrize;

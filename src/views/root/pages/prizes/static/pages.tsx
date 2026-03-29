@@ -1,12 +1,12 @@
 import React from 'react';
 
+import { appStore } from '@store/store.tsx';
+
 import PrizesPage from '../components/prizesPage/PrizesPage.tsx';
 
 import RootI from '../types.ts';
 
-import SpecPrize from '../pages/specPrize/SpecPrize.tsx';
-
-const pages = {
+export const prizesPages = {
     'prizes-moment': {
         title: 'МОМЕНТАЛЬНЫЙ РОЗЫГРЫШ',
         render(this: RootI) {
@@ -17,10 +17,10 @@ const pages = {
                     name="moment"
                     title="Выиграй сразу"
                     metaTitle="Призы - Моментальный розыгрыш"
-                    description="Участие в розыгрыше - <span>1</span> балл"
-                    buttonText="Участвовать"
+                    description="Участие в розыгрыше – <span>1</span> балл"
+                    buttonText="играть в игру"
                     buttonOnClick={() => {
-                        changePage({ pageName: 'game-inner', ids: { 1: 'LOSYANTA' } });
+                        // changePage({ pageName: 'game-inner', ids: { 1: 'LOSYANTA' } });
                     }}
                     items={content!.components.prizes.instant.items}
                 />
@@ -40,7 +40,7 @@ const pages = {
                     description="Регистрируй коды и получай <br class='_MOBILE' />по <span>1</span> баллу за каждый код, приводи друзей - зарабатывай еще баллы"
                     buttonText="Зарегистрировать код"
                     buttonOnClick={() => {
-                        changePage({ pageName: 'regCode' });
+                        appStore.getState().setPopup({ name: 'codePopup' });
                     }}
                     items={content!.components.prizes.merch.items}
                 />
@@ -60,19 +60,17 @@ const pages = {
                     metaTitle="Призы - Еженедельно"
                     buttonText="Зарегистрировать код"
                     buttonOnClick={() => {
-                        changePage({ pageName: 'regCode' });
+                        appStore.getState().setPopup({ name: 'codePopup' });
                     }}
                     items={content!.components.prizes.weekly.items}
                 />
             );
         },
     },
-    'prizes-spec': {
-        title: 'СПЕЦИАЛЬНЫЙ ПРИЗ',
-        render(this: RootI) {
-            return <SpecPrize />;
-        },
-    },
+    // 'prizes-spec': {
+    //     title: 'СПЕЦИАЛЬНЫЙ ПРИЗ',
+    //     render(this: RootI) {
+    //         return <SpecPrize />;
+    //     },
+    // },
 } as const;
-
-export default pages;

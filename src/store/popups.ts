@@ -18,6 +18,8 @@ type PopupsT = {
     loginPopup: PopupT;
     regPopup: PopupT;
     codePopup: PopupT;
+    invitePopup: PopupT;
+    ballsPopup: PopupT;
 };
 
 type PopupsReducersT = {
@@ -34,7 +36,7 @@ type PopupsReducersT = {
 
 const popups = {
     chequePopup: {
-        check: (s: StoreT) => !!s.authUser || s.isAuthProcess,
+        check: (s: StoreT) => !!s.authUser,
         redirectPageName: 'profile',
     },
     loginPopup: {
@@ -46,7 +48,15 @@ const popups = {
         redirectPageName: 'profile',
     },
     codePopup: {
-        check: (s: StoreT) => !!s.authUser || s.isAuthProcess,
+        check: (s: StoreT) => !!s.authUser,
+        redirectPageName: 'profile',
+    },
+    invitePopup: {
+        check: (s: StoreT) => !!s.authUser,
+        redirectPageName: 'profile',
+    },
+    ballsPopup: {
+        check: (s: StoreT) => !!s.authUser,
         redirectPageName: 'profile',
     },
 } as const;

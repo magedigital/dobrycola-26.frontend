@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunk=globalThis.webpackChunk||[]).push([[3412],{3412:(e,n,t)=>{t.r(n),t.d(n,{default:()=>r});t(5043);var a=t(579);const r=function({row:e,name:n}){return"date"===n?(0,a.jsx)(a.Fragment,{children:e.datetime}):"balls"===n?(0,a.jsx)(a.Fragment,{children:e.sum}):"comment"===n?(0,a.jsx)(a.Fragment,{children:e.comment}):void 0}}}]);
+//# sourceMappingURL=3412.1c4996b4.chunk.js.map

@@ -1,12 +1,9 @@
+import DefaultI from '@components/default/types';
+
 type PropsT = {};
 
 type StateT = {};
 
-interface SpecPrizeI extends React.Component<PropsT, StateT> {
-    props: PropsT;
-    state: StateT;
-
-    parent: React.RefObject<HTMLDivElement | null>;
-}
+interface SpecPrizeI extends DefaultI<PropsT, StateT> {}
 
 export default SpecPrizeI;

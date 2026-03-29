@@ -1,4 +1,6 @@
+import { contentRequests } from '@api/requests/content.ts';
 import { enums } from '@global/enums.ts';
+import { appStore } from '@store/store.tsx';
 import checkAuth from '@utils/checkAuth.ts';
 import { getCookie, setCookie } from '@utils/cookies.ts';
 
@@ -40,6 +42,9 @@ const init: I['init'] = async function () {
     (document.addEventListener as CustomListenerT)('changePage', this.changePageListener);
 
     checkAuth({});
+
+    const content = await contentRequests.getContent({ name: 'main' });
+    appStore.getState().setMainContent(content);
 };
 
 export default init;

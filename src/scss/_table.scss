@@ -41,6 +41,10 @@
         }
     }
 
+    &._balls &__content {
+        background: #f4f4f4;
+    }
+
     &__empty {
         position: absolute;
         top: 0;

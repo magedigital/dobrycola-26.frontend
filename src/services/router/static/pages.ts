@@ -100,16 +100,11 @@ const pages = {
         level: 1,
         parentName: 'prizes',
     },
-    'prizes-spec': {
-        links: ['spec'],
-        level: 1,
-        parentName: 'prizes',
-    },
-    'prizes-main': {
-        links: ['main'],
-        level: 1,
-        parentName: 'prizes',
-    },
+    // 'prizes-spec': {
+    //     links: ['spec'],
+    //     level: 1,
+    //     parentName: 'prizes',
+    // },
 } as const;
 
 type PageT = {

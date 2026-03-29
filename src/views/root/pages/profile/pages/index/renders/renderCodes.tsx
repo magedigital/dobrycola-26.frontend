@@ -25,7 +25,8 @@ const renderCodes: I['renderCodes'] = function () {
             <div className="profile__blockHead _COL _COL_H_CENTER">
                 <h3 className="profile__blockTitle _TITLE _profile">МОИ КОДЫ</h3>
                 <p className="profile__blockDescription">
-                    Каждый код даёт шанс на участие в розыгрыше
+                    Каждый код даёт шанс <br className="_MOBILE" />
+                    на участие в розыгрыше
                 </p>
             </div>
             <div className="profile__blockTable _FULL_W">
@@ -36,6 +37,7 @@ const renderCodes: I['renderCodes'] = function () {
                     render={this.renderTableCol.bind(this)}
                     renderEmpty={this.renderTableEmpty.bind(this)}
                     renderListCb={setRenderKey}
+                    emptyId="all"
                 />
             </div>
             {false && (

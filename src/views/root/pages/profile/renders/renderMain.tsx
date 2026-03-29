@@ -102,7 +102,14 @@ const renderMain: I['renderMain'] = function () {
                         У тебя <span className="profile__mainScoreCount">{data?.balance || 0}</span>{' '}
                         {data?.balanceTitle}
                     </div>
-                    <div className="profile__mainLink _blue _CLICK">История</div>
+                    <div
+                        className="profile__mainLink _blue _CLICK"
+                        onClick={() => {
+                            appStore.getState().setPopup({ name: 'ballsPopup' });
+                        }}
+                    >
+                        История
+                    </div>
                 </div>
             </div>
             <div className="profile__mainButtons">
@@ -124,7 +131,7 @@ const renderMain: I['renderMain'] = function () {
                         <Button
                             className="_blueColor _boldBorder _minSize"
                             onClick={() => {
-                                // changePage({ pageName: 'invite' });
+                                appStore.getState().setPopup({ name: 'invitePopup' });
                                 // sendGoal('inviteFriendBtn');
                             }}
                         >

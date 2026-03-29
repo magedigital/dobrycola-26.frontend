@@ -1,81 +1,64 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
-import CloseBtn from '@components/closeBtn/CloseBtn.tsx';
-import InnerPage from '@components/innerPage/InnerPage.tsx';
-import Media from '@components/media/Media.tsx';
-import { getLocalContent } from '@functions/localContent.ts';
-import { StoreT } from '@global/types.ts';
+import { getLocalContent } from '@api/requests/content.ts';
+import Page from '@components/page/Page.tsx';
+import { StoreT, WithStore } from '@store/store.tsx';
 
-import getScrollPage from './methods/getScrollPage.ts';
+import changePropsCb from './methods/changePropsCb.ts';
 import scrollToTab from './methods/scrollToTab.ts';
 import setPagesRenderKey from './methods/setPagesRenderKey.ts';
 
 import PrizesI from './types.ts';
 
-import renderContent from './renders/renderContent.tsx';
 import renderHead from './renders/renderHead.tsx';
 import renderPages from './renders/renderPages.tsx';
-import getContent from './requests/getContent.ts';
-import pages from './static/pages.tsx';
 
-class Prizes extends InnerPage<PrizesI['props'], PrizesI['state']> implements PrizesI {
+class Prizes extends Page<PrizesI['props'], PrizesI['state']> implements PrizesI {
     parent: PrizesI['parent'];
 
     constructor(props: PrizesI['props']) {
         super(props);
+        const content = getLocalContent('main');
+
         this.state = {
-            content: getLocalContent('indexContent'),
+            content,
+            isInit: !!content,
         };
+
         this.parent = React.createRef();
     }
 
-    innerClassName = 'page__innerBox';
-    pages = pages;
+    mode = 'inner' as const;
+    changingProps = ['mainContent'];
 
-    getScrollPage = getScrollPage;
+    changePropsCb = changePropsCb;
+
     setPagesRenderKey = setPagesRenderKey;
     scrollToTab = scrollToTab;
-    getContent = getContent;
 
-    renderContent = renderContent;
     renderHead = renderHead;
-
     renderPages = renderPages;
 
-    componentDidMount(): void {
-        this.getContent();
-        this.setClosePosition();
-        this.scrollToTab(true);
-    }
-
     render() {
-        return this.renderPage(
-            <div
-                className="page _profile _NOSCROLL _FULL"
-                onScroll={this.setClosePosition.bind(this)}
-            >
-                <div className="page__inner _FULL_W _COL _COL_H_CENTER">
-                    <div className="page__innerWrapper _INNER">
-                        <div className="page__innerBox _empty">
-                            <Media current="desktop">
-                                <div className="page__close">
-                                    <CloseBtn />
-                                </div>
-                            </Media>
-                            {this.renderContent()}
+        const { mainContent } = this.props;
+
+        return this.renderPage({
+            render: () =>
+                mainContent ? (
+                    <>
+                        <div className="profile _FULL_W">
+                            {this.renderHead()}
+                            {this.renderPages()}
                         </div>
-                    </div>
-                </div>
-            </div>,
-        );
+                    </>
+                ) : null,
+            className: '_profile _prizes',
+        });
     }
 }
 
-function mapStateToProps(state: StoreT) {
-    return {
-        storePages: state.pages,
-    };
-}
+const mapStore = (s: StoreT) => ({
+    mainContent: s.mainContent,
+});
 
-export default connect(mapStateToProps)(Prizes);
+export default WithStore(Prizes, mapStore);
