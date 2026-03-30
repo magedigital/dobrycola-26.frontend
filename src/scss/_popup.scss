@@ -764,7 +764,7 @@
         &._autoHeight {
             height: auto;
 
-            & .button {
+            & .v2button {
                 padding-right: 22rem;
                 padding-left: 22rem;
             }
@@ -773,7 +773,7 @@
         &._fix {
             width: calc(50% - 10rem);
 
-            & .button {
+            & .v2button {
                 padding-right: 4rem;
                 padding-left: 4rem;
             }

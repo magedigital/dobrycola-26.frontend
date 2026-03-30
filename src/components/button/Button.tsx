@@ -21,10 +21,10 @@ class Button extends Default<ButtonI['props'], ButtonI['state']> implements Butt
 
         return (
             <Tag
-                className={this.getClass('button _CLICK', this.getClass(className))}
+                className={this.getClass('v2button _CLICK', this.getClass(className))}
                 onClick={onClick}
             >
-                <LoaderBlock isShow={loading === true} className="button__loader" />
+                <LoaderBlock isShow={loading === true} className="v2button__loader" />
                 {children}
             </Tag>
         );

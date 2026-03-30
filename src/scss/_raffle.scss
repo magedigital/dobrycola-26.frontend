@@ -204,7 +204,7 @@
         transform: scale(0.8);
 
         @include mob {
-            transform: scale(.8);
+            transform: scale(0.8);
         }
     }
 
@@ -384,7 +384,7 @@
                 height: 72rem;
             }
 
-            & .button {
+            & .v2button {
                 @include mob {
                     font-size: 16rem;
                 }
@@ -496,7 +496,7 @@
                 margin-top: 20rem;
             }
 
-            & .button {
+            & .v2button {
                 @include mob {
                     font-size: 16rem;
                 }
