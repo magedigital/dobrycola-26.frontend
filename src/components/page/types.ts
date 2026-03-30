@@ -27,7 +27,7 @@ interface PageI<P = {}, S = {}> extends DefaultI<PropsT & P, StateT & S> {
 
     renderPage(
         this: PageI,
-        data: { render: () => React.ReactNode; className?: string },
+        data: { render: () => React.ReactNode; className?: string; withClose?: boolean },
     ): React.ReactNode;
     renderInnerClose(this: PageI): React.ReactNode;
 }

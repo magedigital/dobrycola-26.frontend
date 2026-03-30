@@ -4,6 +4,7 @@ import I from '../types.ts';
 
 import Anket from '../pages/anket/Anket.tsx';
 import Faq from '../pages/faq/Faq.tsx';
+import Games from '../pages/game/Game.tsx';
 import Index from '../pages/index/Index.tsx';
 import Prizes from '../pages/prizes/Prizes.tsx';
 import Products from '../pages/products/Products.tsx';
@@ -61,6 +62,11 @@ const pages = {
     prizes: {
         render(this: I) {
             return <Prizes />;
+        },
+    },
+    game: {
+        render(this: I) {
+            return <Games />;
         },
     },
 } as const;

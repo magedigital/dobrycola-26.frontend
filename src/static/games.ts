@@ -1,14 +1,17 @@
 export const games = {
-    TAPAI: {
+    TAP: {
         title: 'ТАпай  к фестивалю',
         thumb: 'game-01.png',
+        index: 3,
     },
-    DIDJEY: {
+    DJ: {
         title: 'Диджей,  зажигай',
         thumb: 'game-02.png',
+        index: 2,
     },
     VIBE: {
         title: 'Лови вайб',
         thumb: 'game-03.png',
+        index: 1,
     },
 };

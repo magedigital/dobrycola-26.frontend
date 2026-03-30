@@ -140,4 +140,26 @@
     &._inner &__scrollInner {
         background-color: #c60019;
     }
+
+    &._game &__scrollInner {
+        padding: 110rem 0 0;
+
+        @include mob {
+            padding-top: 72rem;
+        }
+    }
+
+    &._game &__scrollContent {
+        width: 1300rem;
+        height: 750rem;
+
+        @include bg("/media/inner/game-back.jpg", 100% auto, center top);
+
+        @include mob {
+            width: 100%;
+            height: 660rem;
+            padding: 0;
+            background: none;
+        }
+    }
 }

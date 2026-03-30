@@ -1,3 +1,5 @@
+import { v4 } from 'uuid';
+
 import React from 'react';
 
 import Default from '@components/default/Default.tsx';
@@ -6,9 +8,8 @@ import List from '@components/list/List.tsx';
 import getPages from './methods/getPages.ts';
 import init from './methods/init.ts';
 
-import PagesI from './types.ts';
+import PagesI, { ThisPageT } from './types.ts';
 
-import { PageNamesT } from '../../services/router/static/pages.ts';
 import { StoreT, WithStore } from '../../store/store.tsx';
 
 class Pages extends Default<PagesI['props'], PagesI['state']> implements PagesI {
@@ -22,40 +23,54 @@ class Pages extends Default<PagesI['props'], PagesI['state']> implements PagesI 
     init = init;
     getPages = getPages;
 
-    componentDidMount(): void {
-        this.init();
-    }
-
     render() {
         const {
             context,
             parentClass,
             itemClass,
+            pageClass,
             parentName,
             storePages,
             parentStyleProps = [],
             parentRealStyleProps = [],
+            pagesOrder,
+            pagesClass,
+            renderKey: r,
+            ...listProps
         } = this.props;
         const pages = this.getPages();
         const renderKey = pages.map((page) => page._id).join('');
+        const disabled = parentName ? !storePages[parentName].isShow : undefined;
 
         return (
             <List
-                renderKey={`${renderKey}${this.props.renderKey}`}
+                renderKey={this.getClass(renderKey, r, this.state.renderKey)}
                 items={pages}
-                parentClass={parentClass || 'body__pages'}
+                parentClass={this.getClass(parentClass || 'body__pages', pagesClass)}
                 itemClass={itemClass || 'body__page'}
                 itemStyleProps={[]}
                 parentStyleProps={parentStyleProps}
                 parentRealStyleProps={parentRealStyleProps}
-                render={({ item }: { item: { _id: PageNamesT; isPopup?: boolean } }) => ({
-                    item: this.props.pages[item._id]?.render.call(context),
-                    className: item.isPopup ? '_popup' : '',
+                render={({ item, items }: { item: ThisPageT; items: ThisPageT[] }) => ({
+                    item: this.props.pages[item.pageName]?.render.call(context, {
+                        id: item.id,
+                        setRenderKey: () => this.setState({ renderKey: v4() }),
+                        disabled,
+                    }),
+                    className: this.getClass(
+                        '_PAGE',
+                        item.isPopup ? '_popup' : '',
+                        `_${item.pageName}`,
+                        pageClass,
+                        items.filter((i) => i.id).length > 1 ? '_withId' : '',
+                    ),
                 })}
-                disabled={parentName ? !storePages[parentName].isShow : undefined}
-                allItems={this.getPages(true).map((page) => page._id)}
-                currentItem={pages[0]?._id}
+                disabled={disabled}
+                allItems={pagesOrder || this.getPages(true).map((page) => page.pageName)}
+                allItemProp="pageName"
+                currentItem={pages[0]?.pageName}
                 resizeWidth={true}
+                {...listProps}
             />
         );
     }

@@ -78,6 +78,7 @@ const pages = {
         links: [],
         level: 1,
         parentName: 'game',
+        withId: true,
     },
     raffle: {
         links: ['raffle'],
@@ -119,6 +120,7 @@ type PageT = {
     isPublic: boolean;
     mainPage: string | ((data: StoreT) => string);
     check: (s: StoreT) => { pageName: PageNamesT; callback?: () => void } | undefined;
+    withId: boolean;
 }>;
 
 type PageNamesT = keyof typeof pages;

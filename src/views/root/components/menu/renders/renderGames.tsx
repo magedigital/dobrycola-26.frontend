@@ -5,7 +5,11 @@ import { games } from '@static/games.ts';
 
 import I from '../types.ts';
 
+import { AppRouter } from '../../../../../index.tsx';
+
 const renderGames: I['renderGames'] = function () {
+    const { setState } = this.props;
+
     return (
         <div className="menu__games">
             <h3 className="menu__gamesTitle">
@@ -16,7 +20,14 @@ const renderGames: I['renderGames'] = function () {
                     const game = games[n];
 
                     return (
-                        <div className="menu__gamesItem _CLICK" key={n}>
+                        <div
+                            className="menu__gamesItem _CLICK"
+                            key={n}
+                            onClick={() => {
+                                AppRouter.changePage({ pageName: 'gameInner', ids: { 1: n } });
+                                setState(false);
+                            }}
+                        >
                             <div className="menu__gamesItemHead">
                                 <img
                                     src={require(`@media/${game.thumb}`)}

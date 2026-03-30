@@ -9,7 +9,7 @@ import TopBar from '../../../views/root/components/topBar/TopBar.tsx';
 
 import I from '../types.ts';
 
-const renderPage: I['renderPage'] = function ({ render, className }) {
+const renderPage: I['renderPage'] = function ({ render, className, withClose = true }) {
     const { isFixBarShow, isInit, isMenuShow, isPopupShow } = this.state;
 
     return (
@@ -34,8 +34,8 @@ const renderPage: I['renderPage'] = function ({ render, className }) {
             <Fade isShow={!!isMenuShow} className="page__menu">
                 <Menu setState={this.setMenuState.bind(this)} />
             </Fade>
-            <Media check={(d) => d === 'desktop'}>
-                {this.mode === 'inner' && <>{this.renderInnerClose()}</>}
+            <Media check={(d) => d === 'desktop' && withClose && this.mode === 'inner'}>
+                {this.renderInnerClose()}
             </Media>
             <div className="page__scroll" onScroll={this.checkScroll.bind(this)}>
                 <div className="page__scrollInner">

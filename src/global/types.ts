@@ -10,6 +10,10 @@ declare global {
         daDataToken: string;
         isVisible: boolean;
         visibillityHandlers: Record<string, (b: boolean) => void>;
+        JWT?: string;
+        getAppRoot?: () => HTMLElement;
+        activateGameApp?: () => void;
+        deactivateGameApp?: () => void;
     }
 
     namespace NodeJS {

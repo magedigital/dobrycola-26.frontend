@@ -34,6 +34,7 @@ type StoreT = {
     isAuthProcess?: boolean;
     mainContent?: MainContentT;
     profileData?: ProfileDataT;
+    isGameInit?: boolean;
 } & PopupsT;
 
 type ReducersT = {
@@ -50,6 +51,7 @@ type ReducersT = {
     setAuthUser: (u: UserT | undefined) => void;
     setMainContent: (c: MainContentT) => void;
     setProfileData: (c: ProfileDataT) => void;
+    gameInit: () => void;
 } & PopupsReducersT;
 
 const appStore = create<StoreT & ReducersT>((set) => ({
@@ -97,6 +99,7 @@ const appStore = create<StoreT & ReducersT>((set) => ({
     mainContent: getLocalContent('main'),
     setMainContent: (c) => set({ mainContent: c }),
     setProfileData: (d) => set({ profileData: d }),
+    gameInit: () => set({ isGameInit: true }),
     ...createPopupsStore(set),
 }));
 
