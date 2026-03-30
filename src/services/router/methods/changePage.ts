@@ -17,6 +17,7 @@ const changePage: I['changePage'] = function ({
     ids,
     search,
     savePrevPage = true,
+    saveSearch,
 }) {
     // if (escapeGoBack) {
     //     window.escapeGoBack = true;
@@ -248,7 +249,9 @@ const changePage: I['changePage'] = function ({
             historyHref = historyHref.slice(1);
         }
 
-        if (search) {
+        if (saveSearch) {
+            historyHref += `?${window.location.search.slice(1)}`;
+        } else if (search) {
             historyHref += `?${search.map((i) => [i.name, i.value].join('=')).join('&')}`;
         }
 

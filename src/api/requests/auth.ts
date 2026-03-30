@@ -43,6 +43,24 @@ async function registration({
     };
 }
 
+async function botRegistration({
+    ...data
+}: {
+    login: string | undefined;
+    mode?: string;
+    confirmEmail?: boolean;
+}): Promise<{ mailService?: string }> {
+    const r = await request<{ mailService?: string }>({
+        method: 'POST',
+        url: API.AUTH.BOT_REGISTRATION,
+        data,
+    });
+
+    return {
+        mailService: r.data.mailService,
+    };
+}
+
 async function getUser(): Promise<{ user: UserT }> {
     const r = await request<UserT>({
         method: 'GET',
@@ -67,6 +85,7 @@ export const authRequests = {
     login,
     logout,
     registration,
+    botRegistration,
     getUser,
     getInfo,
 };

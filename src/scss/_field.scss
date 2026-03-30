@@ -15,8 +15,22 @@
         }
     }
 
+    &._popupField &__support {
+        @include mob {
+            font-size: 16rem;
+        }
+    }
+
+    &._center &__support {
+        text-align: center;
+    }
+
     &._whiteColor &__support {
         color: #fff;
+    }
+
+    &._center &__box * {
+        text-align: center;
     }
 
     &__box {
@@ -50,6 +64,12 @@
 
         @include mob {
             height: auto;
+        }
+    }
+
+    &._popupField &__box {
+        @include mob {
+            height: 54rem;
         }
     }
 

@@ -13,6 +13,11 @@ const AppRouter = new Router();
 const path = AppRouter.getStartUrl(window.location.pathname.slice(1));
 
 (async () => {
+    window.isBot = !!window.location.search
+        .slice(1)
+        .split('&')
+        .find((t) => t.split('=')[0] === 'chatBot');
+
     const { storePages, levels, pagesIds, showPages } = AppRouter.changePage({
         href: path,
         storePages: resultPages,

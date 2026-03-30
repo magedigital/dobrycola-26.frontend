@@ -3,6 +3,8 @@ import React from 'react';
 import I from '../types.ts';
 
 import Anket from '../pages/anket/Anket.tsx';
+import BotAnket from '../pages/botAnket/BotAnket.tsx';
+import BotReg from '../pages/botReg/BotReg.tsx';
 import Faq from '../pages/faq/Faq.tsx';
 import Games from '../pages/game/Game.tsx';
 import Index from '../pages/index/Index.tsx';
@@ -13,7 +15,7 @@ import Raffle from '../pages/raffle/Raffle.tsx';
 import Rules from '../pages/rules/Rules.tsx';
 import Winners from '../pages/winners/Winners.tsx';
 
-const pages = {
+export const rootPages = {
     index: {
         render(this: I) {
             return <Index />;
@@ -69,6 +71,14 @@ const pages = {
             return <Games />;
         },
     },
+    botReg: {
+        render(this: I) {
+            return <BotReg />;
+        },
+    },
+    botAnket: {
+        render(this: I) {
+            return <BotAnket />;
+        },
+    },
 } as const;
-
-export default pages;

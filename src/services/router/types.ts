@@ -59,6 +59,7 @@ interface RouterI {
             search: { name: string; value: string }[];
             escapeGoBack: boolean;
             savePrevPage: boolean;
+            saveSearch: boolean;
         }>,
     ): ChangePageResultT;
     getPrevPageData(

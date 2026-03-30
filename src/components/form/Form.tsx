@@ -2,7 +2,6 @@ import React from 'react';
 
 import Button from '@components/button/Button.tsx';
 import Editor from '@components/editor/Editor.tsx';
-import Error from '@components/error/Error.tsx';
 import Field from '@components/field/Field.tsx';
 import Media from '@components/media/Media.tsx';
 
@@ -31,7 +30,7 @@ class Form extends Editor<FormI['props'], FormI['state']> implements FormI {
     sendForm = sendForm;
 
     render() {
-        const { form, loadingKey, error } = this.state;
+        const { form, loadingKey } = this.state;
         const { fields, fieldsList, button, fieldClassName, requiredText, uploadFile, disabled } =
             this.props;
 
@@ -68,7 +67,7 @@ class Form extends Editor<FormI['props'], FormI['state']> implements FormI {
                     ))}
                 </div>
                 {requiredText && <div className="form__required">{requiredText}</div>}
-                <Error className="form__error" error={error?.text} />
+                {/* <Error className="form__error" error={error?.text} /> */}
                 <div className="form__button">
                     <Media check={(d) => d === 'desktop'}>
                         <Button

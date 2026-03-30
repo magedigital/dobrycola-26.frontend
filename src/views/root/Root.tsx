@@ -16,7 +16,7 @@ import { AppRouter } from '../../index.tsx';
 import { StoreT, WithStore } from '../../store/store.tsx';
 import renderCookies from './renders/renderCookies.tsx';
 import renderPopups from './renders/renderPopups.tsx';
-import pages from './static/pages.tsx';
+import { rootPages } from './static/pages.tsx';
 
 const Styles = typeof window !== 'undefined' && require('./components/Styles.tsx').default;
 
@@ -31,8 +31,6 @@ class Root extends React.Component<RootI['props'], RootI['state']> implements Ro
 
         this.parent = React.createRef();
     }
-
-    pages = pages;
 
     resizeHandler = resizeHandler;
     popupsHandler = popupsHandler;
@@ -58,13 +56,14 @@ class Root extends React.Component<RootI['props'], RootI['state']> implements Ro
                     {this.renderCookies()}
                     {this.renderPopups()}
                     {isRootInit && (
-                        <>
-                            <Pages
-                                context={this}
-                                pages={this.pages}
-                                filter={(name) => !AppRouter.pages[name].level}
-                            />
-                        </>
+                        <Pages
+                            context={this}
+                            pages={rootPages}
+                            filter={(name) =>
+                                !AppRouter.pages[name].level &&
+                                !!window.isBot === !!AppRouter.pages[name].forBot
+                            }
+                        />
                     )}
                 </div>
             </>

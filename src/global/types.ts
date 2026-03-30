@@ -14,6 +14,10 @@ declare global {
         getAppRoot?: () => HTMLElement;
         activateGameApp?: () => void;
         deactivateGameApp?: () => void;
+        isBot: boolean;
+        Telegram?: {
+            WebApp?: { close: () => void };
+        };
     }
 
     namespace NodeJS {

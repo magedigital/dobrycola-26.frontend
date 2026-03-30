@@ -12,7 +12,7 @@ import I, { PopupRenderContentT } from '../types.ts';
 
 const renderPopupContent = function (
     this: I,
-    data: { render: PopupRenderContentT; id?: string; canClose?: boolean },
+    data: { render: PopupRenderContentT; id?: string; canClose?: boolean; withTopBar?: boolean },
 ) {
     const { isMenuShow } = this.state;
     const isInit = this.props.isInit ?? this.state.isInit;
@@ -26,6 +26,7 @@ const renderPopupContent = function (
                     pageCloseHandler={this.close.bind(this)}
                 />
             </div>
+
             <Fade isShow={!!isMenuShow} className="popup__menu">
                 <Menu setState={this.setMenuState.bind(this)} />
             </Fade>

@@ -37,8 +37,13 @@ class Games extends Page<GamesI['props'], GamesI['state']> implements GamesI {
                         context={this}
                         pages={{
                             gameInner: {
-                                render(d) {
-                                    return <Game name={d.id as keyof typeof games} />;
+                                render(this: GamesI, d) {
+                                    return (
+                                        <Game
+                                            name={d.id as keyof typeof games}
+                                            close={this.close.bind(this)}
+                                        />
+                                    );
                                 },
                             },
                         }}

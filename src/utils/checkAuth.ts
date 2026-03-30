@@ -75,6 +75,14 @@ export default async function checkAuth({ redirect }: ParamsT): Promise<void> {
         pageName = 'fullAnket';
     }
 
+    if (window.isBot) {
+        pageName = 'botReg';
+
+        if (user?.status === 'ANKET_REQUIRED') {
+            pageName = 'botAnket';
+        }
+    }
+
     // if (user?.status === 'ACT_REQUIRED' && user.nextActPrizeId) {
     //     pageName = 'akt-inner';
     //     ids = { '1': user.nextActPrizeId };
@@ -89,6 +97,6 @@ export default async function checkAuth({ redirect }: ParamsT): Promise<void> {
     }
 
     if (pageName) {
-        AppRouter.changePage({ pageName, ids });
+        AppRouter.changePage({ pageName, ids, saveSearch: true });
     }
 }

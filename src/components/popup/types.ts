@@ -28,7 +28,7 @@ interface PopupI<P = {}, S = {}> extends EditorI<PropsT & P, StateT & S> {
     renderClose(this: PopupI): React.ReactNode;
     renderPopup(
         this: PopupI,
-        data: { render: RenderContentT; id?: string; canClose?: boolean },
+        data: { render: RenderContentT; id?: string; canClose?: boolean; withTopBar?: boolean },
     ): React.ReactNode;
     renderContent: RenderContentT;
 }

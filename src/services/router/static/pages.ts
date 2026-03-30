@@ -106,6 +106,14 @@ const pages = {
     //     level: 1,
     //     parentName: 'prizes',
     // },
+    botReg: {
+        links: ['botReg'],
+        forBot: true,
+    },
+    botAnket: {
+        links: ['botAnket'],
+        forBot: true,
+    },
 } as const;
 
 type PageT = {
@@ -121,6 +129,7 @@ type PageT = {
     mainPage: string | ((data: StoreT) => string);
     check: (s: StoreT) => { pageName: PageNamesT; callback?: () => void } | undefined;
     withId: boolean;
+    forBot: boolean;
 }>;
 
 type PageNamesT = keyof typeof pages;

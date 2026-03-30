@@ -7,6 +7,10 @@
         }
     }
 
+    &._back {
+        background: #c60019;
+    }
+
     &__wrapper {
         position: absolute;
         top: 0;
@@ -28,6 +32,12 @@
             @include mob {
                 display: block;
                 padding: 78rem 16rem 24rem;
+            }
+
+            &._notBar {
+                @include mob {
+                    padding: 16rem;
+                }
             }
 
             &::before {
