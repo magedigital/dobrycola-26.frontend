@@ -168,9 +168,13 @@
         }
 
         &Back {
-            display: block;
             width: 100%;
-            object-fit: contain;
+
+            &Thumb {
+                display: block;
+                width: 100%;
+                object-fit: contain;
+            }
         }
 
         &Location {
