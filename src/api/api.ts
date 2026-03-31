@@ -32,6 +32,7 @@ export const API = {
     },
     RAFFLE: {
         START: '/WelcomeRaffle',
+        GAME: '/PlayGame',
     },
     CODE: {
         REG: '/CodeRegistration',

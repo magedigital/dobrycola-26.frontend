@@ -23,6 +23,7 @@ const renderRaffles: I['renderRaffles'] = function () {
                                 description={content.components.buy.raffle.info.header.description}
                                 buttonText={content.components.buy.raffle.info.button.title}
                                 buttonOnClick={() => {
+                                    appStore.getState().setPopup({ name: 'rafflePopup' });
                                     // changePage({ pageName: 'game-inner', ids: { 1: 'LOSYANTA' } });
                                     // sendGoal('profileRaffleBtn');
                                 }}

@@ -33,6 +33,13 @@ class Popup<P = {}, S = {}>
             document.removeEventListener('customResize', this.setResize);
         };
 
+        this.intervals.resizeH = setInterval(() => {
+            if (this.state.isInit) {
+                this.resizeHandler();
+                clearInterval(this.intervals.resizeH);
+            }
+        }, 100);
+
         this.parent = React.createRef();
     }
 

@@ -21,6 +21,7 @@ type PopupsT = {
     invitePopup: PopupT;
     ballsPopup: PopupT;
     orderPopup: PopupT<{ current: number }>;
+    rafflePopup: PopupT;
 };
 
 type PopupsReducersT = {
@@ -61,6 +62,10 @@ const popups = {
         redirectPageName: 'profile',
     },
     orderPopup: {
+        check: (s: StoreT) => !!s.authUser,
+        redirectPageName: 'profile',
+    },
+    rafflePopup: {
         check: (s: StoreT) => !!s.authUser || true,
         redirectPageName: 'profile',
     },

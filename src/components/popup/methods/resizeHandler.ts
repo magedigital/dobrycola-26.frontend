@@ -4,6 +4,10 @@ import { setPxFromRem } from '@utils/setPxFromRem.ts';
 import I from '../types.ts';
 
 const resizeHandler: I['resizeHandler'] = async function () {
+    if (!this.parent.current) {
+        return;
+    }
+
     const topBarNode = this.parent.current!.querySelector<HTMLElement>('.popup__topBar');
 
     if (!topBarNode) {
