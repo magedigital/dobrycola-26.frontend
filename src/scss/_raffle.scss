@@ -120,7 +120,7 @@
                 aspect-ratio: 1;
 
                 @include mob {
-                    margin-bottom: 32rem;
+                    margin-bottom: 18rem;
                 }
 
                 &::before {
@@ -173,14 +173,15 @@
                 align-items: center;
                 height: 34rem;
                 color: #fff;
-                font-size: 17rem;
-                line-height: 1.2;
+                font-size: 15rem;
+                line-height: 1.3;
                 text-align: center;
                 text-transform: uppercase;
                 transition: $trans;
 
                 @include mob {
-                    font-size: 17rem;
+                    width: 250rem;
+                    font-size: 15rem;
                 }
             }
         }
