@@ -36,4 +36,7 @@ export const API = {
     CODE: {
         REG: '/CodeRegistration',
     },
+    ORDER: {
+        SEND: '/AddUserPrize',
+    },
 };

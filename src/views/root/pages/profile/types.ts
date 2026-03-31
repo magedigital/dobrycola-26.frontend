@@ -112,7 +112,7 @@ type ProfileContentT = {
                         description: string;
                     };
                 };
-                prizes: ProfileMerchT[];
+                prizes: ProfileOrderT[];
             };
         };
     };
@@ -122,7 +122,7 @@ type ProfileChzCodeT = {
     id: string;
 };
 
-type ProfileMerchT = {
+type ProfileOrderT = {
     title: string;
     thumb: string;
     code: string;
@@ -158,7 +158,7 @@ export type {
     ProfileCodeT,
     ProfilePrizeT,
     ProfileContentT,
-    ProfileMerchT,
+    ProfileOrderT,
     ProfileChzCodeT,
     ProfileTransactionT,
 };

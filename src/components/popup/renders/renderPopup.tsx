@@ -30,18 +30,18 @@ const renderPopupContent = function (
             <Fade isShow={!!isMenuShow} className="popup__menu">
                 <Menu setState={this.setMenuState.bind(this)} />
             </Fade>
+            {typeof isInit === 'boolean' && (
+                <LoaderBlock
+                    isShow={isInit !== true}
+                    className="popup__loader"
+                    loaderClassName="_back"
+                />
+            )}
             <div className="popup__inner _COL">
                 <Media check={(d) => d === 'desktop'}>
                     {(data.canClose ?? true) && this.renderClose()}
                 </Media>
                 {data.render({ id: data.id })}
-                {typeof isInit === 'boolean' && (
-                    <LoaderBlock
-                        isShow={isInit !== true}
-                        className="popup__loader"
-                        loaderClassName="_back"
-                    />
-                )}
             </div>
         </div>
     );

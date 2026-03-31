@@ -16,7 +16,7 @@ const pages = {
                 let pageName = s.showPages.find((p) => (pages[p] as PageT).isPublic);
 
                 if (s.authUser?.status === 'EMAIL_CONFIRM_REQUIRED') {
-                    // pageName = 'anket';
+                    pageName = 'anket';
                 }
 
                 if (s.authUser?.status === 'EXTRA_ANKET_REQUIRED') {

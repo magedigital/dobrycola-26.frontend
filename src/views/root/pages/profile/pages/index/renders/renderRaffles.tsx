@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { appStore } from '@store/store.tsx';
+
 import Raffle from '../components/raffle/Raffle.tsx';
 
 import I from '../types.ts';
@@ -39,12 +41,11 @@ const renderRaffles: I['renderRaffles'] = function () {
                                 description={content.components.buy.merch.info.header.description}
                                 buttonText={content.components.buy.merch.info.button.title}
                                 buttonOnClick={() => {
-                                    // changePage({
-                                    //     pageName: 'merch',
-                                    //     pageData: {
-                                    //         currentMerchIndex: this.state.currentMerchIndex,
-                                    //     },
-                                    // });
+                                    appStore.getState().setPopup({
+                                        name: 'orderPopup',
+                                        data: { current: this.state.currentMerchIndex },
+                                    });
+
                                     // sendGoal('profileOrderPrizeBtn');
                                 }}
                                 items={content.components.buy.merch.prizes.map((item) => ({
