@@ -1,6 +1,10 @@
 import DefaultI from '@components/default/types';
 
-type PropsT = {};
+import { MainContentT } from '../../types';
+
+type PropsT = {
+    mainContent: MainContentT;
+};
 
 type StateT = {};
 

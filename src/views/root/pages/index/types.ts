@@ -1,7 +1,10 @@
 import { FooterContentT, HeaderContentT } from '@api/requests/content';
 import PageI from '@components/page/types';
+import { StoreT } from '@store/store';
 
-type PropsT = {};
+type PropsT = {
+    mainContent: StoreT['mainContent'];
+};
 
 type StateT = {};
 
