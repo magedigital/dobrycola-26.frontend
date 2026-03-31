@@ -21,6 +21,11 @@ const renderNav: I['renderNav'] = function () {
                             AppRouter.changePage({ pageName: i.pageName! });
                         } else if (i.type === 'href') {
                             window.open(i.href!, '_blank');
+                        } else if (i.type === 'ancor') {
+                            AppRouter.changePage({
+                                pageName: i.pageName!,
+                                search: [{ name: 'ancor', value: i.ancor! }],
+                            });
                         }
 
                         setState(false);

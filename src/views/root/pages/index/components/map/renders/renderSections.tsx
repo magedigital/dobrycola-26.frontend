@@ -15,6 +15,7 @@ const renderSections: I['renderSections'] = function () {
                         className={this.getClass('indexMap__mapSection', this.setClass(k))}
                         key={k}
                         data-name={k}
+                        data-ancor={k}
                     >
                         {k !== 'start' && (
                             <>

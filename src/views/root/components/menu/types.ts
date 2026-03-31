@@ -15,6 +15,7 @@ type MenuNavItemT = {
     ancorName?: string;
     pageName?: PageNamesT;
     href?: string;
+    ancor?: string;
 };
 
 interface MenuI extends DefaultI<PropsT, StateT> {
