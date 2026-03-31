@@ -86,8 +86,6 @@ export default async function checkAuth({ redirect }: ParamsT): Promise<void> {
     }
 
     if (window.isBot) {
-        pageName = 'botReg';
-
         if (user?.status === 'ANKET_REQUIRED') {
             pageName = 'botAnket';
         }

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Default from '@components/default/Default.tsx';
 import Pages from '@components/pages/Pages.tsx';
 import { PopupT, popups } from '@store/popups.ts';
 
@@ -20,7 +21,7 @@ import { rootPages } from './static/pages.tsx';
 
 const Styles = typeof window !== 'undefined' && require('./components/Styles.tsx').default;
 
-class Root extends React.Component<RootI['props'], RootI['state']> implements RootI {
+class Root extends Default<RootI['props'], RootI['state']> implements RootI {
     parent: React.RefObject<HTMLDivElement | null>;
 
     constructor(props: RootI['props']) {
@@ -41,10 +42,6 @@ class Root extends React.Component<RootI['props'], RootI['state']> implements Ro
     renderPopups = renderPopups;
     renderCookies = renderCookies;
 
-    componentDidMount(): void {
-        this.init();
-    }
-
     render() {
         const { isRootInit } = this.props;
 
@@ -52,17 +49,14 @@ class Root extends React.Component<RootI['props'], RootI['state']> implements Ro
             <>
                 {Styles && <Styles />}
                 <Errors />
-                <div className="body__content">
+                <div className={this.getClass('body__content', window.isBot && '_BOT')}>
                     {this.renderCookies()}
                     {this.renderPopups()}
                     {isRootInit && (
                         <Pages
                             context={this}
                             pages={rootPages}
-                            filter={(name) =>
-                                !AppRouter.pages[name].level &&
-                                !!window.isBot === !!AppRouter.pages[name].forBot
-                            }
+                            filter={(name) => !AppRouter.pages[name].level}
                         />
                     )}
                 </div>

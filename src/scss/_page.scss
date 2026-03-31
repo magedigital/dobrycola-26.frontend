@@ -89,6 +89,12 @@
         height: var(--wheight);
     }
 
+    ._BOT &__scrollInner {
+        @include mob {
+            padding: 20rem !important;
+        }
+    }
+
     &._loading &__scrollContent {
         opacity: 0;
     }

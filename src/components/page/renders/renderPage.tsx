@@ -23,29 +23,38 @@ const renderPage: I['renderPage'] = function ({ render, className, withClose = t
                 this.mode === 'inner' && '_inner',
             )}
         >
-            <div className={this.getClass('page__topBar _fix', isFixBarShow ? '_show' : '')}>
-                <TopBar
-                    mode={this.mode}
-                    setMenuState={this.setMenuState.bind(this)}
-                    pageCloseHandler={this.close.bind(this)}
-                    className="_fix"
-                />
-            </div>
-            <Fade isShow={!!isMenuShow} className="page__menu">
-                <Menu setState={this.setMenuState.bind(this)} />
-            </Fade>
-            <Media check={(d) => d === 'desktop' && withClose && this.mode === 'inner'}>
-                {this.renderInnerClose()}
-            </Media>
-            <div className="page__scroll" onScroll={this.checkScroll.bind(this)}>
-                <div className="page__scrollInner">
-                    <div className="page__topBar">
+            {!window.isBot && (
+                <>
+                    <div
+                        className={this.getClass('page__topBar _fix', isFixBarShow ? '_show' : '')}
+                    >
                         <TopBar
                             mode={this.mode}
                             setMenuState={this.setMenuState.bind(this)}
                             pageCloseHandler={this.close.bind(this)}
+                            className="_fix"
                         />
                     </div>
+                    <Fade isShow={!!isMenuShow} className="page__menu">
+                        <Menu setState={this.setMenuState.bind(this)} />
+                    </Fade>
+                    <Media check={(d) => d === 'desktop' && withClose && this.mode === 'inner'}>
+                        {this.renderInnerClose()}
+                    </Media>
+                </>
+            )}
+            <div className="page__scroll" onScroll={this.checkScroll.bind(this)}>
+                <div className="page__scrollInner">
+                    {!window.isBot && (
+                        <div className="page__topBar">
+                            <TopBar
+                                mode={this.mode}
+                                setMenuState={this.setMenuState.bind(this)}
+                                pageCloseHandler={this.close.bind(this)}
+                            />
+                        </div>
+                    )}
+
                     {typeof isInit === 'boolean' && (
                         <LoaderBlock isShow={!isInit} className="page__loader" />
                     )}

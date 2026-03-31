@@ -19,17 +19,21 @@ const renderPopupContent = function (
 
     return (
         <div className="popup__wrapperBox">
-            <div className="popup__topBar">
-                <TopBar
-                    mode="popup"
-                    setMenuState={this.setMenuState.bind(this)}
-                    pageCloseHandler={this.close.bind(this)}
-                />
-            </div>
+            {!window.isBot && (
+                <>
+                    <div className="popup__topBar">
+                        <TopBar
+                            mode="popup"
+                            setMenuState={this.setMenuState.bind(this)}
+                            pageCloseHandler={this.close.bind(this)}
+                        />
+                    </div>
+                    <Fade isShow={!!isMenuShow} className="popup__menu">
+                        <Menu setState={this.setMenuState.bind(this)} />
+                    </Fade>
+                </>
+            )}
 
-            <Fade isShow={!!isMenuShow} className="popup__menu">
-                <Menu setState={this.setMenuState.bind(this)} />
-            </Fade>
             {typeof isInit === 'boolean' && (
                 <LoaderBlock
                     isShow={isInit !== true}

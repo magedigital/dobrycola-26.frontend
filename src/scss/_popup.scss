@@ -59,6 +59,12 @@
         }
     }
 
+    ._BOT &__wrapperBox {
+        @include mob {
+            padding: 16rem;
+        }
+    }
+
     &._minHeight &__wrapperBox {
         padding-top: 120rem;
         padding-bottom: 60rem;

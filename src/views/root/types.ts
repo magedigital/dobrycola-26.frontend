@@ -1,3 +1,4 @@
+import DefaultI from '@components/default/types.ts';
 import { PopupsT } from '@store/popups.ts';
 
 import { StoreT } from '../../store/store.tsx';
@@ -10,12 +11,7 @@ type PropsT = {
 
 type StateT = {};
 
-interface RootI extends React.Component<PropsT, StateT> {
-    props: PropsT;
-    state: StateT;
-
-    parent: React.RefObject<HTMLDivElement | null>;
-
+interface RootI extends DefaultI<PropsT, StateT> {
     resizeHandler(this: RootI, force?: boolean): Promise<void>;
     init(this: RootI): Promise<void>;
     popupsHandler(this: RootI, set?: boolean): void;
