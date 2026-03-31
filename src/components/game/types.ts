@@ -29,6 +29,7 @@ type GameDataT = {
     gameFinishHandler: () => void;
     userNotAuthorized: boolean;
     activityIsOver: boolean;
+    codeNotRegistered?: boolean;
 };
 
 interface GameI extends DefaultI<PropsT, StateT> {
