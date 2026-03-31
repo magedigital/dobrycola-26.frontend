@@ -2,7 +2,7 @@ import { appStore } from '@store/store.tsx';
 
 import I from '../types.ts';
 
-const scriptSrc = 'js/main.29bc6fef.js';
+const scriptSrc = 'js/main.98f351b5.js';
 const styleSrc = 'css/main.35876ac6.css';
 const root = '/_game/static';
 const fonts = [
