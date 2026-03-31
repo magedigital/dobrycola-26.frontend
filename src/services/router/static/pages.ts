@@ -101,11 +101,16 @@ const pages = {
         level: 1,
         parentName: 'prizes',
     },
-    // 'prizes-spec': {
-    //     links: ['spec'],
-    //     level: 1,
-    //     parentName: 'prizes',
-    // },
+    'prizes-month': {
+        links: ['month'],
+        level: 1,
+        parentName: 'prizes',
+    },
+    'prizes-spec': {
+        links: ['spec'],
+        level: 1,
+        parentName: 'prizes',
+    },
     botReg: {
         links: ['botReg'],
         forBot: true,

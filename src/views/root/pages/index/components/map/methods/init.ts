@@ -12,6 +12,10 @@ const init: I['init'] = async function (this: I) {
             pageScrollNode.removeEventListener('scroll', this.scrollHandler);
         };
     }
+
+    if (window.location.search.includes('ancor=games')) {
+        this.scrollToSection('game', 0);
+    }
 };
 
 export default init;

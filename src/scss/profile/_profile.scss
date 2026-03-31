@@ -290,6 +290,19 @@
         }
     }
 
+    &._prizes &__pagesTab {
+        padding: 10rem 20rem;
+        white-space: unset;
+
+        &Wrapper {
+            width: calc(100% / 5);
+
+            @include mob {
+                width: auto;
+            }
+        }
+    }
+
     &__pages {
         &TabsWrapper {
             width: 100%;
@@ -311,15 +324,18 @@
 
         &TabsWrapper &Tabs {
             display: inline-flex;
+            align-items: stretch;
         }
 
         &Tab {
             width: calc(calc(100% / 2) - 2rem);
+            height: 100%;
             padding: 16rem 20rem;
             color: #fff;
             font-weight: 500;
             font-size: 14rem;
             white-space: nowrap;
+            text-align: center;
             text-transform: uppercase;
             background: #d300b4;
             border-radius: 8rem 8rem 0 0;
@@ -334,7 +350,7 @@
             }
 
             &._auto {
-                width: 100%;
+                width: auto;
             }
 
             &._current {

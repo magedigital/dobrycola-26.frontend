@@ -3,8 +3,11 @@ import React from 'react';
 import { appStore } from '@store/store.tsx';
 
 import PrizesPage from '../components/prizesPage/PrizesPage.tsx';
+import SpecPrize from '../components/specPrize/SpecPrize.tsx';
 
 import RootI from '../types.ts';
+
+import { AppRouter } from '../../../../../index.tsx';
 
 export const prizesPages = {
     'prizes-moment': {
@@ -67,10 +70,47 @@ export const prizesPages = {
             );
         },
     },
-    // 'prizes-spec': {
-    //     title: 'СПЕЦИАЛЬНЫЙ ПРИЗ',
-    //     render(this: RootI) {
-    //         return <SpecPrize />;
-    //     },
-    // },
+    'prizes-month': {
+        title: 'ежемесячный приз',
+        render(this: RootI) {
+            return (
+                <SpecPrize
+                    title="ежемесячный приз"
+                    text="Для участия требуется не менее <span>1</span> балла на балансе"
+                    name="Коллекция мерча и сертификат Яндекс Афиша"
+                    button={{
+                        text: 'зарегистрировать код',
+                        onClick: () => {
+                            appStore.getState().setPopup({ name: 'codePopup' });
+                        },
+                    }}
+                    thumb={require('@media/inner/month-prize.jpg')}
+                    mobThumb={require('@media/inner/month-prize-mob.jpg')}
+                />
+            );
+        },
+    },
+    'prizes-spec': {
+        title: 'СПЕЦИАЛЬНЫЙ ПРИЗ',
+        render(this: RootI) {
+            return (
+                <SpecPrize
+                    title="специальный приз"
+                    text="Розыгрыш среди ТОП-500 игроков"
+                    name="Коллекция мерча"
+                    button={{
+                        text: 'перейти к игровым локациям',
+                        onClick: () => {
+                            AppRouter.changePage({
+                                pageName: 'index',
+                                search: [{ name: 'ancor', value: 'games' }],
+                            });
+                        },
+                    }}
+                    thumb={require('@media/inner/spec-prize.jpg')}
+                    mobThumb={require('@media/inner/spec-prize-mob.jpg')}
+                />
+            );
+        },
+    },
 } as const;

@@ -19,7 +19,7 @@ const renderNav: I['renderNav'] = function () {
                             currentSection === n && '_active',
                         )}
                         key={n}
-                        onClick={this.scrollToSection.bind(this, n)}
+                        onClick={this.scrollToSection.bind(this, n, 300)}
                     >
                         {section.title}
                     </div>

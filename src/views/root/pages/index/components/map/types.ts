@@ -12,7 +12,7 @@ interface MapI extends DefaultI<PropsT, StateT> {
     currentSection: keyof typeof mapSections;
 
     scrollHandler(this: MapI): Promise<void>;
-    scrollToSection(this: MapI, n: keyof typeof mapSections): void;
+    scrollToSection(this: MapI, n: keyof typeof mapSections, d?: number): void;
 
     renderDecors(this: MapI): React.ReactNode;
     renderTop(this: MapI): React.ReactNode;

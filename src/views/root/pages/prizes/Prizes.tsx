@@ -46,7 +46,7 @@ class Prizes extends Page<PrizesI['props'], PrizesI['state']> implements PrizesI
             render: () =>
                 mainContent ? (
                     <>
-                        <div className="profile _FULL_W">
+                        <div className="profile _FULL_W _prizes">
                             {this.renderHead()}
                             {this.renderPages()}
                         </div>
