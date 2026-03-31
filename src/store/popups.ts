@@ -66,7 +66,7 @@ const popups = {
         redirectPageName: 'profile',
     },
     rafflePopup: {
-        check: (s: StoreT) => !!s.authUser || true,
+        check: (s: StoreT) => !!s.authUser,
         redirectPageName: 'profile',
     },
 } as const;

@@ -47,7 +47,7 @@ const renderContent: I['renderContent'] = function () {
                                         />
                                     </div>
 
-                                    {name === 'merch' && false && (
+                                    {name === 'balls' && (
                                         <div className="prizesPage__sliderItemBalls">
                                             {item.price}
                                         </div>
@@ -55,7 +55,7 @@ const renderContent: I['renderContent'] = function () {
                                 </div>
                                 <div className="prizesPage__sliderItemDescription">
                                     {item.title}{' '}
-                                    {name === 'merch' && item.description && false && (
+                                    {name === 'balls' && item.description && false && (
                                         <div className="prizesPage__sliderItemDescriptionInfo">
                                             <div className="prizesPage__sliderItemDescriptionInfoIcon _CLICK">
                                                 i

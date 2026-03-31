@@ -19,12 +19,12 @@ const renderStartForm: I['renderStartForm'] = function () {
                     }}
                 >
                     Я соглашаюсь с{' '}
-                    <a href="/docs/rules.pdf" target="_blank">
+                    <a href="/upload/docs/rules.pdf" target="_blank">
                         Правилами акции
                     </a>{' '}
                     <br className="_MOBILE" />
                     и&nbsp;
-                    <a href="/docs/politics.pdf" target="_blank">
+                    <a href="/upload/docs/politics.pdf" target="_blank">
                         Политикой конфиденциальности
                     </a>
                 </Checkbox>

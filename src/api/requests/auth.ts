@@ -18,6 +18,20 @@ async function login({
     });
 }
 
+async function botLogin({
+    ...data
+}: {
+    login: string | undefined;
+    password: string | undefined;
+    isCode?: boolean;
+}): Promise<void> {
+    await request<{ isFirstCheck?: boolean }>({
+        method: 'POST',
+        url: API.AUTH.BOT_LOGIN,
+        data,
+    });
+}
+
 async function logout(): Promise<void> {
     await request({
         method: 'POST',
@@ -83,6 +97,7 @@ async function getInfo(): Promise<ProfileDataT> {
 
 export const authRequests = {
     login,
+    botLogin,
     logout,
     registration,
     botRegistration,

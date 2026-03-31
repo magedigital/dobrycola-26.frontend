@@ -19,6 +19,8 @@ const renderNav: I['renderNav'] = function () {
                     onClick={() => {
                         if (i.type === 'link') {
                             AppRouter.changePage({ pageName: i.pageName! });
+                        } else if (i.type === 'href') {
+                            window.open(i.href!, '_blank');
                         }
 
                         setState(false);

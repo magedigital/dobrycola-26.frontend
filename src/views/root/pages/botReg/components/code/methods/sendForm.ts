@@ -14,7 +14,7 @@ const sendForm: I['sendForm'] = async function (code) {
     await this.asyncSetState({ loadingKey: 'send', error: undefined });
 
     try {
-        await authRequests.login({ login, password: code, isCode: true });
+        await authRequests.botLogin({ login, password: code, isCode: true });
         await checkAuth({ redirect: true });
     } catch (e) {
         const error = e as RequestErrorT;

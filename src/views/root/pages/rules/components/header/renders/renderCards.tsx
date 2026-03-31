@@ -2,6 +2,7 @@ import React from 'react';
 
 import Button from '@components/button/Button.tsx';
 import Icon from '@components/icon/Icon.tsx';
+import { appStore } from '@store/store.tsx';
 
 import I from '../types.ts';
 
@@ -43,7 +44,7 @@ const renderCards: I['renderCards'] = function () {
             <div className="rules__button">
                 <Button
                     onClick={() => {
-                        // changePage({ pageName: 'regCode' });
+                        appStore.getState().setPopup({ name: 'codePopup' });
                     }}
                     className="_darkPinkColor _boldBorder"
                 >

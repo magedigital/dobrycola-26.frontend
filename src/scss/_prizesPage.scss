@@ -201,19 +201,19 @@
                 left: 50%;
                 z-index: 2;
                 padding: 4rem 8rem;
-                color: #5d279e;
+                color: #fff;
                 font-weight: 900;
-                font-size: 12rem;
+                font-size: 16rem;
                 font-family: Onest;
                 white-space: nowrap;
                 text-transform: uppercase;
-                background: #fed5ff;
-                border-radius: 360rem;
+                background: #10cfc9;
+                border-radius: 6rem;
                 transform: translate(-50%, 0);
 
                 @include mob {
-                    padding: 6rem 10rem;
-                    font-size: 14rem;
+                    padding: 4rem 10rem;
+                    font-size: 16rem;
                     border-radius: 7rem;
                 }
             }

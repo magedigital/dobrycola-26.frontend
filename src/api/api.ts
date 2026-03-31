@@ -13,6 +13,7 @@ export const API = {
         GET_USER: '/GetParticipantInfo',
         GET_INFO: '/GetCabinetInfo',
         BOT_REGISTRATION: '/AddEmailToChatBot',
+        BOT_LOGIN: '/LoginWithChatBot',
     },
     CONTENT: {
         MAIN: routes.CONTENT + '/main/',

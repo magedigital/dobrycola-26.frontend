@@ -24,6 +24,7 @@ export const prizesPages = {
                     buttonText="играть в игру"
                     buttonOnClick={() => {
                         // changePage({ pageName: 'game-inner', ids: { 1: 'LOSYANTA' } });
+                        appStore.getState().setPopup({ name: 'rafflePopup' });
                     }}
                     items={content!.components.prizes.instant.items}
                 />
@@ -37,7 +38,7 @@ export const prizesPages = {
 
             return (
                 <PrizesPage
-                    name="merch"
+                    name="balls"
                     title={`Копи баллы и обменивай на\xa0призы`}
                     metaTitle="Призы - Копи баллы"
                     description="Регистрируй коды и получай <br class='_MOBILE' />по <span>1</span> баллу за каждый код, приводи друзей - зарабатывай еще баллы"
@@ -96,7 +97,7 @@ export const prizesPages = {
             return (
                 <SpecPrize
                     title="специальный приз"
-                    text="Розыгрыш среди ТОП-500 игроков"
+                    text="Для участия в розыгрыше зарегистрируй 1 код и попади в ТОП-500 игроков недели"
                     name="Коллекция мерча"
                     button={{
                         text: 'перейти к игровым локациям',

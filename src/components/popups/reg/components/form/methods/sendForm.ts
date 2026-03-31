@@ -1,5 +1,7 @@
 import { authRequests } from '@api/requests/auth.ts';
 
+import { setError } from '../../../../../../views/root/components/errors/utils/errorHandler.ts';
+
 import I from '../types.ts';
 
 const sendForm: I['sendForm'] = async function () {
@@ -7,6 +9,11 @@ const sendForm: I['sendForm'] = async function () {
     const { setStep } = this.props;
 
     if (!form) {
+        return;
+    }
+
+    if (!form.confirm || !form.policy) {
+        setError({ text: 'Необходимо согласие', type: 'error' });
         return;
     }
 

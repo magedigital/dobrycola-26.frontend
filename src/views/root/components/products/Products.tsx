@@ -2,6 +2,7 @@ import React from 'react';
 
 import Button from '@components/button/Button.tsx';
 import Default from '@components/default/Default.tsx';
+import { appStore } from '@store/store.tsx';
 
 import getProducts from './methods/getProducts.ts';
 import init from './methods/init.ts';
@@ -56,7 +57,7 @@ class Products extends Default<ProductsI['props'], ProductsI['state']> implement
                         <Button
                             className="_darkPinkColor _boldBorder _mediumSize"
                             onClick={() => {
-                                // changePage({ pageName: 'regCode' });
+                                appStore.getState().setPopup({ name: 'codePopup' });
                             }}
                         >
                             Участвовать
