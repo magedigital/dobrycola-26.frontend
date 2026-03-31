@@ -59,7 +59,7 @@ export const prizesPages = {
                 <PrizesPage
                     name="weekly"
                     title="Еженедельный розыгрыш"
-                    description="Для участия в розыгрыше на твоём счету должно быть более <span>10</span> баллов"
+                    description="Для участия в розыгрыше требуется не менее <span>1</span> балла"
                     metaTitle="Призы - Еженедельно"
                     buttonText="Зарегистрировать код"
                     buttonOnClick={() => {

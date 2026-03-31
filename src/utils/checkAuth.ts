@@ -9,9 +9,19 @@ import { deleteCookie, getCookie } from './cookies';
 export const logoutHandler = async function (): Promise<void> {
     window.userAuthorized = false;
     appStore.getState().setAuthProcess(true);
-    appStore.getState().setPopup({ name: 'loginPopup' });
+
     deleteCookie(enums.ACCESS_TOKEN);
     localStorage.removeItem(enums.USER);
+
+    if (window.isBot) {
+        if (window.Telegram?.WebApp) {
+            window.Telegram.WebApp.close();
+        }
+
+        return;
+    }
+
+    appStore.getState().setPopup({ name: 'loginPopup' });
 
     setTimeout(async () => {
         appStore.getState().setAuthUser(undefined);

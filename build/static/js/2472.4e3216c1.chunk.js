@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunk=globalThis.webpackChunk||[]).push([[2472],{2472:(s,e,r)=>{r.r(e),r.d(e,{default:()=>a});r(5043);var t=r(579);const a=function(){const{inProcess:s,isComplete:e,prizes:r}=this.state;return(0,t.jsxs)("div",{className:this.getClass("popup__raffle _FULL_W _COL _COL_H_CENTER",r&&"_ready",s&&"_process",e&&"_complete"),children:[this.renderStart(),this.renderDecors(),this.renderPrizes(),(0,t.jsx)("div",{className:"popup__raffleBack"})]})}}}]);
+//# sourceMappingURL=2472.4e3216c1.chunk.js.map
