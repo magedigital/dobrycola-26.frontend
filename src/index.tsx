@@ -16,7 +16,7 @@ const path = AppRouter.getStartUrl(window.location.pathname.slice(1));
     window.isBot = !!window.location.search
         .slice(1)
         .split('&')
-        .find((t) => t.split('=')[0] === 'chatBot');
+        .find((t) => t.split('=')[0] === 'chatbot');
 
     const { storePages, levels, pagesIds, showPages } = AppRouter.changePage({
         href: path,
