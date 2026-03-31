@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunk=globalThis.webpackChunk||[]).push([[4917],{4917:(e,n,t)=>{t.r(n),t.d(n,{default:()=>r});t(9950);var a=t(4414);const r=function({row:e,name:n}){return"date"===n?(0,a.jsx)(a.Fragment,{children:e.datetime}):"balls"===n?(0,a.jsx)(a.Fragment,{children:e.sum}):"comment"===n?(0,a.jsx)(a.Fragment,{children:e.comment}):void 0}}}]);
