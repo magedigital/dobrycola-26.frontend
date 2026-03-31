@@ -6,6 +6,7 @@ import Anket from '../pages/anket/Anket.tsx';
 import BotAnket from '../pages/botAnket/BotAnket.tsx';
 import BotReg from '../pages/botReg/BotReg.tsx';
 import Faq from '../pages/faq/Faq.tsx';
+import FullAnket from '../pages/fullAnket/FullAnket.tsx';
 import Games from '../pages/game/Game.tsx';
 import Index from '../pages/index/Index.tsx';
 import Prizes from '../pages/prizes/Prizes.tsx';
@@ -36,11 +37,11 @@ export const rootPages = {
             return <Anket />;
         },
     },
-    // fullAnket: {
-    //     render(this: I) {
-    //         return <FullAnket />;
-    //     },
-    // },
+    fullAnket: {
+        render(this: I) {
+            return <FullAnket />;
+        },
+    },
     winners: {
         render(this: I) {
             return <Winners />;

@@ -19,9 +19,7 @@ const startGame: I['startGame'] = async function ({ play }) {
             index: curIndex,
         };
 
-        if (0) {
-            localStorage.setItem(getSavedRaffle().name, JSON.stringify(savedPrize));
-        }
+        localStorage.setItem(getSavedRaffle().name, JSON.stringify(savedPrize));
 
         await this.asyncSetState({ curIndex, prize });
     }

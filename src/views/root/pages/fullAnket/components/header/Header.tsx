@@ -3,7 +3,7 @@ import React from 'react';
 import Default from '@components/default/Default.tsx';
 import Form from '@components/form/Form.tsx';
 
-import getFields from './methods/getFields.ts';
+import getFields from './methods/getFields.tsx';
 import getUserData from './methods/getUserData.ts';
 import sendForm from './methods/sendForm.ts';
 import uploadFile from './methods/uploadFile.ts';

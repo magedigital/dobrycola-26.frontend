@@ -6,7 +6,7 @@ type ReturnT = {
 };
 
 export default function getSavedRaffle(): ReturnT {
-    const name = 'r';
+    const name = 'raffle';
     let prize: SavedRafflePrizeT | undefined;
 
     try {

@@ -9,10 +9,10 @@ export const botAnketFields = {
         type: 'input',
         support: 'Фамилия*',
     },
-    id: {
-        type: 'input',
-        support: 'ID пригласившего участника (если есть)',
-    },
+    // id: {
+    //     type: 'input',
+    //     support: 'ID пригласившего участника (если есть)',
+    // },
     phone: {
         type: 'input',
         support: 'Номер мобильного телефона*',
@@ -25,7 +25,10 @@ export const botAnketFields = {
         checkbox: {
             content: (
                 <>
-                    Я соглашаюсь с <a href="#">политикой конфиденциальности</a>
+                    Я соглашаюсь с{' '}
+                    <a href="/upload/docs/politics.pdf" target="_blank">
+                        политикой конфиденциальности
+                    </a>
                 </>
             ),
         },
@@ -35,7 +38,10 @@ export const botAnketFields = {
         checkbox: {
             content: (
                 <>
-                    Я соглашаюсь с <a href="#">условиями обработки персональных данных</a>
+                    Я соглашаюсь с{' '}
+                    <a href="/upload/docs/agreement-feedback.pdf" target="_blank">
+                        условиями обработки персональных данных
+                    </a>
                 </>
             ),
         },

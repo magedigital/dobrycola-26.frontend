@@ -1,10 +1,12 @@
-import { anketRequests } from '@api/requests/anket.ts';
+import { AnketDataT, anketRequests } from '@api/requests/anket.ts';
 import checkAuth from '@utils/checkAuth.ts';
 
 import I from '../types.ts';
 
+import getSavedRaffle from '../../../../raffle/utils/getSavedRaffle.ts';
+
 const sendForm: I['sendForm'] = async function (d) {
-    const data = {
+    const data: Partial<AnketDataT> = {
         firstName: d.firstName,
         lastName: d.lastName,
         thirdName: d.thirdName,
@@ -14,6 +16,12 @@ const sendForm: I['sendForm'] = async function (d) {
         password1: d.password,
         password2: d.password2,
     };
+
+    const { prize: rafflePrize } = getSavedRaffle();
+
+    if (rafflePrize) {
+        data.welcomeGameId = rafflePrize.id;
+    }
 
     await anketRequests.send({ data });
     await checkAuth({ redirect: true });
