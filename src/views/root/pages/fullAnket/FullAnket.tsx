@@ -3,7 +3,6 @@ import React from 'react';
 import Page from '@components/page/Page.tsx';
 import { StoreT, WithStore } from '@store/store.tsx';
 
-import Footer from '../../components/footer/Footer.tsx';
 import Header from './components/header/Header.tsx';
 
 import FullAnketI from './types.ts';
@@ -26,7 +25,6 @@ class FullAnket extends Page<FullAnketI['props'], FullAnketI['state']> implement
                 authUser ? (
                     <>
                         <Header authUser={authUser} />
-                        <Footer />
                     </>
                 ) : null,
             className: '_inner',
