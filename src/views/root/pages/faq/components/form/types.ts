@@ -4,7 +4,10 @@ type PropsT = {
     disabled?: boolean;
 };
 
-type StateT = {};
+type StateT = {
+    isSuccess?: boolean;
+    name?: string;
+};
 
 interface FormI extends DefaultI<PropsT, StateT> {
     sendForm(this: FormI, d: Partial<Record<string, string>>): Promise<void>;

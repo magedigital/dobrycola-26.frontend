@@ -7,16 +7,82 @@
     }
 
     &__inner {
+        position: relative;
+        z-index: 1;
         align-items: center;
         width: 610rem;
         padding: 48rem;
+        overflow: hidden;
         background: #fff;
         border-radius: 24rem;
 
         @include mob {
             width: 100%;
-            padding: 16rem 12rem 50rem;
+            padding: 16rem 12rem;
             border-radius: 16rem;
+        }
+
+        &Box {
+            align-items: center;
+            width: 100%;
+            transition: $trans;
+        }
+
+        &Blocks {
+            width: 100%;
+        }
+
+        &Block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+    }
+
+    &__success {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        will-change: transform;
+
+        &Inner {
+            align-items: center;
+            width: 100%;
+            margin: auto;
+            padding: 70rem 32rem;
+            background: #d300b4;
+            border-radius: 12rem;
+
+            @include mob {
+                width: 100%;
+                padding: 36rem 50rem;
+            }
+        }
+
+        &Title {
+            color: #fbac2f;
+            font-size: 22rem;
+            text-align: center;
+
+            @include mob {
+                font-size: 20rem;
+            }
+        }
+
+        &Text {
+            margin-top: 18rem;
+            color: #fff;
+            font-weight: 600;
+            font-size: 20rem;
+            font-family: Onest;
+            line-height: 1.3;
+            text-align: center;
+
+            @include mob {
+                margin-top: 12rem;
+                font-size: 16rem;
+            }
         }
     }
 
@@ -45,5 +111,10 @@
         position: relative;
         z-index: 1;
         width: 100%;
+        padding-bottom: 20rem;
+
+        @include mob {
+            padding-bottom: 40rem;
+        }
     }
 }
