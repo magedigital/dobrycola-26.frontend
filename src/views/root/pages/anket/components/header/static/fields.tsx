@@ -9,10 +9,6 @@ export const anketFields = {
         type: 'input',
         support: 'Фамилия*',
     },
-    thirdName: {
-        type: 'input',
-        support: 'Отчество*',
-    },
     phone: {
         type: 'input',
         support: 'Номер мобильного телефона*',
