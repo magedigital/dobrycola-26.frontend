@@ -1,7 +1,9 @@
 import React from 'react';
 
 import Default from '@components/default/Default.tsx';
+import Link from '@components/link/Link.tsx';
 import StringService from '@services/string/String.service.ts';
+import { StoreT, WithStore } from '@store/store.tsx';
 
 import FooterI from './types.ts';
 
@@ -16,29 +18,43 @@ class Footer extends Default<FooterI['props'], FooterI['state']> implements Foot
     }
 
     render() {
+        const { mainContent } = this.props;
+
         return (
             <div ref={this.parent} className="footer">
                 <div className="footer__wrapper _SECTION">
                     <div className="footer__inner _INNER">
                         <div className="footer__nav">
                             <div className="footer__navBlock">
-                                <div className="footer__navLink _CLICK">ПРАВИЛА АКЦИИ</div>
-                                <div className="footer__navLink _CLICK">ОБРАТНАЯ СВЯЗЬ</div>
+                                <Link pageName="rules" className="footer__navLink _CLICK">
+                                    ПРАВИЛА АКЦИИ
+                                </Link>
+                                <Link pageName="faq" className="footer__navLink _CLICK">
+                                    ОБРАТНАЯ СВЯЗЬ
+                                </Link>
                             </div>
                             <div className="footer__navBlock">
-                                <div className="footer__navLink _CLICK">
+                                <a
+                                    className="footer__navLink _CLICK"
+                                    href="/upload/docs/politics.pdf"
+                                    target="_blank"
+                                >
                                     Политика в отношении обработки персональных данных
-                                </div>
-                                <div className="footer__navLink _CLICK">
+                                </a>
+                                <a
+                                    className="footer__navLink _CLICK"
+                                    href="/upload/docs/agreement.pdf"
+                                    target="_blank"
+                                >
                                     Пользовательское соглашение
-                                </div>
+                                </a>
                             </div>
                         </div>
                         <p
                             className="footer__text"
                             dangerouslySetInnerHTML={{
                                 __html: new StringService().setSpaces(
-                                    'Общий срок проведения Акции с 01.04.2026 по 15.10.2026. Подробная информация об организаторе Акции, правилах ее проведения, количестве призов по результатам Акции, сроках, месте и порядке их получения указана на сайте dobrycola-promo.ru. Внешний вид товара и призов может отличаться от изображения в рекламных материалах. Pop&nbsp;sound – Звук в стиле поп-музыки. K-pop sound – Звук в стиле корейской поп-музыки. ',
+                                    mainContent?.components.footer.disclaimer.description,
                                 ),
                             }}
                         ></p>
@@ -49,4 +65,8 @@ class Footer extends Default<FooterI['props'], FooterI['state']> implements Foot
     }
 }
 
-export default Footer;
+const mapStore = (s: StoreT) => ({
+    mainContent: s.mainContent,
+});
+
+export default WithStore(Footer, mapStore);
