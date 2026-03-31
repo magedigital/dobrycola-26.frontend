@@ -17,6 +17,8 @@ class FullAnket extends Page<FullAnketI['props'], FullAnketI['state']> implement
         this.parent = React.createRef();
     }
 
+    mode = 'inner' as const;
+
     render() {
         const { authUser } = this.props;
 
@@ -27,7 +29,6 @@ class FullAnket extends Page<FullAnketI['props'], FullAnketI['state']> implement
                         <Header authUser={authUser} />
                     </>
                 ) : null,
-            className: '_inner',
         });
     }
 }
