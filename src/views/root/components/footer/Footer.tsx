@@ -26,9 +26,13 @@ class Footer extends Default<FooterI['props'], FooterI['state']> implements Foot
                     <div className="footer__inner _INNER">
                         <div className="footer__nav">
                             <div className="footer__navBlock">
-                                <Link pageName="rules" className="footer__navLink _CLICK">
+                                <a
+                                    href="/upload/docs/rules.pdf"
+                                    target="_blank"
+                                    className="footer__navLink _CLICK"
+                                >
                                     ПРАВИЛА АКЦИИ
-                                </Link>
+                                </a>
                                 <Link pageName="faq" className="footer__navLink _CLICK">
                                     ОБРАТНАЯ СВЯЗЬ
                                 </Link>
