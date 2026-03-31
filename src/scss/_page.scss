@@ -49,6 +49,19 @@
         }
     }
 
+    &._game &__close {
+        top: 160rem;
+        right: 160rem;
+        transform: translate(0, 0);
+    }
+
+    &._game .closeBtn {
+        background: #ff49b8;
+        box-shadow: 0 2rem 0 0 rgba(#000, 0.3);
+
+        @include icon(#8200cc);
+    }
+
     &__scroll {
         position: relative;
         width: 100%;

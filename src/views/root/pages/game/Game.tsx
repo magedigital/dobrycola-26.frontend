@@ -53,7 +53,6 @@ class Games extends Page<GamesI['props'], GamesI['state']> implements GamesI {
                 </div>
             ),
             className: '_game',
-            withClose: false,
         });
     }
 }
