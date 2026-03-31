@@ -40,6 +40,10 @@ export default async function request<T extends any>({
 }: RequestParamsT): Promise<{ result: string; data: T }> {
     const token = getCookie(enums.ACCESS_TOKEN);
 
+    if (window.isBot && data) {
+        data.fromChatBot = true;
+    }
+
     try {
         const response = await axios({
             method,
