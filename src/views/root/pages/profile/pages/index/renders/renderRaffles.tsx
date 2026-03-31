@@ -23,7 +23,7 @@ const renderRaffles: I['renderRaffles'] = function () {
                                 description={content.components.buy.raffle.info.header.description}
                                 buttonText={content.components.buy.raffle.info.button.title}
                                 buttonOnClick={() => {
-                                    // appStore.getState().setPopup({ name: 'rafflePopup' });
+                                    appStore.getState().setPopup({ name: 'rafflePopup' });
                                     // sendGoal('profileRaffleBtn');
                                 }}
                                 items={content.components.buy.raffle.prizes.map((item) => ({

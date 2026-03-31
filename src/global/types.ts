@@ -15,6 +15,8 @@ declare global {
         activateGameApp?: () => void;
         deactivateGameApp?: () => void;
         isBot: boolean;
+        getJWT: () => string | undefined;
+        setJWT: (t: string) => void;
         Telegram?: {
             WebApp?: { close: () => void };
         };
