@@ -1,6 +1,7 @@
 import React from 'react';
 
 import StringService from '@services/string/String.service.ts';
+import { appStore } from '@store/store.tsx';
 
 import I from '../types.ts';
 
@@ -12,13 +13,13 @@ const renderPreview: I['renderPreview'] = function () {
             <div className="prize__previewInner">
                 <img src={prize.thumb} alt="" className="prize__previewImage" />
             </div>
-            {prize.count && prize.code === 'DOBRO' && (
+            {prize.count && prize.code === 'DOBRO' && false && (
                 <div className="prize__previewButton _dobro">
                     {prize.count}{' '}
                     {new StringService().getEndText(prize.count, ['балл', 'балла', 'баллов'])}
                 </div>
             )}
-            {prize.promoCode && (
+            {prize.promoCode && false && (
                 <div
                     className="prize__previewButton _CLICK _main"
                     onClick={() => {
@@ -33,6 +34,7 @@ const renderPreview: I['renderPreview'] = function () {
                     className="prize__previewButton _CLICK _code"
                     onClick={() => {
                         //   changePage({ pageName: 'regCode' });
+                        appStore.getState().setPopup({ name: 'codePopup' });
                     }}
                 >
                     Зарегистрируй код{prize.expired ? ` до ${prize.expired}` : ''}
