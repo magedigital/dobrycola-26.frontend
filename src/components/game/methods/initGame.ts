@@ -27,8 +27,8 @@ const initGame: I['initGame'] = function (app) {
     const data: GameDataT = {
         gameData: {
             id: name,
-            request1: { url: '/api/PlayGame', method: 'POST' },
-            request2: { url: '/api/PlayGame', method: 'POST' },
+            request1: { url: '/api/TentGame', method: 'POST' },
+            request2: { url: '/api/TentGame', method: 'POST' },
         },
         gameIndex: games[name].index,
         closeHandler: close,
