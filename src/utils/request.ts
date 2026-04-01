@@ -67,7 +67,11 @@ export default async function request<T extends any>({
         checkResponse(error.response?.data);
 
         if (errorData) {
-            setError({ text: errorData.errorText, type: 'error' });
+            if (errorData.errorText === 'Требуется авторизация' && token) {
+                setError({ text: [errorData.errorText, '*'].join(''), type: 'error' });
+            } else {
+                setError({ text: errorData.errorText, type: 'error' });
+            }
         }
 
         return Promise.reject(errorData);
