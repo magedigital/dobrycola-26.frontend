@@ -77,18 +77,14 @@ export default async function checkAuth({ redirect }: ParamsT): Promise<void> {
     let pageName: PageNamesT | undefined;
     let ids: Record<string, string> | undefined;
 
-    if (user?.status === 'ANKET_REQUIRED') {
-        pageName = 'anket';
-    }
-
-    if (user?.status === 'EXTRA_ANKET_REQUIRED') {
-        pageName = 'fullAnket';
-    }
-
     if (window.isBot) {
         if (user?.status === 'ANKET_REQUIRED') {
             pageName = 'botAnket';
         }
+    } else if (user?.status === 'ANKET_REQUIRED') {
+        pageName = 'anket';
+    } else if (user?.status === 'EXTRA_ANKET_REQUIRED') {
+        pageName = 'fullAnket';
     }
 
     // if (user?.status === 'ACT_REQUIRED' && user.nextActPrizeId) {
@@ -104,7 +100,7 @@ export default async function checkAuth({ redirect }: ParamsT): Promise<void> {
         AppRouter.changePage({ pageName, ids, saveSearch: !!window.isBot });
     }
 
-    if (user?.status === 'EMAIL_CONFIRM_REQUIRED') {
+    if (!window.isBot && user?.status === 'EMAIL_CONFIRM_REQUIRED') {
         appStore.getState().setPopup({ name: 'regPopup' });
     }
 }
