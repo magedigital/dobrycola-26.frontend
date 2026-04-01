@@ -11,9 +11,7 @@ const renderContent: I['renderContent'] = function (this: I) {
     const { profileData } = this.props;
     const items = (profileData?.transactions || []).map((item, key) => ({
         id: key.toString(),
-        date: item.datetime,
-        balls: item.sum,
-        comment: item.comment,
+        ...item,
     }));
 
     return (

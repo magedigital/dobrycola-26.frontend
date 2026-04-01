@@ -42,6 +42,8 @@
     }
 
     &._balls &__content {
+        max-height: 300rem;
+        overflow-y: auto;
         background: #f4f4f4;
     }
 
@@ -93,6 +95,10 @@
         }
     }
 
+    &._balls &__row * {
+        text-align: center;
+    }
+
     &__row {
         display: inline-flex;
         width: 100%;
@@ -109,6 +115,7 @@
 
         &Col {
             align-items: center;
+            padding: 0 12rem;
             color: #222221;
             font-weight: 600;
             font-size: 16rem;
