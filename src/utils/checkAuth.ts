@@ -96,15 +96,15 @@ export default async function checkAuth({ redirect }: ParamsT): Promise<void> {
     //     ids = { '1': user.nextActPrizeId };
     // }
 
-    // if (user?.status === 'EMAIL_CONFIRM_REQUIRED') {
-    //     pageName = 'auth-reg';
-    // }
-
     if (redirect && !pageName) {
         pageName = 'profile';
     }
 
     if (pageName) {
         AppRouter.changePage({ pageName, ids, saveSearch: !!window.isBot });
+    }
+
+    if (user?.status === 'EMAIL_CONFIRM_REQUIRED') {
+        appStore.getState().setPopup({ name: 'regPopup' });
     }
 }

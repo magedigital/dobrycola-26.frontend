@@ -46,7 +46,8 @@ const popups = {
         redirectPageName: 'profile',
     },
     regPopup: {
-        check: (s: StoreT) => !s.authUser || s.isAuthProcess,
+        check: (s: StoreT) =>
+            !s.authUser || s.isAuthProcess || s.authUser?.status === 'EMAIL_CONFIRM_REQUIRED',
         redirectPageName: 'profile',
     },
     codePopup: {
