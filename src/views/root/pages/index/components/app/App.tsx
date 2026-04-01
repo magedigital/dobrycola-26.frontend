@@ -16,6 +16,8 @@ class App extends Default<AppI['props'], AppI['state']> implements AppI {
     }
 
     render() {
+        const { mainContent } = this.props;
+
         return (
             <div ref={this.parent} className="indexApp _SECTION">
                 <div className="indexApp__inner _INNER">
@@ -27,13 +29,18 @@ class App extends Default<AppI['props'], AppI['state']> implements AppI {
                         <div className="indexApp__info">
                             <Media check={(d) => d === 'desktop'}>
                                 <>
-                                    <div className="indexApp__infoQr">
+                                    <a
+                                        href={mainContent.components.app.qr.url}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="indexApp__infoQr"
+                                    >
                                         <img
-                                            src={require('@media/qr-code-test.png')}
+                                            src={mainContent.components.app.qr.thumb}
                                             alt=""
                                             className="indexApp__infoQrThumb"
                                         />
-                                    </div>
+                                    </a>
                                     <p className="indexApp__infoText">
                                         Отсканируй QR-код
                                         <br />
@@ -45,11 +52,16 @@ class App extends Default<AppI['props'], AppI['state']> implements AppI {
                             </Media>
                             <Media check={(d) => d === 'mobile'}>
                                 <>
-                                    <p className="indexApp__infoText">
+                                    <a
+                                        href={mainContent.components.app.qr.url}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="indexApp__infoText"
+                                    >
                                         Скачай
                                         <br />
                                         приложение
-                                    </p>
+                                    </a>
                                 </>
                             </Media>
                         </div>

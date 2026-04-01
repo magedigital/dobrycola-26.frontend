@@ -43,7 +43,7 @@ class Index extends Page<IndexI['props'], IndexI['state']> implements IndexI {
                     <>
                         <Header mainContent={mainContent} />
                         <Map />
-                        <App />
+                        <App mainContent={mainContent} />
                         <Footer />
                     </>
                 ) : null,
