@@ -1293,12 +1293,17 @@
             transition: $trans;
             pointer-events: none;
 
+            &._hide {
+                opacity: 0 !important;
+            }
+
             &Item {
                 position: absolute;
                 top: 0;
                 left: 0;
                 z-index: 3;
                 display: flex;
+                flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 width: 100%;
@@ -1327,7 +1332,13 @@
                     color: #fff;
                     font-size: 12rem;
                     line-height: 1.2;
+                    text-align: center;
                     text-transform: uppercase;
+
+                    &._empty {
+                        font-size: 14rem;
+                        line-height: 1.4;
+                    }
 
                     @include mob {
                         margin-top: 12rem;

@@ -155,6 +155,7 @@
                     opacity: 0;
                     transition: $trans;
                     content: "";
+                    will-change: transform;
 
                     @include bg("/media/inner/prize-win-back.svg", contain, center);
                 }
@@ -171,6 +172,8 @@
             &Name {
                 display: flex;
                 align-items: center;
+                justify-content: center;
+                width: 270rem;
                 height: 34rem;
                 color: #fff;
                 font-size: 15rem;
@@ -245,11 +248,11 @@
             animation: spin 1 2s ease-in-out;
 
             @keyframes spin {
-                0% {
+                from {
                     transform: translate(-50%, -50%) rotate(0deg);
                 }
 
-                100% {
+                to {
                     transform: translate(-50%, -50%) rotate(720deg);
                 }
             }
