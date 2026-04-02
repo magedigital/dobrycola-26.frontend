@@ -15,7 +15,14 @@ const sendForm: I['sendForm'] = async function (code) {
 
     try {
         await authRequests.botLogin({ login, password: code, isCode: true });
-        await checkAuth({ redirect: true });
+
+        if (window.isBot) {
+            if (window.Telegram?.WebApp) {
+                window.Telegram.WebApp.close();
+            }
+        } else {
+            await checkAuth({ redirect: true });
+        }
     } catch (e) {
         const error = e as RequestErrorT;
         await this.asyncSetState({ error: { text: error?.errorText } });
