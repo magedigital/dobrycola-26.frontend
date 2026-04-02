@@ -2,6 +2,7 @@ import React from 'react';
 
 import StringService from '@services/string/String.service.ts';
 import { games } from '@static/games.ts';
+import sendGoal from '@utils/sendGoal.ts';
 
 import I from '../types.ts';
 
@@ -26,6 +27,14 @@ const renderGames: I['renderGames'] = function () {
                             onClick={() => {
                                 AppRouter.changePage({ pageName: 'gameInner', ids: { 1: n } });
                                 setState(false);
+
+                                if (n === 'DJ') {
+                                    sendGoal('menuDjlightup');
+                                } else if (n === 'TAP') {
+                                    sendGoal('menuFest');
+                                } else if (n === 'VIBE') {
+                                    sendGoal('menuVibe');
+                                }
                             }}
                         >
                             <div className="menu__gamesItemHead">

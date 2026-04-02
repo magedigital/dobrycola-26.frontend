@@ -1,5 +1,7 @@
 import { AnketDataT, anketRequests } from '@api/requests/anket.ts';
+import { appStore } from '@store/store.tsx';
 import checkAuth from '@utils/checkAuth.ts';
+import sendGoal from '@utils/sendGoal.ts';
 
 import I from '../types.ts';
 
@@ -24,6 +26,11 @@ const sendForm: I['sendForm'] = async function (d) {
     }
 
     await anketRequests.send({ data });
+
+    if (appStore.getState().authUser?.isFirstAnket) {
+        sendGoal('regComplete');
+    }
+
     await checkAuth({ redirect: true });
 };
 

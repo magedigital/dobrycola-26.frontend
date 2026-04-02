@@ -1,3 +1,5 @@
+import sendGoal from '@utils/sendGoal.ts';
+
 import I from '../types.ts';
 
 const checkScroll: I['checkScroll'] = async function (e) {
@@ -27,6 +29,27 @@ const checkScroll: I['checkScroll'] = async function (e) {
     if (this.pageName) {
         const scrollKey = ['scroll', this.pageName].join('_');
         localStorage.setItem(scrollKey, scrollTop.toString());
+    }
+
+    if (this.pageName === 'index') {
+        if (!this.scrollData) {
+            this.scrollData = {};
+        }
+
+        const scrollPercent = scrollTop / (targetNode.scrollHeight - targetNode.offsetHeight);
+
+        if (scrollPercent > 0.3 && !this.scrollData[3]) {
+            this.scrollData[3] = true;
+            sendGoal('homeScroll30');
+        }
+        if (scrollPercent > 0.6 && !this.scrollData[6]) {
+            this.scrollData[6] = true;
+            sendGoal('homeScroll60');
+        }
+        if (scrollPercent > 0.9 && !this.scrollData[9]) {
+            this.scrollData[9] = true;
+            sendGoal('homeScroll90');
+        }
     }
 };
 

@@ -7,6 +7,7 @@ import Link from '@components/link/Link.tsx';
 import LoaderBlock from '@components/loaderBlock/LoaderBlock.tsx';
 import Media from '@components/media/Media.tsx';
 import { appStore } from '@store/store.tsx';
+import sendGoal from '@utils/sendGoal.ts';
 
 import I from '../types.ts';
 
@@ -66,8 +67,8 @@ const renderMain: I['renderMain'] = function () {
                                     className="profile__mainCopyIcon _CLICK"
                                     onClick={(e) => {
                                         e.stopPropagation();
-
                                         this.copyHandler();
+                                        sendGoal('inviteFriendCopyBtn');
                                     }}
                                 >
                                     <Icon name="copy" />
@@ -80,7 +81,7 @@ const renderMain: I['renderMain'] = function () {
                                 authUser?.status === 'EXTRA_ANKET_REQUIRED' ? 'fullAnket' : 'anket'
                             }
                             callback={() => {
-                                // sendGoal('profileEditData');
+                                sendGoal('profileEditData');
                             }}
                         >
                             Изменить данные
@@ -106,6 +107,7 @@ const renderMain: I['renderMain'] = function () {
                         className="profile__mainLink _blue _CLICK"
                         onClick={() => {
                             appStore.getState().setPopup({ name: 'ballsPopup' });
+                            sendGoal('profileHistory');
                         }}
                     >
                         История
@@ -132,7 +134,7 @@ const renderMain: I['renderMain'] = function () {
                             className="_blueColor _boldBorder _minSize"
                             onClick={() => {
                                 appStore.getState().setPopup({ name: 'invitePopup' });
-                                // sendGoal('inviteFriendBtn');
+                                sendGoal('inviteFriendBtn');
                             }}
                         >
                             ПРИГЛАСИ ДРУГА

@@ -9,6 +9,7 @@ export const mapLocations: Record<
         pageName?: PageNamesT;
         pageIds?: Record<string, string>;
         popupName?: keyof PopupsT;
+        goal?: string;
     }
 > = {
     '1': {
@@ -20,39 +21,46 @@ export const mapLocations: Record<
         thumb: 'map-loc-02.png',
         title: 'Как<br/>участвовать',
         pageName: 'rules',
+        goal: 'howToBtn',
     },
     '3': {
         thumb: 'map-loc-03.png',
         title: 'Личный<br/>кабинет',
         pageName: 'profile',
+        goal: 'profileBtn,mapProfileBtn',
     },
     '4': {
         thumb: 'map-loc-04.png',
         title: 'Продукты-<br/>участники',
         pageName: 'products',
+        goal: 'aboutBtn',
     },
     '5': {
         thumb: 'map-loc-05.png',
         title: 'Призы',
         pageName: 'prizes',
+        goal: 'prizesBtn',
     },
     '6': {
         thumb: 'map-loc-06.png',
         title: 'ТАпай<br/>к фестивалю',
         pageName: 'gameInner',
         pageIds: { 1: 'TAP' },
+        goal: 'mapGameFest',
     },
     '7': {
         thumb: 'map-loc-07.png',
         title: 'Диджей,<br/>зажигай',
         pageName: 'gameInner',
         pageIds: { 1: 'DJ' },
+        goal: 'mapGameDjlightup',
     },
     '8': {
         thumb: 'map-loc-08.png',
         title: 'Лови вайб',
         pageName: 'gameInner',
         pageIds: { 1: 'VIBE' },
+        goal: 'mapGameVibe',
     },
 };
 

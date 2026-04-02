@@ -25,7 +25,7 @@ const renderContent: I['renderContent'] = function (this: I) {
                     </p>
                     <p className="popup__inviteText">
                         Ты получишь дополнительные баллы, после того, как друг зарегистрирует первый
-                        чек. Количество друзей не ограничено.
+                        код. Количество друзей не ограничено.
                     </p>
                     <div className="popup__inviteInfo _COL _COL_H_CENTER">
                         <p className="popup__inviteText">

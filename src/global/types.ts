@@ -17,6 +17,8 @@ declare global {
         isBot: boolean;
         getJWT: () => string | undefined;
         saveJWT: (t: string) => void;
+        ymId: number;
+        ym?: (key: number, name: string, text?: string) => void;
         Telegram?: {
             WebApp?: { close: () => void };
         };

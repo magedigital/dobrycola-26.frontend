@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { appStore } from '@store/store.tsx';
+import sendGoal from '@utils/sendGoal.ts';
 
 import I from '../types.ts';
 
@@ -25,6 +26,7 @@ const renderActions: I['renderActions'] = function () {
                 onClick={() => {
                     setMenuState(false);
                     AppRouter.changePage({ pageName: 'profile' });
+                    sendGoal('profileBtn,headerProfileBtn');
                 }}
             >
                 ЛИЧНЫЙ КАБИНЕТ

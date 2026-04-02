@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Icon from '@components/icon/Icon.tsx';
+import sendGoal from '@utils/sendGoal.ts';
 
 import I from '../types.ts';
 
@@ -26,6 +27,10 @@ const renderNav: I['renderNav'] = function () {
                                 pageName: i.pageName!,
                                 search: [{ name: 'ancor', value: i.ancor! }],
                             });
+                        }
+
+                        if (i.goal) {
+                            sendGoal(i.goal);
                         }
 
                         setState(false);

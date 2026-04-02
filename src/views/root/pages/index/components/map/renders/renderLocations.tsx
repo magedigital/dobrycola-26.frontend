@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { appStore } from '@store/store.tsx';
+import sendGoal from '@utils/sendGoal.ts';
 
 import I from '../types.ts';
 
@@ -25,6 +26,10 @@ const renderLocations: I['renderLocations'] = function () {
                                 });
                             } else if (location.popupName) {
                                 appStore.getState().setPopup({ name: location.popupName });
+                            }
+
+                            if (location.goal) {
+                                sendGoal(location.goal);
                             }
                         }}
                     >

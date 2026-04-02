@@ -2,6 +2,7 @@ import React from 'react';
 
 import Button from '@components/button/Button.tsx';
 import { appStore } from '@store/store.tsx';
+import sendGoal from '@utils/sendGoal.ts';
 
 import I from '../types.ts';
 
@@ -29,6 +30,7 @@ const renderActions: I['renderActions'] = function () {
                     onClick={() => {
                         AppRouter.changePage({ pageName: 'profile' });
                         setState(false);
+                        sendGoal('menuProfile');
                     }}
                 >
                     Личный кабинет

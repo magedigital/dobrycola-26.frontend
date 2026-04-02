@@ -2,6 +2,7 @@ import React from 'react';
 
 import Default from '@components/default/Default.tsx';
 import Media from '@components/media/Media.tsx';
+import sendGoal from '@utils/sendGoal.ts';
 
 import AppI from './types.ts';
 
@@ -57,6 +58,9 @@ class App extends Default<AppI['props'], AppI['state']> implements AppI {
                                         target="_blank"
                                         rel="noreferrer"
                                         className="indexApp__infoText"
+                                        onClick={() => {
+                                            sendGoal('mobileBtn');
+                                        }}
                                     >
                                         Скачай
                                         <br />

@@ -18,6 +18,7 @@ interface PageI<P = {}, S = {}> extends DefaultI<PropsT & P, StateT & S> {
     pageName?: string;
     savedPrevPageUrl?: string;
     mode?: 'inner';
+    scrollData?: Partial<Record<'3' | '6' | '9', true>>;
 
     checkScroll(this: PageI, e: UIEvent): Promise<void>;
     close(this: PageI): Promise<void>;

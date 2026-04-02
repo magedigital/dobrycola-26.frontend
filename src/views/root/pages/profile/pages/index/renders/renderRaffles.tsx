@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { appStore } from '@store/store.tsx';
+import sendGoal from '@utils/sendGoal.ts';
 
 import Raffle from '../components/raffle/Raffle.tsx';
 
@@ -24,7 +25,7 @@ const renderRaffles: I['renderRaffles'] = function () {
                                 buttonText={content.components.buy.raffle.info.button.title}
                                 buttonOnClick={() => {
                                     appStore.getState().setPopup({ name: 'rafflePopup' });
-                                    // sendGoal('profileRaffleBtn');
+                                    sendGoal('profileRaffleBtn');
                                 }}
                                 items={content.components.buy.raffle.prizes.map((item) => ({
                                     title: item.title,
@@ -46,7 +47,7 @@ const renderRaffles: I['renderRaffles'] = function () {
                                         data: { current: this.state.currentMerchIndex },
                                     });
 
-                                    // sendGoal('profileOrderPrizeBtn');
+                                    sendGoal('profileOrderPrizeBtn');
                                 }}
                                 items={content.components.buy.merch.prizes.map((item) => ({
                                     title: item.title,

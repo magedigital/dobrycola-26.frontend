@@ -1,5 +1,6 @@
 import React from 'react';
 
+import CustomHead from '@components/customHead/CustomHead.tsx';
 import Default from '@components/default/Default.tsx';
 import Pages from '@components/pages/Pages.tsx';
 import { PopupT, popups } from '@store/popups.ts';
@@ -7,6 +8,7 @@ import { PopupT, popups } from '@store/popups.ts';
 import Errors from './components/errors/Errors.tsx';
 
 import changePageListener from './methods/changePageListener.ts';
+import getMetaTitle from './methods/getMetaTitle.ts';
 import init from './methods/init.ts';
 import popupsHandler from './methods/popupsHandler.ts';
 import resizeHandler from './methods/resizeHandler.ts';
@@ -36,6 +38,7 @@ class Root extends Default<RootI['props'], RootI['state']> implements RootI {
     resizeHandler = resizeHandler;
     popupsHandler = popupsHandler;
     changePageListener = changePageListener;
+    getMetaTitle = getMetaTitle;
 
     init = init;
 
@@ -47,11 +50,10 @@ class Root extends Default<RootI['props'], RootI['state']> implements RootI {
 
         return (
             <>
+                <CustomHead title={this.getMetaTitle()} />
                 {Styles && <Styles />}
                 <Errors />
                 <div className={this.getClass('body__content', window.isBot && '_BOT')}>
-                    {this.renderCookies()}
-                    {this.renderPopups()}
                     {isRootInit && (
                         <Pages
                             context={this}
@@ -59,6 +61,8 @@ class Root extends Default<RootI['props'], RootI['state']> implements RootI {
                             filter={(name) => !AppRouter.pages[name].level}
                         />
                     )}
+                    {this.renderCookies()}
+                    {this.renderPopups()}
                 </div>
             </>
         );
@@ -69,6 +73,7 @@ const mapStore = (store: StoreT) => ({
     isRootInit: store.isRootInit,
     isCookiesShow: store.isCookiesShow,
     currentPopup: store.currentPopup,
+    pages: store.pages,
     ...(() => {
         const popupsData: Record<keyof typeof popups, PopupT> = {} as Record<
             keyof typeof popups,

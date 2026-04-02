@@ -55,13 +55,7 @@ class Profile extends Page<ProfileI['props'], ProfileI['state']> implements Prof
         const { authUser } = this.props;
 
         return this.renderPage({
-            render: () =>
-                authUser && content && data ? (
-                    <>
-                        {/* <CustomHead title="Личный кабинет" /> */}
-                        {this.renderContent()}
-                    </>
-                ) : null,
+            render: () => (authUser && content && data ? <>{this.renderContent()}</> : null),
             className: '_profile',
         });
     }

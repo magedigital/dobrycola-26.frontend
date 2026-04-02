@@ -1,5 +1,6 @@
 import { orderRequests } from '@api/requests/order.ts';
 import { appStore } from '@store/store.tsx';
+import sendGoal from '@utils/sendGoal.ts';
 
 import { setError } from '../../../../views/root/components/errors/utils/errorHandler.ts';
 
@@ -10,7 +11,7 @@ import { AppRouter } from '../../../../index.tsx';
 const send: I['send'] = async function () {
     const { loadingKey, content, currentOrderIndex, isConfirm } = this.state;
 
-    // sendGoal('profileOrderPrizeFinalBtn');
+    sendGoal('profileOrderPrizeFinalBtn');
 
     if (!content || loadingKey || typeof currentOrderIndex !== 'number') {
         return;
@@ -41,6 +42,7 @@ const send: I['send'] = async function () {
         AppRouter.changePage({ pageName: 'profile-prizes' });
 
         setError({ text: 'Приз заказан', type: 'success' });
+        sendGoal('profileOrderPrizeSuccess');
     } catch (e) {}
 
     await this.asyncSetState({ loadingKey: undefined });
