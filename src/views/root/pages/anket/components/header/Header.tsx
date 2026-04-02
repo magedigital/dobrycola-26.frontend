@@ -42,7 +42,7 @@ class Header extends Default<HeaderI['props'], HeaderI['state']> implements Head
                         data={this.getUserData()}
                         fields={anketFields}
                         fieldsList={Object.keys(anketFields).filter(
-                            (k) => authUser.isFirstAnket || k !== 'mailing',
+                            (k) => authUser.isFirstAnket || (k !== 'mailing' && k !== 'inv'),
                         )}
                         button={{
                             text: authUser.isFirstAnket ? 'завершить регистрацию' : 'Сохранить',

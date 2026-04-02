@@ -2,6 +2,7 @@ import { API } from '@api/api';
 import request from '@utils/request';
 
 type AnketDataT = {
+    inv?: string;
     firstName: string;
     lastName: string;
     thirdName: string;

@@ -13,6 +13,16 @@ const AppRouter = new Router();
 const path = AppRouter.getStartUrl(window.location.pathname.slice(1));
 
 (async () => {
+    const invItem = window.location.search
+        .slice(1)
+        .split('&')
+        .find((item) => item.split('=')[0] === 'inv');
+    const inv = invItem ? invItem.split('=')[1] : undefined;
+
+    if (inv) {
+        localStorage.setItem('inv', inv);
+    }
+
     window.isBot = !!window.location.search
         .slice(1)
         .split('&')
