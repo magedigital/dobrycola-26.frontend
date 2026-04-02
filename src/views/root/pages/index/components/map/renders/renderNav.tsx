@@ -1,5 +1,7 @@
 import React from 'react';
 
+import sendGoal from '@utils/sendGoal.ts';
+
 import I from '../types.ts';
 
 import { mapSections } from '../static/locations.ts';
@@ -19,7 +21,15 @@ const renderNav: I['renderNav'] = function () {
                             currentSection === n && '_active',
                         )}
                         key={n}
-                        onClick={this.scrollToSection.bind(this, n, 300)}
+                        onClick={() => {
+                            this.scrollToSection(n);
+
+                            if (n === 'game') {
+                                sendGoal('mapGameTab');
+                            } else if (n === 'partners') {
+                                sendGoal('mapPartnersTab');
+                            }
+                        }}
                     >
                         {section.title}
                     </div>
