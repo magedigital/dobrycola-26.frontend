@@ -2,7 +2,7 @@ import I from '../types.ts';
 
 const getMetaTitle: I['getMetaTitle'] = function () {
     const { pages, currentPopup } = this.props;
-    let title: string | undefined;
+    let title = 'Добрый - Так звучит твоё лето';
 
     if (currentPopup) {
         if (currentPopup === 'codePopup') {
