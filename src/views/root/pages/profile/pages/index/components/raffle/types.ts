@@ -4,7 +4,7 @@ import Slider from '@services/slider/Slider';
 type PropsT = {
     title: string;
     description: string;
-    items: { title: string; image: string }[];
+    items: { title: string; image: string; info?: string }[];
     buttonText: string;
     buttonOnClick: () => void;
     sliderCallback: (current: number) => void;

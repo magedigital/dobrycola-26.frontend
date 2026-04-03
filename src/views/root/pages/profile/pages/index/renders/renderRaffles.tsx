@@ -52,6 +52,7 @@ const renderRaffles: I['renderRaffles'] = function () {
                                 items={content.components.buy.merch.prizes.map((item) => ({
                                     title: item.title,
                                     image: item.thumb,
+                                    info: item.description,
                                 }))}
                                 sliderCallback={(currentMerchIndex) => {
                                     this.setState({ currentMerchIndex });

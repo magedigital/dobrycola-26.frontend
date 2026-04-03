@@ -33,12 +33,28 @@ const renderContent: I['renderContent'] = function () {
                                         className="profileRaffle__sliderItemImage"
                                     />
                                 </div>
-                                <p
-                                    className="profileRaffle__sliderItemContent"
-                                    dangerouslySetInnerHTML={{
-                                        __html: new StringService().setSpaces(item.title),
-                                    }}
-                                ></p>
+                                <p className="profileRaffle__sliderItemContent">
+                                    <span
+                                        dangerouslySetInnerHTML={{
+                                            __html: new StringService().setSpaces(item.title),
+                                        }}
+                                    />
+                                    {item.info && (
+                                        <>
+                                            &nbsp;&nbsp;
+                                            <div className="profileRaffle__sliderItemContentInfo">
+                                                <div
+                                                    className="profileRaffle__sliderItemContentAlert"
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: new StringService().setSpaces(
+                                                            item.info,
+                                                        ),
+                                                    }}
+                                                ></div>
+                                            </div>
+                                        </>
+                                    )}
+                                </p>
                             </div>
                         ))}
                     </div>
