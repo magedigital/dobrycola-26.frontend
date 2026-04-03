@@ -5,7 +5,7 @@ async function reg({ code }: { code: string }): Promise<void> {
     await request({
         method: 'POST',
         url: API.CODE.REG,
-        data: { code },
+        data: { code, interface: 'site' },
     });
 }
 

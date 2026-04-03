@@ -55,11 +55,9 @@ const renderContent: I['renderContent'] = function () {
                                 </div>
                                 <div className="prizesPage__sliderItemDescription">
                                     {item.title}{' '}
-                                    {name === 'balls' && item.description && false && (
+                                    {name === 'balls' && item.description && (
                                         <div className="prizesPage__sliderItemDescriptionInfo">
-                                            <div className="prizesPage__sliderItemDescriptionInfoIcon _CLICK">
-                                                i
-                                            </div>
+                                            <div className="prizesPage__sliderItemDescriptionInfoIcon _CLICK"></div>
                                             <div
                                                 className="prizesPage__sliderItemDescriptionInfoAlert"
                                                 dangerouslySetInnerHTML={{

@@ -23,6 +23,7 @@ const icons = [
     'arrow-prev-thin',
     'copy',
     'download',
+    'info-i',
 ] as const;
 
 export default icons;
