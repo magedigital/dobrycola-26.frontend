@@ -22,6 +22,8 @@ declare global {
         Telegram?: {
             WebApp?: { close: () => void };
         };
+        gameJsName: string;
+        gameCssName: string;
     }
 
     namespace NodeJS {
