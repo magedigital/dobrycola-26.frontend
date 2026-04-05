@@ -3,7 +3,7 @@ import { appStore } from '@store/store.tsx';
 import I from '../types.ts';
 
 const scriptSrc = 'js/main.791582e8.js';
-const styleSrc = 'css/main.87b723c0.css';
+const styleSrc = 'css/main.b99f361a.css';
 const root = '/_game/static';
 const fonts = [
     'https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap',
