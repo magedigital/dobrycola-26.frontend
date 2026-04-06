@@ -3,8 +3,8 @@ import { appStore } from '@store/store.tsx';
 import I from '../types.ts';
 
 if (!window.gameJsName && !window.gameCssName) {
-    window.gameJsName = 'main.791582e8.js';
-    window.gameCssName = 'main.b99f361a.css';
+    window.gameJsName = 'main.995a3a3f.js';
+    window.gameCssName = 'main.55718809.css';
 }
 
 const scriptSrc = `js/${window.gameJsName}`;
