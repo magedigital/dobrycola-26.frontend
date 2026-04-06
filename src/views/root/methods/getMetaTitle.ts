@@ -1,3 +1,5 @@
+import { games } from '@static/games.ts';
+
 import I from '../types.ts';
 
 const getMetaTitle: I['getMetaTitle'] = function () {
@@ -24,6 +26,10 @@ const getMetaTitle: I['getMetaTitle'] = function () {
         title = 'Призы - Главный приз';
     } else if (pages.products.isShow) {
         title = 'Продукты-участники';
+    } else if (pages.gameInner.isShow) {
+        const game = games[pages.gameInner.id as keyof typeof games];
+
+        title = game?.meta;
     }
 
     return title;
