@@ -2,6 +2,11 @@ import { appStore } from '@store/store.tsx';
 
 import I from '../types.ts';
 
+if (0) {
+    window.gameJsName = 'main.791582e8.js';
+    window.gameCssName = 'main.b99f361a.css';
+}
+
 const scriptSrc = `js/${window.gameJsName}`;
 const styleSrc = `css/${window.gameCssName}`;
 const root = '/_game/static';

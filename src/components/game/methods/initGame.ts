@@ -21,6 +21,7 @@ const initGame: I['initGame'] = function (app) {
 
     window.addEventListener('load', updateLayout);
     window.addEventListener('resize', updateLayout);
+    document.addEventListener('customResize', updateLayout);
 
     window.JWT = getCookie(enums.ACCESS_TOKEN);
 
@@ -53,6 +54,7 @@ const initGame: I['initGame'] = function (app) {
     this.unmountHandlers.all = () => {
         window.removeEventListener('load', updateLayout);
         window.removeEventListener('resize', updateLayout);
+        document.removeEventListener('customResize', updateLayout);
     };
 };
 
