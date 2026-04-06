@@ -17,7 +17,7 @@ const sendForm: I['sendForm'] = async function (d) {
         mailing: d.mailing ? '1' : undefined,
         password1: d.password,
         password2: d.password2,
-        inv: d.inv,
+        referral: d.referral,
     };
 
     const { prize: rafflePrize } = getSavedRaffle();

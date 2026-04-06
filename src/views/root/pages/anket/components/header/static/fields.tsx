@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const anketFields = {
-    inv: {
+    referral: {
         type: 'input',
         support: 'ID пригласившего участника',
     },
