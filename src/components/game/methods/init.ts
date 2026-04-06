@@ -2,7 +2,7 @@ import { appStore } from '@store/store.tsx';
 
 import I from '../types.ts';
 
-if (!window.gameJsName) {
+if (!window.gameJsName && !window.gameCssName) {
     window.gameJsName = 'main.791582e8.js';
     window.gameCssName = 'main.b99f361a.css';
 }
