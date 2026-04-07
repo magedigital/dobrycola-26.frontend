@@ -20,9 +20,9 @@ const sendForm: I['sendForm'] = async function (code) {
             if (window.Telegram?.WebApp) {
                 window.Telegram.WebApp.close();
             }
-        } else {
-            await checkAuth({ redirect: true });
         }
+
+        await checkAuth({ redirect: true });
     } catch (e) {
         const error = e as RequestErrorT;
         await this.asyncSetState({ error: { text: error?.errorText } });
