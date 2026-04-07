@@ -1,0 +1,287 @@
+.fivekaSteps {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 70rem 0 40rem;
+
+    &__decor {
+        position: absolute;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    &__decor._1 {
+        top: -170rem;
+        left: 0;
+        width: 330rem;
+        height: 860rem;
+
+        @include bg("/media/5ka/back-5ka-element05-01.png", contain, left top);
+
+        &::before {
+            position: absolute;
+            top: 104rem;
+            left: -90rem;
+            z-index: 2;
+            width: 244rem;
+            height: 244rem;
+            content: "";
+
+            @include bg("/media/5ka/back-5ka-element05-2.svg", contain, center);
+        }
+    }
+
+    &__decor._2 {
+        top: 440rem;
+        right: -76rem;
+        width: 334rem;
+        height: 334rem;
+
+        @include bg("/media/5ka/back-5ka-element02.png", contain, right top);
+    }
+
+    &__inner {
+        align-items: flex-start;
+    }
+
+    &__cards {
+        display: flex;
+        align-items: stretch;
+        width: calc(100% + 72rem);
+        margin-bottom: 70rem;
+        margin-left: -36rem;
+        counter-reset: stepCount;
+
+        &Item {
+            position: relative;
+            width: calc(100% / 3);
+            padding: 0 36rem;
+        }
+
+        &Arrow {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 24rem;
+            height: 34rem;
+            transform: translate(50%, -50%);
+        }
+    }
+
+    &__card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 24rem 36rem 40rem;
+        border-radius: 24rem;
+        counter-increment: stepCount;
+
+        @include bg("/media/5ka/step-back-5ka.svg", 100% auto, center top);
+
+        & {
+            background-color: #7a2799;
+        }
+
+        &Head {
+            position: relative;
+            z-index: 1;
+            width: 202rem;
+            height: 202rem;
+            margin: 0 auto 17rem;
+            background: #ff49b8;
+            border-radius: 50%;
+
+            &::before {
+                position: absolute;
+                bottom: 0;
+                left: -30rem;
+                z-index: 2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80rem;
+                height: 80rem;
+                padding-bottom: 3rem;
+                color: #eb2316;
+                font-size: 36rem;
+                text-transform: uppercase;
+                background: #fff;
+                border-radius: 50%;
+                content: counter(stepCount);
+            }
+        }
+
+        &Thumb {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        &Title {
+            margin-bottom: 4rem;
+            color: #10cfc9;
+            font-size: 24rem;
+            text-transform: uppercase;
+        }
+
+        &Text {
+            color: #fff;
+            font-size: 16rem;
+            font-family: Onest;
+            line-height: 1.3;
+
+            & a {
+                display: inline-block;
+                color: #fff;
+                font-family: Onest;
+                line-height: 0.9;
+                border-bottom: 1rem solid rgba(#fff, 0.6);
+            }
+        }
+    }
+
+    &__rules {
+        margin: 0 auto 66rem;
+        padding: 16rem 35rem;
+        color: #fff;
+        font-size: 16rem;
+        line-height: 1.4;
+        text-align: center;
+        text-transform: uppercase;
+        border: 3rem solid #fff;
+        border-radius: 12rem;
+    }
+
+    &__offer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        height: 284rem;
+        padding: 32rem 68rem 32rem 32rem;
+        overflow: hidden;
+        border-radius: 24rem;
+
+        @include bg("/media/5ka/special-prize-5ka-bg.svg", 100% auto, center top);
+
+        & {
+            background-color: #5a9e87;
+        }
+
+        &Decor {
+            position: absolute;
+            z-index: -1;
+            object-fit: contain;
+            pointer-events: none;
+        }
+
+        &Decor._1 {
+            top: -156rem;
+            right: -107rem;
+            width: 280rem;
+            height: 280rem;
+        }
+
+        &Decor._2 {
+            right: -86rem;
+            bottom: -115rem;
+            width: 250rem;
+            height: 250rem;
+        }
+
+        &Decor._3 {
+            bottom: -214rem;
+            left: 66rem;
+            width: 430rem;
+            height: 410rem;
+        }
+
+        &Decor._4 {
+            top: 17rem;
+            left: 137rem;
+            width: 35rem;
+            height: 34rem;
+        }
+
+        &Decor._5 {
+            top: 10rem;
+            left: 256rem;
+            width: 58rem;
+            height: 48rem;
+        }
+
+        &Decor._6 {
+            top: 5rem;
+            left: 442rem;
+            width: 60rem;
+            height: 60rem;
+        }
+
+        &Decor._7 {
+            bottom: 40rem;
+            left: 63rem;
+            width: 56rem;
+            height: 56rem;
+        }
+
+        &Decor._8 {
+            bottom: 54rem;
+            left: 206rem;
+            width: 46rem;
+            height: 46rem;
+        }
+
+        &Decor._9 {
+            bottom: 18rem;
+            left: 492rem;
+            width: 44rem;
+            height: 50rem;
+        }
+
+        &Price {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 490rem;
+
+            &Title {
+                width: 100%;
+                height: 93rem;
+
+                @include bg("/media/5ka/special-prize-5ka.svg", contain, left top);
+            }
+
+            &Support {
+                margin: 0 7rem 0 0;
+                color: #fff;
+                font-size: 32rem;
+                text-transform: uppercase;
+            }
+        }
+
+        &Content {
+            width: 462rem;
+            margin-left: 60rem;
+        }
+
+        &Title {
+            margin-bottom: 8rem;
+            color: #ffb712;
+            font-size: 28rem;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        &Text {
+            max-width: 90%;
+            color: #fff;
+            font-weight: 600;
+            font-size: 16rem;
+            font-family: Onest;
+            line-height: 1.4;
+        }
+    }
+}

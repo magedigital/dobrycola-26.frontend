@@ -1,0 +1,280 @@
+.fivekaPrizes {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 50rem 0;
+
+    &__decor {
+        position: absolute;
+        z-index: -1;
+        object-fit: contain;
+        pointer-events: none;
+    }
+
+    &__decor._1 {
+        top: -116rem;
+        left: -12rem;
+        width: 158rem;
+        height: 186rem;
+
+        @include bg("/media/5ka/back-5ka-element01.png", contain, center);
+    }
+
+    &__decor._2 {
+        top: 900rem;
+        right: -12rem;
+        width: 256rem;
+        height: 256rem;
+
+        @include bg("/media/5ka/back-5ka-element03.png", contain, right center);
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 1;
+        align-items: center;
+
+        &::before {
+            position: absolute;
+            top: -128rem;
+            right: -290rem;
+            z-index: -1;
+            width: 950rem;
+            height: 510rem;
+            content: "";
+
+            @include bg("/media/5ka/main-prize-5ka-bg.svg", contain, right top);
+        }
+
+        &::after {
+            position: absolute;
+            top: 502rem;
+            left: -434rem;
+            z-index: -1;
+            width: 950rem;
+            height: 490rem;
+            content: "";
+
+            @include bg("/media/5ka/main-prize-5ka-bg.svg", contain, left bottom);
+        }
+    }
+
+    &__prizes {
+        width: 100%;
+
+        &Title {
+            margin-bottom: 40rem;
+            color: #fff;
+        }
+
+        &Blocks {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            width: 100%;
+            padding: 32rem;
+            overflow: hidden;
+            border-radius: 36rem;
+
+            @include bg("/media/5ka/weekly-and-product-5ka-bg01.svg", 100% auto, center top);
+
+            & {
+                background-color: #ea001e;
+            }
+        }
+
+        &Block {
+            width: calc(50% - 16rem);
+        }
+    }
+
+    &__cheques {
+        width: 100%;
+        margin-top: 94rem;
+
+        &Title {
+            margin-bottom: 40rem;
+            color: #fff;
+            text-align: center;
+        }
+
+        &Content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            padding: 56rem 56rem 0;
+            overflow: hidden;
+            border-radius: 24rem;
+
+            @include bg("/media/5ka/check-prize-5ka-bg01.svg", 100% auto, center top);
+
+            & {
+                background-color: #7a2799;
+            }
+
+            &::before {
+                position: absolute;
+                bottom: -200rem;
+                left: -280rem;
+                width: 560rem;
+                height: 600rem;
+                content: "";
+
+                @include bg("/media/5ka/check-prize-5ka-bg02.png", contain, left bottom);
+            }
+
+            &::after {
+                position: absolute;
+                right: -310rem;
+                bottom: -221rem;
+                width: 550rem;
+                height: 550rem;
+                content: "";
+
+                @include bg("/media/5ka/check-prize-5ka-bg03.svg", contain, right top);
+            }
+        }
+
+        &Items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: calc(100% + 48rem);
+            margin-left: -24rem;
+        }
+
+        &Item {
+            width: calc(100% / 4);
+            margin-bottom: 48rem;
+            padding: 0 24rem;
+        }
+    }
+
+    &__cheque {
+        width: 100%;
+
+        &Head {
+            position: relative;
+            width: 100%;
+            margin-bottom: 30rem;
+            background: #d300b4;
+            border-radius: 50%;
+            aspect-ratio: 1;
+        }
+
+        &Count {
+            position: absolute;
+            bottom: -9rem;
+            left: 50%;
+            z-index: 2;
+            padding: 2rem 8rem 4rem;
+            color: #fff;
+            font-size: 14rem;
+            text-transform: uppercase;
+            background: #eb2316;
+            border-radius: 4rem;
+            transform: translate(-50%, 0);
+        }
+
+        &Thumb {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        &Title {
+            max-width: 85%;
+            margin: 0 auto;
+            color: #fff;
+            font-size: 12rem;
+            line-height: 1.4;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+
+    &__promo {
+        width: 100%;
+        margin-top: 95rem;
+
+        &Title {
+            width: 100%;
+            margin-bottom: 42rem;
+            color: #fff;
+            text-align: center;
+        }
+
+        &Content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            padding: 40rem 50rem;
+            overflow: hidden;
+            border-radius: 24rem;
+
+            @include bg("/media/5ka/invite-5ka-bg01.svg", 100% auto, center top);
+
+            & {
+                background-color: #5a9e87;
+            }
+        }
+
+        &Decors {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 520rem;
+            height: 100%;
+        }
+
+        &Decor {
+            position: absolute;
+            z-index: 1;
+            display: none;
+            pointer-events: none;
+        }
+
+        &Info {
+            align-items: center;
+            width: 564rem;
+            margin-left: auto;
+
+            &Title {
+                margin-bottom: 4rem;
+                color: #fff;
+                font-size: 28rem;
+                line-height: 1.3;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            &SubTitle {
+                margin-bottom: 22rem;
+                color: #ffb712;
+                font-size: 16rem;
+                line-height: 1.4;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            &Text {
+                width: 100%;
+                margin-bottom: 30rem;
+                padding: 16rem 26rem;
+                color: #231f20;
+                font-size: 16rem;
+                font-family: Onest;
+                line-height: 1.4;
+                text-align: center;
+                background: #ffb712;
+                border-radius: 12rem;
+
+                & * {
+                    font-family: Onest;
+                }
+            }
+        }
+    }
+}

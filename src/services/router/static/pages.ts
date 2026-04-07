@@ -119,9 +119,9 @@ const pages = {
         links: ['botAnket'],
         forBot: true,
     },
-    // '5ka': {
-    //     links: ['5ka'],
-    // },
+    '5ka': {
+        links: ['5ka'],
+    },
 } as const;
 
 type PageT = {

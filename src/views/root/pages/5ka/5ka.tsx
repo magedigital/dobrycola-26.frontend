@@ -3,6 +3,8 @@ import React from 'react';
 import Page from '@components/page/Page.tsx';
 
 import Header from './components/header/Header.tsx';
+import Prizes from './components/prizes/Prizes.tsx';
+import Steps from './components/steps/Steps.tsx';
 
 import FiveKaI from './types.ts';
 
@@ -25,6 +27,8 @@ class FiveKa extends Page<FiveKaI['props'], FiveKaI['state']> implements FiveKaI
             render: () => (
                 <>
                     <Header />
+                    <Steps />
+                    <Prizes />
                 </>
             ),
         });

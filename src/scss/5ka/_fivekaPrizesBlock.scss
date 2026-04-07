@@ -1,0 +1,185 @@
+.fivekaPrizesBlock {
+    position: relative;
+    border-radius: 24rem;
+
+    &__decor {
+        position: absolute;
+        z-index: 2;
+        object-fit: contain;
+        pointer-events: none;
+    }
+
+    &._legend &__decor._1 {
+        bottom: 15rem;
+        left: -160rem;
+        width: 286rem;
+        height: 260rem;
+    }
+
+    &._legend &__decor._2 {
+        bottom: 270rem;
+        left: 12rem;
+        width: 48rem;
+        height: 48rem;
+    }
+
+    &._legend &__decor._3 {
+        bottom: 201rem;
+        left: 76rem;
+        width: 55rem;
+        height: 82rem;
+    }
+
+    &._legend &__decor._4 {
+        bottom: 119rem;
+        left: 98rem;
+        width: 30rem;
+        height: 34rem;
+    }
+
+    &._legend &__decor._5 {
+        right: -137rem;
+        bottom: 19rem;
+        width: 230rem;
+        height: 224rem;
+    }
+
+    &._legend &__decor._6 {
+        right: 30rem;
+        bottom: 276rem;
+        width: 34rem;
+        height: 40rem;
+    }
+
+    &._legend &__decor._7 {
+        right: 94rem;
+        bottom: 219rem;
+        width: 39rem;
+        height: 48rem;
+    }
+
+    &._legend &__decor._8 {
+        right: 98rem;
+        bottom: 93rem;
+        width: 36rem;
+        height: 36rem;
+    }
+
+    &._school &__decor._1 {
+        bottom: 116rem;
+        left: -45rem;
+        width: 160rem;
+        height: 184rem;
+    }
+
+    &._school &__decor._2 {
+        bottom: 303rem;
+        left: 32rem;
+        width: 23rem;
+        height: 23rem;
+    }
+
+    &._school &__decor._3 {
+        bottom: 128rem;
+        left: 65rem;
+        width: 80rem;
+        height: 80rem;
+    }
+
+    &._school &__decor._4 {
+        bottom: 69rem;
+        left: 53rem;
+        width: 52rem;
+        height: 52rem;
+    }
+
+    &._school &__decor._5 {
+        right: -50rem;
+        bottom: 59rem;
+        width: 146rem;
+        height: 218rem;
+    }
+
+    &._school &__decor._6 {
+        right: 84rem;
+        bottom: 284rem;
+        width: 28rem;
+        height: 34rem;
+    }
+
+    &._school &__decor._7 {
+        right: 105rem;
+        bottom: 148rem;
+        width: 27rem;
+        height: 32rem;
+    }
+
+    &._school &__decor._8 {
+        right: 70rem;
+        bottom: 65rem;
+        width: 48rem;
+        height: 55rem;
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 1;
+        align-items: center;
+        padding: 24rem 30rem;
+        overflow: hidden;
+        background: rgba(#fbac2f, 0.2);
+        border-radius: inherit;
+    }
+
+    &__title {
+        margin-bottom: 32rem;
+        padding: 2rem 10rem 4rem;
+        color: #fff;
+        font-size: 16rem;
+        text-transform: uppercase;
+        background: #231f20;
+        border-radius: 4rem;
+    }
+
+    &__prizes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: calc(100% + 20rem);
+
+        &Item {
+            width: calc(100% / 2);
+            margin-bottom: 33rem;
+            padding: 0 10rem;
+        }
+    }
+
+    &__prize {
+        width: 100%;
+        height: 100%;
+
+        &Head {
+            width: 100%;
+            margin-bottom: 20rem;
+            background: #d300b4;
+            border-radius: 50%;
+            aspect-ratio: 1;
+        }
+
+        &Thumb {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        &Title {
+            max-width: 90%;
+            margin: 0 auto;
+            color: #fff;
+            font-size: 12rem;
+            line-height: 1.4;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+}

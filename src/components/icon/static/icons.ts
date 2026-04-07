@@ -25,6 +25,7 @@ const icons = [
     'download',
     'info-i',
     '5ka-back-arrow',
+    '5ka-card-arrow',
 ] as const;
 
 export default icons;
