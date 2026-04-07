@@ -7,6 +7,7 @@ import Media from '@components/media/Media.tsx';
 import TopBarI from './types.ts';
 
 import { AppRouter } from '../../../../index.tsx';
+import render5ka from './renders/render5ka.tsx';
 import renderActions from './renders/renderActions.tsx';
 import renderLogo from './renders/renderLogo.tsx';
 
@@ -20,6 +21,7 @@ class TopBar extends Default<TopBarI['props'], TopBarI['state']> implements TopB
         this.parent = React.createRef();
     }
 
+    render5ka = render5ka;
     renderLogo = renderLogo;
     renderActions = renderActions;
 
@@ -33,6 +35,7 @@ class TopBar extends Default<TopBarI['props'], TopBarI['state']> implements TopB
             >
                 <div className="topBar__inner _INNER">
                     {this.renderLogo()}
+                    {this.render5ka()}
                     <Media check={(d) => d === 'desktop'}>{this.renderActions()}</Media>
                     <Media check={(d) => d === 'mobile' && !mode}>
                         <img

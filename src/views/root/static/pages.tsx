@@ -2,6 +2,7 @@ import React from 'react';
 
 import I from '../types.ts';
 
+import FiveKa from '../pages/5ka/5ka.tsx';
 import Anket from '../pages/anket/Anket.tsx';
 import BotAnket from '../pages/botAnket/BotAnket.tsx';
 import BotReg from '../pages/botReg/BotReg.tsx';
@@ -80,6 +81,11 @@ export const rootPages = {
     botAnket: {
         render(this: I) {
             return <BotAnket />;
+        },
+    },
+    '5ka': {
+        render(this: I) {
+            return <FiveKa />;
         },
     },
 } as const;

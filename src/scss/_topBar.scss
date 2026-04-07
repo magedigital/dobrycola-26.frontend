@@ -1,4 +1,5 @@
 .topBar {
+    position: relative;
     width: 100%;
     padding: 24rem 0;
 
@@ -17,6 +18,21 @@
 
         @include mob {
             padding: 16rem 0;
+        }
+    }
+
+    &._5ka {
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 2;
+            width: 70rem;
+            height: 70rem;
+            transform: translate(-50%, -50%);
+            content: "";
+
+            @include bg("/media/5ka/logo-5ka.svg", contain, center);
         }
     }
 
@@ -61,8 +77,34 @@
 
     &._fix &__logo,
     &._popup &__logo,
-    &._inner &__logo {
+    &._inner &__logo,
+    &._5ka &__logo {
         @include icon(#fff);
+    }
+
+    &__5ka {
+        display: flex;
+        align-items: center;
+
+        &Back {
+            position: relative;
+            margin-right: 24rem;
+            padding-left: 24rem;
+            color: #fff;
+            font-size: 13rem;
+            text-transform: uppercase;
+
+            & i {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 14rem;
+                height: 14rem;
+                transform: translate(0, -50%);
+
+                @include icon(#fff);
+            }
+        }
     }
 
     &__actions {
@@ -119,6 +161,11 @@
                     background: #ff6bc9;
                 }
             }
+        }
+
+        &._faq {
+            background: #10cfc9;
+            border-color: #fff;
         }
     }
 

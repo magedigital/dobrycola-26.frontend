@@ -7,7 +7,7 @@ import I from '../types.ts';
 import { AppRouter } from '../../../../../index.tsx';
 
 const renderLogo: I['renderLogo'] = function () {
-    const { setMenuState } = this.props;
+    const { setMenuState, mode } = this.props;
 
     return (
         <div className="topBar__logo">
@@ -16,13 +16,15 @@ const renderLogo: I['renderLogo'] = function () {
                 className="topBar__logoBtn _CLICK"
                 onClick={setMenuState.bind(null, true)}
             />
-            <Icon
-                name="logo"
-                className="topBar__logoThumb _CLICK"
-                onClick={() => {
-                    AppRouter.changePage({ pageName: 'index' });
-                }}
-            />
+            {mode !== '5ka' && (
+                <Icon
+                    name="logo"
+                    className="topBar__logoThumb _CLICK"
+                    onClick={() => {
+                        AppRouter.changePage({ pageName: 'index' });
+                    }}
+                />
+            )}
         </div>
     );
 };
