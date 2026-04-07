@@ -1,5 +1,4 @@
 import { authRequests } from '@api/requests/auth.ts';
-import { appStore } from '@store/store.tsx';
 import checkAuth from '@utils/checkAuth.ts';
 import { RequestErrorT } from '@utils/request.ts';
 
@@ -14,12 +13,14 @@ const sendForm: I['sendForm'] = async function (code) {
 
     await this.asyncSetState({ loadingKey: 'send', error: undefined });
 
+    console.log('test');
+
     try {
         await authRequests.botLogin({ login, password: code, isCode: true });
 
-        await checkAuth({ redirect: true });
+        const user = await checkAuth({ redirect: true });
 
-        if (appStore.getState().authUser?.status !== 'ANKET_REQUIRED') {
+        if (user?.status !== 'ANKET_REQUIRED') {
             if (window.Telegram?.WebApp) {
                 window.Telegram.WebApp.close();
             }

@@ -1,3 +1,4 @@
+import UserT from '@api/entities/User';
 import { authRequests } from '@api/requests/auth';
 import { enums } from '@global/enums';
 import { PageNamesT } from '@services/router/static/pages';
@@ -32,7 +33,7 @@ type ParamsT = {
     redirect?: boolean;
 };
 
-export default async function checkAuth({ redirect }: ParamsT): Promise<void> {
+export default async function checkAuth({ redirect }: ParamsT): Promise<UserT | undefined> {
     if (!getCookie(enums.ACCESS_TOKEN)) {
         if (localStorage.getItem(enums.USER)) {
             await logoutHandler();
@@ -103,4 +104,6 @@ export default async function checkAuth({ redirect }: ParamsT): Promise<void> {
     if (!window.isBot && user?.status === 'EMAIL_CONFIRM_REQUIRED') {
         appStore.getState().setPopup({ name: 'regPopup' });
     }
+
+    return user;
 }

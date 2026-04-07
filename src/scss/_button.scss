@@ -108,4 +108,10 @@
         background: inherit;
         border-radius: inherit;
     }
+
+    & i._attachment {
+        width: 18rem;
+        height: 18rem;
+        margin-right: 16rem;
+    }
 }

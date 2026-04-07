@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.932f283a.css",
-    "main.js": "/static/js/main.288c5446.js",
+    "main.css": "/static/css/main.4f97b6fc.css",
+    "main.js": "/static/js/main.a24275ef.js",
     "static/js/3315.d341fc11.chunk.js": "/static/js/3315.d341fc11.chunk.js",
     "static/js/3648.864124b6.chunk.js": "/static/js/3648.864124b6.chunk.js",
     "static/js/6286.9e249d70.chunk.js": "/static/js/6286.9e249d70.chunk.js",
@@ -11,6 +11,7 @@
     "static/js/3392.acff2dd4.chunk.js": "/static/js/3392.acff2dd4.chunk.js",
     "static/js/8970.35f1d71c.chunk.js": "/static/js/8970.35f1d71c.chunk.js",
     "static/js/7723.ecee0893.chunk.js": "/static/js/7723.ecee0893.chunk.js",
+    "static/js/3095.3c916408.chunk.js": "/static/js/3095.3c916408.chunk.js",
     "static/js/7590.7c6ce63b.chunk.js": "/static/js/7590.7c6ce63b.chunk.js",
     "static/js/8996.78e7b3e6.chunk.js": "/static/js/8996.78e7b3e6.chunk.js",
     "static/js/979.7e73140d.chunk.js": "/static/js/979.7e73140d.chunk.js",
@@ -226,7 +227,7 @@
     "static/media/plashka-map.svg": "/static/media/plashka-map.807bbf92b339d7fb2f4c.svg"
   },
   "entrypoints": [
-    "static/css/main.932f283a.css",
-    "static/js/main.288c5446.js"
+    "static/css/main.4f97b6fc.css",
+    "static/js/main.a24275ef.js"
   ]
 }

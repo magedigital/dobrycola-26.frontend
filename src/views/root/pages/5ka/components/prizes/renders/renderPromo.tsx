@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Button from '@components/button/Button.tsx';
+import Icon from '@components/icon/Icon.tsx';
 
 import I from '../types.ts';
 
@@ -33,7 +34,10 @@ const renderPromo: I['renderPromo'] = function () {
                         возможность!
                     </p>
                     <div className="fivekaPrizes__promoInfoButton">
-                        <Button className="_purpleColor _boldBorder">скопировать ссылку</Button>
+                        <Button className="_purpleColor _boldBorder">
+                            <Icon name="attachment" className="_attachment" />
+                            скопировать ссылку
+                        </Button>
                     </div>
                 </div>
             </div>
