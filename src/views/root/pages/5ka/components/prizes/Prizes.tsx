@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Default from '@components/default/Default.tsx';
+import Media from '@components/media/Media.tsx';
 
 import PrizesI from './types.ts';
 
@@ -27,8 +28,14 @@ class Prizes extends Default<PrizesI['props'], PrizesI['state']> implements Priz
             <div ref={this.parent} className="fivekaPrizes _SECTION">
                 <div className="fivekaPrizes__decor _1"></div>
                 <div className="fivekaPrizes__decor _2"></div>
+                <div className="fivekaPrizes__decor _3"></div>
                 <div className="fivekaPrizes__inner _INNER">
-                    {this.renderPrizes()}
+                    <Media check={(d) => d === 'desktop'}>
+                        {this.renderPrizes({ mode: 'desktop' })}
+                    </Media>
+                    <Media check={(d) => d === 'mobile'}>
+                        {this.renderPrizes({ mode: 'mobile' })}
+                    </Media>
                     {this.renderCheques()}
                     {this.renderPromo()}
                 </div>

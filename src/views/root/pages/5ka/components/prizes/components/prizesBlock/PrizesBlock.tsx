@@ -1,6 +1,10 @@
 import React from 'react';
 
 import Default from '@components/default/Default.tsx';
+import Icon from '@components/icon/Icon.tsx';
+
+import init from './methods/init.ts';
+import sliderInit from './methods/sliderInit.ts';
 
 import PrizesBlockI from './types.ts';
 
@@ -17,8 +21,12 @@ class PrizesBlock
         this.parent = React.createRef();
     }
 
+    init = init;
+
+    sliderInit = sliderInit;
+
     render() {
-        const { name, title, prizes } = this.props;
+        const { name, title, prizes, mode } = this.props;
 
         return (
             <div
@@ -91,22 +99,63 @@ class PrizesBlock
                         {title}
                         {'"'}
                     </h4>
-                    <div className="fivekaPrizesBlock__prizes">
-                        {prizes.map((prize, i) => (
-                            <div className="fivekaPrizesBlock__prizesItem" key={i}>
-                                <div className="fivekaPrizesBlock__prize">
-                                    <div className="fivekaPrizesBlock__prizeHead">
-                                        <img
-                                            src={prize.thumb}
-                                            alt=""
-                                            className="fivekaPrizesBlock__prizeThumb"
-                                        />
+                    {mode === 'desktop' && (
+                        <div className="fivekaPrizesBlock__prizes">
+                            {prizes.map((prize, i) => (
+                                <div className="fivekaPrizesBlock__prizesItem" key={i}>
+                                    <div className="fivekaPrizesBlock__prize">
+                                        <div className="fivekaPrizesBlock__prizeHead">
+                                            <img
+                                                src={prize.thumb}
+                                                alt=""
+                                                className="fivekaPrizesBlock__prizeThumb"
+                                            />
+                                        </div>
+                                        <p className="fivekaPrizesBlock__prizeTitle">
+                                            {prize.title}
+                                        </p>
                                     </div>
-                                    <p className="fivekaPrizesBlock__prizeTitle">{prize.title}</p>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                    {mode === 'mobile' && (
+                        <div className="fivekaPrizesBlock__slider">
+                            {(['prev', 'next'] as const).map((k) => (
+                                <div
+                                    className={this.getClass(
+                                        'fivekaPrizesBlock__sliderButton',
+                                        this.setClass(k),
+                                    )}
+                                    key={k}
+                                >
+                                    <Icon
+                                        name={k === 'prev' ? 'arrow-prev-long' : 'arrow-next-long'}
+                                    />
+                                </div>
+                            ))}
+                            <div className="fivekaPrizesBlock__sliderInner">
+                                <div className="fivekaPrizesBlock__sliderItems">
+                                    {prizes.map((prize, i) => (
+                                        <div className="fivekaPrizesBlock__sliderItem" key={i}>
+                                            <div className="fivekaPrizesBlock__prize">
+                                                <div className="fivekaPrizesBlock__prizeHead">
+                                                    <img
+                                                        src={prize.thumb}
+                                                        alt=""
+                                                        className="fivekaPrizesBlock__prizeThumb"
+                                                    />
+                                                </div>
+                                                <p className="fivekaPrizesBlock__prizeTitle">
+                                                    {prize.title}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    )}
                 </div>
             </div>
         );

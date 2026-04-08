@@ -1,5 +1,6 @@
 .fivekaPrizesBlock {
     position: relative;
+    z-index: 1;
     border-radius: 24rem;
 
     &__decor {
@@ -7,6 +8,10 @@
         z-index: 2;
         object-fit: contain;
         pointer-events: none;
+
+        @include mob {
+            z-index: 1;
+        }
     }
 
     &._legend &__decor._1 {
@@ -14,6 +19,13 @@
         left: -160rem;
         width: 286rem;
         height: 260rem;
+
+        @include mob {
+            bottom: 7rem;
+            left: -90rem;
+            width: 180rem;
+            height: 180rem;
+        }
     }
 
     &._legend &__decor._2 {
@@ -21,6 +33,14 @@
         left: 12rem;
         width: 48rem;
         height: 48rem;
+
+        @include mob {
+            top: 36rem;
+            bottom: auto;
+            left: 28rem;
+            width: 35rem;
+            height: 35rem;
+        }
     }
 
     &._legend &__decor._3 {
@@ -28,6 +48,13 @@
         left: 76rem;
         width: 55rem;
         height: 82rem;
+
+        @include mob {
+            bottom: 67rem;
+            left: 58rem;
+            width: 34rem;
+            height: 34rem;
+        }
     }
 
     &._legend &__decor._4 {
@@ -35,6 +62,14 @@
         left: 98rem;
         width: 30rem;
         height: 34rem;
+
+        @include mob {
+            top: 100rem;
+            bottom: auto;
+            left: 14rem;
+            width: 22rem;
+            height: 22rem;
+        }
     }
 
     &._legend &__decor._5 {
@@ -42,6 +77,12 @@
         bottom: 19rem;
         width: 230rem;
         height: 224rem;
+
+        @include mob {
+            right: -82rem;
+            width: 144rem;
+            height: 144rem;
+        }
     }
 
     &._legend &__decor._6 {
@@ -49,6 +90,14 @@
         bottom: 276rem;
         width: 34rem;
         height: 40rem;
+
+        @include mob {
+            top: 40rem;
+            right: 4rem;
+            bottom: auto;
+            width: 30rem;
+            height: 30rem;
+        }
     }
 
     &._legend &__decor._7 {
@@ -56,6 +105,12 @@
         bottom: 219rem;
         width: 39rem;
         height: 48rem;
+
+        @include mob {
+            top: 58rem;
+            right: 26rem;
+            bottom: auto;
+        }
     }
 
     &._legend &__decor._8 {
@@ -63,6 +118,13 @@
         bottom: 93rem;
         width: 36rem;
         height: 36rem;
+
+        @include mob {
+            right: 52rem;
+            bottom: 120rem;
+            width: 18rem;
+            height: 18rem;
+        }
     }
 
     &._school &__decor._1 {
@@ -70,6 +132,14 @@
         left: -45rem;
         width: 160rem;
         height: 184rem;
+
+        @include mob {
+            bottom: 16rem;
+            left: -69rem;
+            width: 140rem;
+            height: 140rem;
+            transform: rotate(8deg);
+        }
     }
 
     &._school &__decor._2 {
@@ -77,6 +147,12 @@
         left: 32rem;
         width: 23rem;
         height: 23rem;
+
+        @include mob {
+            bottom: 23rem;
+            width: 20rem;
+            height: 20rem;
+        }
     }
 
     &._school &__decor._3 {
@@ -84,6 +160,15 @@
         left: 65rem;
         width: 80rem;
         height: 80rem;
+
+        @include mob {
+            top: 42rem;
+            bottom: auto;
+            left: 8rem;
+            width: 56rem;
+            height: 56rem;
+            transform: rotate(-75deg);
+        }
     }
 
     &._school &__decor._4 {
@@ -91,6 +176,14 @@
         left: 53rem;
         width: 52rem;
         height: 52rem;
+
+        @include mob {
+            top: 126rem;
+            bottom: auto;
+            left: 26rem;
+            width: 28rem;
+            height: 28rem;
+        }
     }
 
     &._school &__decor._5 {
@@ -98,6 +191,13 @@
         bottom: 59rem;
         width: 146rem;
         height: 218rem;
+
+        @include mob {
+            right: -48rem;
+            bottom: 12rem;
+            width: 140rem;
+            height: 140rem;
+        }
     }
 
     &._school &__decor._6 {
@@ -105,6 +205,14 @@
         bottom: 284rem;
         width: 28rem;
         height: 34rem;
+
+        @include mob {
+            top: 36rem;
+            right: 20rem;
+            bottom: auto;
+            width: 24rem;
+            height: 30rem;
+        }
     }
 
     &._school &__decor._7 {
@@ -112,6 +220,13 @@
         bottom: 148rem;
         width: 27rem;
         height: 32rem;
+
+        @include mob {
+            right: 40rem;
+            bottom: 22rem;
+            width: 20rem;
+            height: 24rem;
+        }
     }
 
     &._school &__decor._8 {
@@ -119,16 +234,28 @@
         bottom: 65rem;
         width: 48rem;
         height: 55rem;
+
+        @include mob {
+            top: 100rem;
+            right: 14rem;
+            bottom: auto;
+            width: 36rem;
+            height: 36rem;
+        }
     }
 
     &__inner {
         position: relative;
-        z-index: 1;
         align-items: center;
         padding: 24rem 30rem;
         overflow: hidden;
         background: rgba(#fbac2f, 0.2);
         border-radius: inherit;
+
+        @include mob {
+            padding: 32rem 29rem 40rem;
+            overflow: visible;
+        }
     }
 
     &__title {
@@ -139,6 +266,11 @@
         text-transform: uppercase;
         background: #231f20;
         border-radius: 4rem;
+
+        @include mob {
+            padding: 3rem 8rem 5rem;
+            font-size: 18rem;
+        }
     }
 
     &__prizes {
@@ -147,10 +279,22 @@
         justify-content: center;
         width: calc(100% + 20rem);
 
+        @include mob {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+        }
+
         &Item {
             width: calc(100% / 2);
             margin-bottom: 33rem;
             padding: 0 10rem;
+
+            @include mob {
+                width: 100%;
+                padding: 0;
+            }
         }
     }
 
@@ -164,6 +308,11 @@
             background: #d300b4;
             border-radius: 50%;
             aspect-ratio: 1;
+
+            @include mob {
+                width: 232rem;
+                margin: 0 auto 22rem;
+            }
         }
 
         &Thumb {
@@ -180,6 +329,55 @@
             line-height: 1.4;
             text-align: center;
             text-transform: uppercase;
+
+            @include mob {
+                max-width: 95%;
+                font-size: 15.2rem;
+            }
+        }
+    }
+
+    &__slider {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+
+        &Button {
+            position: absolute;
+            top: 116rem;
+            z-index: 2;
+            width: 40rem;
+            height: 40rem;
+            padding: 12rem;
+            background: #fff;
+            border-radius: 50%;
+            transform: translate(0, -50%);
+
+            @include icon(#ea001e);
+
+            &._prev {
+                left: -18rem;
+            }
+
+            &._next {
+                right: -18rem;
+            }
+        }
+
+        &Inner {
+            position: relative;
+            z-index: 1;
+            width: 280rem;
+            margin: 0 auto;
+        }
+
+        &Items {
+            display: inline-flex;
+        }
+
+        &Item {
+            width: 280rem;
+            margin-right: 32rem;
         }
     }
 }

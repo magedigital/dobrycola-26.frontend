@@ -80,8 +80,8 @@
             position: relative;
             z-index: 1;
             width: 100%;
-
-            // transform: translate(0, -3600px);
+            overflow: hidden;
+            // transform: translate(0, -5700px);
             transition: $trans;
         }
     }

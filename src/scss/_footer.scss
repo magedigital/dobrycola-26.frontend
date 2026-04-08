@@ -4,6 +4,68 @@
     width: 100%;
     margin-top: auto;
 
+    &._5ka {
+        z-index: 0;
+
+        &::after {
+            position: absolute;
+            top: -100rem;
+            right: 273rem;
+            z-index: 2;
+            width: 160rem;
+            height: 196rem;
+            content: "";
+            pointer-events: none;
+
+            @include bg("/media/5ka/back-5ka-element06.png", contain, center);
+
+            @include mob {
+                top: -148rem;
+                right: auto;
+                left: -10rem;
+                width: 160rem;
+                height: 160rem;
+            }
+        }
+    }
+
+    &__5kaDecor {
+        position: absolute;
+        top: -300rem;
+        right: -310rem;
+        z-index: -1;
+        width: 800rem;
+        height: 1156rem;
+
+        @include bg("/media/5ka/back-5ka-element05.png", contain, left top);
+
+        @include mob {
+            top: -280rem;
+            right: -212rem;
+            width: 500rem;
+            height: 690rem;
+        }
+
+        &::before {
+            position: absolute;
+            top: 210rem;
+            left: 250rem;
+            z-index: 3;
+            width: 340rem;
+            height: 340rem;
+            content: "";
+
+            @include bg("/media/5ka/back-5ka-element05-2.svg", contain, center);
+
+            @include mob {
+                top: 118rem;
+                left: 150rem;
+                width: 200rem;
+                height: 200rem;
+            }
+        }
+    }
+
     &__wrapper {
         padding: 56rem 0 92rem;
 

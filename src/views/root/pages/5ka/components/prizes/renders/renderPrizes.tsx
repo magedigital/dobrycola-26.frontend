@@ -4,13 +4,14 @@ import PrizesBlock from '../components/prizesBlock/PrizesBlock.tsx';
 
 import I from '../types.ts';
 
-const renderPrizes: I['renderPrizes'] = function () {
+const renderPrizes: I['renderPrizes'] = function ({ mode }) {
     return (
         <div className="fivekaPrizes__prizes">
             <h3 className="fivekaPrizes__prizesTitle _TITLE _mediumSize">ЕЖЕНЕДЕЛЬНЫЕ ПРИЗЫ</h3>
             <div className="fivekaPrizes__prizesBlocks">
                 <div className="fivekaPrizes__prizesBlock">
                     <PrizesBlock
+                        mode={mode}
                         name="legend"
                         title="Легенды"
                         prizes={[
@@ -31,6 +32,7 @@ const renderPrizes: I['renderPrizes'] = function () {
                 </div>
                 <div className="fivekaPrizes__prizesBlock">
                     <PrizesBlock
+                        mode={mode}
                         name="school"
                         title="Новая школа"
                         prizes={[

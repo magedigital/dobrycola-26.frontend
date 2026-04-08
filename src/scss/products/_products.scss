@@ -120,19 +120,34 @@
         }
     }
 
-    // &._5ka &__slider {
-    //     &MobItems {
-    //         color: #fff;
-    //     }
+    &._5ka &__slider {
+        &MobItems {
+            color: #fff;
+        }
 
-    //     &MobButton {
-    //         @include icon(#fff);
-    //     }
+        &MobButton {
+            @include icon(#fff);
+        }
 
-    //     &Button {
-    //         background: #fff;
+        &Button {
+            width: 56rem;
+            height: 56rem;
+            background: #fff;
 
-    //         @include icon(#ff1c24);
-    //     }
-    // }
+            &._prev {
+                left: 14rem;
+            }
+
+            &._next {
+                right: 14rem;
+            }
+
+            &Icon {
+                width: 23rem;
+                height: 23rem;
+            }
+
+            @include icon(#ff1c24);
+        }
+    }
 }

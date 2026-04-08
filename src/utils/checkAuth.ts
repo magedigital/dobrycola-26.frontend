@@ -93,6 +93,10 @@ export default async function checkAuth({ redirect }: ParamsT): Promise<UserT | 
     //     ids = { '1': user.nextActPrizeId };
     // }
 
+    if (window.isBot && user?.status === 'EMAIL_CONFIRM_REQUIRED') {
+        pageName = 'botReg';
+    }
+
     if (redirect && !pageName) {
         pageName = 'profile';
     }

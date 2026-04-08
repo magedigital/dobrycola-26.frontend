@@ -4,6 +4,10 @@
     width: 100%;
     padding: 50rem 0;
 
+    @include mob {
+        padding: 66rem 0 30rem;
+    }
+
     &__decor {
         position: absolute;
         z-index: -1;
@@ -18,6 +22,10 @@
         height: 186rem;
 
         @include bg("/media/5ka/back-5ka-element01.png", contain, center);
+
+        @include mob {
+            display: none;
+        }
     }
 
     &__decor._2 {
@@ -27,6 +35,30 @@
         height: 256rem;
 
         @include bg("/media/5ka/back-5ka-element03.png", contain, right center);
+
+        @include mob {
+            top: 1112rem;
+            right: -48rem;
+            width: 184rem;
+            height: 184rem;
+        }
+    }
+
+    &__decor._3 {
+        bottom: -114rem;
+        left: -42rem;
+        width: 190rem;
+        height: 190rem;
+
+        @include bg("/media/5ka/back-5ka-element04.png", contain, left center);
+
+        @include mob {
+            top: 1778rem;
+            bottom: auto;
+            left: -44rem;
+            width: 140rem;
+            height: 140rem;
+        }
     }
 
     &__inner {
@@ -44,6 +76,13 @@
             content: "";
 
             @include bg("/media/5ka/main-prize-5ka-bg.svg", contain, right top);
+
+            @include mob {
+                top: -38rem;
+                right: -244rem;
+                width: 518rem;
+                height: 518rem;
+            }
         }
 
         &::after {
@@ -56,6 +95,13 @@
             content: "";
 
             @include bg("/media/5ka/main-prize-5ka-bg.svg", contain, left bottom);
+
+            @include mob {
+                top: 648rem;
+                left: -256rem;
+                width: 480rem;
+                height: 480rem;
+            }
         }
     }
 
@@ -65,6 +111,12 @@
         &Title {
             margin-bottom: 40rem;
             color: #fff;
+            text-align: center;
+
+            @include mob {
+                margin-bottom: 36rem;
+                font-size: 28rem !important;
+            }
         }
 
         &Blocks {
@@ -80,6 +132,16 @@
 
             @include bg("/media/5ka/weekly-and-product-5ka-bg01.svg", 100% auto, center top);
 
+            @include mob {
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 8rem;
+                border-radius: 32rem;
+
+                @include bg("/media/5ka/weekly-and-product-5ka-bg01-mob.svg", 100% auto, center top);
+            }
+
             & {
                 background-color: #ea001e;
             }
@@ -87,6 +149,14 @@
 
         &Block {
             width: calc(50% - 16rem);
+
+            @include mob {
+                width: 100%;
+
+                & + & {
+                    margin-top: 19rem;
+                }
+            }
         }
     }
 
@@ -94,10 +164,19 @@
         width: 100%;
         margin-top: 94rem;
 
+        @include mob {
+            margin-top: 162rem;
+        }
+
         &Title {
             margin-bottom: 40rem;
             color: #fff;
             text-align: center;
+
+            @include mob {
+                margin-bottom: 38rem;
+                font-size: 28rem !important;
+            }
         }
 
         &Content {
@@ -110,6 +189,12 @@
 
             @include bg("/media/5ka/check-prize-5ka-bg01.svg", 100% auto, center top);
 
+            @include mob {
+                padding: 38rem 20rem 56rem;
+
+                @include bg("/media/5ka/check-prize-5ka-bg01-mob.svg", 100% auto, center top);
+            }
+
             & {
                 background-color: #7a2799;
             }
@@ -118,6 +203,7 @@
                 position: absolute;
                 bottom: -200rem;
                 left: -280rem;
+                display: none;
                 width: 560rem;
                 height: 600rem;
                 content: "";
@@ -134,6 +220,16 @@
                 content: "";
 
                 @include bg("/media/5ka/check-prize-5ka-bg03.svg", contain, right top);
+
+                @include mob {
+                    right: auto;
+                    bottom: -160rem;
+                    left: 50%;
+                    z-index: -1;
+                    width: 400rem;
+                    height: 400rem;
+                    transform: translate(-50%, 0);
+                }
             }
         }
 
@@ -150,9 +246,52 @@
             margin-bottom: 48rem;
             padding: 0 24rem;
         }
+
+        &Slider {
+            width: 100%;
+
+            &Button {
+                position: absolute;
+                top: 154rem;
+                z-index: 2;
+                width: 40rem;
+                height: 40rem;
+                padding: 12rem;
+                background: #fff;
+                border-radius: 50%;
+                transform: translate(0, -50%);
+
+                @include icon(#ea001e);
+
+                &._prev {
+                    left: 17rem;
+                }
+
+                &._next {
+                    right: 17rem;
+                }
+            }
+
+            &Inner {
+                width: 260rem;
+                margin: 0 auto;
+            }
+
+            &Items {
+                display: inline-flex;
+            }
+
+            &Item {
+                width: 260rem;
+                margin-right: 64rem;
+            }
+        }
     }
 
     &__cheque {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
 
         &Head {
@@ -162,6 +301,11 @@
             background: #d300b4;
             border-radius: 50%;
             aspect-ratio: 1;
+
+            @include mob {
+                width: 230rem;
+                margin-bottom: 22rem;
+            }
         }
 
         &Count {
@@ -176,6 +320,12 @@
             background: #eb2316;
             border-radius: 4rem;
             transform: translate(-50%, 0);
+
+            @include mob {
+                bottom: -6rem;
+                font-size: 18rem;
+                white-space: nowrap;
+            }
         }
 
         &Thumb {
@@ -192,6 +342,11 @@
             line-height: 1.4;
             text-align: center;
             text-transform: uppercase;
+
+            @include mob {
+                max-width: 100%;
+                font-size: 15rem;
+            }
         }
     }
 
@@ -199,11 +354,20 @@
         width: 100%;
         margin-top: 95rem;
 
+        @include mob {
+            margin-top: 82rem;
+        }
+
         &Title {
             width: 100%;
             margin-bottom: 42rem;
             color: #fff;
             text-align: center;
+
+            @include mob {
+                margin-bottom: 38rem;
+                font-size: 28rem !important;
+            }
         }
 
         &Content {
@@ -216,8 +380,16 @@
 
             @include bg("/media/5ka/invite-5ka-bg01.svg", 100% auto, center top);
 
+            @include mob {
+                @include bg("/media/5ka/invite-5ka-bg01-mob.svg", 100% auto, center top);
+            }
+
             & {
                 background-color: #5a9e87;
+            }
+
+            @include mob {
+                padding: 38rem 14rem 300rem;
             }
         }
 
@@ -227,6 +399,13 @@
             left: 0;
             width: 520rem;
             height: 100%;
+
+            @include mob {
+                top: auto;
+                bottom: 0;
+                width: 100%;
+                height: 300rem;
+            }
         }
 
         &Decor {
@@ -242,6 +421,13 @@
             z-index: 3;
             width: 200rem;
             height: 184rem;
+
+            @include mob {
+                bottom: 60rem;
+                left: 28rem;
+                width: 150rem;
+                height: 150rem;
+            }
         }
 
         &Decor._2 {
@@ -250,6 +436,13 @@
             z-index: 3;
             width: 212rem;
             height: 212rem;
+
+            @include mob {
+                bottom: 52rem;
+                left: 188rem;
+                width: 154rem;
+                height: 154rem;
+            }
         }
 
         &Decor._3 {
@@ -258,6 +451,12 @@
             z-index: 3;
             width: 68rem;
             height: 98rem;
+
+            @include mob {
+                left: 154rem;
+                width: 54rem;
+                height: 74rem;
+            }
         }
 
         &Decor._4 {
@@ -266,6 +465,13 @@
             z-index: 1;
             width: 205rem;
             height: 300rem;
+
+            @include mob {
+                bottom: 36rem;
+                left: 10rem;
+                width: 220rem;
+                height: 220rem;
+            }
         }
 
         &Decor._5 {
@@ -274,6 +480,13 @@
             z-index: 0;
             width: 211rem;
             height: 303rem;
+
+            @include mob {
+                bottom: 44rem;
+                left: 142rem;
+                width: 220rem;
+                height: 220rem;
+            }
         }
 
         &Decor._6 {
@@ -282,6 +495,13 @@
             z-index: 1;
             width: 34rem;
             height: 50rem;
+
+            @include mob {
+                bottom: 174rem;
+                left: 10rem;
+                width: 30rem;
+                height: 36rem;
+            }
         }
 
         &Decor._7 {
@@ -290,6 +510,13 @@
             z-index: 1;
             width: 42rem;
             height: 52rem;
+
+            @include mob {
+                bottom: 76rem;
+                left: 8rem;
+                width: 34rem;
+                height: 34rem;
+            }
         }
 
         &Decor._8 {
@@ -298,6 +525,13 @@
             z-index: 1;
             width: 46rem;
             height: 62rem;
+
+            @include mob {
+                bottom: 19rem;
+                left: 48rem;
+                width: 45rem;
+                height: 45rem;
+            }
         }
 
         &Decor._9 {
@@ -306,6 +540,13 @@
             z-index: 2;
             width: 40rem;
             height: 40rem;
+
+            @include mob {
+                bottom: 169rem;
+                left: 150rem;
+                width: 30rem;
+                height: 30rem;
+            }
         }
 
         &Decor._10 {
@@ -314,6 +555,13 @@
             z-index: 2;
             width: 63rem;
             height: 103rem;
+
+            @include mob {
+                top: 24rem;
+                left: 150rem;
+                width: 74rem;
+                height: 74rem;
+            }
         }
 
         &Decor._11 {
@@ -322,6 +570,13 @@
             z-index: 2;
             width: 42rem;
             height: 53rem;
+
+            @include mob {
+                top: 96rem;
+                right: 20rem;
+                width: 40rem;
+                height: 40rem;
+            }
         }
 
         &Decor._12 {
@@ -330,6 +585,13 @@
             z-index: 2;
             width: 67rem;
             height: 56rem;
+
+            @include mob {
+                right: 24rem;
+                bottom: 40rem;
+                width: 50rem;
+                height: 50rem;
+            }
         }
 
         &Decor._13 {
@@ -338,12 +600,24 @@
             z-index: 2;
             width: 30rem;
             height: 36rem;
+
+            @include mob {
+                right: 122rem;
+                bottom: 10rem;
+                width: 24rem;
+                height: 24rem;
+            }
         }
 
         &Info {
             align-items: center;
             width: 564rem;
             margin-left: auto;
+
+            @include mob {
+                width: 100%;
+                margin-left: 0;
+            }
 
             &Title {
                 margin-bottom: 4rem;
@@ -352,6 +626,11 @@
                 line-height: 1.3;
                 text-align: center;
                 text-transform: uppercase;
+
+                @include mob {
+                    margin-bottom: 8rem;
+                    font-size: 23rem;
+                }
             }
 
             &SubTitle {
@@ -361,6 +640,12 @@
                 line-height: 1.4;
                 text-align: center;
                 text-transform: uppercase;
+
+                @include mob {
+                    margin-bottom: 26rem;
+                    font-size: 17.5rem;
+                    line-height: 1.25;
+                }
             }
 
             &Text {
@@ -375,8 +660,26 @@
                 background: #ffb712;
                 border-radius: 12rem;
 
+                @include mob {
+                    padding: 18rem 10rem;
+                    font-size: 16.5rem;
+                    line-height: 1.42;
+                    border-radius: 14rem;
+                }
+
                 & * {
                     font-family: Onest;
+                }
+            }
+
+            &Button {
+                & .v2button {
+                    padding-right: 18rem;
+                    padding-left: 18rem;
+                }
+
+                @include mob {
+                    height: 69rem;
                 }
             }
         }

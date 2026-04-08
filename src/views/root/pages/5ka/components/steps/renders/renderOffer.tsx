@@ -1,5 +1,7 @@
 import React from 'react';
 
+import StringService from '@services/string/String.service.ts';
+
 import I from '../types.ts';
 
 const renderOffer: I['renderOffer'] = function () {
@@ -19,10 +21,14 @@ const renderOffer: I['renderOffer'] = function () {
             </div>
             <div className="fivekaSteps__offerContent">
                 <h3 className="fivekaSteps__offerTitle">ВЫИГРАЙ специальный ПРИЗ!</h3>
-                <p className="fivekaSteps__offerText">
-                    Загрузи 10 чеков из «Пятёрочки» с продукцией Добрый® или BURN® и получи шанс
-                    выиграть суперприз 100 000 рублей.
-                </p>
+                <p
+                    className="fivekaSteps__offerText"
+                    dangerouslySetInnerHTML={{
+                        __html: new StringService().setSpaces(
+                            'Загрузи 10 чеков из «Пятёрочки» с продукцией Добрый® или BURN® и получи шанс выиграть суперприз 100 000 рублей.',
+                        ),
+                    }}
+                ></p>
             </div>
         </div>
     );

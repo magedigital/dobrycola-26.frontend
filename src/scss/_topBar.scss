@@ -33,6 +33,11 @@
             content: "";
 
             @include bg("/media/5ka/logo-5ka.svg", contain, center);
+
+            @include mob {
+                width: 54rem;
+                height: 54rem;
+            }
         }
     }
 

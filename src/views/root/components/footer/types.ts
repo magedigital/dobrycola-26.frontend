@@ -3,6 +3,7 @@ import { StoreT } from '@store/store';
 
 type PropsT = {
     mainContent: StoreT['mainContent'];
+    mode?: '5ka';
 };
 
 type StateT = {};

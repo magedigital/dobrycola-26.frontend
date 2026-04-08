@@ -18,10 +18,14 @@ class Footer extends Default<FooterI['props'], FooterI['state']> implements Foot
     }
 
     render() {
-        const { mainContent } = this.props;
+        const { mainContent, className, mode } = this.props;
 
         return (
-            <div ref={this.parent} className="footer">
+            <div
+                ref={this.parent}
+                className={this.getClass('footer', className, this.setClass(mode))}
+            >
+                {mode === '5ka' && <div className="footer__5kaDecor"></div>}
                 <div className="footer__wrapper _SECTION">
                     <div className="footer__inner _INNER">
                         <div className="footer__nav">

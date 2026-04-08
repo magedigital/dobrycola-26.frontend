@@ -47,7 +47,17 @@ class TopBar extends Default<TopBarI['props'], TopBarI['state']> implements TopB
                             }}
                         />
                     </Media>
-                    <Media check={(d) => d === 'mobile' && !!mode}>
+                    <Media check={(d) => d === 'mobile' && mode === '5ka'}>
+                        <img
+                            src={require('@media/5ka/user-profile.svg').default}
+                            alt=""
+                            className="topBar__profile"
+                            onClick={() => {
+                                AppRouter.changePage({ pageName: 'profile' });
+                            }}
+                        />
+                    </Media>
+                    <Media check={(d) => d === 'mobile' && !!mode && mode !== '5ka'}>
                         <div className="closeBtn topBar__close" onClick={pageCloseHandler}>
                             <Icon name="popup-close" />
                         </div>

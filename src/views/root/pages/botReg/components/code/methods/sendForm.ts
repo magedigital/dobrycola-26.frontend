@@ -13,8 +13,6 @@ const sendForm: I['sendForm'] = async function (code) {
 
     await this.asyncSetState({ loadingKey: 'send', error: undefined });
 
-    console.log('test');
-
     try {
         await authRequests.botLogin({ login, password: code, isCode: true });
 

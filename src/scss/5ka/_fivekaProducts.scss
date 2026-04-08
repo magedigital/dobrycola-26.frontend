@@ -1,0 +1,33 @@
+.fivekaProducts {
+    width: 100%;
+    padding: 40rem 0 120rem;
+
+    @include mob {
+        padding: 32rem 0 200rem;
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 1;
+        padding: 38rem 24rem;
+        overflow: hidden;
+        background: #ea001e;
+        border-radius: 24rem;
+
+        @include mob {
+            padding: 38rem 10rem 18rem;
+        }
+    }
+
+    &__title {
+        width: 100%;
+        margin-bottom: 12rem;
+        color: #fff;
+        text-align: center;
+
+        @include mob {
+            margin-bottom: 32rem;
+            font-size: 20.5rem !important;
+        }
+    }
+}

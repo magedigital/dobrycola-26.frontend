@@ -7,6 +7,13 @@
 
     @include bg("/media/5ka/back-5ka-01.jpg", 100% auto, center top);
 
+    @include mob {
+        height: auto;
+        padding: 81rem 0 190rem;
+
+        @include bg("/media/5ka/back-5ka-01-mob.jpg", 100% auto, center top);
+    }
+
     &::after {
         position: absolute;
         bottom: 0;
@@ -28,6 +35,14 @@
         height: 730rem;
         pointer-events: none;
 
+        @include mob {
+            top: 202rem;
+            bottom: auto;
+            left: -16rem;
+            width: 250rem;
+            height: 302rem;
+        }
+
         &Thumb {
             position: absolute;
             top: 0;
@@ -45,6 +60,14 @@
             z-index: 11;
             width: 264rem;
             height: 146rem;
+            object-fit: contain;
+
+            @include mob {
+                bottom: 34rem;
+                left: 73rem;
+                width: 110rem;
+                height: 100rem;
+            }
         }
     }
 
@@ -61,6 +84,12 @@
             background: #eb2316;
             border: 2rem solid #fff;
             border-radius: 360rem;
+
+            @include mob {
+                margin-bottom: 18rem;
+                padding: 7rem 10rem;
+                font-size: 10.2rem;
+            }
         }
 
         &Title {
@@ -71,6 +100,10 @@
             line-height: 1.15;
             text-align: right;
             text-transform: uppercase;
+
+            @include mob {
+                font-size: 23.5rem;
+            }
         }
     }
 
@@ -79,6 +112,12 @@
         z-index: 12;
         width: 634rem;
         margin: 125rem 0 0 auto;
+
+        @include mob {
+            width: 100%;
+            margin: 300rem 0 0;
+            padding-bottom: 4rem;
+        }
 
         &::before {
             position: absolute;
@@ -90,6 +129,13 @@
             content: "";
 
             @include bg("/media/5ka/main-prize-5ka-bg.svg", contain, left top);
+
+            @include mob {
+                top: -26rem;
+                left: -122rem;
+                width: 550rem;
+                height: 550rem;
+            }
         }
 
         &Decor {
@@ -102,6 +148,13 @@
                 left: -118rem;
                 width: 170rem;
                 height: 114rem;
+
+                @include mob {
+                    bottom: -5rem;
+                    left: -62rem;
+                    width: 100rem;
+                    height: 80rem;
+                }
             }
 
             &._2 {
@@ -109,6 +162,13 @@
                 left: 112rem;
                 width: 127rem;
                 height: 100rem;
+
+                @include mob {
+                    bottom: -82rem;
+                    left: 54rem;
+                    width: 74rem;
+                    height: 74rem;
+                }
             }
 
             &._3 {
@@ -116,6 +176,13 @@
                 left: 356rem;
                 width: 95rem;
                 height: 106rem;
+
+                @include mob {
+                    bottom: -52rem;
+                    left: 208rem;
+                    width: 66rem;
+                    height: 66rem;
+                }
             }
 
             &._4 {
@@ -123,6 +190,13 @@
                 bottom: -112rem;
                 width: 168rem;
                 height: 205rem;
+
+                @include mob {
+                    right: -86rem;
+                    bottom: -77rem;
+                    width: 156rem;
+                    height: 156rem;
+                }
             }
 
             &._5 {
@@ -130,6 +204,13 @@
                 left: 217rem;
                 width: 120rem;
                 height: 98rem;
+
+                @include mob {
+                    top: -41rem;
+                    left: 145rem;
+                    width: 68rem;
+                    height: 68rem;
+                }
             }
 
             &._6 {
@@ -137,6 +218,13 @@
                 right: 48rem;
                 width: 156rem;
                 height: 124rem;
+
+                @include mob {
+                    top: -50rem;
+                    right: 34rem;
+                    width: 100rem;
+                    height: 100rem;
+                }
             }
         }
 
@@ -147,6 +235,12 @@
             font-size: 16rem;
             text-transform: uppercase;
             background: #7a2799;
+
+            @include mob {
+                margin-bottom: -1rem;
+                padding: 1rem 4rem 2rem;
+                font-size: 11.5rem;
+            }
         }
 
         &SubTitle {
@@ -154,6 +248,10 @@
             color: #fff;
             font-size: 32rem;
             text-transform: uppercase;
+
+            @include mob {
+                font-size: 20.5rem;
+            }
         }
 
         &Title {
@@ -163,10 +261,20 @@
             margin-left: -4rem;
 
             @include bg("/media/5ka/main-prize-5ka.svg", contain, left top);
+
+            @include mob {
+                width: 103%;
+                height: 60rem;
+                margin-bottom: 4rem;
+            }
         }
 
         &Info {
             padding-left: 92rem;
+
+            @include mob {
+                padding-left: 52rem;
+            }
 
             &Title {
                 margin-bottom: 14rem;
@@ -174,6 +282,11 @@
                 font-size: 20rem;
                 line-height: 1.45;
                 text-transform: uppercase;
+
+                @include mob {
+                    margin-bottom: 9rem;
+                    font-size: 16.8rem;
+                }
             }
 
             &Link {
@@ -184,6 +297,10 @@
                 font-family: Onest;
                 line-height: 0.9;
                 border-bottom: 1rem solid rgba(#ff49b8, 0.72);
+
+                @include mob {
+                    font-size: 14.5rem;
+                }
             }
         }
     }

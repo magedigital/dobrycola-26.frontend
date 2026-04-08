@@ -2,6 +2,7 @@ import React from 'react';
 
 import Button from '@components/button/Button.tsx';
 import Icon from '@components/icon/Icon.tsx';
+import StringService from '@services/string/String.service.ts';
 
 import I from '../types.ts';
 
@@ -9,7 +10,7 @@ const renderPromo: I['renderPromo'] = function () {
     return (
         <div className="fivekaPrizes__promo">
             <h3 className="fivekaPrizes__promoTitle _TITLE">
-                Выиграйте смартфоны для тебя и друга
+                Выиграйте смартфоны для&nbsp;тебя и друга
             </h3>
             <div className="fivekaPrizes__promoContent _COL">
                 <div className="fivekaPrizes__promoDecors">
@@ -27,12 +28,14 @@ const renderPromo: I['renderPromo'] = function () {
                     <p className="fivekaPrizes__promoInfoSubTitle">
                         Выиграйте смартфоны для тебя и друга
                     </p>
-                    <p className="fivekaPrizes__promoInfoText">
-                        Копируй свою уникальную ссылку и делись ей с друзьями. После того, как друг
-                        зарегистрирует свой первый чек, <b>вы оба попадёте в розыгрыш смартфона</b>.
-                        Больше приглашенных друзей - больше шансов выиграть приз. Не упусти
-                        возможность!
-                    </p>
+                    <p
+                        className="fivekaPrizes__promoInfoText"
+                        dangerouslySetInnerHTML={{
+                            __html: new StringService().setSpaces(
+                                'Копируй свою уникальную ссылку и делись ей с друзьями. После того, как друг зарегистрирует свой первый чек, <b>вы оба попадёте в розыгрыш смартфона</b>. Больше приглашенных друзей - больше шансов выиграть приз. Не упусти возможность!',
+                            ),
+                        }}
+                    ></p>
                     <div className="fivekaPrizes__promoInfoButton">
                         <Button className="_purpleColor _boldBorder">
                             <Icon name="attachment" className="_attachment" />
