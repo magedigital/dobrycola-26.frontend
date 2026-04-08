@@ -3,6 +3,7 @@ import Slider from '@services/slider/Slider.ts';
 import I from '../types.ts';
 
 const sliderInit: I['sliderInit'] = function () {
+    const items = this.state.items!;
     const slider = this.parent.current!.querySelector('.raffle__slider') as HTMLElement;
 
     this.slider = new Slider({
@@ -13,6 +14,7 @@ const sliderInit: I['sliderInit'] = function () {
         showEach: true,
         infinity: false,
         withDrag: false,
+        current: this.allCount - items.length - 2,
         callback: ({ current }) => {
             if (typeof current === 'number') {
                 const itemNode = this.parent.current!.querySelector(

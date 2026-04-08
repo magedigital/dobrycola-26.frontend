@@ -20,9 +20,9 @@ const startCarusel: I['startCarusel'] = function () {
     this.animationId = requestAnimationFrame(animate);
 
     setAnimate({
-        duration: 1_000,
+        duration: this.startDur,
         draw: (p) => {
-            this.rotateSpeed = p;
+            this.rotateSpeed = p * 2;
         },
         // getId: (id) => {
         //     this.advanceAnimationId = id;
@@ -38,10 +38,10 @@ const startCarusel: I['startCarusel'] = function () {
             const diff = count * 360 - this.rotateDeg + 360 * 2;
 
             setAnimate({
-                duration: 1_800,
+                duration: this.resultDur + 300,
                 timing: makeEaseOut,
                 draw: (p) => {
-                    const thisDeg = lastRotate + p * diff;
+                    const thisDeg = lastRotate + p * diff * 3;
 
                     circleNode.style.transform = `rotate(${thisDeg}deg)`;
                 },

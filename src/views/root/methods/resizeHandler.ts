@@ -3,7 +3,7 @@ import I from '../types.ts';
 import { appStore } from '../../../store/store.tsx';
 import removeTransition from '../../../utils/removeTransition.ts';
 
-window.mediaM = 700;
+window.mediaM = 500;
 
 const resizeHandler: I['resizeHandler'] = async function (force) {
     window.widthValue = document.documentElement.clientWidth;

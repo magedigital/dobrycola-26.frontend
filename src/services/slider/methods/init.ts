@@ -93,7 +93,7 @@ const init: I['init'] = function () {
         this.callback({ type: 'init', current: this.current, currentKey: this.current });
     }
 
-    window.addEventListener('resize', this.resize);
+    document.addEventListener('customResize', this.resize);
 
     if (this.withDrag !== false) {
         (this.area.addEventListener as ListenerT)('mousedown', this.start, { passive: false });

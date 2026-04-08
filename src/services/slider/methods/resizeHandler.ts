@@ -1,6 +1,11 @@
 import I from '../types.ts';
 
 const resizeHandler: I['resizeHandler'] = function () {
+    if (1) {
+        this.setCurrent();
+        return;
+    }
+
     this.destroyNodes();
     this.init();
 

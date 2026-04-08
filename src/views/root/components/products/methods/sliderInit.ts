@@ -38,10 +38,6 @@ const sliderInit: I['sliderInit'] = function () {
                 }
             }
         },
-        buttons: {
-            prev: slider.querySelector('.products__sliderButton._prev') as HTMLElement,
-            next: slider.querySelector('.products__sliderButton._next') as HTMLElement,
-        },
         notDragItems: ['.product__sliderButton'],
     });
 };

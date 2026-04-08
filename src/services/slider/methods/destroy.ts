@@ -1,6 +1,10 @@
 import I from '../types.ts';
 
 const destroy: I['destroy'] = function (force = true) {
+    if (this.resizeTimerId) {
+        clearTimeout(this.resizeTimerId);
+    }
+
     if (force) {
         this.destroyNodes();
     }
@@ -15,7 +19,7 @@ const destroy: I['destroy'] = function (force = true) {
         });
     }
 
-    window.removeEventListener('resize', this.resize);
+    document.removeEventListener('customResize', this.resize);
 
     (this.area.removeEventListener as ListenerT)('mousedown', this.start, { passive: false });
     (document.removeEventListener as ListenerT)('mousemove', this.move, { passive: false });

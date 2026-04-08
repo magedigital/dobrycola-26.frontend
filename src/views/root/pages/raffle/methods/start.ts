@@ -11,6 +11,7 @@ const start: I['start'] = async function () {
 
     if (!isConfirm) {
         setError({ text: 'Необходимо отметить согласие', type: 'error' });
+
         return;
     }
 
@@ -24,7 +25,7 @@ const start: I['start'] = async function () {
         this.startCarusel();
 
         this.intervals.slider = setInterval(() => {
-            this.slider!.buttonHandler({ dir: 'next' });
+            this.slider!.buttonHandler({ dir: 'prev' });
         }, 300);
     } catch (e) {
         await this.asyncSetState({ loadingKey: undefined });

@@ -25,7 +25,7 @@ const renderSlider: I['renderSlider'] = function () {
         <div className={`raffle__slider ${items.length ? '_ready' : ''}`}>
             <div className="raffle__sliderInner">
                 <div className="raffle__sliderItems">
-                    {new Array(30).fill({}).map((item, i) => {
+                    {new Array(this.allCount).fill({}).map((item, i) => {
                         const index = i % items.length;
                         const isOdd = i % 2 === 1;
                         const isResult = i === curIndex && prize;

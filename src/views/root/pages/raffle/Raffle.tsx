@@ -53,7 +53,8 @@ class Raffle extends Page<RaffleI['props'], RaffleI['state']> implements RaffleI
     mode = 'inner' as const;
 
     startDur = 1_000;
-    resultDur = 1_500;
+    resultDur = 3_000;
+    allCount = 30;
 
     rotateDeg = 0;
     rotateSpeed = 0;

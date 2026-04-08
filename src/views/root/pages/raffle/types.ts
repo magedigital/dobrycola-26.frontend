@@ -41,6 +41,7 @@ type RaffleDataT = {
 interface RaffleI extends PageI<PropsT, StateT> {
     slider?: Slider;
     gameId: string;
+    allCount: number;
 
     isStart?: boolean;
     rotateDeg: number;
