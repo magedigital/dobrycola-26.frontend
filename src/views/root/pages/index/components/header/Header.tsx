@@ -12,6 +12,7 @@ import HeaderI from './types.ts';
 
 import renderCircle from './renders/renderCircle.tsx';
 import renderContent from './renders/renderContent.tsx';
+import renderDecors from './renders/renderDecors.tsx';
 import renderSlider from './renders/renderSlider.tsx';
 
 class Header extends Default<HeaderI['props'], HeaderI['state']> implements HeaderI {
@@ -38,6 +39,7 @@ class Header extends Default<HeaderI['props'], HeaderI['state']> implements Head
     renderContent = renderContent;
     renderSlider = renderSlider;
     renderCircle = renderCircle;
+    renderDecors = renderDecors;
 
     render() {
         return (

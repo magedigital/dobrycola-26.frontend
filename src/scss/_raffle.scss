@@ -210,7 +210,7 @@
         transform: scale(1.1);
 
         @include mob {
-            transform: scale(1);
+            transform: scale(0.85);
         }
     }
 
@@ -224,7 +224,7 @@
         transform: scale(1.45);
 
         @include mob {
-            transform: scale(1.45);
+            transform: scale(1.3);
         }
     }
 

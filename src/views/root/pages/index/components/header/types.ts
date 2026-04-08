@@ -24,6 +24,7 @@ interface HeaderI extends DefaultI<PropsT, StateT> {
     renderContent(this: HeaderI): React.ReactNode;
     renderSlider(this: HeaderI): React.ReactNode;
     renderCircle(this: HeaderI): React.ReactNode;
+    renderDecors(this: HeaderI): React.ReactNode;
 }
 
 export default HeaderI;
