@@ -207,7 +207,7 @@
     }
 
     &__sliderItem:not([data-cur]) &__sliderItemImage {
-        transform: scale(1.2);
+        transform: scale(1.1);
 
         @include mob {
             transform: scale(1);
@@ -221,10 +221,10 @@
     }
 
     &__sliderItem[data-cur] &__sliderItemImage {
-        transform: scale(1.6);
+        transform: scale(1.45);
 
         @include mob {
-            transform: scale(1.6);
+            transform: scale(1.45);
         }
     }
 
