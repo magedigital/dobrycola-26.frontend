@@ -1,9 +1,9 @@
 import DefaultI from '@components/default/types';
 
-import { ProductsContentT } from '../../../products/types';
+import { FivekaContentT } from '../../types';
 
 type PropsT = {
-    content: ProductsContentT;
+    content: FivekaContentT;
 };
 
 type StateT = {};

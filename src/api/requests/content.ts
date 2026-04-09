@@ -1,12 +1,13 @@
 import { API } from '@api/api';
 import request from '@utils/request';
 
+import { FivekaContentT } from '../../views/root/pages/5ka/types';
 import { FaqContentT } from '../../views/root/pages/faq/types';
 import { MainContentT } from '../../views/root/pages/index/types';
 import { ProductsContentT } from '../../views/root/pages/products/types';
 import { ProfileContentT } from '../../views/root/pages/profile/types';
 
-const version = 2;
+const version = 3;
 
 type ContentNamesT = keyof typeof urls;
 type ContentDatasT = {
@@ -14,13 +15,15 @@ type ContentDatasT = {
     faq: FaqContentT;
     products: ProductsContentT;
     profile: ProfileContentT;
+    '5ka': FivekaContentT;
 };
 
 const urls = {
     main: 'MAIN',
     faq: 'FAQ',
     products: 'PRODUCTS',
-    profile: 'profile',
+    profile: 'PROFILE',
+    '5ka': 'FIVEKA',
 } as const;
 
 export const setLocalContent = function (d: { name: ContentNamesT; data: any }): void {

@@ -13,7 +13,7 @@ type StateT = {
 type FaqContentT = {
     components: {
         faq: QuestionT[];
-        '5ka': QuestionT[];
+        'faq-5ka': QuestionT[];
     };
 };
 

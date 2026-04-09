@@ -18,8 +18,8 @@ class Footer extends Default<FooterI['props'], FooterI['state']> implements Foot
     }
 
     render() {
-        const { mainContent, className, mode } = this.props;
-        const rulesHref = mainContent?.components.footer[mode === '5ka' ? 'url3_5ka' : 'url3']?.url;
+        const { content, mainContent, className, mode } = this.props;
+        const rulesHref = (content || mainContent?.components.footer)?.url3?.url;
 
         return (
             <div
@@ -39,7 +39,10 @@ class Footer extends Default<FooterI['props'], FooterI['state']> implements Foot
                                 >
                                     ПРАВИЛА АКЦИИ
                                 </a>
-                                <Link pageName="faq" className="footer__navLink _CLICK">
+                                <Link
+                                    pageName={mode === '5ka' ? 'faq5ka' : 'faq'}
+                                    className="footer__navLink _CLICK"
+                                >
                                     ОБРАТНАЯ СВЯЗЬ
                                 </Link>
                             </div>

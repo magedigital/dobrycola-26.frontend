@@ -19,7 +19,8 @@ export const API = {
         MAIN: routes.CONTENT + '/main/',
         FAQ: routes.CONTENT + '/faq/',
         PRODUCTS: routes.CONTENT + '/about/',
-        profile: routes.CONTENT + '/profile/',
+        PROFILE: routes.CONTENT + '/profile/',
+        FIVEKA: routes.CONTENT + '/5ka/',
     },
     FAQ: {
         SEND_FORM: '/SendQuestion',
