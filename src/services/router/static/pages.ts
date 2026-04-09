@@ -53,6 +53,10 @@ const pages = {
         links: ['faq'],
         isPublic: true,
     },
+    faq5ka: {
+        links: ['faq-5ka'],
+        isPublic: true,
+    },
     anket: {
         links: ['anket'],
     },

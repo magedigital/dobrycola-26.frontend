@@ -28,6 +28,11 @@ export const rootPages = {
             return <Faq />;
         },
     },
+    faq5ka: {
+        render(this: I) {
+            return <Faq is5ka={true} />;
+        },
+    },
     profile: {
         render(this: I) {
             return <Profile />;

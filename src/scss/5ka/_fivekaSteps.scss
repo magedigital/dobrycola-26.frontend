@@ -12,6 +12,7 @@
         position: absolute;
         z-index: -1;
         pointer-events: none;
+        will-change: transform;
     }
 
     &__decor._1 {
@@ -35,9 +36,22 @@
             z-index: 2;
             width: 244rem;
             height: 244rem;
+            animation: fivekaBackDecor1 1.1s infinite ease-in-out;
             content: "";
+            will-change: transform;
 
             @include bg("/media/5ka/back-5ka-element05-2.svg", contain, center);
+
+            @keyframes fivekaBackDecor1 {
+                0%,
+                100% {
+                    transform: scale(1);
+                }
+
+                50% {
+                    transform: scale(1.04);
+                }
+            }
 
             @include mob {
                 top: 70rem;
@@ -54,6 +68,20 @@
         height: 334rem;
 
         @include bg("/media/5ka/back-5ka-element02.png", contain, right top);
+
+        animation: fivekaBackDecor2 1.1s infinite ease-in-out;
+        animation-delay: 0.3s;
+
+        @keyframes fivekaBackDecor2 {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
 
         @include mob {
             top: 1277rem;
@@ -118,6 +146,14 @@
         }
     }
 
+    &__cardsItem:nth-child(2) &__cardHeadInner {
+        animation-delay: 0.33s;
+    }
+
+    &__cardsItem:nth-child(3) &__cardHeadInner {
+        animation-delay: 0.66s;
+    }
+
     &__card {
         position: relative;
         width: 100%;
@@ -144,8 +180,6 @@
             width: 202rem;
             aspect-ratio: 1;
             margin: 0 auto 17rem;
-            background: #ff49b8;
-            border-radius: 50%;
 
             @include mob {
                 width: 214rem;
@@ -175,6 +209,26 @@
                     width: 84rem;
                     height: 84rem;
                     font-size: 38rem;
+                }
+            }
+
+            &Inner {
+                width: 100%;
+                height: 100%;
+                background: #ff49b8;
+                border-radius: 50%;
+                animation: vifekaStep 1s infinite ease-in-out;
+                will-change: transform;
+
+                @keyframes vifekaStep {
+                    0%,
+                    100% {
+                        transform: scale(1);
+                    }
+
+                    50% {
+                        transform: scale(1.04);
+                    }
                 }
             }
         }
@@ -263,6 +317,7 @@
             z-index: -1;
             object-fit: contain;
             pointer-events: none;
+            will-change: transform;
         }
 
         &Decor._1 {
@@ -292,6 +347,18 @@
             left: 66rem;
             width: 430rem;
             height: 410rem;
+            animation: fivekaStepsDecor3 1.2s infinite ease-in-out;
+
+            @keyframes fivekaStepsDecor3 {
+                0%,
+                100% {
+                    transform: translate(0, 0);
+                }
+
+                50% {
+                    transform: translate(0, 8rem);
+                }
+            }
 
             @include mob {
                 bottom: -110rem;
@@ -306,6 +373,18 @@
             left: 137rem;
             width: 35rem;
             height: 34rem;
+            animation: fivekaStepsDecor4 1.2s infinite ease-in-out;
+
+            @keyframes fivekaStepsDecor4 {
+                0%,
+                100% {
+                    transform: translate(0, 0);
+                }
+
+                50% {
+                    transform: translate(0, -8rem) rotate(-5deg);
+                }
+            }
 
             @include mob {
                 top: auto;
@@ -321,6 +400,19 @@
             left: 256rem;
             width: 58rem;
             height: 48rem;
+            animation: fivekaStepsDecor5 1.1s infinite ease-in-out;
+            animation-delay: 0.3s;
+
+            @keyframes fivekaStepsDecor5 {
+                0%,
+                100% {
+                    transform: translate(0, 0);
+                }
+
+                50% {
+                    transform: translate(0, -8rem) rotate(2deg);
+                }
+            }
 
             @include mob {
                 top: auto;
@@ -336,6 +428,19 @@
             left: 442rem;
             width: 60rem;
             height: 60rem;
+            animation: fivekaStepsDecor6 1.1s infinite ease-in-out;
+            animation-delay: 0.4s;
+
+            @keyframes fivekaStepsDecor6 {
+                0%,
+                100% {
+                    transform: translate(-2rem, 4rem);
+                }
+
+                50% {
+                    transform: translate(2rem, -3rem);
+                }
+            }
 
             @include mob {
                 inset: auto 68rem 213rem auto;
@@ -349,6 +454,19 @@
             left: 63rem;
             width: 56rem;
             height: 56rem;
+            animation: fivekaStepsDecor7 1.1s infinite ease-in-out;
+            animation-delay: 0.2s;
+
+            @keyframes fivekaStepsDecor7 {
+                0%,
+                100% {
+                    transform: translate(0, 0);
+                }
+
+                50% {
+                    transform: translate(0, 7rem) rotate(3deg);
+                }
+            }
 
             @include mob {
                 bottom: 64rem;
@@ -364,6 +482,19 @@
             z-index: 3;
             width: 46rem;
             height: 46rem;
+            animation: fivekaStepsDecor8 1.1s infinite ease-in-out;
+            animation-delay: 0.5s;
+
+            @keyframes fivekaStepsDecor8 {
+                0%,
+                100% {
+                    transform: translate(0, 0);
+                }
+
+                50% {
+                    transform: translate(0, 8rem) rotate(-4deg);
+                }
+            }
 
             @include mob {
                 bottom: 79rem;
@@ -378,6 +509,19 @@
             left: 492rem;
             width: 44rem;
             height: 50rem;
+            animation: fivekaStepsDecor9 1.1s infinite ease-in-out;
+            animation-delay: 0.3s;
+
+            @keyframes fivekaStepsDecor9 {
+                0%,
+                100% {
+                    transform: translate(0, 0);
+                }
+
+                50% {
+                    transform: translate(-2rem, 8rem) rotate(2deg);
+                }
+            }
 
             @include mob {
                 right: 40rem;
@@ -401,6 +545,19 @@
             &Title {
                 width: 100%;
                 height: 93rem;
+                animation: fivekaStepsTitle 1.1s infinite ease-in-out;
+                will-change: transform;
+
+                @keyframes fivekaStepsTitle {
+                    0%,
+                    100% {
+                        transform: scale(1);
+                    }
+
+                    50% {
+                        transform: scale(1.035);
+                    }
+                }
 
                 @include bg("/media/5ka/special-prize-5ka.svg", contain, left top);
 

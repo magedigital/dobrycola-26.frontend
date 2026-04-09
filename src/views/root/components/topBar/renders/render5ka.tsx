@@ -26,7 +26,7 @@ const render5ka: I['render5ka'] = function () {
                     <div
                         className="topBar__action _faq _ROW _ROW_CENTER _CLICK"
                         onClick={() => {
-                            AppRouter.changePage({ pageName: 'faq' });
+                            AppRouter.changePage({ pageName: 'faq5ka' });
                         }}
                     >
                         Вопрос-ответ

@@ -17,8 +17,8 @@ class Header extends Default<HeaderI['props'], HeaderI['state']> implements Head
     }
 
     render() {
-        const { content } = this.props;
-        const questions = content!.components.faq;
+        const { content, is5ka } = this.props;
+        const questions = content!.components[is5ka ? '5ka' : 'faq'];
 
         return (
             <div ref={this.parent} className="faqHeader _SECTION">

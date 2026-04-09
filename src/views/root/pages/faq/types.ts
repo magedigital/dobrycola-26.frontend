@@ -2,7 +2,9 @@ import PageI from '@components/page/types';
 
 import { QuestionT } from './components/question/types';
 
-type PropsT = {};
+type PropsT = {
+    is5ka?: boolean;
+};
 
 type StateT = {
     content?: FaqContentT;
@@ -11,6 +13,7 @@ type StateT = {
 type FaqContentT = {
     components: {
         faq: QuestionT[];
+        '5ka': QuestionT[];
     };
 };
 

@@ -8,6 +8,7 @@
         z-index: 2;
         object-fit: contain;
         pointer-events: none;
+        will-change: transform;
 
         @include mob {
             z-index: 1;
@@ -19,6 +20,18 @@
         left: -160rem;
         width: 286rem;
         height: 260rem;
+        animation: fivekaPrizeLegendDecor1 1.1s infinite ease-in-out;
+
+        @keyframes fivekaPrizeLegendDecor1 {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.045);
+            }
+        }
 
         @include mob {
             bottom: 7rem;
@@ -33,6 +46,18 @@
         left: 12rem;
         width: 48rem;
         height: 48rem;
+        animation: fivekaPrizeLegendDecor2 1.1s infinite ease-in-out;
+
+        @keyframes fivekaPrizeLegendDecor2 {
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(0, -7rem) rotate(3deg);
+            }
+        }
 
         @include mob {
             top: 36rem;
@@ -48,6 +73,19 @@
         left: 76rem;
         width: 55rem;
         height: 82rem;
+        animation: fivekaPrizeLegendDecor3 1.1s infinite ease-in-out;
+        animation-delay: 0.3s;
+
+        @keyframes fivekaPrizeLegendDecor3 {
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(4rem, -6rem);
+            }
+        }
 
         @include mob {
             bottom: 67rem;
@@ -62,6 +100,19 @@
         left: 98rem;
         width: 30rem;
         height: 34rem;
+        animation: fivekaPrizeLegendDecor4 1.1s infinite ease-in-out;
+        animation-delay: 0.4s;
+
+        @keyframes fivekaPrizeLegendDecor4 {
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(6rem, 2rem) rotate(7deg);
+            }
+        }
 
         @include mob {
             top: 100rem;
@@ -77,6 +128,19 @@
         bottom: 19rem;
         width: 230rem;
         height: 224rem;
+        animation: fivekaPrizeLegendDecor5 1.1s infinite ease-in-out;
+        animation-delay: 0.2s;
+
+        @keyframes fivekaPrizeLegendDecor5 {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.045);
+            }
+        }
 
         @include mob {
             right: -82rem;
@@ -90,6 +154,18 @@
         bottom: 276rem;
         width: 34rem;
         height: 40rem;
+        animation: fivekaPrizeLegendDecor6 1.1s infinite ease-in-out;
+
+        @keyframes fivekaPrizeLegendDecor6 {
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(1rem, -8rem);
+            }
+        }
 
         @include mob {
             top: 40rem;
@@ -105,6 +181,19 @@
         bottom: 219rem;
         width: 39rem;
         height: 48rem;
+        animation: fivekaPrizeLegendDecor7 1.1s infinite ease-in-out;
+        animation-delay: 0.3s;
+
+        @keyframes fivekaPrizeLegendDecor7 {
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(2rem, 6rem) rotate(-3deg);
+            }
+        }
 
         @include mob {
             top: 58rem;
@@ -118,6 +207,19 @@
         bottom: 93rem;
         width: 36rem;
         height: 36rem;
+        animation: fivekaPrizeLegendDecor8 1.1s infinite ease-in-out;
+        animation-delay: 0.6s;
+
+        @keyframes fivekaPrizeLegendDecor8 {
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(-19deg);
+            }
+        }
 
         @include mob {
             right: 52rem;
@@ -132,6 +234,18 @@
         left: -45rem;
         width: 160rem;
         height: 184rem;
+        animation: fivekaPrizeSchoolDecor1 1.1s infinite ease-in-out;
+
+        @keyframes fivekaPrizeSchoolDecor1 {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
 
         @include mob {
             bottom: 16rem;
@@ -147,6 +261,18 @@
         left: 32rem;
         width: 23rem;
         height: 23rem;
+        animation: fivekaPrizeSchoolDecor2 1.1s infinite ease-in-out;
+
+        @keyframes fivekaPrizeSchoolDecor2 {
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: rotate(18deg);
+            }
+        }
 
         @include mob {
             bottom: 23rem;
@@ -160,6 +286,19 @@
         left: 65rem;
         width: 80rem;
         height: 80rem;
+        animation: fivekaPrizeSchoolDecor3 1.1s infinite ease-in-out;
+        animation-delay: 0.4s;
+
+        @keyframes fivekaPrizeSchoolDecor3 {
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(5rem, -1rem);
+            }
+        }
 
         @include mob {
             top: 42rem;
@@ -176,6 +315,18 @@
         left: 53rem;
         width: 52rem;
         height: 52rem;
+        animation: fivekaPrizeSchoolDecor4 1.1s infinite ease-in-out;
+
+        @keyframes fivekaPrizeSchoolDecor4 {
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(0, 8rem) rotate(5deg);
+            }
+        }
 
         @include mob {
             top: 126rem;
@@ -191,6 +342,19 @@
         bottom: 59rem;
         width: 146rem;
         height: 218rem;
+        animation: fivekaPrizeSchoolDecor5 1.1s infinite ease-in-out;
+        animation-delay: 0.5s;
+
+        @keyframes fivekaPrizeSchoolDecor5 {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
 
         @include mob {
             right: -48rem;
@@ -205,6 +369,19 @@
         bottom: 284rem;
         width: 28rem;
         height: 34rem;
+        animation: fivekaPrizeSchoolDecor6 1.1s infinite ease-in-out;
+        animation-delay: 0.4s;
+
+        @keyframes fivekaPrizeSchoolDecor6 {
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(0, 6rem) rotate(8deg);
+            }
+        }
 
         @include mob {
             top: 36rem;
@@ -220,6 +397,18 @@
         bottom: 148rem;
         width: 27rem;
         height: 32rem;
+        animation: fivekaPrizeSchoolDecor7 1.1s infinite ease-in-out;
+
+        @keyframes fivekaPrizeSchoolDecor7 {
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(-7rem, 2rem) rotate(-7deg);
+            }
+        }
 
         @include mob {
             right: 40rem;
@@ -234,6 +423,18 @@
         bottom: 65rem;
         width: 48rem;
         height: 55rem;
+        animation: fivekaPrizeSchoolDecor8 1.1s infinite ease-in-out;
+
+        @keyframes fivekaPrizeSchoolDecor8 {
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(-5rem, 5rem) rotate(-4deg);
+            }
+        }
 
         @include mob {
             top: 100rem;

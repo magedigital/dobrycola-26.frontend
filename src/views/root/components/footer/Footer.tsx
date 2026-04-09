@@ -19,6 +19,7 @@ class Footer extends Default<FooterI['props'], FooterI['state']> implements Foot
 
     render() {
         const { mainContent, className, mode } = this.props;
+        const rulesHref = mainContent?.components.footer[mode === '5ka' ? 'url3_5ka' : 'url3']?.url;
 
         return (
             <div
@@ -31,8 +32,9 @@ class Footer extends Default<FooterI['props'], FooterI['state']> implements Foot
                         <div className="footer__nav">
                             <div className="footer__navBlock">
                                 <a
-                                    href="/upload/docs/rules.pdf"
+                                    href={rulesHref}
                                     target="_blank"
+                                    rel="noreferrer"
                                     className="footer__navLink _CLICK"
                                 >
                                     ПРАВИЛА АКЦИИ

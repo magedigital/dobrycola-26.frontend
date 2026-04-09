@@ -32,12 +32,13 @@ class Faq extends Page<FaqI['props'], FaqI['state']> implements FaqI {
 
     render() {
         const { content, isPopupShow } = this.state;
+        const { is5ka } = this.props;
 
         return this.renderPage({
             render: () =>
                 content ? (
                     <>
-                        <Header content={content} />
+                        <Header is5ka={is5ka} content={content} />
                         <Form disabled={!!isPopupShow} />
                     </>
                 ) : null,

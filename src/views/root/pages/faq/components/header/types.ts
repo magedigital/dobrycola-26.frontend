@@ -4,6 +4,7 @@ import { FaqContentT } from '../../types';
 
 type PropsT = {
     content: FaqContentT;
+    is5ka?: boolean;
 };
 
 type StateT = {};

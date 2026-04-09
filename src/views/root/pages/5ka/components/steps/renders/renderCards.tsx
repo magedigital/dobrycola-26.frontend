@@ -21,11 +21,13 @@ const renderCards: I['renderCards'] = function () {
                             )}
                             <div className="fivekaSteps__card">
                                 <div className="fivekaSteps__cardHead">
-                                    <img
-                                        src={require(`@media/5ka/${step.thumb}`)}
-                                        alt=""
-                                        className="fivekaSteps__cardThumb"
-                                    />
+                                    <div className="fivekaSteps__cardHeadInner">
+                                        <img
+                                            src={require(`@media/5ka/${step.thumb}`)}
+                                            alt=""
+                                            className="fivekaSteps__cardThumb"
+                                        />
+                                    </div>
                                 </div>
                                 <h3 className="fivekaSteps__cardTitle">{step.title}</h3>
                                 <p
@@ -39,7 +41,7 @@ const renderCards: I['renderCards'] = function () {
                     );
                 })}
             </div>
-            <a href="#" className="fivekaSteps__rules">
+            <a href="/upload/docs/rules-5ka.pdf" target="_blank" className="fivekaSteps__rules">
                 Полные правила участия
                 <br />в акции сети «Пятёрочка»
             </a>
