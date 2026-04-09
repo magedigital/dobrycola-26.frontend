@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2de6eaef.css",
-    "main.js": "/static/js/main.12af0f6b.js",
+    "main.css": "/static/css/main.0d83e2d1.css",
+    "main.js": "/static/js/main.ea3daa4c.js",
     "static/js/3315.d341fc11.chunk.js": "/static/js/3315.d341fc11.chunk.js",
     "static/js/3648.864124b6.chunk.js": "/static/js/3648.864124b6.chunk.js",
     "static/js/6286.9e249d70.chunk.js": "/static/js/6286.9e249d70.chunk.js",
@@ -204,10 +204,10 @@
     "static/media/invite-5ka-bg01-mob.svg": "/static/media/invite-5ka-bg01-mob.b143a68675b2889b4c23.svg",
     "static/media/check-prize-5ka-bg01-mob.svg": "/static/media/check-prize-5ka-bg01-mob.20fa14ffe1ffad46fe3e.svg",
     "static/media/special-prize-5ka-bg-mob.svg": "/static/media/special-prize-5ka-bg-mob.b9440aa3c0eca6aefbea.svg",
+    "static/media/lights-stage-mob.svg": "/static/media/lights-stage-mob.623e23432b49909a66de.svg",
     "static/media/check-prize-5ka-bg03.svg": "/static/media/check-prize-5ka-bg03.c8a748eb4a440871928e.svg",
-    "static/media/lights-stage-mob.svg": "/static/media/lights-stage-mob.296d417984a999602d20.svg",
+    "static/media/lights-stage.svg": "/static/media/lights-stage.c1dc25c02720d9a1ac01.svg",
     "static/media/games-back-mob.svg": "/static/media/games-back-mob.ddba68b00f87e91a0be1.svg",
-    "static/media/lights-stage.svg": "/static/media/lights-stage.408fbdc7cc3e248d1839.svg",
     "static/media/games-back.svg": "/static/media/games-back.058c00e7329c4d41157f.svg",
     "static/media/prize-win-back.svg": "/static/media/prize-win-back.f97a95a954d51a7cfd17.svg",
     "static/media/ma-logo.svg": "/static/media/ma-logo.6946e35cea19a09a1872.svg",
@@ -229,7 +229,7 @@
     "static/media/plashka-map.svg": "/static/media/plashka-map.807bbf92b339d7fb2f4c.svg"
   },
   "entrypoints": [
-    "static/css/main.2de6eaef.css",
-    "static/js/main.12af0f6b.js"
+    "static/css/main.0d83e2d1.css",
+    "static/js/main.ea3daa4c.js"
   ]
 }
