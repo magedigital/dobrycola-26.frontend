@@ -7,7 +7,7 @@ export const fivekaSteps = {
     '2': {
         thumb: 'step-02-5ka.jpg',
         title: 'Регистрируй',
-        text: 'чеки на сайте, в <a href="https://t.me/dobrycola_promo_bot" target="_blank">боте</a> или в <a href="https://dobry-winbox.onelink.me/FAl8/summerteens" target="_blank">Добрый Винбокс</a>',
+        text: 'чеки на сайте, в <a href="https://t.me/dobrycola_promo_bot" target="_blank">боте</a> или в <a href="https://4493398.redirect.appmetrica.yandex.com/?appmetrica_tracking_id=966528812613420193&referrer=reattribution%3D1" target="_blank">Добрый Винбокс</a>',
     },
     '3': {
         thumb: 'step-03-5ka.jpg',
