@@ -5,6 +5,7 @@ const routes = {
 export const API = {
     CHEQUE: {
         SEND_FORM: '/CheckRegistration',
+        ORDER: '/AddCheckPrize',
     },
     AUTH: {
         LOGIN: '/Login',

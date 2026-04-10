@@ -2,6 +2,7 @@ import React from 'react';
 
 import RootI from '../types.ts';
 
+import Cheques from '../pages/cheques/Cheques.tsx';
 import Index from '../pages/index/Index.tsx';
 import Prizes from '../pages/prizes/Prizes.tsx';
 
@@ -20,14 +21,20 @@ export const profilePages = {
             );
         },
     },
-    // 'profile-cheques': {
-    //     title: 'Акция в «Пятёрочке»',
-    //     render(this: RootI) {
-    //         const { data } = this.state;
+    'profile-cheques': {
+        title: 'Акция в «Пятёрочке»',
+        render(this: RootI) {
+            const { data, content } = this.state;
 
-    //         return <Cheques data={data!} setRenderKey={this.setPagesRenderKey.bind(this)} />;
-    //     },
-    // },
+            return (
+                <Cheques
+                    data={data!}
+                    content={content!}
+                    setRenderKey={this.setPagesRenderKey.bind(this)}
+                />
+            );
+        },
+    },
     'profile-prizes': {
         title: 'Призы',
         render(this: RootI) {

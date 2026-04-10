@@ -45,6 +45,11 @@
         }
     }
 
+    &._redColor {
+        color: #fff;
+        background: #e11f26;
+    }
+
     &._purpleColor {
         color: #fff;
         background: #5d279e;
@@ -119,5 +124,11 @@
             height: 20rem;
             margin-right: 12rem;
         }
+    }
+
+    & img._5ka {
+        width: 26rem;
+        height: 26rem;
+        margin-right: 10rem;
     }
 }

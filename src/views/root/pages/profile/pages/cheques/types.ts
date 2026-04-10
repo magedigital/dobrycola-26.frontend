@@ -1,10 +1,13 @@
 import DefaultI from '@components/default/types';
+import { TableRenderEmptyT, TableRenderRowT } from '@components/table/types';
 
-import { ProfileDataT } from '../../types';
+import { ProfileCheckT, ProfileContentT, ProfileDataT } from '../../types';
+import { chequesTableCols } from './static/table';
 
 type PropsT = {
     setRenderKey: () => void;
     data?: ProfileDataT;
+    content: ProfileContentT;
 };
 
 type StateT = {
@@ -14,7 +17,8 @@ type StateT = {
 interface ChequesI extends DefaultI<PropsT, StateT> {
     codeMoreHandler(this: ChequesI): Promise<void>;
 
-    renderOffer(this: ChequesI): React.ReactNode;
+    renderTableCol: TableRenderRowT<ProfileCheckT, keyof typeof chequesTableCols>;
+    renderTableEmpty: TableRenderEmptyT;
 }
 
 export default ChequesI;

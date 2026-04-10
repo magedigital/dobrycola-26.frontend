@@ -2,7 +2,12 @@ import React from 'react';
 
 import Button from '@components/button/Button.tsx';
 import Icon from '@components/icon/Icon.tsx';
+import getLink from '@components/popups/invite/utils/getLink.ts';
 import StringService from '@services/string/String.service.ts';
+import { appStore } from '@store/store.tsx';
+import copyInBuffer from '@utils/copyInBuffer.ts';
+
+import { setError } from '../../../../../components/errors/utils/errorHandler.ts';
 
 import I from '../types.ts';
 
@@ -37,7 +42,23 @@ const renderPromo: I['renderPromo'] = function () {
                         }}
                     ></p>
                     <div className="fivekaPrizes__promoInfoButton">
-                        <Button className="_purpleColor _boldBorder">
+                        <Button
+                            className="_purpleColor _boldBorder"
+                            onClick={async () => {
+                                // sendGoal('5kaInviteFriends');
+
+                                if (!appStore.getState().authUser) {
+                                    appStore.getState().setPopup({ name: 'loginPopup' });
+                                } else {
+                                    await copyInBuffer(getLink());
+
+                                    setError({
+                                        type: 'success',
+                                        text: 'Ссылка успешно скопирована',
+                                    });
+                                }
+                            }}
+                        >
                             <Icon name="attachment" className="_attachment" />
                             скопировать ссылку
                         </Button>

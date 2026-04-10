@@ -127,6 +127,22 @@ const renderMain: I['renderMain'] = function () {
                             зарегистрировать код
                         </Button>
                     </div>
+                    <div className="profile__mainButton">
+                        <Button
+                            className="_redColor _boldBorder _minSize"
+                            onClick={() => {
+                                appStore.getState().setPopup({ name: 'chequePopup' });
+                                // sendGoal('regCodeBtn, profileRegCodeBtn', true);
+                            }}
+                        >
+                            <img
+                                className="_5ka"
+                                src={require('@media/5ka/logo-5ka.svg').default}
+                                alt=""
+                            />
+                            зарегистрировать чек
+                        </Button>
+                    </div>
                 </div>
                 <div className="profile__mainButtonsInner _invite">
                     <div className="profile__mainButton">

@@ -37,7 +37,6 @@ class Index extends Default<IndexI['props'], IndexI['state']> implements IndexI 
             <>
                 {this.renderCodes()}
                 {this.renderRaffles()}
-                {this.renderPrizes()}
             </>
         );
     }

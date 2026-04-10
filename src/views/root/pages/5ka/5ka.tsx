@@ -40,7 +40,7 @@ class FiveKa extends Page<FiveKaI['props'], FiveKaI['state']> implements FiveKaI
                         <Header />
                         <Steps />
                         <Prizes />
-                        <Products5ka content={content} />
+                        <Products5ka content={content!} />
                         <Footer content={content.components.footer} mode="5ka" />
                     </>
                 ) : null,

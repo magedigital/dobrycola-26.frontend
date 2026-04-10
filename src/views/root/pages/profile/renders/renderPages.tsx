@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Link from '@components/link/Link.tsx';
+import Media from '@components/media/Media.tsx';
 import Pages from '@components/pages/Pages.tsx';
 
 import I from '../types.ts';
@@ -23,7 +24,12 @@ const renderPages: I['renderPages'] = function () {
                             key={name}
                             pageName={name}
                         >
-                            {page.title}
+                            <Media check={(d) => d === 'desktop' || name !== 'profile-cheques'}>
+                                {page.title}
+                            </Media>
+                            <Media check={(d) => d === 'mobile' && name === 'profile-cheques'}>
+                                Чеки
+                            </Media>
                         </Link>
                     );
                 })}

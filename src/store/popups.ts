@@ -22,6 +22,7 @@ type PopupsT = {
     ballsPopup: PopupT;
     orderPopup: PopupT<{ current: number }>;
     rafflePopup: PopupT;
+    prizeOrderPopup: PopupT<{ code: string }>;
 };
 
 type PopupsReducersT = {
@@ -68,6 +69,10 @@ const popups = {
     },
     rafflePopup: {
         check: (s: StoreT) => !!s.authUser,
+        redirectPageName: 'profile',
+    },
+    prizeOrderPopup: {
+        check: (s: StoreT) => !!s.authUser || true,
         redirectPageName: 'profile',
     },
 } as const;

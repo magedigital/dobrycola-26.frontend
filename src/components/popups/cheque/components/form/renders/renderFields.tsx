@@ -15,7 +15,7 @@ const renderFields: I['renderFields'] = function () {
     }
 
     return (
-        <div className="popup__form">
+        <div className="popup__form _bottom">
             {(Object.keys(chequeFormFields) as (keyof typeof chequeFormFields)[]).map((name) => {
                 const field = chequeFormFields[name] as FieldT;
 

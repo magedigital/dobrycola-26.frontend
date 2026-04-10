@@ -11,6 +11,15 @@ async function regCheque({ data }: { data: FormData }): Promise<{ isFirstCheck?:
     return response.data;
 }
 
+async function order({ prize }: { prize: string }): Promise<void> {
+    await request({
+        method: 'POST',
+        url: API.CHEQUE.ORDER,
+        data: { prize },
+    });
+}
+
 export const chequeRequests = {
     regCheque,
+    order,
 };

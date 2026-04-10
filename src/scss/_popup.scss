@@ -154,6 +154,10 @@
 
     &._chequePopup &__inner {
         width: 604rem;
+
+        @include mob {
+            width: 100%;
+        }
     }
 
     &__close {
@@ -207,7 +211,7 @@
 
         @include mob {
             min-height: 72rem;
-            margin: -20rem -14rem 24rem;
+            margin: -21rem -14rem 24rem;
         }
     }
 
@@ -257,11 +261,19 @@
         justify-content: space-between;
         margin-bottom: 8rem;
 
+        &._bottom {
+            margin-bottom: 24rem;
+        }
+
         &Field {
             margin-bottom: 8rem;
 
             &._short {
                 width: calc(50% - 8rem);
+
+                @include mob {
+                    width: 100%;
+                }
             }
 
             & .field__support {
@@ -1417,6 +1429,10 @@
                 padding-right: 22rem;
                 padding-left: 22rem;
             }
+
+            @include mob {
+                height: 66rem;
+            }
         }
 
         &._fix {
@@ -1460,5 +1476,89 @@
         display: flex;
         justify-content: center;
         width: 100%;
+    }
+
+    &__prizeOrder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 26rem;
+
+        &Card {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 330rem;
+            height: 320rem;
+            margin-bottom: 24rem;
+            padding: 20rem;
+            overflow: hidden;
+            border-radius: 20rem;
+
+            @include bg("/media/inner/order-back.svg", cover, center top);
+
+            & {
+                background-color: #ffae83;
+            }
+
+            @include mob {
+                width: calc(100% + 28rem);
+                height: auto;
+                aspect-ratio: 1;
+                border-radius: 24rem;
+            }
+
+            &Head {
+                width: 180rem;
+                margin-bottom: 20rem;
+                background: #7a2799;
+                border-radius: 50%;
+                aspect-ratio: 1;
+
+                @include mob {
+                    width: 240rem;
+                }
+            }
+
+            &Thumb {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            &Title {
+                max-width: 80%;
+                color: #222221;
+                font-size: 12rem;
+                line-height: 1.4;
+                text-align: center;
+                text-transform: uppercase;
+
+                @include mob {
+                    font-size: 15rem;
+                }
+            }
+        }
+
+        &Info {
+            padding: 6rem 10rem 5rem;
+            color: #fff;
+            font-weight: 900;
+            font-size: 16rem;
+            font-family: Onest;
+            line-height: 1;
+            text-transform: uppercase;
+            background: #8200cc;
+            border-radius: 6rem;
+
+            @include mob {
+                padding: 6rem 14rem 5rem;
+                font-size: 17.5rem;
+            }
+        }
     }
 }

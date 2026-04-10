@@ -6,6 +6,13 @@ import I from '../types.ts';
 
 const initPopup = <T extends keyof PopupsT>(name: T): Omit<PopupsT[T], 'isShow'> => {
     let data: ObjT = {};
+    const location = getLocation();
+
+    if (name === 'prizeOrderPopup') {
+        data = {
+            code: location.search.code,
+        };
+    }
 
     if (name === 'chequePopup') {
         data = {};
