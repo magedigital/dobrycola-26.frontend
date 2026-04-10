@@ -20,7 +20,12 @@ const renderContent: I['renderContent'] = function () {
                 <p className="fivekaHeader__contentInfoTitle">
                     на музыкальный фестиваль на&nbsp;двоих
                 </p>
-                <a href="#" className="fivekaHeader__contentInfoLink">
+                <a
+                    href="/upload/docs/rules-5ka.pdf#page=12"
+                    className="fivekaHeader__contentInfoLink"
+                    target="_blank"
+                    rel="noreferrer"
+                >
                     Подробнее о призе
                 </a>
             </div>
