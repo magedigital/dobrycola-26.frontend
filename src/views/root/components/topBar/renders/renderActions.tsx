@@ -45,6 +45,18 @@ const renderActions: I['renderActions'] = function () {
             >
                 ЛИЧНЫЙ КАБИНЕТ
             </div>
+            {mode !== '5ka' && (
+                <div
+                    className="topBar__action _5ka _ROW _ROW_CENTER _CLICK"
+                    onClick={() => {
+                        AppRouter.changePage({ pageName: '5ka' });
+                        setMenuState(false);
+                    }}
+                >
+                    <img src={require('@media/5ka/logo-5ka.svg').default} alt="" />
+                    акция в пятерочке
+                </div>
+            )}
         </div>
     );
 };
