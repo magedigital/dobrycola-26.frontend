@@ -16,7 +16,7 @@ const renderTableCol: I['renderTableCol'] = function ({ row, name }) {
     }
 
     if (name === 'result') {
-        return <>{row.result}</>;
+        return <>{row.result || '–'}</>;
     }
 };
 

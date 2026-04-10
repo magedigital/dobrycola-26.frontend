@@ -30,7 +30,10 @@ class Scan extends Default<ScanI['props'], ScanI['state']> implements ScanI {
 
     render() {
         return (
-            <div ref={this.parent} className="popup__stepInner _FULL _COL _COL_H_CENTER">
+            <div ref={this.parent} className="popup__stepInner _FULL">
+                <div className="popup__head _COL _COL_H_CENTER">
+                    <div className="popup__title">Регистрация чека</div>
+                </div>
                 <div className="popup__scan">
                     <video ref={this.video} className="popup__scanVideo" playsInline muted />
                     <LoaderBlock className="popup__scanLoader" isShow={true} loaderClassName="" />

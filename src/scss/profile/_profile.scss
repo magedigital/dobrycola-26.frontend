@@ -438,8 +438,8 @@
         }
 
         &Description {
-            margin-top: 7rem;
-            padding: 4rem 8rem;
+            margin-top: 10rem;
+            padding: 5rem 9rem;
             color: #fff;
             font-weight: 600;
             font-size: 16rem;
@@ -449,21 +449,27 @@
             background: #ff49b8;
             border-radius: 6rem;
 
+            &._sub {
+                color: #222221;
+                background: #fbac2f;
+            }
+
             @include mob {
-                max-width: 90%;
-                margin-top: 9rem;
-                padding: 4rem 14rem;
+                max-width: 100%;
+                margin-top: 12rem;
+                padding: 5rem 9rem;
                 font-size: 17rem;
-                border-radius: 10rem;
+                border-radius: 8rem;
             }
 
             & span {
                 position: relative;
                 z-index: 1;
                 display: inline-block;
-                padding: 0 9rem;
-                color: #fed5ff;
+                padding: 0 5rem;
+                color: #fff;
                 font-weight: 600;
+                font-size: 14rem;
 
                 &::before {
                     position: absolute;
@@ -471,8 +477,9 @@
                     left: 50%;
                     z-index: -1;
                     width: 100%;
-                    min-width: 22rem;
-                    height: 22rem;
+                    min-width: 28rem;
+                    height: 28rem;
+                    margin-top: 1rem;
                     background: #5d279e;
                     border-radius: 360rem;
                     transform: translate(-50%, -50%);

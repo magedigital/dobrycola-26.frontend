@@ -60,6 +60,7 @@ type ProfileDataT = {
     transactions: ProfileTransactionT[];
     balance: number;
     balanceTitle: string;
+    checkBalance: number;
     checks: ProfileCheckT[];
     codes: ProfileCodeT[];
     prizes: ProfilePrizeT[];

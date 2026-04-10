@@ -36,6 +36,19 @@ const renderActions: I['renderActions'] = function () {
                     Личный кабинет
                 </Button>
             </div>
+            <div className="menu__actionsButton">
+                <Button
+                    className="_redColor"
+                    onClick={() => {
+                        AppRouter.changePage({ pageName: '5ka' });
+                        setState(false);
+                        // sendGoal('menuProfile');
+                    }}
+                >
+                    <img className="_5ka _big" src={require('@media/5ka/logo-5ka.svg').default} alt="" />
+                    акция в пятерочке
+                </Button>
+            </div>
         </div>
     );
 };

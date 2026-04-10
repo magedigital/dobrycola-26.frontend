@@ -5,6 +5,7 @@ import Default from '@components/default/Default.tsx';
 import List from '@components/list/List.tsx';
 import Media from '@components/media/Media.tsx';
 import Table from '@components/table/Table.tsx';
+import StringService from '@services/string/String.service.ts';
 
 import Prizes from './components/prizes/Prizes.tsx';
 
@@ -74,6 +75,7 @@ class Cheques extends Default<ChequesI['props'], ChequesI['state']> implements C
                             renderListCb={setRenderKey}
                             renderEmpty={this.renderTableEmpty.bind(this)}
                             emptyId="empty"
+                            isMobRows={true}
                         />
                     </div>
                     <List
@@ -105,6 +107,14 @@ class Cheques extends Default<ChequesI['props'], ChequesI['state']> implements C
                             закажи <br className="_MOBILE" />
                             за принятые чеки
                         </h3>
+                        <p className="profile__blockDescription _sub">
+                            У тебя <span>{data?.checkBalance}</span> непотраченных{' '}
+                            {new StringService().getEndText(data?.checkBalance, [
+                                'чек',
+                                'чека',
+                                'чеков',
+                            ])}
+                        </p>
                     </div>
                     <div className="profile__blockPrizes">
                         <Prizes items={content.components.extra5ka.prizes} />

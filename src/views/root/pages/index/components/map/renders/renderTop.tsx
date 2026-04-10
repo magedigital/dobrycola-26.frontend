@@ -10,7 +10,7 @@ const renderTop: I['renderTop'] = function () {
             className="indexMap__top _CLICK"
             onClick={this.scrollToSection.bind(this, 'start', 300)}
         >
-            ТВОЙ OPEN-AIR
+            ТВОЙ OPEN-AIR*
             <Icon name="map-arrow" />
         </div>
     );
