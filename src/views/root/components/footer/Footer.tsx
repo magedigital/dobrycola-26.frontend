@@ -18,8 +18,8 @@ class Footer extends Default<FooterI['props'], FooterI['state']> implements Foot
     }
 
     render() {
-        const { content, mainContent, className, mode } = this.props;
-        const rulesHref = (content || mainContent?.components.footer)?.url3?.url;
+        const { mainContent, className, mode } = this.props;
+        const rulesHref = mainContent?.components.footer?.[mode === '5ka' ? 'url4' : 'url3']?.url;
         const disclaimer =
             mainContent?.components.footer[mode === '5ka' ? 'disclaimer5ka' : 'disclaimer']
                 ?.description;

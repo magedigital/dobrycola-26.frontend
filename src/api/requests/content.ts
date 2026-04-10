@@ -131,7 +131,7 @@ type FooterContentT = {
         title: string;
         url: string;
     };
-    url3_5ka: {
+    url4: {
         title: string;
         url: string;
     };
