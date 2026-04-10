@@ -3,6 +3,7 @@ import axios from 'axios';
 import React from 'react';
 
 import { appStore } from '@store/store.tsx';
+import { checkPixel } from '@utils/checkPixel.ts';
 import sendGoal from '@utils/sendGoal.ts';
 
 import I from '../types.ts';
@@ -32,9 +33,11 @@ const renderActions: I['renderActions'] = function () {
                         appStore.getState().setPopup({ name: 'codePopup' });
                         setMenuState(false);
 
-                        try {
-                            await axios.get('bu--s348.sync.t2.ru/api/v1/postback?request=sync');
-                        } catch (e) {}
+                        if (checkPixel()) {
+                            try {
+                                await axios.get('bu--s348.sync.t2.ru/api/v1/postback?request=sync');
+                            } catch (e) {}
+                        }
                     }}
                 >
                     Регистрация кода

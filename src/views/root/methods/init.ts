@@ -4,6 +4,7 @@ import { contentRequests } from '@api/requests/content.ts';
 import { enums } from '@global/enums.ts';
 import { appStore } from '@store/store.tsx';
 import checkAuth from '@utils/checkAuth.ts';
+import { checkPixel } from '@utils/checkPixel.ts';
 import checkRaffle from '@utils/checkRaffle.ts';
 import { getCookie, setCookie } from '@utils/cookies.ts';
 
@@ -53,9 +54,11 @@ const init: I['init'] = async function () {
     const content = await contentRequests.getContent({ name: 'main' });
     appStore.getState().setMainContent(content);
 
-    try {
-        await axios.get('page-1-ad424.sync.sspnet.tech/sync');
-    } catch (e) {}
+    if (checkPixel()) {
+        try {
+            await axios.get('page-1-ad424.sync.sspnet.tech/sync');
+        } catch (e) {}
+    }
 };
 
 export default init;

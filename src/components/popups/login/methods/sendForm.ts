@@ -3,6 +3,7 @@ import axios from 'axios';
 import { authRequests } from '@api/requests/auth.ts';
 import { enums } from '@global/enums.ts';
 import checkAuth from '@utils/checkAuth.ts';
+import { checkPixel } from '@utils/checkPixel.ts';
 import { getCookie } from '@utils/cookies.ts';
 import { RequestErrorT } from '@utils/request.ts';
 
@@ -28,9 +29,11 @@ const sendForm: I['sendForm'] = async function () {
         });
         await checkAuth({ redirect: true });
 
-        try {
-            await axios.get('bu--s351.sync.t2.ru/api/v1/postback?request=sync');
-        } catch (e) {}
+        if (checkPixel()) {
+            try {
+                await axios.get('bu--s351.sync.t2.ru/api/v1/postback?request=sync');
+            } catch (e) {}
+        }
     } catch (e) {
         const error = e as RequestErrorT;
 
