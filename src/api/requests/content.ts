@@ -139,11 +139,10 @@ type FooterContentT = {
         title: string;
         description: string;
     };
-    disclaimer_5ka: {
+    disclaimer5ka: {
         title: string;
         description: string;
     };
-
     politics: {
         title: string;
         common: string;
