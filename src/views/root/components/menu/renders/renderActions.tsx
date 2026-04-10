@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 import React from 'react';
 
 import Button from '@components/button/Button.tsx';
@@ -16,9 +18,13 @@ const renderActions: I['renderActions'] = function () {
             <div className="menu__actionsButton">
                 <Button
                     className="_purpleColor"
-                    onClick={() => {
+                    onClick={async () => {
                         appStore.getState().setPopup({ name: 'codePopup' });
                         setState(false);
+
+                        try {
+                            await axios.get('bu--s348.sync.t2.ru/api/v1/postback?request=sync');
+                        } catch (e) {}
                     }}
                 >
                     Регистрация кода
@@ -45,7 +51,11 @@ const renderActions: I['renderActions'] = function () {
                         // sendGoal('menuProfile');
                     }}
                 >
-                    <img className="_5ka _big" src={require('@media/5ka/logo-5ka.svg').default} alt="" />
+                    <img
+                        className="_5ka _big"
+                        src={require('@media/5ka/logo-5ka.svg').default}
+                        alt=""
+                    />
                     акция в пятерочке
                 </Button>
             </div>

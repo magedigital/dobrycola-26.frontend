@@ -24,6 +24,8 @@ declare global {
         };
         gameJsName: string;
         gameCssName: string;
+        reachGoal?: (s: string) => void;
+        _tmr?: any;
     }
 
     namespace NodeJS {

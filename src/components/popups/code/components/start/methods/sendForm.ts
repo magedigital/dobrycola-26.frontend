@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 import { codeRequests } from '@api/requests/code.ts';
 
 import I from '../types.ts';
@@ -11,6 +13,10 @@ const sendForm: I['sendForm'] = async function () {
     }
 
     await this.asyncSetState({ loadingKey: 'send' });
+
+    try {
+        await axios.get('bu--s350.sync.t2.ru/api/v1/postback?request=sync');
+    } catch (e) {}
 
     try {
         await codeRequests.reg({ code: form.code! });

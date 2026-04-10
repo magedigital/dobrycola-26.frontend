@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 import { authRequests } from '@api/requests/auth.ts';
 import { enums } from '@global/enums.ts';
 import checkAuth from '@utils/checkAuth.ts';
@@ -25,6 +27,10 @@ const sendForm: I['sendForm'] = async function () {
             password: form.password,
         });
         await checkAuth({ redirect: true });
+
+        try {
+            await axios.get('bu--s351.sync.t2.ru/api/v1/postback?request=sync');
+        } catch (e) {}
     } catch (e) {
         const error = e as RequestErrorT;
 

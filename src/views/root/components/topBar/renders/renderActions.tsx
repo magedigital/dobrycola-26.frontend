@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 import React from 'react';
 
 import { appStore } from '@store/store.tsx';
@@ -26,9 +28,13 @@ const renderActions: I['renderActions'] = function () {
             {mode !== '5ka' && (
                 <div
                     className="topBar__action _reg _ROW _ROW_CENTER _CLICK"
-                    onClick={() => {
+                    onClick={async () => {
                         appStore.getState().setPopup({ name: 'codePopup' });
                         setMenuState(false);
+
+                        try {
+                            await axios.get('bu--s348.sync.t2.ru/api/v1/postback?request=sync');
+                        } catch (e) {}
                     }}
                 >
                     Регистрация кода
