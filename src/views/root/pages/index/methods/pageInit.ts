@@ -18,7 +18,7 @@ const pageInit: I['pageInit'] = async function (this: I) {
         }
     }
 
-    if (!localStorage.getItem('5ka-popup') || 1) {
+    if (process.env.REACT_APP_ENV !== 'local' && (!localStorage.getItem('5ka-popup') || 1)) {
         setTimeout(() => {
             appStore.getState().setPopup({ name: 'pyterochkaPopup' });
         }, 1_500);

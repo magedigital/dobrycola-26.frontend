@@ -32,6 +32,7 @@ declare global {
         interface ProcessEnv {
             REACT_APP_SEO: string;
             REACT_APP_API: string;
+            REACT_APP_ENV: 'local' | 'prod';
         }
     }
 
