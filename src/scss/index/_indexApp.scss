@@ -61,6 +61,7 @@
             height: 866rem;
             margin-right: -352rem;
             content: "";
+            pointer-events: none;
 
             @include bg("/media/app-decor-left.svg", contain, right top);
 
@@ -82,6 +83,7 @@
             width: 186rem;
             height: 364rem;
             content: "";
+            pointer-events: none;
 
             @include bg("/media/app-phone.png", contain, left top);
 

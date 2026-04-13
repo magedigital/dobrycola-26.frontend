@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Media from '@components/media/Media.tsx';
 import { appStore } from '@store/store.tsx';
 import sendGoal from '@utils/sendGoal.ts';
 
@@ -38,10 +39,20 @@ const renderLocations: I['renderLocations'] = function () {
                             alt=""
                             className="indexMap__mapLocationThumb"
                         />
-                        <div
-                            className="indexMap__mapLocationTitle _CLICK"
-                            dangerouslySetInnerHTML={{ __html: location.title }}
-                        />
+                        <div className="indexMap__mapLocationTitle">
+                            <div
+                                className="indexMap__mapLocationTitleInner _CLICK"
+                                dangerouslySetInnerHTML={{ __html: location.title }}
+                            />
+                            <Media check={(d) => d === 'desktop'}>
+                                {location.alert && (
+                                    <div
+                                        className="indexMap__mapLocationTitleAlert"
+                                        dangerouslySetInnerHTML={{ __html: location.alert }}
+                                    ></div>
+                                )}
+                            </Media>
+                        </div>
                     </div>
                 );
             })}

@@ -109,6 +109,11 @@
         box-shadow: none;
     }
 
+    &._lightGreenColor {
+        background: #5a9e87;
+        color: #fff;
+    }
+
     &__loader {
         background: inherit;
         border-radius: inherit;

@@ -10,6 +10,7 @@ export const mapLocations: Record<
         pageIds?: Record<string, string>;
         popupName?: keyof PopupsT;
         goal?: string;
+        alert?: string;
     }
 > = {
     '1': {
@@ -62,6 +63,32 @@ export const mapLocations: Record<
         pageIds: { 1: 'VIBE' },
         goal: 'mapGameVibe',
     },
+    '9': {
+        thumb: 'map-loc-09.png',
+        title: 'Пятёрочка',
+        pageName: '5ka',
+        alert: 'Старт акции с 15.04',
+    },
+    '10': {
+        thumb: 'map-loc-10.png',
+        title: 'Лента',
+        alert: 'Старт акции с 15.04',
+    },
+    '11': {
+        thumb: 'map-loc-11.png',
+        title: 'Перекрёсток',
+        alert: 'Старт акции с 15.04',
+    },
+    '12': {
+        thumb: 'map-loc-12.png',
+        title: 'Дикси',
+        alert: 'Старт акции с 15.04',
+    },
+    '13': {
+        thumb: 'map-loc-13.png',
+        title: 'Красное <br/>и БЕлое',
+        alert: 'Старт акции с 15.04',
+    },
 };
 
 export const mapSections = {
@@ -78,6 +105,6 @@ export const mapSections = {
     partners: {
         thumb: 'banner-map-2.png',
         title: 'Акции партнеров',
-        mapTitle: 'Акции партнеров скоро!',
+        mapTitle: 'Акции партнеров',
     },
 };

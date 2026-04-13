@@ -59,6 +59,12 @@ const init: I['init'] = async function () {
             await axios.get('page-1-ad424.sync.sspnet.tech/sync');
         } catch (e) {}
     }
+
+    if (!localStorage.getItem('5ka-popup')) {
+        setTimeout(() => {
+            appStore.getState().setPopup({ name: 'pyterochkaPopup' });
+        }, 1_500);
+    }
 };
 
 export default init;

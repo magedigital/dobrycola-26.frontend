@@ -16,10 +16,11 @@ const renderPopupContent = function (
 ) {
     const { isMenuShow } = this.state;
     const isInit = this.props.isInit ?? this.state.isInit;
+    const { withTopBar = true } = data;
 
     return (
         <div className="popup__wrapperBox">
-            {!window.isBot && (
+            {!window.isBot && withTopBar && (
                 <>
                     <div className="popup__topBar">
                         <TopBar
@@ -42,7 +43,7 @@ const renderPopupContent = function (
                 />
             )}
             <div className="popup__inner _COL">
-                <Media check={(d) => d === 'desktop'}>
+                <Media check={(d) => d === 'desktop' || withTopBar === false}>
                     {(data.canClose ?? true) && this.renderClose()}
                 </Media>
                 {data.render({ id: data.id })}
@@ -66,6 +67,7 @@ const renderPopup: I['renderPopup'] = function ({ render, ...props }) {
                 isInit === false ? '_loading' : '',
                 withIds ? '_withIds' : '',
                 isHeightMin && '_minHeight',
+                props.className,
             )}
         >
             {!withIds ? (

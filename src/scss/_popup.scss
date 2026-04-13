@@ -11,6 +11,10 @@
         background: #c60019;
     }
 
+    &._overlay {
+        background: rgba(#000, 0.6);
+    }
+
     &__wrapper {
         position: absolute;
         top: 0;
@@ -56,6 +60,16 @@
                     display: none;
                 }
             }
+        }
+    }
+
+    &._overlay &__wrapperBox {
+        @include mob {
+            padding-top: 62rem;
+        }
+
+        &::before {
+            display: none;
         }
     }
 
@@ -160,6 +174,19 @@
         }
     }
 
+    &._pyterochkaPopup &__inner {
+        width: 826rem;
+
+        @include mob {
+            width: 100%;
+        }
+
+        &Box {
+            background: none;
+            border-radius: 0;
+        }
+    }
+
     &__close {
         position: absolute;
         top: 20rem;
@@ -167,6 +194,17 @@
         z-index: 10;
         margin-left: 12rem;
         transition: $trans;
+    }
+
+    &._overlay &__close {
+        top: 0;
+        right: auto;
+        left: 100%;
+
+        @include mob {
+            inset: auto 0 100% auto;
+            margin-bottom: 10rem;
+        }
     }
 
     &._loading &__close {

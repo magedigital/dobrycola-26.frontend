@@ -23,6 +23,7 @@ type PopupsT = {
     orderPopup: PopupT<{ current: number }>;
     rafflePopup: PopupT;
     prizeOrderPopup: PopupT<{ code: string }>;
+    pyterochkaPopup: PopupT;
 };
 
 type PopupsReducersT = {
@@ -72,14 +73,18 @@ const popups = {
         redirectPageName: 'profile',
     },
     prizeOrderPopup: {
-        check: (s: StoreT) => !!s.authUser || true,
+        check: (s: StoreT) => !!s.authUser,
         redirectPageName: 'profile',
+    },
+    pyterochkaPopup: {
+        isOverlay: true,
     },
 } as const;
 
 type PopupDataT = Partial<{
     check: (s: StoreT) => boolean;
     redirectPageName: PageNamesT;
+    isOverlay: boolean;
 }>;
 
 const getPopupSearch = (name: string, data: ObjT | undefined): string => {
@@ -165,10 +170,14 @@ const createPopupsStore = (set: (data: Partial<StoreT>) => void): PopupsT & Popu
             document.dispatchEvent(
                 new CustomEvent('changePopup', { detail: { currentPopup: undefined } }),
             );
+
+            if (name === 'pyterochkaPopup') {
+                localStorage.setItem('5ka-popup', 'true');
+            }
         }, 10);
     },
 });
 
 export { popups, createPopupsStore };
 
-export type { PopupsT, PopupT, InfoPopupT, PopupsReducersT };
+export type { PopupsT, PopupT, InfoPopupT, PopupsReducersT, PopupDataT };

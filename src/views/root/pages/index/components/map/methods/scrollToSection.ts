@@ -16,8 +16,8 @@ const scrollToSection: I['scrollToSection'] = function (section, d) {
     scrollToBlock({
         blockNode: sectionNode,
         scrollNode: pageScrollNode,
-        dir: section === 'start' ? 'top' : undefined,
-        offset: -topBarNode.offsetHeight,
+        dir: 'top',
+        offset: -topBarNode.offsetHeight * 1.2,
         duration: d ?? 300,
     });
 };

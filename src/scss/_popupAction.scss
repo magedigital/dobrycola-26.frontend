@@ -1,0 +1,247 @@
+.popupAction {
+    width: 100%;
+    padding: 24rem 32rem 32rem;
+    border-radius: 32rem;
+
+    @include mob {
+        padding: 16rem 16rem 48rem;
+        border-radius: 24rem;
+    }
+
+    &._5ka {
+        @include bg("/media/popups/5ka-back.jpg", 100% auto, center top);
+
+        @include mob {
+            @include bg("/media/popups/5ka-back-mob.jpg", 100% auto, center top);
+        }
+    }
+
+    & {
+        background-color: #e11f26 !important;
+    }
+
+    &__support {
+        margin-bottom: 4rem;
+        padding: 2rem 6rem;
+        color: #fff;
+        font-weight: 900;
+        font-size: 14rem;
+        font-family: Onest;
+        line-height: 1.35;
+        text-transform: uppercase;
+        background: #c50018;
+        border-radius: 6rem;
+
+        @include mob {
+            margin-bottom: 336rem;
+            padding: 2rem 8rem;
+            font-size: 14.5rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 12rem;
+        color: #fff;
+        font-size: 24rem;
+        line-height: 1.2;
+        text-transform: uppercase;
+
+        @include mob {
+            margin-bottom: 22rem;
+            padding: 0 5rem;
+            font-size: 18rem;
+            line-height: 1.3;
+        }
+    }
+
+    &__content {
+        width: 342rem;
+        margin-bottom: 32rem;
+        margin-left: auto;
+
+        @include mob {
+            width: 100%;
+            margin-bottom: 42rem;
+            margin-left: 0;
+            padding: 0 5rem;
+        }
+
+        &Support {
+            margin-bottom: 12rem;
+            color: #fff;
+            font-size: 14rem;
+            line-height: 1.3;
+            text-transform: uppercase;
+
+            @include mob {
+                margin-bottom: 9rem;
+                font-size: 13rem;
+            }
+        }
+
+        &Steps {
+            width: 100%;
+            margin-bottom: 18rem;
+            counter-reset: countStep;
+        }
+
+        &Step {
+            position: relative;
+            padding: 4rem 0 0 62rem;
+            counter-increment: countStep;
+
+            @include mob {
+                padding-left: 54rem;
+            }
+
+            & + & {
+                margin-top: 9rem;
+            }
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 46rem;
+                height: 46rem;
+                padding-bottom: 3rem;
+                color: #fff;
+                font-size: 20rem;
+                text-transform: uppercase;
+                background: #7a2799;
+                border-radius: 50%;
+                content: counter(countStep);
+
+                @include mob {
+                    width: 42rem;
+                    height: 42rem;
+                    font-size: 18rem;
+                }
+            }
+
+            &Title {
+                margin-bottom: 4rem;
+                color: #fff;
+                font-size: 20rem;
+                line-height: 1;
+                text-transform: uppercase;
+
+                @include mob {
+                    font-size: 18rem;
+                }
+            }
+
+            &Text {
+                color: #fff;
+                font-size: 14rem;
+                font-family: Onest;
+                line-height: 1.3;
+
+                @include mob {
+                    font-size: 16rem;
+                    line-height: 1.23;
+                }
+
+                & a {
+                    display: inline-block;
+                    color: #fff;
+                    font-family: Onest;
+                    line-height: 0.9;
+                    border-bottom: 1rem solid rgba(#fff, 0.72);
+                }
+            }
+        }
+
+        &Button {
+            margin-left: 62rem;
+
+            @include mob {
+                height: 68rem;
+                margin-left: 54rem;
+            }
+        }
+    }
+
+    &__prizes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &Items {
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+
+            @include mob {
+                justify-content: center;
+                width: calc(100% + 20rem);
+            }
+        }
+
+        &Item {
+            width: 92rem;
+
+            @include mob {
+                width: 50%;
+                padding: 0 10rem;
+            }
+
+            & + & {
+                margin-left: 40rem;
+
+                @include mob {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        &Support {
+            margin-top: 14rem;
+            color: #fff;
+            font-size: 12rem;
+            text-transform: uppercase;
+        }
+    }
+
+    &__prize {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        &Head {
+            position: relative;
+            width: 100%;
+            background: #ff49b8;
+            border-radius: 50%;
+            aspect-ratio: 1;
+
+            @include mob {
+                width: 128rem;
+            }
+        }
+
+        &Thumb {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 125%;
+            object-fit: contain;
+            transform: translate(-50%, -50%);
+            aspect-ratio: 1;
+        }
+    }
+
+    &._5ka &__prizes {
+        width: 240rem;
+        margin: 0 40rem 0 auto;
+
+        @include mob {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}
