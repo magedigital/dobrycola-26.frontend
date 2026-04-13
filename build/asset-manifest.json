@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6e5cbed4.css",
-    "main.js": "/static/js/main.f63aaaf5.js",
+    "main.css": "/static/css/main.1c958b4c.css",
+    "main.js": "/static/js/main.95d6869e.js",
     "static/js/3315.d341fc11.chunk.js": "/static/js/3315.d341fc11.chunk.js",
     "static/js/3648.864124b6.chunk.js": "/static/js/3648.864124b6.chunk.js",
     "static/js/6286.9e249d70.chunk.js": "/static/js/6286.9e249d70.chunk.js",
@@ -89,13 +89,11 @@
     "static/js/2153.ab1c277a.chunk.js": "/static/js/2153.ab1c277a.chunk.js",
     "static/media/Regular.ttf": "/static/media/Regular.3e6423cef8188d3106d3.ttf",
     "static/media/back-5ka-element05.png": "/static/media/back-5ka-element05.1d3dc42ed581d76e1efc.png",
-    "static/media/5ka-back.jpg": "/static/media/5ka-back.85bcb2150f53ff2ff886.jpg",
     "static/media/carousel-big.png": "/static/media/carousel-big.3d4d26231d4a065fa3b5.png",
     "static/media/map-leto-03.jpg": "/static/media/map-leto-03.16fab8629f66ef03e5f7.jpg",
     "static/media/back-5ka-element02.png": "/static/media/back-5ka-element02.f81917fd542824ecdcfe.png",
     "static/media/back-5ka-element05-01.png": "/static/media/back-5ka-element05-01.147b9e19b7a8f75637f9.png",
     "static/media/game-back.jpg": "/static/media/game-back.cfaa375d5d93ab0b86cb.jpg",
-    "static/media/5ka-back-mob.jpg": "/static/media/5ka-back-mob.453bcf3821a8bce77bb4.jpg",
     "static/media/back-5ka-01.jpg": "/static/media/back-5ka-01.ec7c70394c956952685d.jpg",
     "static/media/map-leto-02.jpg": "/static/media/map-leto-02.9037cb9781b6deafce85.jpg",
     "static/media/check-prize-5ka-bg02.png": "/static/media/check-prize-5ka-bg02.30a3e257b685748af1e9.png",
@@ -126,6 +124,7 @@
     "static/media/map-leto-02-mob.jpg": "/static/media/map-leto-02-mob.34ef735fe76ae1eea7db.jpg",
     "static/media/back-5ka-01-mob.jpg": "/static/media/back-5ka-01-mob.c2c82b9a6e1f78fce5bb.jpg",
     "static/media/app-decor-right.svg": "/static/media/app-decor-right.988031e5576b9c1eb1ff.svg",
+    "static/media/5ka-back.jpg": "/static/media/5ka-back.430e4c9200e8b2f6cc76.jpg",
     "static/media/back-main-1-mob.jpg": "/static/media/back-main-1-mob.2605dea90400463663ae.jpg",
     "static/media/map-loc-12.png": "/static/media/map-loc-12.2cb338675a38c8cf60d2.png",
     "static/media/back-main-2-mob.png": "/static/media/back-main-2-mob.bc09d93563927946983b.png",
@@ -168,7 +167,7 @@
     "static/media/weekly-decor-5.png": "/static/media/weekly-decor-5.b2c1128adbc71e9124dd.png",
     "static/media/weekly-prize-5ka-04.png": "/static/media/weekly-prize-5ka-04.6c34fa2b0ef8dcb97cf4.png",
     "static/media/step-02-5ka.jpg": "/static/media/step-02-5ka.3d0128b6a98a944950a2.jpg",
-    "static/media/5ka-prize-2.png": "/static/media/5ka-prize-2.1f711b3d2f176c67ebec.png",
+    "static/media/5ka-back-mob.jpg": "/static/media/5ka-back-mob.dd992e92454662285177.jpg",
     "static/media/back-5ka-hand-2.png": "/static/media/back-5ka-hand-2.64bcd41f36aa05d05ecd.png",
     "static/media/invite-decor-1.png": "/static/media/invite-decor-1.3274afea75e9c0bdc238.png",
     "static/media/weekly-decor-13.png": "/static/media/weekly-decor-13.18514ddf2dd7b49a76a8.png",
@@ -183,7 +182,6 @@
     "static/media/banner-map-1.png": "/static/media/banner-map-1.4475eed7a200866f3b5f.png",
     "static/media/step-01-5ka.jpg": "/static/media/step-01-5ka.0ea6010947edc0c51916.jpg",
     "static/media/weekly-decor-9.png": "/static/media/weekly-decor-9.eaf5b10c806a6406a1b6.png",
-    "static/media/5ka-prize-1.png": "/static/media/5ka-prize-1.c01415535acc4555d77a.png",
     "static/media/raffle-back-decors.png": "/static/media/raffle-back-decors.7637b4bdd752ca08604a.png",
     "static/media/check-prize-5ka-06.png": "/static/media/check-prize-5ka-06.a836eeb01e9ae2e0d079.png",
     "static/media/check-prize-5ka-03.png": "/static/media/check-prize-5ka-03.edb4df8188545e40ac8a.png",
@@ -220,6 +218,7 @@
     "static/media/decor-9.png": "/static/media/decor-9.e8f6fb54221f94aaa9cd.png",
     "static/media/weekly-prize-5ka-06.png": "/static/media/weekly-prize-5ka-06.afd024b5d438f6b91c2f.png",
     "static/media/decor-2.png": "/static/media/decor-2.58a49be0a2fa75d3242e.png",
+    "static/media/5ka-prize-2.png": "/static/media/5ka-prize-2.b1234d00d1352f724778.png",
     "static/media/invite-5ka-bg01-mob.svg": "/static/media/invite-5ka-bg01-mob.b143a68675b2889b4c23.svg",
     "static/media/check-prize-5ka-bg01-mob.svg": "/static/media/check-prize-5ka-bg01-mob.20fa14ffe1ffad46fe3e.svg",
     "static/media/special-prize-5ka-bg-mob.svg": "/static/media/special-prize-5ka-bg-mob.b9440aa3c0eca6aefbea.svg",
@@ -248,7 +247,7 @@
     "static/media/plashka-map.svg": "/static/media/plashka-map.807bbf92b339d7fb2f4c.svg"
   },
   "entrypoints": [
-    "static/css/main.6e5cbed4.css",
-    "static/js/main.f63aaaf5.js"
+    "static/css/main.1c958b4c.css",
+    "static/js/main.95d6869e.js"
   ]
 }
