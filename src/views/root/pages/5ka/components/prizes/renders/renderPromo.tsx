@@ -6,6 +6,7 @@ import getLink from '@components/popups/invite/utils/getLink.ts';
 import StringService from '@services/string/String.service.ts';
 import { appStore } from '@store/store.tsx';
 import copyInBuffer from '@utils/copyInBuffer.ts';
+import sendGoal from '@utils/sendGoal.ts';
 
 import { setError } from '../../../../../components/errors/utils/errorHandler.ts';
 
@@ -45,7 +46,7 @@ const renderPromo: I['renderPromo'] = function () {
                         <Button
                             className="_purpleColor _boldBorder"
                             onClick={async () => {
-                                // sendGoal('5kaInviteFriends');
+                                sendGoal('5kaInviteFriends');
 
                                 if (!appStore.getState().authUser) {
                                     appStore.getState().setPopup({ name: 'loginPopup' });

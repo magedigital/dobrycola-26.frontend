@@ -121,7 +121,7 @@ const renderMain: I['renderMain'] = function () {
                             className="_darkPinkColor _boldBorder _minSize"
                             onClick={() => {
                                 appStore.getState().setPopup({ name: 'codePopup' });
-                                // sendGoal('regCodeBtn, profileRegCodeBtn', true);
+                                sendGoal('regCodeBtn, profileRegCodeBtn', true);
                             }}
                         >
                             зарегистрировать код
@@ -132,7 +132,7 @@ const renderMain: I['renderMain'] = function () {
                             className="_redColor _boldBorder _minSize"
                             onClick={() => {
                                 appStore.getState().setPopup({ name: 'chequePopup' });
-                                // sendGoal('regCodeBtn, profileRegCodeBtn', true);
+                                sendGoal('regCheckBtn, profileRegCheckBtn', true);
                             }}
                         >
                             <img

@@ -68,26 +68,27 @@ export const mapLocations: Record<
         title: 'Пятёрочка',
         pageName: '5ka',
         alert: 'Старт акции с 15.04',
+        goal: 'mapPopup5ka',
     },
     '10': {
         thumb: 'map-loc-10.png',
         title: 'Лента',
-        alert: 'Старт акции с 15.04',
+        alert: 'Старт акции с 01.05',
     },
     '11': {
         thumb: 'map-loc-11.png',
         title: 'Перекрёсток',
-        alert: 'Старт акции с 15.04',
+        alert: 'Старт акции с 04.05',
     },
     '12': {
         thumb: 'map-loc-12.png',
         title: 'Дикси',
-        alert: 'Старт акции с 15.04',
+        alert: 'Старт акции с 04.05',
     },
     '13': {
         thumb: 'map-loc-13.png',
         title: 'Красное <br/>и БЕлое',
-        alert: 'Старт акции с 15.04',
+        alert: 'Старт акции с 01.05',
     },
 };
 

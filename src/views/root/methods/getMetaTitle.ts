@@ -13,7 +13,11 @@ const getMetaTitle: I['getMetaTitle'] = function () {
             title = 'Авторизация';
         } else if (currentPopup === 'regPopup') {
             title = 'Получение пароля';
+        } else if (currentPopup === 'chequePopup') {
+            title = 'Регистрация чека';
         }
+    } else if (pages['5ka'].isShow) {
+        title = 'Добрый - 5ка';
     } else if (pages.profile.isShow) {
         title = 'Личный кабинет';
     } else if (pages['prizes-moment'].isShow) {

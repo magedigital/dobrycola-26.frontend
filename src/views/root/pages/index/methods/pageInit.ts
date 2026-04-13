@@ -1,3 +1,4 @@
+import { appStore } from '@store/store.tsx';
 import getLocation from '@utils/getLocation.ts';
 import scrollToBlock from '@utils/scrollToBlock.ts';
 
@@ -15,6 +16,12 @@ const pageInit: I['pageInit'] = async function (this: I) {
         if (scrollNode && blockNode) {
             scrollToBlock({ blockNode, scrollNode, duration: 0 });
         }
+    }
+
+    if (!localStorage.getItem('5ka-popup')) {
+        setTimeout(() => {
+            appStore.getState().setPopup({ name: 'pyterochkaPopup' });
+        }, 1_500);
     }
 };
 

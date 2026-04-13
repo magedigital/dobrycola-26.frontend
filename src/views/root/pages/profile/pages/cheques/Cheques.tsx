@@ -6,6 +6,7 @@ import List from '@components/list/List.tsx';
 import Media from '@components/media/Media.tsx';
 import Table from '@components/table/Table.tsx';
 import StringService from '@services/string/String.service.ts';
+import sendGoal from '@utils/sendGoal.ts';
 
 import Prizes from './components/prizes/Prizes.tsx';
 
@@ -59,6 +60,7 @@ class Cheques extends Default<ChequesI['props'], ChequesI['state']> implements C
                                     className="_redColor _boldBorder _minSize"
                                     onClick={() => {
                                         AppRouter.changePage({ pageName: '5ka' });
+                                        sendGoal('profileNCP');
                                     }}
                                 >
                                     перейти на страницу акции

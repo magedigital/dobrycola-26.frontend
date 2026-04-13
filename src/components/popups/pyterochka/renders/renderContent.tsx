@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Button from '@components/button/Button.tsx';
+import sendGoal from '@utils/sendGoal.ts';
 
 import I from '../types.ts';
 
@@ -29,8 +30,26 @@ const renderContent: I['renderContent'] = function (this: I) {
                     <div className="popupAction__contentStep">
                         <h4 className="popupAction__contentStepTitle">Регистрируй чеки</h4>
                         <p className="popupAction__contentStepText">
-                            на <a href="#">сайте</a>, в <a href="#">боте</a> или{' '}
-                            <br className="_MOBILE" />в <a href="#">Добрый Винбокс</a>
+                            на{' '}
+                            <a href="https://dobrycola-promo.ru/" rel="noreferrer" target="_blank">
+                                сайте
+                            </a>
+                            , в{' '}
+                            <a
+                                href="https://t.me/dobrycola_promo_bot"
+                                rel="noreferrer"
+                                target="_blank"
+                            >
+                                боте
+                            </a>{' '}
+                            или <br className="_MOBILE" />в{' '}
+                            <a
+                                href="https://4493398.redirect.appmetrica.yandex.com/?appmetrica_tracking_id=966528812613420193&referrer=reattribution%3D1"
+                                rel="noreferrer"
+                                target="_blank"
+                            >
+                                Добрый Винбокс
+                            </a>
                         </p>
                     </div>
                     <div className="popupAction__contentStep">
@@ -46,6 +65,7 @@ const renderContent: I['renderContent'] = function (this: I) {
                         onClick={() => {
                             localStorage.setItem('5ka-popup', 'true');
                             AppRouter.changePage({ pageName: '5ka' });
+                            sendGoal('popup5kaBtn');
                         }}
                     >
                         Участвовать

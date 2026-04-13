@@ -1,4 +1,5 @@
 import { chequeRequests } from '@api/requests/cheque.ts';
+import sendGoal from '@utils/sendGoal.ts';
 
 import I from '../types.ts';
 
@@ -73,17 +74,17 @@ const sendForm: I['sendForm'] = async function () {
     await this.asyncSetState({ loadingKey: 'send', error: undefined });
 
     try {
-        await chequeRequests.regCheque({ data: this.formData });
+        const r = await chequeRequests.regCheque({ data: this.formData });
+
+        sendGoal('regCheckSuccess', true);
 
         setStep('final');
 
         document.dispatchEvent(new CustomEvent('getProfileContent'));
 
-        // sendGoal('regCheckSuccess', true);
-
-        // if (response.data?.isFirstCheck) {
-        //     sendGoal('regFirstCheck', true);
-        // }
+        if (r?.isFirstCheck) {
+            sendGoal('regFirstCheck', true);
+        }
 
         // sendCRAGoal(response.data?.isFirstCheck ? 'new' : 'old');
     } catch (e) {
@@ -91,7 +92,7 @@ const sendForm: I['sendForm'] = async function () {
 
         await this.asyncSetState({ error: { text: error.errorText } });
 
-        // sendGoal('regCheckError', true);
+        sendGoal('regCheckError', true);
     }
 
     await this.asyncSetState({ loadingKey: undefined });

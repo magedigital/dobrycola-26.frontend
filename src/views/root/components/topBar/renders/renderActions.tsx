@@ -21,6 +21,7 @@ const renderActions: I['renderActions'] = function () {
                     onClick={() => {
                         appStore.getState().setPopup({ name: 'chequePopup' });
                         setMenuState(false);
+                        sendGoal('5kaHeaderCheck', true);
                     }}
                 >
                     загрузить чек
@@ -49,7 +50,12 @@ const renderActions: I['renderActions'] = function () {
                 onClick={() => {
                     setMenuState(false);
                     AppRouter.changePage({ pageName: 'profile' });
-                    sendGoal('profileBtn,headerProfileBtn');
+
+                    if (mode === '5ka') {
+                        sendGoal('5kaHeaderProfile');
+                    } else {
+                        sendGoal('profileBtn,headerProfileBtn');
+                    }
                 }}
             >
                 ЛИЧНЫЙ КАБИНЕТ
@@ -60,6 +66,7 @@ const renderActions: I['renderActions'] = function () {
                     onClick={() => {
                         AppRouter.changePage({ pageName: '5ka' });
                         setMenuState(false);
+                        sendGoal('5kaBtn');
                     }}
                 >
                     <img src={require('@media/5ka/logo-5ka.svg').default} alt="" />

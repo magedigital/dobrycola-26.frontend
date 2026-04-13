@@ -3,6 +3,7 @@ import React from 'react';
 import Link from '@components/link/Link.tsx';
 import Media from '@components/media/Media.tsx';
 import Pages from '@components/pages/Pages.tsx';
+import sendGoal from '@utils/sendGoal.ts';
 
 import I from '../types.ts';
 
@@ -23,6 +24,11 @@ const renderPages: I['renderPages'] = function () {
                             className="profile__pagesTab _COL _COL_CENTER"
                             key={name}
                             pageName={name}
+                            callback={() => {
+                                if (name === 'profile-cheques') {
+                                    sendGoal('profile5ka');
+                                }
+                            }}
                         >
                             <Media check={(d) => d === 'desktop' || name !== 'profile-cheques'}>
                                 {page.title}
