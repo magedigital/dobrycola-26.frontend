@@ -67,7 +67,6 @@ export const mapLocations: Record<
         thumb: 'map-loc-09.png',
         title: 'Пятёрочка',
         pageName: '5ka',
-        alert: 'Старт акции с 15.04',
         goal: 'mapPopup5ka',
     },
     '10': {
