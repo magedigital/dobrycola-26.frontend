@@ -13,7 +13,9 @@
     border-radius: 8rem;
     box-shadow: 4rem 4rem 0 0 #000;
 
-    @include button(0.97);
+    @include desk {
+        @include button(0.97);
+    }
 
     @include mob {
         padding: 14rem 26rem;
@@ -110,8 +112,8 @@
     }
 
     &._lightGreenColor {
-        background: #5a9e87;
         color: #fff;
+        background: #5a9e87;
     }
 
     &__loader {
