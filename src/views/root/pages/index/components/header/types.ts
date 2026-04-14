@@ -21,6 +21,8 @@ interface HeaderI extends DefaultI<PropsT, StateT> {
     startRotate(this: HeaderI): void;
     forceRotate(this: HeaderI, s: boolean): void;
 
+    setDecors(this: HeaderI): void;
+
     renderContent(this: HeaderI): React.ReactNode;
     renderSlider(this: HeaderI): React.ReactNode;
     renderCircle(this: HeaderI): React.ReactNode;

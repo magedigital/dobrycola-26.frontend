@@ -16,6 +16,19 @@
         background-color: #c50018;
     }
 
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 11;
+        width: 100%;
+        height: 100%;
+        content: "";
+        pointer-events: none;
+
+        @include bg("/media/back-main-1-sub.png", 100% auto, center top);
+    }
+
     &__decor {
         position: absolute;
         z-index: 2;
@@ -26,9 +39,60 @@
         }
 
         &Inner {
-            animation: indexLine 6s infinite linear;
+            transform-origin: left top;
+            will-change: transform;
 
-            @keyframes indexLine {
+            &::before {
+                // will-change: transform;
+            }
+        }
+
+        &Wrapper {
+            width: 100%;
+            height: 100%;
+            will-change: transform;
+        }
+    }
+
+    &__decor._01 {
+        top: -210rem;
+        left: -360rem;
+        z-index: 10;
+        width: 690rem;
+        height: 690rem;
+    }
+
+    &__decor._1 {
+        top: -55rem;
+        left: -278rem;
+        z-index: 9;
+        display: block;
+        width: 650px;
+        height: 400px;
+        transform: rotate(0.7deg);
+        transform-origin: left top;
+    }
+
+    &__decor._1 &__decorInner {
+        clip-path: url("#decor1");
+
+        &::before {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            z-index: 2;
+            width: calc(3282px * 6);
+            height: 400px;
+            animation: decor1 60s infinite linear;
+            content: "";
+
+            @include bg("/media/animate/decor-1.svg", auto 100%, left top, repeat-x);
+
+            & {
+                background-color: #0f9296;
+            }
+
+            @keyframes decor1 {
                 0% {
                     transform: translate(0, 0);
                 }
@@ -40,34 +104,99 @@
         }
     }
 
-    &__decor._1 {
-        top: -492rem;
-        left: -318rem;
-        // display: none;
-        width: 1250rem;
-        height: 1250rem;
-        transform: rotate(-19deg);
+    &__decor._02 {
+        top: -197rem;
+        left: -382rem;
+        z-index: 10;
+        width: 740rem;
+        height: 740rem;
     }
 
     &__decor._2 {
-        top: -398rem;
-        left: -280rem;
-        // display: none;
-        width: 1250rem;
-        height: 1250rem;
-        transform: rotate(-19deg);
+        top: 184rem;
+        left: -312rem;
+        z-index: 11;
+        width: 650px;
+        height: 280px;
     }
 
     &__decor._2 &__decorInner {
-        animation-delay: 0.5s;
+        clip-path: url("#decor2");
+
+        &::before {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 1385px;
+            height: 300px;
+            animation: decor2 7s infinite linear;
+            content: "";
+
+            @include bg("/media/animate/decor-2.svg", auto 100%, left top, repeat-x);
+
+            & {
+                background-color: #0f9296;
+            }
+
+            @keyframes decor2 {
+                0% {
+                    transform: translate(0, 0);
+                }
+
+                100% {
+                    transform: translate(-50%, 0);
+                }
+            }
+        }
+    }
+
+    &__decor._03 {
+        top: -97rem;
+        left: -354rem;
+        z-index: 5;
+        width: 740rem;
+        height: 740rem;
     }
 
     &__decor._3 {
-        top: -464rem;
-        left: -390rem;
-        width: 1450rem;
-        height: 1450rem;
-        transform: rotate(15deg);
+        top: 148rem;
+        left: -280rem;
+        z-index: 11;
+        width: 750px;
+        height: 400px;
+    }
+
+    &__decor._3 &__decorInner {
+        background-color: #8d33b3;
+        clip-path: url("#decor3");
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            width: calc(3090px * 6);
+            height: 400px;
+            animation: decor3 60s infinite linear;
+            content: "";
+            will-change: transform;
+
+            @include bg("/media/animate/decor-3.svg", auto 100%, left top, repeat);
+
+            & {
+                background-color: #8d33b3;
+            }
+
+            @keyframes decor3 {
+                0% {
+                    transform: translate(0, 0);
+                }
+
+                100% {
+                    transform: translate(-50%, 0);
+                }
+            }
+        }
     }
 
     &__inner {

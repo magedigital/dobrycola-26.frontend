@@ -5,6 +5,7 @@ import Default from '@components/default/Default.tsx';
 import forceRotate from './methods/forceRotate.ts';
 import getSliderItems from './methods/getSliderItems.ts';
 import init from './methods/init.ts';
+import setDecors from './methods/setDecors.ts';
 import sliderInit from './methods/sliderInit.ts';
 import startRotate from './methods/startRotate.ts';
 
@@ -25,6 +26,8 @@ class Header extends Default<HeaderI['props'], HeaderI['state']> implements Head
         super(props);
         this.state = {};
 
+        this.setDecors = this.setDecors.bind(this);
+
         this.parent = React.createRef();
     }
 
@@ -32,6 +35,7 @@ class Header extends Default<HeaderI['props'], HeaderI['state']> implements Head
     rotateDeg = 0;
 
     init = init;
+    setDecors = setDecors;
 
     getSliderItems = getSliderItems;
     sliderInit = sliderInit;
