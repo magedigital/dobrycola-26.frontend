@@ -16,25 +16,19 @@
         background-color: #c50018;
     }
 
-    &__test {
+    &__decor {
         position: absolute;
-        top: -524rem;
-        left: -510rem;
-        z-index: 100;
-        width: 1400rem;
-        height: 900rem;
-        transform: rotate(-20deg);
+        z-index: 2;
 
         & svg {
             width: 100%;
             height: 100%;
         }
 
-        &L {
-            transform-origin: center;
-            animation: test infinite 4s linear;
+        &Inner {
+            animation: indexLine 6s infinite linear;
 
-            @keyframes test {
+            @keyframes indexLine {
                 0% {
                     transform: translate(0, 0);
                 }
@@ -43,35 +37,37 @@
                     transform: translate(-50%, 0);
                 }
             }
-
-            // @keyframes test {
-            //     0% {
-            //         transform: translate(16rem, 0) rotate(-3deg);
-            //     }
-
-            //     50% {
-            //         transform: rotate(2deg) scale(1.15);
-            //     }
-
-            //     100% {
-            //         transform: translate(16rem, 0) rotate(-3deg);
-            //     }
-            // }
-
-            // @keyframes test {
-            //     0% {
-            //         transform: translate(-50rem, 0);
-            //     }
-
-            //     50% {
-            //         transform: translate(50rem, 0) scale(1.1);
-            //     }
-
-            //     100% {
-            //         transform: translate(-50rem, 0);
-            //     }
-            // }
         }
+    }
+
+    &__decor._1 {
+        top: -492rem;
+        left: -318rem;
+        // display: none;
+        width: 1250rem;
+        height: 1250rem;
+        transform: rotate(-19deg);
+    }
+
+    &__decor._2 {
+        top: -398rem;
+        left: -280rem;
+        // display: none;
+        width: 1250rem;
+        height: 1250rem;
+        transform: rotate(-19deg);
+    }
+
+    &__decor._2 &__decorInner {
+        animation-delay: 0.5s;
+    }
+
+    &__decor._3 {
+        top: -464rem;
+        left: -390rem;
+        width: 1450rem;
+        height: 1450rem;
+        transform: rotate(15deg);
     }
 
     &__inner {

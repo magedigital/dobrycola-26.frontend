@@ -12,6 +12,9 @@ import HeaderI from './types.ts';
 
 import renderCircle from './renders/renderCircle.tsx';
 import renderContent from './renders/renderContent.tsx';
+import renderDecor1 from './renders/renderDecor1.tsx';
+import renderDecor2 from './renders/renderDecor2.tsx';
+import renderDecor3 from './renders/renderDecor3.tsx';
 import renderDecors from './renders/renderDecors.tsx';
 import renderSlider from './renders/renderSlider.tsx';
 
@@ -39,11 +42,16 @@ class Header extends Default<HeaderI['props'], HeaderI['state']> implements Head
     renderContent = renderContent;
     renderSlider = renderSlider;
     renderCircle = renderCircle;
+
     renderDecors = renderDecors;
+    renderDecor1 = renderDecor1;
+    renderDecor2 = renderDecor2;
+    renderDecor3 = renderDecor3;
 
     render() {
         return (
             <div ref={this.parent} className="indexHeader _SECTION" data-ancor="index">
+                {this.renderDecors()}
                 <div className="indexHeader__inner _INNER">
                     {this.renderContent()}
                     {this.renderSlider()}
