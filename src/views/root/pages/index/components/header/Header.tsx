@@ -16,6 +16,9 @@ import renderContent from './renders/renderContent.tsx';
 import renderDecor1 from './renders/renderDecor1.tsx';
 import renderDecor2 from './renders/renderDecor2.tsx';
 import renderDecor3 from './renders/renderDecor3.tsx';
+import renderDecor4 from './renders/renderDecor4.tsx';
+import renderDecor5 from './renders/renderDecor5.tsx';
+import renderDecor6 from './renders/renderDecor6.tsx';
 import renderDecors from './renders/renderDecors.tsx';
 import renderSlider from './renders/renderSlider.tsx';
 
@@ -51,6 +54,9 @@ class Header extends Default<HeaderI['props'], HeaderI['state']> implements Head
     renderDecor1 = renderDecor1;
     renderDecor2 = renderDecor2;
     renderDecor3 = renderDecor3;
+    renderDecor4 = renderDecor4;
+    renderDecor5 = renderDecor5;
+    renderDecor6 = renderDecor6;
 
     render() {
         return (

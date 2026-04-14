@@ -6,7 +6,7 @@ const renderDecor2: I['renderDecor2'] = function () {
     return (
         <div className="indexHeader__decor _2">
             <div className="indexHeader__decorWrapper">
-                <div className="indexHeader__decorInner _DECOR" data-scale="1">
+                <div className="indexHeader__decorInner _DECOR" data-scale="1" data-mobscale=".5">
                     <svg viewBox="0 0 649 158" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <clipPath id="decor2">
                             <path

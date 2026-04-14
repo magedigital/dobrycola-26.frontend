@@ -18,6 +18,17 @@
             z-index: 2;
             width: 218rem;
             height: 218rem;
+            animation: mapDecor1 4s infinite linear;
+
+            @keyframes mapDecor1 {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(-360deg);
+                }
+            }
         }
 
         &._2 {
@@ -26,14 +37,102 @@
             z-index: 1;
             width: 446rem;
             height: 446rem;
-        }
+            overflow: hidden;
+            background: #ff49b8;
+            border-radius: 50%;
+            animation: mapDecorCircle 10s infinite linear;
 
-        &._3 {
-            top: 6rem;
-            right: -28rem;
-            z-index: 1;
-            width: 275rem;
-            height: 275rem;
+            @keyframes mapDecorCircle {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            &::before {
+                position: absolute;
+                bottom: -108rem;
+                left: -158rem;
+                width: 1200rem;
+                height: 1050rem;
+                animation: mapDecor2 5s infinite ease-in-out;
+                content: "";
+
+                @include bg("/media/map-decor-2-lines.svg", contain, left bottom);
+
+                @keyframes mapDecor2 {
+                    0% {
+                        transform: translate(0, 0) rotate(0deg);
+                    }
+
+                    50% {
+                        transform: translate(40rem, 150rem) rotate(100deg);
+                    }
+
+                    100% {
+                        transform: translate(0, 0) rotate(0deg);
+                    }
+                }
+            }
+        }
+    }
+
+    &__circle {
+        position: absolute;
+        top: 6rem;
+        right: -28rem;
+        z-index: 1;
+        width: 275rem;
+        height: 275rem;
+
+        &Item {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 146rem;
+            height: 146rem;
+            border: 16rem solid rgba(#ff49b8, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            animation: mapCircle 2s infinite linear;
+
+            @keyframes mapCircle {
+                0% {
+                    width: 86rem;
+                    height: 86rem;
+                    opacity: 0;
+                }
+
+                10% {
+                    opacity: 1;
+                }
+
+                90% {
+                    opacity: 1;
+                }
+
+                100% {
+                    width: 320rem;
+                    height: 320rem;
+                    opacity: 0;
+                }
+            }
+
+            &._2 {
+                animation-delay: 0.5s;
+            }
+
+            &._3 {
+                animation-delay: 1s;
+            }
+
+            &._4 {
+                animation-delay: 1.5s;
+            }
         }
     }
 

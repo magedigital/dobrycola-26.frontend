@@ -31,6 +31,9 @@ interface HeaderI extends DefaultI<PropsT, StateT> {
     renderDecor1(this: HeaderI): React.ReactNode;
     renderDecor2(this: HeaderI): React.ReactNode;
     renderDecor3(this: HeaderI): React.ReactNode;
+    renderDecor4(this: HeaderI): React.ReactNode;
+    renderDecor5(this: HeaderI): React.ReactNode;
+    renderDecor6(this: HeaderI): React.ReactNode;
 }
 
 export default HeaderI;
