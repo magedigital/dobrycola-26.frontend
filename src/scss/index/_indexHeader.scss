@@ -97,12 +97,12 @@
             top: 0;
             left: 0;
             z-index: 2;
-            width: calc(3282px * 15);
-            height: calc(3282px * 15);
+            width: calc(1836px * 33);
+            aspect-ratio: 4.098;
             animation: decor1 200s infinite linear;
             content: "";
 
-            @include bg("/media/animate/decor-1.jpg", 1500px auto, left top, repeat);
+            @include bg("/media/animate/decor-1.jpg", 918px auto, left top, repeat);
 
             & {
                 background-color: #0f9296;
@@ -114,7 +114,7 @@
                 }
 
                 100% {
-                    transform: translate(-50%, -15%);
+                    transform: translate(-50%, -50%);
                 }
             }
         }
@@ -156,12 +156,12 @@
             position: absolute;
             top: 50px;
             left: 0;
-            width: calc(1385px * 30);
-            height: 300px;
+            width: calc(1218px * 40);
+            aspect-ratio: 2.306;
             animation: decor2 200s infinite linear;
             content: "";
 
-            @include bg("/media/animate/decor-2.jpg", auto 100%, left top, repeat-x);
+            @include bg("/media/animate/decor-2.jpg", 609px auto, left top, repeat);
 
             @keyframes decor2 {
                 0% {
@@ -213,13 +213,13 @@
             bottom: 0;
             left: 0;
             z-index: 2;
-            width: calc(3090px * 18);
-            height: calc(3090px * 12);
+            width: calc(3090px * 20);
+            aspect-ratio: 3.848;
             animation: decor3 200s infinite linear;
             content: "";
             will-change: transform;
 
-            @include bg("/media/animate/decor-3.jpg", 1500px, left top, repeat);
+            @include bg("/media/animate/decor-3.jpg", 1545px auto, left top, repeat);
 
             @keyframes decor3 {
                 0% {
@@ -227,7 +227,7 @@
                 }
 
                 100% {
-                    transform: translate(-50%, 30%);
+                    transform: translate(-50%, 50%);
                 }
             }
         }
@@ -272,10 +272,10 @@
             top: 0;
             right: 0;
             z-index: 2;
-            width: calc(2100px * 8);
-            height: calc(800px * 8);
+            width: calc(2100px * 32);
+            height: calc(800px * 20);
             transform: rotate(-20deg);
-            animation: decor4 64s infinite linear;
+            animation: decor4 200s infinite linear;
             content: "";
             will-change: transform;
 
@@ -287,7 +287,7 @@
                 }
 
                 100% {
-                    transform: translate(50%, -50%) rotate(-20deg);
+                    transform: translate(30%, -70%) rotate(-20deg);
                 }
             }
         }
