@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.7ae61d2b.css",
+    "main.css": "/static/css/main.e25096d7.css",
     "main.js": "/static/js/main.05c5ee63.js",
     "static/js/3315.d341fc11.chunk.js": "/static/js/3315.d341fc11.chunk.js",
     "static/js/3648.864124b6.chunk.js": "/static/js/3648.864124b6.chunk.js",
@@ -257,7 +257,7 @@
     "static/media/plashka-map.svg": "/static/media/plashka-map.807bbf92b339d7fb2f4c.svg"
   },
   "entrypoints": [
-    "static/css/main.7ae61d2b.css",
+    "static/css/main.e25096d7.css",
     "static/js/main.05c5ee63.js"
   ]
 }
