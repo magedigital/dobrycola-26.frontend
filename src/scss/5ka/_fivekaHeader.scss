@@ -183,7 +183,30 @@
     }
 
     &__head {
+        position: relative;
         align-items: flex-end;
+
+        &Back {
+            position: absolute;
+            top: 7rem;
+            left: 0;
+            padding-left: 18rem;
+            color: #fff;
+            font-size: 10.2rem;
+            text-transform: uppercase;
+            z-index: 10;
+
+            & i {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 12rem;
+                height: 12rem;
+                transform: translate(0, -50%);
+
+                @include icon(#fff);
+            }
+        }
 
         &Subtitle {
             margin-bottom: 42rem;

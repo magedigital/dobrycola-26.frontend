@@ -3,6 +3,7 @@ import React from 'react';
 import Icon from '@components/icon/Icon.tsx';
 import Link from '@components/link/Link.tsx';
 import Media from '@components/media/Media.tsx';
+import { appStore } from '@store/store.tsx';
 import sendGoal from '@utils/sendGoal.ts';
 
 import I from '../types.ts';
@@ -17,31 +18,58 @@ const render5ka: I['render5ka'] = function () {
     }
 
     return (
-        <Media check={(d) => d === 'desktop'}>
-            <div className="topBar__5ka">
-                <Link
-                    className="topBar__5kaBack"
-                    pageName="index"
-                    callback={() => {
-                        sendGoal('5kaHeaderMain');
-                    }}
-                >
-                    <Icon name="5ka-back-arrow" />
-                    на главную
-                </Link>
-                <div className="topBar__5kaButton">
-                    <div
-                        className="topBar__action _faq _ROW _ROW_CENTER _CLICK"
-                        onClick={() => {
-                            AppRouter.changePage({ pageName: 'faq5ka' });
-                            sendGoal('5kaHeaderFaq');
+        <>
+            <Media check={(d) => d === 'desktop'}>
+                <div className="topBar__5ka">
+                    <Link
+                        className="topBar__5kaBack"
+                        pageName="index"
+                        callback={() => {
+                            sendGoal('5kaHeaderMain');
                         }}
                     >
-                        Вопрос-ответ
+                        <Icon name="5ka-back-arrow" />
+                        на главную
+                    </Link>
+                    <div className="topBar__5kaButton">
+                        <div
+                            className="topBar__action _faq _ROW _ROW_CENTER _CLICK"
+                            onClick={() => {
+                                AppRouter.changePage({ pageName: 'faq5ka' });
+                                sendGoal('5kaHeaderFaq');
+                            }}
+                        >
+                            Вопрос-ответ
+                        </div>
                     </div>
                 </div>
-            </div>
-        </Media>
+            </Media>
+            <Media check={(d) => d === 'mobile'}>
+                <div className="topBar__5ka">
+                    <div className="topBar__5kaButton">
+                        <div
+                            className="topBar__action _faq _ROW _ROW_CENTER _CLICK"
+                            onClick={() => {
+                                AppRouter.changePage({ pageName: 'faq5ka' });
+                                sendGoal('5kaHeaderFaq');
+                            }}
+                        >
+                            Вопрос-ответ
+                        </div>
+                    </div>
+                    <div className="topBar__5kaButton">
+                        <div
+                            className="topBar__action _cheque _ROW _ROW_CENTER _CLICK"
+                            onClick={() => {
+                                appStore.getState().setPopup({ name: 'chequePopup' });
+                            }}
+                        >
+                            Загрузить чек
+                        </div>
+                    </div>
+                </div>
+            </Media>
+        </>
     );
 };
 

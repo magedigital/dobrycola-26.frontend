@@ -35,8 +35,7 @@
             @include bg("/media/5ka/logo-5ka.svg", contain, center);
 
             @include mob {
-                width: 54rem;
-                height: 54rem;
+                display: none;
             }
         }
     }
@@ -59,6 +58,7 @@
 
             @include mob {
                 width: 40rem;
+                margin-right: 0;
             }
 
             @include icon(#de261f);
@@ -91,6 +91,10 @@
         display: flex;
         align-items: center;
 
+        @include mob {
+            margin: 0 auto;
+        }
+
         &Back {
             position: relative;
             margin-right: 24rem;
@@ -108,6 +112,14 @@
                 transform: translate(0, -50%);
 
                 @include icon(#fff);
+            }
+        }
+
+        &Button {
+            & + & {
+                @include mob {
+                    margin-left: 8rem;
+                }
             }
         }
     }
@@ -138,6 +150,14 @@
         box-shadow: 8rem 8rem 0 0 #000;
 
         @include button(0.96);
+
+        @include mob {
+            height: auto;
+            padding: 10rem 11rem;
+            font-size: 10rem;
+            border-radius: 6rem;
+            box-shadow: 3.5rem 3.5rem 0 0 #000;
+        }
 
         & + & {
             margin-left: 16rem;
@@ -178,10 +198,19 @@
             }
         }
 
+        &._cheque {
+            background: #5d279e;
+            border-color: #fff;
+        }
+
         &._faq {
             background: #10cfc9;
             border-color: #fff;
         }
+    }
+
+    &._fix &__action._cheque {
+        border-color: #000;
     }
 
     &__profile {
@@ -189,6 +218,12 @@
         height: 32rem;
         margin-left: auto;
         object-fit: contain;
+    }
+
+    &._5ka &__profile {
+        @include mob {
+            margin-left: 0;
+        }
     }
 
     &__close {

@@ -29,7 +29,7 @@ const sendForm: I['sendForm'] = async function (d) {
     await anketRequests.send({ data });
 
     if (appStore.getState().authUser?.isFirstAnket) {
-        sendGoal('regComplete');
+        sendGoal('regComplete', true);
     }
 
     await checkAuth({ redirect: true });
