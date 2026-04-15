@@ -135,10 +135,8 @@
         &Inner {
             transform-origin: left top;
 
-            &::after {
-                @include mob {
-                    display: none;
-                }
+            &::before {
+                will-change: transform;
             }
         }
 
@@ -180,8 +178,7 @@
     &__decor._1 &__decorInner {
         clip-path: url("#decor1");
 
-        &::before,
-        &::after {
+        &::before {
             position: absolute;
             top: 0;
             left: 0;
@@ -199,17 +196,13 @@
 
             @keyframes decor1 {
                 0% {
-                    transform: translate(0, 0);
+                    background-position: 0 0;
                 }
 
                 100% {
-                    transform: translate(-50%, -50%);
+                    background-position: -100% -100%;
                 }
             }
-        }
-
-        &::after {
-            top: 448px;
         }
     }
 
@@ -245,10 +238,9 @@
         background: #0f9296;
         clip-path: url("#decor2");
 
-        &::before,
-        &::after {
+        &::before {
             position: absolute;
-            top: 50px;
+            top: 0;
             left: 0;
             width: 1218px;
             height: 528px;
@@ -259,17 +251,13 @@
 
             @keyframes decor2 {
                 0% {
-                    transform: translate(0, 0);
+                    background-position: 0 0;
                 }
 
                 100% {
-                    transform: translate(-50%, 0);
+                    background-position: -100% 0%;
                 }
             }
-        }
-
-        &::after {
-            left: 1218px;
         }
     }
 
@@ -306,14 +294,13 @@
         background: #fbac2f;
         clip-path: url("#decor3");
 
-        &::before,
-        &::after {
+        &::before {
             position: absolute;
             bottom: 0;
             left: 0;
             z-index: 2;
-            width: 2432px;
-            height: 632px;
+            width: 1216px;
+            height: 316px;
             animation: decor3 10s infinite linear;
             content: "";
 
@@ -321,19 +308,13 @@
 
             @keyframes decor3 {
                 0% {
-                    transform: translate(0, 0);
+                    background-position: 0 0;
                 }
 
                 100% {
-                    transform: translate(-50%, 50%);
+                    background-position: -1216px 316px;
                 }
             }
-        }
-
-        &::after {
-            bottom: 316px;
-            left: 1216px;
-            z-index: 3;
         }
     }
 
@@ -374,8 +355,7 @@
         background: #c50018;
         clip-path: url("#decor4");
 
-        &::before,
-        &::after {
+        &::before {
             position: absolute;
             top: 0;
             right: 0;
@@ -390,18 +370,13 @@
 
             @keyframes decor4 {
                 0% {
-                    transform: translate(0, 0) rotate(-20deg);
+                    background-position: 0 0;
                 }
 
                 100% {
-                    transform: translate(50%, -50%) rotate(-20deg);
+                    background-position: 63% -63%;
                 }
             }
-        }
-
-        &::after {
-            top: 560px;
-            right: 1035px;
         }
     }
 
@@ -440,8 +415,7 @@
         background: #e32c26;
         clip-path: url("#decor5");
 
-        &::before,
-        &::after {
+        &::before {
             position: absolute;
             top: 0;
             right: 0;
@@ -449,25 +423,20 @@
             width: 2052px;
             height: 656px;
             transform: rotate(-20deg);
-            animation: decor5 11s infinite linear;
+            animation: decor5 10s infinite linear;
             content: "";
 
             @include bg("/media/animate/decor-5.jpg", 850px auto, right top, repeat);
 
             @keyframes decor5 {
                 0% {
-                    transform: translate(0, 0) rotate(-20deg);
+                    background-position: 0 0;
                 }
 
                 100% {
-                    transform: translate(50%, -50%) rotate(-20deg);
+                    background-position: 70.5% 0;
                 }
             }
-        }
-
-        &::after {
-            top: 328px;
-            right: 1026px;
         }
     }
 
@@ -505,8 +474,7 @@
         background: #fbac2f;
         clip-path: url("#decor6");
 
-        &::before,
-        &::after {
+        &::before {
             position: absolute;
             top: 0;
             right: 0;
@@ -514,25 +482,20 @@
             width: 2128px;
             height: 762px;
             transform: rotate(-20deg);
-            animation: decor6 12s infinite linear;
+            animation: decor6 13s infinite linear;
             content: "";
 
             @include bg("/media/animate/decor-6.jpg", 700px auto, right top, repeat);
 
             @keyframes decor6 {
                 0% {
-                    transform: translate(0, 0) rotate(-20deg);
+                    background-position: 0 0;
                 }
 
                 100% {
-                    transform: translate(50%, -50%) rotate(-20deg);
+                    background-position: 105% 0;
                 }
             }
-        }
-
-        &::after {
-            top: 381px;
-            right: 1064px;
         }
     }
 
