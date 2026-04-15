@@ -1,15 +1,17 @@
 .indexHeader {
     position: relative;
+    z-index: 1;
     width: 100%;
-    padding: 196rem 0 74rem;
+    padding: 196rem 0 84rem;
+    overflow: hidden;
 
-    @include bg("/media/back-main-1.jpg", 100% auto, center top);
+    @include bg("/media/animate/back-main-1.jpg", 100% auto, center top);
 
     @include mob {
         height: auto;
         padding: 90rem 0 80rem;
 
-        @include bg("/media/back-main-1-mob.jpg", 100% auto, center top);
+        @include bg("/media/animate/back-main-1-mob.jpg", 100% auto, center top);
     }
 
     & {
@@ -30,6 +32,92 @@
 
         @include mob {
             @include bg("/media/back-main-1-sub-mob.png", 100% auto, center top);
+        }
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        content: "";
+        pointer-events: none;
+
+        @include bg("/media/animate/back-main-2.png", 100% auto, center top);
+
+        @include mob {
+            @include bg("/media/animate/back-main-2-mob.png", 100% auto, center top);
+        }
+    }
+
+    &__decorCircle {
+        position: absolute;
+        bottom: -16rem;
+        left: 477rem;
+        z-index: -2;
+        width: 452rem;
+        height: 452rem;
+        overflow: hidden;
+        background: rgba(#fff, 0.5);
+        border-radius: 50%;
+        animation: indexCircleWrap 6s infinite ease-in-out;
+
+        @include mob {
+            right: -73rem;
+            bottom: 250rem;
+            left: auto;
+            width: 260rem;
+            height: 260rem;
+        }
+
+        @keyframes indexCircleWrap {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: rotate(-40deg);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        &::before {
+            position: absolute;
+            right: -144rem;
+            bottom: -77rem;
+            width: 860rem;
+            height: 750rem;
+            opacity: 0.6;
+            animation: indexCircle 3s infinite ease-in-out;
+            content: "";
+
+            @include mob {
+                right: -96rem;
+                bottom: -58rem;
+                width: 573rem;
+                height: 500rem;
+            }
+
+            @keyframes indexCircle {
+                0% {
+                    transform: translate(0, 0);
+                }
+
+                50% {
+                    transform: translate(0, -30rem) scale(1) rotate(50deg);
+                }
+
+                100% {
+                    transform: translate(0, 0);
+                }
+            }
+
+            @include bg("/media/animate/index-circle.svg", contain, right bottom);
         }
     }
 
@@ -98,9 +186,9 @@
             left: 0;
             z-index: 2;
             width: calc(1836px * 33);
-            aspect-ratio: 4.098;
             animation: decor1 200s infinite linear;
             content: "";
+            aspect-ratio: 4.098;
 
             @include bg("/media/animate/decor-1.jpg", 918px auto, left top, repeat);
 
@@ -157,9 +245,9 @@
             top: 50px;
             left: 0;
             width: calc(1218px * 40);
-            aspect-ratio: 2.306;
             animation: decor2 200s infinite linear;
             content: "";
+            aspect-ratio: 2.306;
 
             @include bg("/media/animate/decor-2.jpg", 609px auto, left top, repeat);
 
@@ -214,10 +302,10 @@
             left: 0;
             z-index: 2;
             width: calc(3090px * 20);
-            aspect-ratio: 3.848;
             animation: decor3 200s infinite linear;
             content: "";
             will-change: transform;
+            aspect-ratio: 3.848;
 
             @include bg("/media/animate/decor-3.jpg", 1545px auto, left top, repeat);
 
@@ -242,7 +330,7 @@
         transform: rotate(1deg);
 
         @include mob {
-            top: -160rem;
+            top: -164rem;
             left: 139rem;
             width: 600rem;
             height: 600rem;
@@ -259,7 +347,7 @@
         transform: rotate(-19deg);
 
         @include mob {
-            top: 35rem;
+            top: 31rem;
             left: 120rem;
         }
     }
@@ -300,10 +388,10 @@
         z-index: 12;
         width: 1120rem;
         height: 1120rem;
-        transform: rotate(.5deg);
+        transform: rotate(0.5deg);
 
         @include mob {
-            top: -220rem;
+            top: -224rem;
             left: 198rem;
             width: 750rem;
             height: 750rem;
@@ -320,7 +408,7 @@
         transform: rotate(-19deg);
 
         @include mob {
-            top: 156rem;
+            top: 152rem;
             left: 170rem;
         }
     }
@@ -363,7 +451,7 @@
         height: 1100rem;
 
         @include mob {
-            top: -10rem;
+            top: -14rem;
             left: 220rem;
             width: 650rem;
             height: 650rem;
@@ -379,7 +467,7 @@
         transform: rotate(-18deg);
 
         @include mob {
-            top: 274rem;
+            top: 270rem;
             left: 206rem;
             transform: rotate(-17deg);
         }

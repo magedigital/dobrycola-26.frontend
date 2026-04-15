@@ -48,6 +48,8 @@ const renderDecors: I['renderDecors'] = function () {
             {this.renderDecor4()}
             {this.renderDecor5()}
             {this.renderDecor6()}
+
+            <div className="indexHeader__decorCircle"></div>
         </>
     );
 };
