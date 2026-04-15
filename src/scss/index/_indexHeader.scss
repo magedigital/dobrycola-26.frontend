@@ -186,7 +186,7 @@
             left: 0;
             z-index: 2;
             width: calc(1836px * 11);
-            animation: decor1 60s infinite linear;
+            animation: decor1 80s infinite linear;
             content: "";
             aspect-ratio: 4.098;
 
@@ -207,8 +207,10 @@
             }
 
             @include mob {
-                width: calc(1836px * 4);
-                animation: decor1 20s infinite linear;
+                // width: calc(1836px * 4);
+                // animation: decor1 20s infinite linear;
+                width: calc(1836px * 1);
+                animation: none;
             }
         }
     }
@@ -250,7 +252,7 @@
             top: 50px;
             left: 0;
             width: calc(1218px * 13);
-            animation: decor2 60s infinite linear;
+            animation: decor2 80s infinite linear;
             content: "";
             aspect-ratio: 2.306;
 
@@ -267,8 +269,11 @@
             }
 
             @include mob {
-                width: calc(1218px * 4.2);
-                animation: decor2 20s infinite linear;
+                width: calc(1218px * 1);
+
+                // width: calc(1218px * 4.2);
+                // animation: decor2 20s infinite linear;
+                animation: none;
             }
         }
     }
@@ -312,7 +317,7 @@
             left: 0;
             z-index: 2;
             width: calc(3090px * 7);
-            animation: decor3 60s infinite linear;
+            animation: decor3 80s infinite linear;
             content: "";
             will-change: transform;
             aspect-ratio: 3.848;
@@ -330,8 +335,11 @@
             }
 
             @include mob {
-                width: calc(3090px * 2.3);
-                animation: decor3 20s infinite linear;
+                width: calc(3090px * 1);
+
+                // width: calc(3090px * 2.3);
+                // animation: decor3 20s infinite linear;
+                animation: none;
             }
         }
     }
@@ -381,7 +389,7 @@
             width: calc(2100px * 11);
             height: calc(800px * 7);
             transform: rotate(-20deg);
-            animation: decor4 60s infinite linear;
+            animation: decor4 80s infinite linear;
             content: "";
 
             @include bg("/media/animate/decor-4.jpg", 700px auto, right top, repeat);
@@ -396,20 +404,14 @@
                 }
             }
 
-            @keyframes decor4Mob {
-                0% {
-                    transform: translate(0, 0);
-                }
-
-                100% {
-                    transform: translate(30%, -50%);
-                }
-            }
-
             @include mob {
-                width: calc(2100px * 3.66);
-                height: calc(800px * 2.3);
-                animation: decor4Mob 20s infinite linear;
+                width: calc(2100px * 1);
+                height: calc(800px * 1);
+
+                //  width: calc(2100px * 3.66);
+                // height: calc(800px * 2.3);
+                // animation: decor4Mob 20s infinite linear;
+                animation: none;
             }
         }
     }
@@ -457,7 +459,7 @@
             width: calc(2100px * 8);
             height: calc(500px * 8);
             transform: rotate(-20deg);
-            animation: decor5 64s infinite linear;
+            animation: decor5 80s infinite linear;
             content: "";
             will-change: transform;
 
@@ -473,20 +475,14 @@
                 }
             }
 
-            @keyframes decor5Mob {
-                0% {
-                    transform: translate(0, 0);
-                }
-
-                100% {
-                    transform: translate(50%, -50%);
-                }
-            }
-
             @include mob {
-                width: calc(2100px * 2.3);
-                height: calc(500px * 2.3);
-                animation: decor5Mob 21s infinite linear;
+                width: calc(2100px * 1);
+                height: calc(500px * 1);
+
+                //  width: calc(2100px * 2.3);
+                // height: calc(500px * 2.3);
+                // animation: decor5Mob 21s infinite linear;
+                animation: none;
             }
         }
     }
@@ -533,7 +529,7 @@
             width: calc(2100px * 8);
             height: calc(500px * 7);
             transform: rotate(-20deg);
-            animation: decor6 60s infinite linear;
+            animation: decor6 80s infinite linear;
             content: "";
             will-change: transform;
 
@@ -549,20 +545,14 @@
                 }
             }
 
-            @keyframes decor6Mob {
-                0% {
-                    transform: translate(0, 0);
-                }
-
-                100% {
-                    transform: translate(50%, -50%);
-                }
-            }
-
             @include mob {
-                width: calc(2100px * 2.6);
-                height: calc(500px * 2.3);
-                animation: decor6Mob 20s infinite linear;
+                width: calc(2100px * 1);
+                height: calc(500px * 1);
+
+                //  width: calc(2100px * 2.6);
+                // height: calc(500px * 2.3);
+                // animation: decor6 20s infinite linear;
+                animation: none;
             }
         }
     }
