@@ -134,6 +134,12 @@
 
         &Inner {
             transform-origin: left top;
+
+            &::after {
+                @include mob {
+                    display: none;
+                }
+            }
         }
 
         &Wrapper {
