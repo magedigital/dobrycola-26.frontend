@@ -185,8 +185,8 @@
             top: 0;
             left: 0;
             z-index: 2;
-            width: calc(1836px * 33);
-            animation: decor1 200s infinite linear;
+            width: calc(1836px * 11);
+            animation: decor1 60s infinite linear;
             content: "";
             aspect-ratio: 4.098;
 
@@ -244,8 +244,8 @@
             position: absolute;
             top: 50px;
             left: 0;
-            width: calc(1218px * 40);
-            animation: decor2 200s infinite linear;
+            width: calc(1218px * 13);
+            animation: decor2 60s infinite linear;
             content: "";
             aspect-ratio: 2.306;
 
@@ -301,8 +301,8 @@
             bottom: 0;
             left: 0;
             z-index: 2;
-            width: calc(3090px * 20);
-            animation: decor3 200s infinite linear;
+            width: calc(3090px * 7);
+            animation: decor3 60s infinite linear;
             content: "";
             will-change: transform;
             aspect-ratio: 3.848;
@@ -361,10 +361,10 @@
             top: 0;
             right: 0;
             z-index: 2;
-            width: calc(2100px * 32);
-            height: calc(800px * 20);
+            width: calc(2100px * 11);
+            height: calc(800px * 7);
             transform: rotate(-20deg);
-            animation: decor4 200s infinite linear;
+            animation: decor4 60s infinite linear;
             content: "";
             will-change: transform;
 
@@ -482,10 +482,10 @@
             top: 0;
             right: 0;
             z-index: 2;
-            width: calc(2100px * 24);
-            height: calc(500px * 20);
+            width: calc(2100px * 8);
+            height: calc(500px * 7);
             transform: rotate(-20deg);
-            animation: decor6 200s infinite linear;
+            animation: decor6 60s infinite linear;
             content: "";
             will-change: transform;
 
