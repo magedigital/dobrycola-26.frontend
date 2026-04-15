@@ -551,6 +551,16 @@
             @include mob {
                 margin: 1rem 0 0 -2rem;
             }
+
+            &Inner {
+                color: #c60019;
+
+                @include hover {
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
         }
 
         &Location._11 {
