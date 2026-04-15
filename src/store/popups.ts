@@ -24,6 +24,7 @@ type PopupsT = {
     rafflePopup: PopupT;
     prizeOrderPopup: PopupT<{ code: string }>;
     pyterochkaPopup: PopupT;
+    magnitPopup: PopupT;
 };
 
 type PopupsReducersT = {
@@ -76,9 +77,8 @@ const popups = {
         check: (s: StoreT) => !!s.authUser,
         redirectPageName: 'profile',
     },
-    pyterochkaPopup: {
-        isOverlay: true,
-    },
+    pyterochkaPopup: { isOverlay: true },
+    magnitPopup: { isOverlay: true },
 } as const;
 
 type PopupDataT = Partial<{

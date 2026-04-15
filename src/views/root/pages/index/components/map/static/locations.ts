@@ -71,21 +71,26 @@ export const mapLocations: Record<
     },
     '10': {
         thumb: 'map-loc-10.png',
-        title: 'Лента',
-        alert: 'Старт акции с 01.05',
+        title: 'Магнит',
+        popupName: 'magnitPopup',
     },
     '11': {
         thumb: 'map-loc-11.png',
-        title: 'Перекрёсток',
-        alert: 'Старт акции с 04.05',
+        title: 'Лента',
+        alert: 'Старт акции с 01.05',
     },
     '12': {
         thumb: 'map-loc-12.png',
-        title: 'Дикси',
+        title: 'Перекрёсток',
         alert: 'Старт акции с 04.05',
     },
     '13': {
         thumb: 'map-loc-13.png',
+        title: 'Дикси',
+        alert: 'Старт акции с 04.05',
+    },
+    '14': {
+        thumb: 'map-loc-14.png',
         title: 'Красное <br/>и БЕлое',
         alert: 'Старт акции с 01.05',
     },

@@ -174,7 +174,8 @@
         }
     }
 
-    &._pyterochkaPopup &__inner {
+    &._pyterochkaPopup &__inner,
+    &._magnitPopup &__inner {
         width: 826rem;
 
         @include mob {

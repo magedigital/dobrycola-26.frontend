@@ -87,10 +87,10 @@
         position: relative;
         z-index: 5;
         width: 100%;
-        height: 2842rem;
+        height: 3012rem;
 
         @include mob {
-            height: 1870rem;
+            height: 1980rem;
         }
 
         &Nav {
@@ -183,21 +183,21 @@
 
             &:nth-child(2) {
                 top: 910rem;
-                height: 910rem;
+                height: 912rem;
 
                 @include mob {
-                    top: 607rem;
-                    height: 607rem;
+                    top: 606rem;
+                    height: 610rem;
                 }
             }
 
             &:nth-child(3) {
-                top: 1820rem;
+                top: 1822rem;
                 height: 1190rem;
 
                 @include mob {
-                    top: 1214rem;
-                    height: 658rem;
+                    top: 1215rem;
+                    height: 766rem;
                 }
             }
 
@@ -527,95 +527,117 @@
             margin: 11rem 0 0 14rem;
 
             @include mob {
-                margin: 7rem 0 0 -11rem;
+                margin: 7rem 0 0 -4rem;
             }
         }
 
         &Location._10 {
-            top: 1840rem;
-            width: 288rem;
-            height: 288rem;
-            margin-left: 166rem;
+            top: 1849rem;
+            width: 274rem;
+            height: 274rem;
+            margin-left: 173rem;
 
             @include mob {
-                top: 1268rem;
-                width: 165rem;
-                height: 165rem;
-                margin-left: 76rem;
+                top: 1256rem;
+                width: 174rem;
+                height: 174rem;
+                margin-left: 84rem;
             }
         }
 
         &Location._10 &LocationTitle {
-            margin: 9rem 0 0 10rem;
+            margin: 6rem 0 0 -2rem;
 
             @include mob {
-                margin: 7rem 0 0 6rem;
+                margin: 1rem 0 0 -2rem;
             }
         }
 
         &Location._11 {
-            top: 2055rem;
+            top: 2088rem;
             width: 288rem;
             height: 288rem;
-            margin-left: -155rem;
+            margin-left: -154rem;
 
             @include mob {
-                top: 1390rem;
-                width: 170rem;
-                height: 170rem;
+                top: 1402rem;
+                width: 166rem;
+                height: 166rem;
                 margin-left: -74rem;
             }
         }
 
         &Location._11 &LocationTitle {
-            margin: -2rem 0 0 -12rem;
+            margin: 8rem 0 0 -12rem;
 
             @include mob {
-                margin: 5rem 0 0 -2rem;
+                margin: 5rem 0 0 -8rem;
             }
         }
 
         &Location._12 {
-            top: 2229rem;
-            width: 280rem;
-            height: 280rem;
-            margin-left: 196rem;
+            top: 2227rem;
+            width: 286rem;
+            height: 286rem;
+            margin-left: 176rem;
 
             @include mob {
-                top: 1492rem;
-                width: 180rem;
-                height: 180rem;
-                margin-left: 102rem;
+                top: 1503rem;
+                width: 177rem;
+                height: 177rem;
+                margin-left: 88rem;
             }
         }
 
         &Location._12 &LocationTitle {
-            margin: -1rem 0 0 -16rem;
+            margin: -1rem 0 0 6rem;
 
             @include mob {
-                margin: 6rem 0 0 -12rem;
+                margin: -2rem 0 0 -5rem;
             }
         }
 
         &Location._13 {
-            top: 2435rem;
+            top: 2458rem;
             width: 280rem;
             height: 280rem;
-            margin-left: -178rem;
+            margin-left: -163rem;
 
             @include mob {
                 top: 1626rem;
-                width: 184rem;
-                height: 184rem;
-                margin-left: -84rem;
+                width: 179rem;
+                height: 179rem;
+                margin-left: -86rem;
             }
         }
 
         &Location._13 &LocationTitle {
-            margin: 1rem 0 0 13rem;
+            margin: 1rem 0 0 -2rem;
 
             @include mob {
-                margin: -2rem 0 0 10rem;
+                margin: 0 0 0 2rem;
+            }
+        }
+
+        &Location._14 {
+            top: 2641rem;
+            width: 280rem;
+            height: 280rem;
+            margin-left: 190rem;
+
+            @include mob {
+                top: 1748rem;
+                width: 186rem;
+                height: 186rem;
+                margin-left: 89rem;
+            }
+        }
+
+        &Location._14 &LocationTitle {
+            margin: 1rem 0 0 -13rem;
+
+            @include mob {
+                margin: -6rem 0 0 -8rem;
             }
         }
 
