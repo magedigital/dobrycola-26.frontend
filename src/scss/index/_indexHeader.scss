@@ -364,6 +364,7 @@
         @include mob {
             top: 31rem;
             left: 120rem;
+            // display: none;
         }
     }
 
@@ -398,7 +399,7 @@
             @include mob {
                 width: calc(2100px * 3.66);
                 height: calc(800px * 2.3);
-                animation: decor4 20s infinite linear;
+                animation: none;
             }
         }
     }
