@@ -134,17 +134,11 @@
 
         &Inner {
             transform-origin: left top;
-            will-change: transform;
-
-            &::before {
-                // will-change: transform;
-            }
         }
 
         &Wrapper {
             width: 100%;
             height: 100%;
-            will-change: transform;
         }
     }
 
@@ -180,15 +174,16 @@
     &__decor._1 &__decorInner {
         clip-path: url("#decor1");
 
-        &::before {
+        &::before,
+        &::after {
             position: absolute;
             top: 0;
             left: 0;
             z-index: 2;
-            width: calc(1836px * 11);
-            animation: decor1 80s infinite linear;
+            width: 1836px;
+            height: 448px;
+            animation: decor1 10s infinite linear;
             content: "";
-            aspect-ratio: 4.098;
 
             @include bg("/media/animate/decor-1.jpg", 918px auto, left top, repeat);
 
@@ -205,13 +200,10 @@
                     transform: translate(-50%, -50%);
                 }
             }
+        }
 
-            @include mob {
-                // width: calc(1836px * 4);
-                // animation: decor1 20s infinite linear;
-                width: calc(1836px * 1);
-                animation: none;
-            }
+        &::after {
+            top: 448px;
         }
     }
 
@@ -247,14 +239,15 @@
         background: #0f9296;
         clip-path: url("#decor2");
 
-        &::before {
+        &::before,
+        &::after {
             position: absolute;
             top: 50px;
             left: 0;
-            width: calc(1218px * 13);
-            animation: decor2 80s infinite linear;
+            width: 1218px;
+            height: 528px;
+            animation: decor2 8s infinite linear;
             content: "";
-            aspect-ratio: 2.306;
 
             @include bg("/media/animate/decor-2.jpg", 609px auto, left top, repeat);
 
@@ -267,14 +260,10 @@
                     transform: translate(-50%, 0);
                 }
             }
+        }
 
-            @include mob {
-                width: calc(1218px * 1);
-
-                // width: calc(1218px * 4.2);
-                // animation: decor2 20s infinite linear;
-                animation: none;
-            }
+        &::after {
+            left: 1218px;
         }
     }
 
@@ -311,18 +300,18 @@
         background: #fbac2f;
         clip-path: url("#decor3");
 
-        &::before {
+        &::before,
+        &::after {
             position: absolute;
             bottom: 0;
             left: 0;
             z-index: 2;
-            width: calc(3090px * 7);
-            animation: decor3 80s infinite linear;
+            width: 2432px;
+            height: 632px;
+            animation: decor3 10s infinite linear;
             content: "";
-            will-change: transform;
-            aspect-ratio: 3.848;
 
-            @include bg("/media/animate/decor-3.jpg", 1545px auto, left top, repeat);
+            @include bg("/media/animate/decor-3.jpg", 1216px 316px, left bottom, repeat);
 
             @keyframes decor3 {
                 0% {
@@ -333,14 +322,12 @@
                     transform: translate(-50%, 50%);
                 }
             }
+        }
 
-            @include mob {
-                width: calc(3090px * 1);
-
-                // width: calc(3090px * 2.3);
-                // animation: decor3 20s infinite linear;
-                animation: none;
-            }
+        &::after {
+            bottom: 316px;
+            left: 1216px;
+            z-index: 3;
         }
     }
 
@@ -381,18 +368,19 @@
         background: #c50018;
         clip-path: url("#decor4");
 
-        &::before {
+        &::before,
+        &::after {
             position: absolute;
             top: 0;
             right: 0;
             z-index: 2;
-            width: calc(2100px * 11);
-            height: calc(800px * 7);
+            width: 2070px;
+            height: 1120px;
             transform: rotate(-20deg);
-            animation: decor4 80s infinite linear;
+            animation: decor4 10s infinite linear;
             content: "";
 
-            @include bg("/media/animate/decor-4.jpg", 700px auto, right top, repeat);
+            @include bg("/media/animate/decor-4.jpg", 800px auto, right top, repeat);
 
             @keyframes decor4 {
                 0% {
@@ -400,19 +388,14 @@
                 }
 
                 100% {
-                    transform: translate(30%, -50%) rotate(-20deg);
+                    transform: translate(50%, -50%) rotate(-20deg);
                 }
             }
+        }
 
-            @include mob {
-                width: calc(2100px * 1);
-                height: calc(800px * 1);
-
-                //  width: calc(2100px * 3.66);
-                // height: calc(800px * 2.3);
-                // animation: decor4Mob 20s infinite linear;
-                animation: none;
-            }
+        &::after {
+            top: 560px;
+            right: 1035px;
         }
     }
 
@@ -451,19 +434,19 @@
         background: #e32c26;
         clip-path: url("#decor5");
 
-        &::before {
+        &::before,
+        &::after {
             position: absolute;
             top: 0;
             right: 0;
             z-index: 2;
-            width: calc(2100px * 8);
-            height: calc(500px * 8);
+            width: 2052px;
+            height: 656px;
             transform: rotate(-20deg);
-            animation: decor5 80s infinite linear;
+            animation: decor5 11s infinite linear;
             content: "";
-            will-change: transform;
 
-            @include bg("/media/animate/decor-5.jpg", 700px auto, right top, repeat);
+            @include bg("/media/animate/decor-5.jpg", 850px auto, right top, repeat);
 
             @keyframes decor5 {
                 0% {
@@ -474,16 +457,11 @@
                     transform: translate(50%, -50%) rotate(-20deg);
                 }
             }
+        }
 
-            @include mob {
-                width: calc(2100px * 1);
-                height: calc(500px * 1);
-
-                //  width: calc(2100px * 2.3);
-                // height: calc(500px * 2.3);
-                // animation: decor5Mob 21s infinite linear;
-                animation: none;
-            }
+        &::after {
+            top: 328px;
+            right: 1026px;
         }
     }
 
@@ -521,17 +499,17 @@
         background: #fbac2f;
         clip-path: url("#decor6");
 
-        &::before {
+        &::before,
+        &::after {
             position: absolute;
             top: 0;
             right: 0;
             z-index: 2;
-            width: calc(2100px * 8);
-            height: calc(500px * 7);
+            width: 2128px;
+            height: 762px;
             transform: rotate(-20deg);
-            animation: decor6 80s infinite linear;
+            animation: decor6 12s infinite linear;
             content: "";
-            will-change: transform;
 
             @include bg("/media/animate/decor-6.jpg", 700px auto, right top, repeat);
 
@@ -544,16 +522,11 @@
                     transform: translate(50%, -50%) rotate(-20deg);
                 }
             }
+        }
 
-            @include mob {
-                width: calc(2100px * 1);
-                height: calc(500px * 1);
-
-                //  width: calc(2100px * 2.6);
-                // height: calc(500px * 2.3);
-                // animation: decor6 20s infinite linear;
-                animation: none;
-            }
+        &::after {
+            top: 381px;
+            right: 1064px;
         }
     }
 
