@@ -205,6 +205,11 @@
                     transform: translate(-50%, -50%);
                 }
             }
+
+            @include mob {
+                width: calc(1836px * 4);
+                animation: decor1 20s infinite linear;
+            }
         }
     }
 
@@ -259,6 +264,11 @@
                 100% {
                     transform: translate(-50%, 0);
                 }
+            }
+
+            @include mob {
+                width: calc(1218px * 4.2);
+                animation: decor2 20s infinite linear;
             }
         }
     }
@@ -318,6 +328,11 @@
                     transform: translate(-50%, 50%);
                 }
             }
+
+            @include mob {
+                width: calc(3090px * 2.3);
+                animation: decor3 20s infinite linear;
+            }
         }
     }
 
@@ -376,8 +391,14 @@
                 }
 
                 100% {
-                    transform: translate(30%, -70%) rotate(-20deg);
+                    transform: translate(30%, -50%) rotate(-20deg);
                 }
+            }
+
+            @include mob {
+                width: calc(2100px * 3.66);
+                height: calc(800px * 2.3);
+                animation: decor4 20s infinite linear;
             }
         }
     }
@@ -440,6 +461,12 @@
                     transform: translate(50%, -50%) rotate(-20deg);
                 }
             }
+
+            @include mob {
+                width: calc(2100px * 2.3);
+                height: calc(500px * 2.3);
+                animation: decor5 21s infinite linear;
+            }
         }
     }
 
@@ -499,6 +526,12 @@
                 100% {
                     transform: translate(50%, -50%) rotate(-20deg);
                 }
+            }
+
+            @include mob {
+                width: calc(2100px * 2.6);
+                height: calc(500px * 2.3);
+                animation: decor6 20s infinite linear;
             }
         }
     }
