@@ -207,8 +207,8 @@
             }
 
             @include mob {
-                width: calc(1836px * 4);
-                animation: decor1 20s infinite linear;
+                width: calc(1836px * 1);
+                animation: decor1 7s infinite linear;
             }
         }
     }
@@ -267,8 +267,8 @@
             }
 
             @include mob {
-                width: calc(1218px * 4.2);
-                animation: decor2 20s infinite linear;
+                width: calc(1218px );
+                animation: decor2 7s infinite linear;
             }
         }
     }
@@ -330,8 +330,8 @@
             }
 
             @include mob {
-                width: calc(3090px * 2.3);
-                animation: decor3 20s infinite linear;
+                width: calc(3090px );
+                animation: decor3 7s infinite linear;
             }
         }
     }
