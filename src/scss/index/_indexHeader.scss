@@ -397,11 +397,9 @@
             }
 
             @include mob {
-                width: calc(2100px * 3.66);
-                height: calc(800px * 2.3);
-
-                // animation: decor4 20s infinite linear;
-                animation: none;
+                width: calc(2100px);
+                height: calc(800px);
+                animation: decor4 6s infinite linear;
             }
         }
     }
@@ -466,11 +464,9 @@
             }
 
             @include mob {
-                width: calc(2100px * 2.3);
-                height: calc(500px * 2.3);
-
-                // animation: decor5 21s infinite linear;
-                animation: none;
+                width: calc(2100px);
+                height: calc(500px);
+                animation: decor5 8s infinite linear;
             }
         }
     }
@@ -534,11 +530,9 @@
             }
 
             @include mob {
-                width: calc(2100px * 2.6);
-                height: calc(500px * 2.3);
-
-                // animation: decor6 20s infinite linear;
-                animation: none;
+                width: calc(2100px);
+                height: calc(500px);
+                animation: decor6 8s infinite linear;
             }
         }
     }
