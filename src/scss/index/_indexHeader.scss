@@ -207,8 +207,8 @@
             }
 
             @include mob {
-                width: calc(1836px * 1);
-                animation: decor1 7s infinite linear;
+                width: calc(1836px * 4);
+                animation: decor1 20s infinite linear;
             }
         }
     }
@@ -267,8 +267,8 @@
             }
 
             @include mob {
-                width: calc(1218px );
-                animation: decor2 7s infinite linear;
+                width: calc(1218px * 4.2);
+                animation: decor2 20s infinite linear;
             }
         }
     }
@@ -330,8 +330,8 @@
             }
 
             @include mob {
-                width: calc(3090px );
-                animation: decor3 7s infinite linear;
+                width: calc(3090px * 2.3);
+                animation: decor3 20s infinite linear;
             }
         }
     }
@@ -396,10 +396,20 @@
                 }
             }
 
+            @keyframes decor4Mob {
+                0% {
+                    transform: translate(0, 0);
+                }
+
+                100% {
+                    transform: translate(30%, -50%);
+                }
+            }
+
             @include mob {
-                width: calc(2100px);
-                height: calc(800px);
-                animation: decor4 6s infinite linear;
+                width: calc(2100px * 3.66);
+                height: calc(800px * 2.3);
+                animation: decor4Mob 20s infinite linear;
             }
         }
     }
@@ -463,10 +473,20 @@
                 }
             }
 
+            @keyframes decor5Mob {
+                0% {
+                    transform: translate(0, 0);
+                }
+
+                100% {
+                    transform: translate(50%, -50%);
+                }
+            }
+
             @include mob {
-                width: calc(2100px);
-                height: calc(500px);
-                animation: decor5 8s infinite linear;
+                width: calc(2100px * 2.3);
+                height: calc(500px * 2.3);
+                animation: decor5Mob 21s infinite linear;
             }
         }
     }
@@ -529,10 +549,20 @@
                 }
             }
 
+            @keyframes decor6Mob {
+                0% {
+                    transform: translate(0, 0);
+                }
+
+                100% {
+                    transform: translate(50%, -50%);
+                }
+            }
+
             @include mob {
-                width: calc(2100px);
-                height: calc(500px);
-                animation: decor6 8s infinite linear;
+                width: calc(2100px * 2.6);
+                height: calc(500px * 2.3);
+                animation: decor6Mob 20s infinite linear;
             }
         }
     }
