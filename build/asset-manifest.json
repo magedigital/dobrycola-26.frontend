@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d264867e.css",
-    "main.js": "/static/js/main.05c5ee63.js",
+    "main.css": "/static/css/main.a8316f06.css",
+    "main.js": "/static/js/main.7c1cc097.js",
     "static/js/3315.d341fc11.chunk.js": "/static/js/3315.d341fc11.chunk.js",
     "static/js/3648.864124b6.chunk.js": "/static/js/3648.864124b6.chunk.js",
     "static/js/6286.9e249d70.chunk.js": "/static/js/6286.9e249d70.chunk.js",
@@ -138,11 +138,11 @@
     "static/media/map-loc-04.png": "/static/media/map-loc-04.48b560e2b92fa0471b65.png",
     "static/media/map-loc-09.png": "/static/media/map-loc-09.0dff5097ffbba1b942fd.png",
     "static/media/map-loc-05.png": "/static/media/map-loc-05.7c5b44d51edfc2ac11d4.png",
-    "static/media/back-main-1-sub.png": "/static/media/back-main-1-sub.816daed4cbdad42fd65f.png",
     "static/media/back-main-1-mob.jpg": "/static/media/back-main-1-mob.c510fa2fb352cb8b159e.jpg",
     "static/media/special-prize-5ka-element01.png": "/static/media/special-prize-5ka-element01.00f8ec47c457fd001842.png",
     "static/media/lk-small-blocks-back.svg": "/static/media/lk-small-blocks-back.d4f433516ff152df31b6.svg",
     "static/media/back-pattern-4.svg": "/static/media/back-pattern-4.d96813d076de9d14d62c.svg",
+    "static/media/back-main-1-sub.png": "/static/media/back-main-1-sub.b2b20442ed8d0660c2fb.png",
     "static/media/special-prize-5ka-element02.png": "/static/media/special-prize-5ka-element02.70b537151f8cff31e29e.png",
     "static/media/map-loc-11.png": "/static/media/map-loc-11.429b6a942a331ff7c4b2.png",
     "static/media/index-circle.svg": "/static/media/index-circle.b5ccf78e10d9382a7b7d.svg",
@@ -186,7 +186,6 @@
     "static/media/back-5ka-element02.jpg": "/static/media/back-5ka-element02.9f63ccf66e9442d90b18.jpg",
     "static/media/check-prize-5ka-04.png": "/static/media/check-prize-5ka-04.be7170f64507fb0e53f6.png",
     "static/media/weekly-prize-5ka-02.png": "/static/media/weekly-prize-5ka-02.4b108a50d190721bce8e.png",
-    "static/media/back-main-1-sub-mob.png": "/static/media/back-main-1-sub-mob.407bb13366d5ef336450.png",
     "static/media/prize-test-3.png": "/static/media/prize-test-3.a8af57371a7cec7ef958.png",
     "static/media/spec-prize.jpg": "/static/media/spec-prize.9c082d4b5f631c9a3e05.jpg",
     "static/media/banner-map-1.png": "/static/media/banner-map-1.4475eed7a200866f3b5f.png",
@@ -201,6 +200,7 @@
     "static/media/weekly-prize-5ka-05.png": "/static/media/weekly-prize-5ka-05.96503079fb6f1354abe1.png",
     "static/media/index-title.svg": "/static/media/index-title.9d16bdf1f38daaa52aed.svg",
     "static/media/main-prize-5ka-element01.png": "/static/media/main-prize-5ka-element01.531e05c316c334b21e3a.png",
+    "static/media/back-main-1-sub-mob.png": "/static/media/back-main-1-sub-mob.2f5a30ff291f4e48315c.png",
     "static/media/back-5ka-element05-2.svg": "/static/media/back-5ka-element05-2.88bb897a44cb5d20c10e.svg",
     "static/media/check-prize-5ka-01.png": "/static/media/check-prize-5ka-01.26118eb92ab0430255f6.png",
     "static/media/check-prize-5ka-bg01.svg": "/static/media/check-prize-5ka-bg01.96310c7407eb34cdb0e3.svg",
@@ -257,7 +257,7 @@
     "static/media/plashka-map.svg": "/static/media/plashka-map.807bbf92b339d7fb2f4c.svg"
   },
   "entrypoints": [
-    "static/css/main.d264867e.css",
-    "static/js/main.05c5ee63.js"
+    "static/css/main.a8316f06.css",
+    "static/js/main.7c1cc097.js"
   ]
 }
