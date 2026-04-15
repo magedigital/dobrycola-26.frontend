@@ -234,11 +234,12 @@
     }
 
     &__decor._04 {
-        top: -684rem;
-        left: 386rem;
+        top: -729rem;
+        left: 374rem;
         z-index: 5;
-        width: 1100rem;
-        height: 1100rem;
+        width: 1160rem;
+        height: 1160rem;
+        transform: rotate(1deg);
 
         @include mob {
             top: -160rem;
@@ -294,11 +295,12 @@
     }
 
     &__decor._05 {
-        top: -580rem;
-        left: 442rem;
+        top: -594rem;
+        left: 444rem;
         z-index: 12;
-        width: 1100rem;
-        height: 1100rem;
+        width: 1120rem;
+        height: 1120rem;
+        transform: rotate(.5deg);
 
         @include mob {
             top: -220rem;
@@ -369,7 +371,7 @@
     }
 
     &__decor._6 {
-        top: 131rem;
+        top: 132rem;
         left: 482rem;
         z-index: 13;
         width: 1024px;
