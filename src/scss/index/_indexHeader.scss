@@ -364,6 +364,7 @@
         @include mob {
             top: 31rem;
             left: 120rem;
+
             // display: none;
         }
     }
@@ -382,7 +383,6 @@
             transform: rotate(-20deg);
             animation: decor4 60s infinite linear;
             content: "";
-            will-change: transform;
 
             @include bg("/media/animate/decor-4.jpg", 700px auto, right top, repeat);
 
@@ -399,7 +399,7 @@
             @include mob {
                 width: calc(2100px * 3.66);
                 height: calc(800px * 2.3);
-                animation: none;
+                animation: decor4 20s infinite linear;
             }
         }
     }
@@ -498,8 +498,8 @@
         @include mob {
             top: 270rem;
             left: 206rem;
-            transform: rotate(-17deg);
             display: none;
+            transform: rotate(-17deg);
         }
     }
 
