@@ -81,7 +81,7 @@ const renderMain: I['renderMain'] = function () {
                                 authUser?.status === 'EXTRA_ANKET_REQUIRED' ? 'fullAnket' : 'anket'
                             }
                             callback={() => {
-                                sendGoal('profileEditData');
+                                sendGoal('profileEditData', true);
                             }}
                         >
                             Изменить данные
