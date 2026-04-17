@@ -1,76 +1,501 @@
 .indexHeader {
     position: relative;
+    z-index: 1;
     width: 100%;
-    padding: 196rem 0 74rem;
+    padding: 196rem 0 84rem;
+    overflow: hidden;
 
-    @include bg("/media/back-main-1.jpg", 100% auto, center top);
+    @include bg("/media/animate/back-main-1.jpg", 100% auto, center top);
 
     @include mob {
         height: auto;
         padding: 90rem 0 80rem;
 
-        @include bg("/media/back-main-1-mob.jpg", 100% auto, center top);
+        @include bg("/media/animate/back-main-1-mob.jpg", 100% auto, center top);
     }
 
     & {
         background-color: #c50018;
     }
 
-    &__test {
+    &::after {
         position: absolute;
-        top: -524rem;
-        left: -510rem;
+        top: 0;
+        left: 0;
         z-index: 100;
-        width: 1400rem;
-        height: 900rem;
-        transform: rotate(-20deg);
+        width: 100%;
+        height: 100%;
+        content: "";
+        pointer-events: none;
+
+        @include bg("/media/back-main-1-sub.png", 100% auto, center top);
+
+        @include mob {
+            @include bg("/media/back-main-1-sub-mob.png", 100% auto, center top);
+        }
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        content: "";
+        pointer-events: none;
+
+        @include bg("/media/animate/back-main-2.png", 100% auto, center top);
+
+        @include mob {
+            @include bg("/media/animate/back-main-2-mob.png", 100% auto, center top);
+        }
+    }
+
+    &__decorCircle {
+        position: absolute;
+        bottom: -16rem;
+        left: 477rem;
+        z-index: -2;
+        width: 452rem;
+        height: 452rem;
+        overflow: hidden;
+        background: rgba(#fff, 0.5);
+        border-radius: 50%;
+        animation: indexCircleWrap 6s infinite ease-in-out;
+
+        @include mob {
+            right: -73rem;
+            bottom: 250rem;
+            left: auto;
+            width: 260rem;
+            height: 260rem;
+        }
+
+        @keyframes indexCircleWrap {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: rotate(-40deg);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        &::before {
+            position: absolute;
+            right: -144rem;
+            bottom: -77rem;
+            width: 860rem;
+            height: 750rem;
+            opacity: 0.6;
+            animation: indexCircle 3s infinite ease-in-out;
+            content: "";
+
+            @include mob {
+                right: -96rem;
+                bottom: -58rem;
+                width: 573rem;
+                height: 500rem;
+            }
+
+            @keyframes indexCircle {
+                0% {
+                    transform: translate(0, 0);
+                }
+
+                50% {
+                    transform: translate(0, -30rem) scale(1) rotate(50deg);
+                }
+
+                100% {
+                    transform: translate(0, 0);
+                }
+            }
+
+            @include bg("/media/animate/index-circle.svg", contain, right bottom);
+        }
+    }
+
+    &__decor {
+        position: absolute;
+        z-index: 2;
+        transform-origin: left top;
+        pointer-events: none;
 
         & svg {
             width: 100%;
             height: 100%;
         }
 
-        &L {
-            transform-origin: center;
-            animation: test infinite 4s linear;
+        &Inner {
+            transform-origin: left top;
 
-            @keyframes test {
+            &::before {
+                will-change: transform;
+            }
+        }
+
+        &Wrapper {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__decor._01 {
+        top: -210rem;
+        left: -360rem;
+        z-index: 10;
+        width: 690rem;
+        height: 690rem;
+
+        @include mob {
+            top: 76rem;
+            left: -254rem;
+            width: 400rem;
+            height: 400rem;
+        }
+    }
+
+    &__decor._1 {
+        top: -55rem;
+        left: -278rem;
+        z-index: 9;
+        width: 650px;
+        height: 400px;
+        transform: rotate(0.7deg);
+
+        @include mob {
+            top: 190rem;
+            left: -170rem;
+        }
+    }
+
+    &__decor._1 &__decorInner {
+        clip-path: url("#decor1");
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            width: 918px;
+            height: 448px;
+            animation: decor1 10s infinite linear;
+            content: "";
+
+            @include bg("/media/animate/decor-1.jpg", 918px auto, left top, repeat);
+
+            & {
+                background-color: #0f9296;
+            }
+
+            @keyframes decor1 {
                 0% {
-                    transform: translate(0, 0);
+                    background-position: 0 0;
                 }
 
                 100% {
-                    transform: translate(-50%, 0);
+                    background-position: -918px -100%;
                 }
             }
+        }
+    }
 
-            // @keyframes test {
-            //     0% {
-            //         transform: translate(16rem, 0) rotate(-3deg);
-            //     }
+    &__decor._02 {
+        top: -197rem;
+        left: -382rem;
+        z-index: 10;
+        width: 740rem;
+        height: 740rem;
 
-            //     50% {
-            //         transform: rotate(2deg) scale(1.15);
-            //     }
+        @include mob {
+            top: 99rem;
+            left: -244rem;
+            width: 400rem;
+            height: 400rem;
+        }
+    }
 
-            //     100% {
-            //         transform: translate(16rem, 0) rotate(-3deg);
-            //     }
-            // }
+    &__decor._2 {
+        top: 184rem;
+        left: -312rem;
+        z-index: 11;
+        width: 650px;
+        height: 280px;
 
-            // @keyframes test {
-            //     0% {
-            //         transform: translate(-50rem, 0);
-            //     }
+        @include mob {
+            top: 309rem;
+            left: -190rem;
+        }
+    }
 
-            //     50% {
-            //         transform: translate(50rem, 0) scale(1.1);
-            //     }
+    &__decor._2 &__decorInner {
+        background: #0f9296;
+        clip-path: url("#decor2");
 
-            //     100% {
-            //         transform: translate(-50rem, 0);
-            //     }
-            // }
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 609px;
+            height: 264px;
+            animation: decor2 8s infinite linear;
+            content: "";
+
+            @include bg("/media/animate/decor-2.jpg", 609px auto, left top, repeat);
+
+            @keyframes decor2 {
+                0% {
+                    background-position: 0 0;
+                }
+
+                100% {
+                    background-position: -609px 0;
+                }
+            }
+        }
+    }
+
+    &__decor._03 {
+        top: -97rem;
+        left: -354rem;
+        z-index: 5;
+        width: 740rem;
+        height: 740rem;
+
+        @include mob {
+            top: 153rem;
+            left: -238rem;
+            width: 400rem;
+            height: 400rem;
+        }
+    }
+
+    &__decor._3 {
+        top: 148rem;
+        left: -280rem;
+        z-index: 11;
+        width: 750px;
+        height: 400px;
+
+        @include mob {
+            top: 301rem;
+            left: -180rem;
+            transform: rotate(-2deg);
+        }
+    }
+
+    &__decor._3 &__decorInner {
+        background: #fbac2f;
+        clip-path: url("#decor3");
+
+        &::before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            width: 750px;
+            height: 250px;
+            animation: decor3 10s infinite linear;
+            content: "";
+
+            @include bg("/media/animate/decor-3.jpg", 1216px 316px, left bottom, repeat);
+
+            @keyframes decor3 {
+                0% {
+                    background-position: 0 0;
+                }
+
+                100% {
+                    background-position: -1216px 316px;
+                }
+            }
+        }
+    }
+
+    &__decor._04 {
+        top: -729rem;
+        left: 374rem;
+        z-index: 5;
+        width: 1160rem;
+        height: 1160rem;
+        transform: rotate(1deg);
+
+        @include mob {
+            top: -164rem;
+            left: 139rem;
+            width: 600rem;
+            height: 600rem;
+            transform: rotate(-3deg);
+        }
+    }
+
+    &__decor._4 {
+        top: -276rem;
+        left: 346rem;
+        z-index: 11;
+        width: 1024px;
+        height: 400px;
+        transform: rotate(-19deg);
+
+        @include mob {
+            top: 31rem;
+            left: 120rem;
+
+            // display: none;
+        }
+    }
+
+    &__decor._4 &__decorInner {
+        background: #c50018;
+        clip-path: url("#decor4");
+
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+            width: 1200px;
+            height: 500px;
+            transform: rotate(-20deg);
+            animation: decor4 14s infinite linear;
+            content: "";
+
+            @include bg("/media/animate/decor-4.jpg", 800px 400px, right top, repeat);
+
+            @keyframes decor4 {
+                0% {
+                    background-position: 0 0;
+                }
+
+                100% {
+                    background-position: 1600px -400px;
+                }
+            }
+        }
+    }
+
+    &__decor._05 {
+        top: -594rem;
+        left: 444rem;
+        z-index: 12;
+        width: 1120rem;
+        height: 1120rem;
+        transform: rotate(0.5deg);
+
+        @include mob {
+            top: -224rem;
+            left: 198rem;
+            width: 750rem;
+            height: 750rem;
+            transform: rotate(3deg);
+        }
+    }
+
+    &__decor._5 {
+        top: -69rem;
+        left: 416rem;
+        z-index: 11;
+        width: 1024px;
+        height: 400px;
+        transform: rotate(-19deg);
+
+        @include mob {
+            top: 152rem;
+            left: 170rem;
+        }
+    }
+
+    &__decor._5 &__decorInner {
+        background: #e32c26;
+        clip-path: url("#decor5");
+
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+            width: 1052px;
+            height: 400px;
+            transform: rotate(-20deg);
+            animation: decor5 9s infinite linear;
+            content: "";
+
+            @include bg("/media/animate/decor-5.jpg", 850px auto, right top, repeat);
+
+            @keyframes decor5 {
+                0% {
+                    background-position: 0 0;
+                }
+
+                100% {
+                    background-position: 850px 0;
+                }
+            }
+        }
+    }
+
+    &__decor._06 {
+        top: -356rem;
+        left: 508rem;
+        z-index: 14;
+        width: 1100rem;
+        height: 1100rem;
+
+        @include mob {
+            top: -14rem;
+            left: 220rem;
+            width: 650rem;
+            height: 650rem;
+        }
+    }
+
+    &__decor._6 {
+        top: 132rem;
+        left: 482rem;
+        z-index: 13;
+        width: 1024px;
+        height: 400px;
+        transform: rotate(-18deg);
+
+        @include mob {
+            top: 270rem;
+            left: 206rem;
+            transform: rotate(-17deg);
+        }
+    }
+
+    &__decor._6 &__decorInner {
+        background: #fbac2f;
+        clip-path: url("#decor6");
+
+        &::before {
+            position: absolute;
+            top: -70px;
+            right: 0;
+            z-index: 2;
+            width: 1100px;
+            height: 550px;
+            transform: rotate(-20deg);
+            animation: decor6 9s infinite linear;
+            content: "";
+
+            @include bg("/media/animate/decor-6.jpg", 700px auto, right top, repeat);
+
+            @keyframes decor6 {
+                0% {
+                    background-position: 0 0;
+                }
+
+                100% {
+                    background-position: 700px 0;
+                }
+            }
         }
     }
 

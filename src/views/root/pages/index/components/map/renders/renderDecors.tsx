@@ -7,14 +7,18 @@ import I from '../types.ts';
 const renderDecors: I['renderDecors'] = function () {
     return (
         <Media check={(d) => d === 'desktop'}>
-            {['back-pattern-1.svg', 'back-pattern-2.svg', 'back-pattern-3.svg'].map((th, i) => (
-                <img
-                    src={require(`@media/${th}`)}
-                    alt=""
-                    className={this.getClass('indexMap__decor', this.setClass(i + 1))}
-                    key={i}
-                />
-            ))}
+            <img
+                src={require(`@media/back-pattern-1.svg`).default}
+                alt=""
+                className={this.getClass('indexMap__decor _1')}
+            />
+            <div className="indexMap__decor _2"></div>
+            <div className="indexMap__circle">
+                <div className="indexMap__circleItem _1"></div>
+                <div className="indexMap__circleItem _2"></div>
+                <div className="indexMap__circleItem _3"></div>
+                <div className="indexMap__circleItem _4"></div>
+            </div>
         </Media>
     );
 };

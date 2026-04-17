@@ -2,7 +2,7 @@
     position: relative;
     z-index: 1;
     width: 100%;
-    padding: 112rem 0 100rem;
+    padding: 102rem 0 100rem;
 
     @include mob {
         padding: 32rem 0 40rem;
@@ -18,6 +18,17 @@
             z-index: 2;
             width: 218rem;
             height: 218rem;
+            animation: mapDecor1 4s infinite linear;
+
+            @keyframes mapDecor1 {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(-360deg);
+                }
+            }
         }
 
         &._2 {
@@ -26,14 +37,102 @@
             z-index: 1;
             width: 446rem;
             height: 446rem;
-        }
+            overflow: hidden;
+            background: #ff49b8;
+            border-radius: 50%;
+            animation: mapDecorCircle 10s infinite linear;
 
-        &._3 {
-            top: 6rem;
-            right: -28rem;
-            z-index: 1;
-            width: 275rem;
-            height: 275rem;
+            @keyframes mapDecorCircle {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            &::before {
+                position: absolute;
+                bottom: -108rem;
+                left: -158rem;
+                width: 1200rem;
+                height: 1050rem;
+                animation: mapDecor2 5s infinite ease-in-out;
+                content: "";
+
+                @include bg("/media/map-decor-2-lines.svg", contain, left bottom);
+
+                @keyframes mapDecor2 {
+                    0% {
+                        transform: translate(0, 0) rotate(0deg);
+                    }
+
+                    50% {
+                        transform: translate(40rem, 150rem) rotate(100deg);
+                    }
+
+                    100% {
+                        transform: translate(0, 0) rotate(0deg);
+                    }
+                }
+            }
+        }
+    }
+
+    &__circle {
+        position: absolute;
+        top: 6rem;
+        right: -28rem;
+        z-index: 1;
+        width: 275rem;
+        height: 275rem;
+
+        &Item {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 146rem;
+            height: 146rem;
+            border: 16rem solid rgba(#ff49b8, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            animation: mapCircle 2s infinite linear;
+
+            @keyframes mapCircle {
+                0% {
+                    width: 86rem;
+                    height: 86rem;
+                    opacity: 0;
+                }
+
+                10% {
+                    opacity: 1;
+                }
+
+                70% {
+                    opacity: 1;
+                }
+
+                100% {
+                    width: 320rem;
+                    height: 320rem;
+                    opacity: 0;
+                }
+            }
+
+            &._2 {
+                animation-delay: 0.5s;
+            }
+
+            &._3 {
+                animation-delay: 1s;
+            }
+
+            &._4 {
+                animation-delay: 1.5s;
+            }
         }
     }
 
@@ -216,6 +315,7 @@
             z-index: 2;
             transform: translate(-50%, 0);
             user-select: none;
+            aspect-ratio: 1;
 
             &Thumb {
                 position: relative;
@@ -297,14 +397,12 @@
 
         &Location._1 {
             top: 95rem;
-            width: 182rem;
-            height: 240rem;
+            width: 240rem;
             margin-left: -352rem;
 
             @include mob {
                 top: 105rem;
-                width: 120rem;
-                height: 150rem;
+                width: 150rem;
                 margin-left: -134rem;
             }
 
@@ -341,13 +439,11 @@
         &Location._2 {
             top: 72rem;
             width: 276rem;
-            height: 276rem;
             margin-left: 379rem;
 
             @include mob {
                 top: 98rem;
                 width: 155rem;
-                height: 155rem;
                 margin-left: 136rem;
             }
         }
@@ -363,13 +459,11 @@
         &Location._3 {
             top: 276rem;
             width: 370rem;
-            height: 370rem;
             margin-left: 6rem;
 
             @include mob {
                 top: 200rem;
                 width: 200rem;
-                height: 200rem;
                 margin-left: 3rem;
             }
         }
@@ -385,13 +479,11 @@
         &Location._4 {
             top: 601rem;
             width: 256rem;
-            height: 256rem;
             margin-left: -350rem;
 
             @include mob {
                 top: 401rem;
                 width: 156rem;
-                height: 156rem;
                 margin-left: -122rem;
             }
         }
@@ -407,13 +499,11 @@
         &Location._5 {
             top: 540rem;
             width: 278rem;
-            height: 278rem;
             margin-left: 374rem;
 
             @include mob {
                 top: 392rem;
                 width: 158rem;
-                height: 158rem;
                 margin-left: 138rem;
             }
         }
@@ -429,13 +519,11 @@
         &Location._6 {
             top: 947rem;
             width: 279rem;
-            height: 279rem;
             margin-left: -188rem;
 
             @include mob {
                 top: 681rem;
                 width: 174rem;
-                height: 174rem;
                 margin-left: -94rem;
             }
 
@@ -467,13 +555,11 @@
         &Location._7 {
             top: 1103rem;
             width: 264rem;
-            height: 264rem;
             margin-left: 174rem;
 
             @include mob {
                 top: 782rem;
                 width: 165rem;
-                height: 165rem;
                 margin-left: 94rem;
             }
         }
@@ -489,13 +575,11 @@
         &Location._8 {
             top: 1352rem;
             width: 228rem;
-            height: 228rem;
             margin-left: -156rem;
 
             @include mob {
                 top: 918rem;
                 width: 144rem;
-                height: 144rem;
                 margin-left: -90rem;
             }
         }
@@ -512,13 +596,11 @@
             top: 1752rem;
             z-index: 10;
             width: 242rem;
-            height: 242rem;
             margin-left: -178rem;
 
             @include mob {
                 top: 1176rem;
                 width: 146rem;
-                height: 146rem;
                 margin-left: -78rem;
             }
         }
@@ -534,13 +616,11 @@
         &Location._10 {
             top: 1849rem;
             width: 274rem;
-            height: 274rem;
             margin-left: 173rem;
 
             @include mob {
                 top: 1256rem;
                 width: 174rem;
-                height: 174rem;
                 margin-left: 84rem;
             }
         }
@@ -566,13 +646,11 @@
         &Location._11 {
             top: 2088rem;
             width: 288rem;
-            height: 288rem;
             margin-left: -154rem;
 
             @include mob {
                 top: 1402rem;
                 width: 166rem;
-                height: 166rem;
                 margin-left: -74rem;
             }
         }
@@ -588,13 +666,11 @@
         &Location._12 {
             top: 2227rem;
             width: 286rem;
-            height: 286rem;
             margin-left: 176rem;
 
             @include mob {
                 top: 1503rem;
                 width: 177rem;
-                height: 177rem;
                 margin-left: 88rem;
             }
         }
@@ -610,13 +686,11 @@
         &Location._13 {
             top: 2458rem;
             width: 280rem;
-            height: 280rem;
             margin-left: -163rem;
 
             @include mob {
                 top: 1626rem;
                 width: 179rem;
-                height: 179rem;
                 margin-left: -86rem;
             }
         }
@@ -632,13 +706,11 @@
         &Location._14 {
             top: 2641rem;
             width: 280rem;
-            height: 280rem;
             margin-left: 190rem;
 
             @include mob {
                 top: 1748rem;
                 width: 186rem;
-                height: 186rem;
                 margin-left: 89rem;
             }
         }
