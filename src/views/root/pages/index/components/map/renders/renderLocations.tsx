@@ -18,21 +18,16 @@ const renderLocations: I['renderLocations'] = function () {
                     <div
                         className={this.getClass('indexMap__mapLocation', this.setClass(k))}
                         key={k}
-                        onClick={() => {
-                            if (location.pageName) {
-                                AppRouter.changePage({
-                                    pageName: location.pageName,
-                                    ids: location.pageIds,
-                                });
-                            } else if (location.popupName) {
-                                appStore.getState().setPopup({ name: location.popupName });
-                            }
-
-                            if (location.goal) {
-                                sendGoal(location.goal);
-                            }
-                        }}
+                        data-location={k}
+                        onMouseEnter={this.locationHoverHandler.bind(this, k, 'hover')}
+                        onMouseLeave={this.locationHoverHandler.bind(this, k, 'leave')}
                     >
+                        {this.renderLocationBack(k)}
+                        {k === '1' && this.renderLocation1Decor()}
+                        {k === '2' && this.renderLocation2Decor()}
+                        {k === '3' && this.renderLocation3Decor()}
+                        {k === '4' && this.renderLocation4Decor()}
+                        {k === '5' && this.renderLocation5Decor()}
                         <img
                             src={require(`@media/${location.thumb}`)}
                             alt=""
@@ -42,6 +37,20 @@ const renderLocations: I['renderLocations'] = function () {
                             <div
                                 className="indexMap__mapLocationTitleInner _CLICK"
                                 dangerouslySetInnerHTML={{ __html: location.title }}
+                                onClick={() => {
+                                    if (location.pageName) {
+                                        AppRouter.changePage({
+                                            pageName: location.pageName,
+                                            ids: location.pageIds,
+                                        });
+                                    } else if (location.popupName) {
+                                        appStore.getState().setPopup({ name: location.popupName });
+                                    }
+
+                                    if (location.goal) {
+                                        sendGoal(location.goal);
+                                    }
+                                }}
                             />
                             {location.alert && (
                                 <div
