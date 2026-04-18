@@ -19,9 +19,9 @@ const renderPreview: I['renderPreview'] = function () {
                     {new StringService().getEndText(prize.count, ['балл', 'балла', 'баллов'])}
                 </div>
             )}
-            {prize.promoCode && false && (
+            {prize.promoCode && (
                 <div
-                    className="prize__previewButton _CLICK _main"
+                    className="prize__previewButton _CLICK _main _CLICK"
                     onClick={() => {
                         this.promoHandler(true);
                     }}
@@ -31,7 +31,7 @@ const renderPreview: I['renderPreview'] = function () {
             )}
             {prize.status === 'NEED_CODE' && (
                 <div
-                    className="prize__previewButton _CLICK _code"
+                    className="prize__previewButton _CLICK _code _CLICK"
                     onClick={() => {
                         //   changePage({ pageName: 'regCode' });
                         appStore.getState().setPopup({ name: 'codePopup' });

@@ -73,6 +73,7 @@ export const mapLocations: Record<
         thumb: 'map-loc-10.png',
         title: 'Магнит',
         popupName: 'magnitPopup',
+        goal: 'mapPopupMagnit',
     },
     '11': {
         thumb: 'map-loc-11.png',

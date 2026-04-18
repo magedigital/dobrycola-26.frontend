@@ -1,6 +1,9 @@
 import React from 'react';
 
 import Icon from '@components/icon/Icon.tsx';
+import copyInBuffer from '@utils/copyInBuffer.ts';
+
+import { setError } from '../../../../../../../components/errors/utils/errorHandler.ts';
 
 import I from '../types.ts';
 
@@ -14,8 +17,8 @@ const renderPromo: I['renderPromo'] = function () {
             <div
                 className="prize__promoCopy _CLICK"
                 onClick={() => {
-                    // copyInBuffer(prize.promoCode!);
-                    // setError({ type: 'success', text: 'Промокод успешно скопирован' });
+                    copyInBuffer(prize.promoCode!);
+                    setError({ type: 'success', text: 'Промокод успешно скопирован' });
                 }}
             >
                 <i>
