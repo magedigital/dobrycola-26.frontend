@@ -35,6 +35,7 @@ type StoreT = {
     mainContent?: MainContentT;
     profileData?: ProfileDataT;
     isGameInit?: boolean;
+    canLoadImage?: boolean;
 } & PopupsT;
 
 type ReducersT = {
@@ -52,6 +53,7 @@ type ReducersT = {
     setMainContent: (c: MainContentT) => void;
     setProfileData: (c: ProfileDataT) => void;
     gameInit: () => void;
+    setLoadImage: () => void;
 } & PopupsReducersT;
 
 const appStore = create<StoreT & ReducersT>((set) => ({
@@ -100,6 +102,7 @@ const appStore = create<StoreT & ReducersT>((set) => ({
     setMainContent: (c) => set({ mainContent: c }),
     setProfileData: (d) => set({ profileData: d }),
     gameInit: () => set({ isGameInit: true }),
+    setLoadImage: () => set({ canLoadImage: true }),
     ...createPopupsStore(set),
 }));
 

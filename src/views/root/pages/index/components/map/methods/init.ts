@@ -1,5 +1,7 @@
 import I from '../types.ts';
 
+import { rootPromises } from '../../../../../Root.tsx';
+
 const init: I['init'] = async function (this: I) {
     await this.scrollHandler();
 
@@ -16,6 +18,8 @@ const init: I['init'] = async function (this: I) {
     if (window.location.search.includes('ancor=games')) {
         this.scrollToSection('game', 0);
     }
+
+    await rootPromises.image;
 
     this.location1Animate();
     this.location3Animate();

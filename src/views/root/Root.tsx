@@ -89,3 +89,4 @@ const mapStore = (store: StoreT) => ({
 });
 
 export default WithStore(Root, mapStore);
+export const rootPromises: Record<'image', Promise<void>> = {} as any;
