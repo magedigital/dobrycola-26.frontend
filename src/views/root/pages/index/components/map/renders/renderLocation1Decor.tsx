@@ -5,6 +5,23 @@ import I from '../types.ts';
 const renderLocation1Decor: I['renderLocation1Decor'] = function () {
     return (
         <>
+            <div className="indexMap__mapLocation1Arrows">
+                <img
+                    src={require('@media/map/arrows-map-1-1.png')}
+                    alt=""
+                    className="indexMap__mapLocation1Arrow _1"
+                />
+                <img
+                    src={require('@media/map/arrows-map-1-2.png')}
+                    alt=""
+                    className="indexMap__mapLocation1Arrow _2"
+                />
+                <img
+                    src={require('@media/map/arrows-map-1-3.png')}
+                    alt=""
+                    className="indexMap__mapLocation1Arrow _3"
+                />
+            </div>
             {new Array(13).fill({}).map((i, t) => (
                 <img
                     src={require(`@media/map/loc1-light-${t + 1}.png`)}
@@ -13,6 +30,17 @@ const renderLocation1Decor: I['renderLocation1Decor'] = function () {
                     key={t}
                 />
             ))}
+            <div className="indexMap__mapLocation1Scan _CLIP" data-scale="1" data-mobscale=".59">
+                <svg viewBox="0 0 49 30" fill="none">
+                    <clipPath id="mapLocation1Scan">
+                        <path
+                            d="M19.5 29.0159C13.6899 28.807 10.5145 27.959 5 25.5159C4.18033 17.5659 3.17314 13.1778 0 5.51586C5.60839 2.43163 9.27483 1.17661 17 0.0158607C22.0621 -0.0426563 24.9278 0.0471 30 0.515861C34.9437 1.70086 37.2755 2.46852 40.5 4.01586C43.2702 5.61039 44.3941 6.61588 46 8.51586C47.3663 10.2771 47.8853 11.262 48.5 13.0159C48.9423 14.8887 48.8646 15.9786 48 18.0159C46.763 20.4414 45.3054 21.7439 42 24.0159C37.9589 26.097 35.7716 26.9636 32 28.0159C27.5508 29.0393 24.8109 29.2357 19.5 29.0159Z"
+                            fill="black"
+                        />
+                    </clipPath>
+                </svg>
+            </div>
+
             <div className="indexMap__mapLocation1Line _1 _CLIP" data-scale="1" data-mobscale=".6">
                 <svg viewBox="0 0 37 113" fill="none">
                     <clipPath id="mapLocation1Line1">

@@ -20,6 +20,7 @@ const init: I['init'] = async function (this: I) {
     this.location1Animate();
     this.location3Animate();
     this.location4Animate();
+    this.location7Animate();
 
     this.setClips();
 

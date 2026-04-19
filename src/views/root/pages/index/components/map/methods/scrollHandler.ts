@@ -5,7 +5,7 @@ import { mapSections } from '../static/locations.ts';
 const scrollHandler: I['scrollHandler'] = async function () {
     const topBarNode = document.querySelector<HTMLElement>('.topBar');
 
-    if (!topBarNode) {
+    if (!topBarNode || !this.parent.current) {
         return;
     }
 
