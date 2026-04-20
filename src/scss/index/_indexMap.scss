@@ -2917,4 +2917,452 @@
             animation-delay: -0.9s;
         }
     }
+
+    &__mapLocation10Decor {
+        position: absolute;
+        z-index: 10;
+        aspect-ratio: 1;
+        object-fit: contain;
+        transform-origin: right top;
+        transition: 0.2s ease-in-out;
+        will-change: transform;
+
+        &._show {
+            transform: scale(1.1);
+        }
+
+        &._1 {
+            top: 70.7%;
+            left: 4%;
+            width: 7%;
+        }
+
+        &._2 {
+            top: 44.9%;
+            left: 2.8%;
+            width: 10%;
+        }
+
+        &._3 {
+            top: 30.7%;
+            left: 12.8%;
+            width: 10%;
+        }
+
+        &._4 {
+            top: 10.1%;
+            left: 8.4%;
+            width: 8%;
+        }
+
+        &._5 {
+            top: 11.3%;
+            left: 17.3%;
+            z-index: 13;
+            width: 9%;
+        }
+
+        &._6 {
+            top: 3.5%;
+            left: 26%;
+            width: 11.5%;
+        }
+
+        &._7 {
+            top: 2.5%;
+            left: 54.7%;
+            width: 8.6%;
+        }
+
+        &._8 {
+            top: 21.3%;
+            left: 59.3%;
+            z-index: 13;
+            width: 11%;
+        }
+
+        &._9 {
+            top: 17.1%;
+            left: 79.2%;
+            width: 11.3%;
+        }
+
+        &._10 {
+            top: 54.5%;
+            left: 65.8%;
+            z-index: 13;
+            width: 9.9%;
+        }
+
+        &._11 {
+            top: 65.5%;
+            left: 86.9%;
+            width: 7.2%;
+        }
+
+        &._12 {
+            top: 89.2%;
+            left: 49.3%;
+            z-index: 13;
+            width: 7.4%;
+        }
+    }
+
+    &__mapLocation10Parts {
+        position: absolute;
+        z-index: 13;
+        object-fit: contain;
+        object-position: left top;
+        animation: mapLoc10Parts 1s infinite ease-in-out;
+        will-change: transform;
+
+        @keyframes mapLoc10Parts {
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        &._1 {
+            top: 18%;
+            left: 2.1%;
+            width: 20%;
+            transform-origin: left center;
+        }
+
+        &._2 {
+            top: 33.2%;
+            right: 2.3%;
+            width: 38%;
+            transform-origin: right center;
+        }
+    }
+
+    &__mapLocation11Trees {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 13;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        mix-blend-mode: hard-light;
+        animation: mapLoc11Trees 1.8s infinite ease-in-out;
+
+        @keyframes mapLoc11Trees {
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                opacity: 0;
+            }
+
+            30%,
+            40%,
+            60%,
+            70% {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__mapLocation11Top {
+        position: absolute;
+        top: 8.2%;
+        left: 24.3%;
+        z-index: 12;
+        width: 68px;
+        height: 76px;
+        transform-origin: left top;
+        mix-blend-mode: plus-lighter;
+        clip-path: url("#mapLoc11Top");
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(#91d8ff, #8200cc);
+            opacity: 0;
+            animation: mapLoc11Top 0.75s infinite ease-in-out;
+            content: "";
+
+            @keyframes mapLoc11Top {
+                0%,
+                100% {
+                    opacity: 0;
+                }
+
+                50% {
+                    opacity: 0.12;
+                }
+            }
+        }
+    }
+
+    &__mapLocation11Light {
+        position: absolute;
+        top: 28%;
+        left: 27%;
+        z-index: 1;
+        width: 26%;
+        min-width: 20rem;
+        height: 26%;
+        min-height: 20rem;
+        background: #fff;
+        border-radius: 50%;
+        opacity: 0.6;
+        filter: blur(15rem);
+        animation: mapLoc11Light 3.5s infinite ease-in-out;
+        content: "";
+
+        @keyframes mapLoc11Light {
+            0%,
+            100% {
+                top: -8%;
+                left: -7%;
+            }
+
+            15% {
+                top: 50%;
+                left: 20%;
+            }
+
+            30% {
+                top: 30%;
+                left: 50%;
+            }
+
+            45% {
+                top: 70%;
+                left: 10%;
+            }
+
+            60% {
+                top: 3%;
+                left: 70%;
+            }
+
+            75% {
+                top: 60%;
+                left: 50%;
+            }
+        }
+    }
+
+    &__mapLocation11Window {
+        position: absolute;
+        z-index: 4;
+        overflow: hidden;
+        transform: skewY(-25deg);
+        transform-origin: left top;
+        mix-blend-mode: plus-lighter;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #8200cc;
+            opacity: 0.12;
+            animation: mapLoc11Window 0.75s infinite ease-in-out;
+            content: "";
+
+            @keyframes mapLoc11Window {
+                0%,
+                100% {
+                    opacity: 0;
+                }
+
+                50% {
+                    opacity: 0.4;
+                }
+            }
+        }
+
+        &._1 {
+            top: 39.5%;
+            left: 28.3%;
+            width: 3.3%;
+            height: 5.6%;
+
+            &::before {
+                animation-delay: -0.15s;
+            }
+        }
+
+        &._2 {
+            top: 21.9%;
+            left: 64.3%;
+            width: 3.3%;
+            height: 5.4%;
+
+            &::before {
+                animation-delay: -0.3s;
+            }
+        }
+
+        &._3 {
+            top: 42%;
+            left: 40.8%;
+            width: 14.4%;
+            height: 4.9%;
+            transform: skewY(-28deg);
+
+            &::before {
+                animation-delay: -0.1s;
+            }
+        }
+
+        &._4 {
+            top: 68.7%;
+            left: 29.05%;
+            width: 3.4%;
+            height: 7%;
+            transform: skewY(-28deg);
+
+            &::before {
+                animation-delay: -0.5s;
+            }
+        }
+
+        &._5 {
+            top: 51.6%;
+            left: 44.8%;
+            width: 8.2%;
+            height: 16.8%;
+            transform: skewY(-28deg);
+
+            &::before {
+                animation-delay: -0.05s;
+            }
+        }
+
+        &._6 {
+            top: 50.8%;
+            left: 64.8%;
+            width: 3.4%;
+            height: 7%;
+            transform: skewY(-28deg);
+
+            &::before {
+                animation-delay: -0.25s;
+            }
+        }
+
+        &._7 {
+            top: 67.2%;
+            left: 64.8%;
+            width: 18%;
+            height: 18%;
+            transform: rotateX(58deg) rotate(45deg);
+
+            &::before {
+                animation-delay: -0.25s;
+            }
+        }
+
+        &._8 {
+            top: 84.2%;
+            left: 66.2%;
+            width: 13.9%;
+            height: 4.1%;
+            transform: skewY(-28deg);
+
+            &::before {
+                animation-delay: -0.7s;
+            }
+        }
+    }
+
+    &__mapLocation11Window &__mapLocation11Light {
+        opacity: 1;
+    }
+
+    &__mapLocation11Window._1 &__mapLocation11Light {
+        animation-delay: -0.6s;
+    }
+
+    &__mapLocation11Window._2 &__mapLocation11Light {
+        animation-delay: -1.2s;
+    }
+
+    &__mapLocation11Window._3 &__mapLocation11Light {
+        animation-delay: -1.8s;
+    }
+
+    &__mapLocation11Window._4 &__mapLocation11Light {
+        animation-delay: -2.4s;
+    }
+
+    &__mapLocation11Window._5 &__mapLocation11Light {
+        animation-delay: -3s;
+    }
+
+    &__mapLocation11Window._6 &__mapLocation11Light {
+        animation-delay: -3.3s;
+    }
+
+    &__mapLocation11Window._7 &__mapLocation11Light {
+        animation-delay: -0.5s;
+    }
+
+    &__mapLocation11Man {
+        position: absolute;
+        top: 18.3%;
+        left: 32.5%;
+        z-index: 14;
+        width: 20%;
+        object-fit: contain;
+        object-position: center top;
+        transform-origin: left bottom;
+        animation: mapLoc11Man 1s infinite ease-in-out;
+        animation-delay: -0.5s;
+        will-change: transform;
+        aspect-ratio: 1;
+
+        @keyframes mapLoc11Man {
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(3deg);
+            }
+        }
+    }
+
+    &__mapLocation11Peoples {
+        position: absolute;
+        top: 48.5%;
+        left: 32.5%;
+        z-index: 14;
+        width: 60%;
+        height: 40%;
+        object-fit: contain;
+        object-position: center top;
+        transform-origin: right bottom;
+        animation: mapLoc11Peoples 1s infinite ease-in-out;
+        will-change: transform;
+
+        @keyframes mapLoc11Peoples {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+        }
+    }
 }

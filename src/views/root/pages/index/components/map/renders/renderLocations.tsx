@@ -24,6 +24,11 @@ const renderLocations: I['renderLocations'] = function () {
                         onMouseLeave={this.locationHoverHandler.bind(this, k, 'leave')}
                     >
                         <Lazy>
+                            <img
+                                src={require(`@media/${location.thumb}`)}
+                                alt=""
+                                className="indexMap__mapLocationThumb"
+                            />
                             {this.renderLocationBack(k)}
                             {k === '1' && this.renderLocation1Decor()}
                             {k === '2' && this.renderLocation2Decor()}
@@ -35,11 +40,7 @@ const renderLocations: I['renderLocations'] = function () {
                             {k === '8' && this.renderLocation8Decor()}
                             {k === '9' && this.renderLocation9Decor()}
                             {k === '10' && this.renderLocation10Decor()}
-                            <img
-                                src={require(`@media/${location.thumb}`)}
-                                alt=""
-                                className="indexMap__mapLocationThumb"
-                            />
+                            {k === '11' && this.renderLocation11Decor()}
                         </Lazy>
 
                         <div className="indexMap__mapLocationTitle">

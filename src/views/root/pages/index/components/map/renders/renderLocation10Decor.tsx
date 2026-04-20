@@ -47,6 +47,25 @@ const renderLocation10Decor: I['renderLocation10Decor'] = function () {
                     ></div>
                 ))}
             </div>
+
+            {new Array(12).fill({}).map((t, i) => (
+                <img
+                    key={i}
+                    src={require(`@media/map/loc10-decor-${i + 1}.png`)}
+                    alt=""
+                    className={this.getClass('indexMap__mapLocation10Decor', this.setClass(i + 1))}
+                />
+            ))}
+            <img
+                src={require('@media/map/loc10-parts-1.png')}
+                alt=""
+                className="indexMap__mapLocation10Parts _1"
+            />
+            <img
+                src={require('@media/map/loc10-parts-2.png')}
+                alt=""
+                className="indexMap__mapLocation10Parts _2"
+            />
         </>
     );
 };

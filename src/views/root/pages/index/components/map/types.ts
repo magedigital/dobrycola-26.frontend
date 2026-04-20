@@ -39,6 +39,7 @@ interface MapI extends DefaultI<PropsT, StateT> {
     renderLocation8Decor(this: MapI): React.ReactNode;
     renderLocation9Decor(this: MapI): React.ReactNode;
     renderLocation10Decor(this: MapI): React.ReactNode;
+    renderLocation11Decor(this: MapI): React.ReactNode;
     renderBacks(this: MapI): React.ReactNode;
     renderSections(this: MapI): React.ReactNode;
 }

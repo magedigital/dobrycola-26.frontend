@@ -122,6 +122,30 @@ const location10Animate: I['location10Animate'] = function () {
 
         show();
     }
+
+    if (1) {
+        const items = locationNode.querySelectorAll<HTMLElement>('.indexMap__mapLocation10Decor');
+
+        let cur = 0;
+
+        const show = () => {
+            locationNode.querySelectorAll('.indexMap__mapLocation10Decor._show').forEach((n) => {
+                n.classList.remove('_show');
+            });
+
+            items[cur]?.classList.add('_show');
+
+            cur += 1;
+
+            if (cur >= items.length) {
+                cur = 0;
+            }
+
+            this.timers['loc10-2'] = setTimeout(show, 200);
+        };
+
+        show();
+    }
 };
 
 export default location10Animate;
