@@ -1,6 +1,6 @@
 import I from '../types.ts';
 
-import { rootPromises } from '../../../../../Root.tsx';
+import { rootPromises } from '../../../../../../../index.tsx';
 
 const init: I['init'] = async function (this: I) {
     await this.scrollHandler();
@@ -19,12 +19,13 @@ const init: I['init'] = async function (this: I) {
         this.scrollToSection('game', 0);
     }
 
-    await rootPromises.image;
+    await rootPromises.load;
 
     this.location1Animate();
     this.location3Animate();
     this.location4Animate();
     this.location7Animate();
+    this.location10Animate();
 
     this.setClips();
 

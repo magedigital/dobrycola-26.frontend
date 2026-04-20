@@ -10,18 +10,9 @@ import { getCookie, setCookie } from '@utils/cookies.ts';
 
 import I from '../types.ts';
 
-import { rootPromises } from '../Root.tsx';
-
 window.visibillityHandlers = {};
 
 const init: I['init'] = async function () {
-    rootPromises.image = new Promise((r) => {
-        setTimeout(() => {
-            appStore.getState().setLoadImage();
-            r();
-        }, 200);
-    });
-
     const rootJWT = document.querySelector('#root')!.getAttribute('data-jwt');
 
     if (rootJWT) {

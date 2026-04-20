@@ -34,6 +34,7 @@ const renderLocations: I['renderLocations'] = function () {
                             {k === '7' && this.renderLocation7Decor()}
                             {k === '8' && this.renderLocation8Decor()}
                             {k === '9' && this.renderLocation9Decor()}
+                            {k === '10' && this.renderLocation10Decor()}
                             <img
                                 src={require(`@media/${location.thumb}`)}
                                 alt=""
