@@ -23,25 +23,28 @@ const renderLocations: I['renderLocations'] = function () {
                         onMouseEnter={this.locationHoverHandler.bind(this, k, 'hover')}
                         onMouseLeave={this.locationHoverHandler.bind(this, k, 'leave')}
                     >
-                        <Lazy>
-                            <img
-                                src={require(`@media/${location.thumb}`)}
-                                alt=""
-                                className="indexMap__mapLocationThumb"
-                            />
-                            {this.renderLocationBack(k)}
-                            {k === '1' && this.renderLocation1Decor()}
-                            {k === '2' && this.renderLocation2Decor()}
-                            {k === '3' && this.renderLocation3Decor()}
-                            {k === '4' && this.renderLocation4Decor()}
-                            {k === '5' && this.renderLocation5Decor()}
-                            {k === '6' && this.renderLocation6Decor()}
-                            {k === '7' && this.renderLocation7Decor()}
-                            {k === '8' && this.renderLocation8Decor()}
-                            {k === '9' && this.renderLocation9Decor()}
-                            {k === '10' && this.renderLocation10Decor()}
-                            {k === '11' && this.renderLocation11Decor()}
-                        </Lazy>
+                        <div className="indexMap__mapLocationInner">
+                            <Lazy>
+                                <img
+                                    src={require(`@media/${location.thumb}`)}
+                                    alt=""
+                                    className="indexMap__mapLocationThumb"
+                                />
+                                {this.renderLocationBack(k)}
+                                {k === '1' && this.renderLocation1Decor()}
+                                {k === '2' && this.renderLocation2Decor()}
+                                {k === '3' && this.renderLocation3Decor()}
+                                {k === '4' && this.renderLocation4Decor()}
+                                {k === '5' && this.renderLocation5Decor()}
+                                {k === '6' && this.renderLocation6Decor()}
+                                {k === '7' && this.renderLocation7Decor()}
+                                {k === '8' && this.renderLocation8Decor()}
+                                {k === '9' && this.renderLocation9Decor()}
+                                {k === '10' && this.renderLocation10Decor()}
+                                {k === '11' && this.renderLocation11Decor()}
+                                {k === '12' && this.renderLocation12Decor()}
+                            </Lazy>
+                        </div>
 
                         <div className="indexMap__mapLocationTitle">
                             <div

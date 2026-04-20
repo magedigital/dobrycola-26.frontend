@@ -71,51 +71,32 @@ const location10Animate: I['location10Animate'] = function () {
     if (1) {
         const items = locationNode.querySelectorAll<HTMLElement>('.indexMap__mapLocation10Dot');
 
-        let prev1: number | undefined;
-        let prev2: number | undefined;
-        let prev3: number | undefined;
+        let prevs: number[] = [];
 
         const show = () => {
-            let cur1: number | undefined;
-            let cur2: number | undefined;
-            let cur3: number | undefined;
+            const curs: number[] = [];
 
-            while (cur1 === undefined || cur1 === prev1 || cur1 === prev2 || cur1 === prev3) {
-                cur1 = Math.round(Math.random() * (items.length - 1));
-            }
+            [1, 2, 3, 4, 5].forEach(() => {
+                let cur: number | undefined;
 
-            while (
-                cur2 === undefined ||
-                cur2 === cur1 ||
-                cur2 === prev1 ||
-                cur2 === prev2 ||
-                cur2 === prev3
-            ) {
-                cur2 = Math.round(Math.random() * (items.length - 1));
-            }
+                while (cur === undefined || prevs.includes(cur)) {
+                    cur = Math.round(Math.random() * (items.length - 1));
+                }
 
-            while (
-                cur3 === undefined ||
-                cur3 === cur1 ||
-                cur3 === cur2 ||
-                cur3 === prev1 ||
-                cur3 === prev2 ||
-                cur3 === prev3
-            ) {
-                cur3 = Math.round(Math.random() * (items.length - 1));
-            }
+                curs.push(cur);
+            });
+
+            prevs = [];
 
             locationNode.querySelectorAll('.indexMap__mapLocation10Dot._show').forEach((n) => {
                 n.classList.remove('_show');
             });
 
-            items[cur1]?.classList.add('_show');
-            items[cur2]?.classList.add('_show');
-            items[cur3]?.classList.add('_show');
+            curs.forEach((cur) => {
+                items[cur]?.classList.add('_show');
+            });
 
-            prev1 = cur1;
-            prev2 = cur2;
-            prev3 = cur3;
+            prevs.push(...curs);
 
             this.timers['loc10-2'] = setTimeout(show, 250);
         };

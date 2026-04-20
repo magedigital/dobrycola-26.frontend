@@ -317,6 +317,13 @@
             user-select: none;
             aspect-ratio: 1;
 
+            &Inner {
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+            }
+
             &Lights {
                 position: absolute;
                 top: -80rem;
@@ -805,7 +812,7 @@
                 height: 100%;
                 object-fit: contain;
                 filter: brightness(1.2) blur(2rem);
-                mix-blend-mode: hard-light;
+                mix-blend-mode: plus-lighter;
                 animation: mapSectionLight 0.5s infinite ease-in-out;
                 pointer-events: none;
 
@@ -935,6 +942,7 @@
         z-index: 100;
         object-fit: contain;
         aspect-ratio: 1;
+        mix-blend-mode: plus-lighter;
 
         &:not(._show) {
             opacity: 0;
@@ -1027,6 +1035,7 @@
         width: 49px;
         height: 29px;
         transform-origin: left top;
+        mix-blend-mode: plus-lighter;
         clip-path: url("#mapLocation1Scan");
 
         @include mob {
@@ -1035,12 +1044,13 @@
 
         &::before {
             position: absolute;
-            top: -40px;
-            left: -40px;
-            width: 16px;
-            height: 100px;
-            background: linear-gradient(to right, rgba(#fff, 0), rgba(#fff, 0.6), rgba(#fff, 0));
+            top: -80px;
+            left: -90px;
+            width: 40px;
+            height: 170px;
+            background: linear-gradient(to right, rgba(#fff, 0), rgba(#fff, 0.4), rgba(#fff, 0));
             transform: rotate(-55deg);
+            opacity: 0.72;
             animation: mapLoc1Scan 2.5s infinite ease-in-out;
             content: "";
 
@@ -1050,7 +1060,7 @@
                 }
 
                 100% {
-                    transform: translate(106px, 0) rotate(-55deg);
+                    transform: translate(160px, 0) rotate(-55deg);
                 }
             }
         }
@@ -1078,6 +1088,7 @@
                 height: 50px;
                 background: linear-gradient(to bottom, rgba(#46efc7, 0), rgba(#1dd2a8, 0.6), rgba(#46efc7, 0));
                 transform: translate(-50%, 0) rotate(15deg);
+                mix-blend-mode: plus-lighter;
                 animation: mapLoc1Line1 2s infinite ease-in-out;
                 content: "";
 
@@ -1115,6 +1126,7 @@
                 height: 50px;
                 background: linear-gradient(to bottom, rgba(#ff6c95, 0), rgba(#ff22a9, 0.6), rgba(#ff6c95, 0));
                 transform: translate(-50%, -100%) rotate(-15deg);
+                mix-blend-mode: plus-lighter;
                 animation: mapLoc1Line2 2s infinite ease-in-out;
                 animation-delay: 0.5s;
                 content: "";
@@ -1164,9 +1176,10 @@
         left: 20.5%;
         z-index: 10;
         width: 33.5%;
-        aspect-ratio: 1;
         object-fit: contain;
+        mix-blend-mode: plus-lighter;
         animation: mapLoc2Light 2s infinite ease-in-out;
+        aspect-ratio: 1;
 
         @keyframes mapLoc2Light {
             0%,
@@ -1207,12 +1220,13 @@
 
     &__mapLocation3Light {
         position: absolute;
-        z-index: 10;
+        z-index: 12;
         width: 34%;
         object-fit: contain;
         object-position: left top;
         transform: rotate(-3deg);
         transform-origin: left top;
+        mix-blend-mode: hard-light;
         transition: 0.2s;
         animation: mapLoc3Light 1s infinite ease-in-out;
         aspect-ratio: 1;
@@ -1274,11 +1288,11 @@
         left: 53.6%;
         z-index: 12;
         width: 31.5%;
-        aspect-ratio: 1;
         object-fit: contain;
-        opacity: 0;
+        mix-blend-mode: plus-lighter;
         animation: mapLoc3Door 2s infinite ease-in-out;
-        animation-delay: 0.5s;
+        animation-delay: -0.5s;
+        aspect-ratio: 1;
 
         @keyframes mapLoc3Door {
             0%,
@@ -1347,9 +1361,10 @@
         position: absolute;
         z-index: 12;
         object-fit: contain;
-        aspect-ratio: 1;
         opacity: 0;
+        mix-blend-mode: plus-lighter;
         animation: mapLoc3Flash 5s infinite ease-in-out;
+        aspect-ratio: 1;
 
         @keyframes mapLoc3Flash {
             0% {
@@ -1358,7 +1373,7 @@
 
             9%,
             18% {
-                opacity: 1;
+                opacity: 0.72;
             }
 
             27% {
@@ -1367,7 +1382,7 @@
 
             36%,
             45% {
-                opacity: 1;
+                opacity: 0.72;
             }
 
             54%,
@@ -1376,7 +1391,7 @@
             }
 
             65% {
-                opacity: 1;
+                opacity: 0.72;
             }
 
             67% {
@@ -1384,7 +1399,7 @@
             }
 
             69% {
-                opacity: 1;
+                opacity: 0.72;
             }
 
             71% {
@@ -1392,7 +1407,7 @@
             }
 
             73% {
-                opacity: 1;
+                opacity: 0.72;
             }
 
             75% {
@@ -1400,7 +1415,7 @@
             }
 
             77% {
-                opacity: 1;
+                opacity: 0.72;
             }
 
             79% {
@@ -1408,7 +1423,7 @@
             }
 
             81% {
-                opacity: 1;
+                opacity: 0.72;
             }
 
             83%,
@@ -1434,6 +1449,7 @@
         position: absolute;
         z-index: 13;
         object-fit: contain;
+        mix-blend-mode: plus-lighter;
 
         @keyframes mapLoc4Light {
             0%,
@@ -1462,7 +1478,7 @@
             height: 44.2%;
             opacity: 0;
             animation: mapLoc4Light 1.2s infinite ease-in-out;
-            animation-delay: 0.6s;
+            animation-delay: -0.6s;
         }
 
         &._3 {
@@ -1470,7 +1486,6 @@
             left: 34%;
             width: 10%;
             aspect-ratio: 1;
-            opacity: 0;
 
             @keyframes mapLoc4Light3 {
                 0%,
@@ -1484,15 +1499,14 @@
             }
 
             animation: mapLoc4Light3 1.6s infinite ease-in-out;
-            animation-delay: 0.5s;
+            animation-delay: -0.5s;
         }
 
         &._4 {
-            top: 39.7%;
-            left: 25.5%;
+            top: 39.4%;
+            left: 25.9%;
             width: 16%;
             aspect-ratio: 1;
-            opacity: 0;
 
             @keyframes mapLoc4Light4 {
                 0%,
@@ -1506,7 +1520,7 @@
             }
 
             animation: mapLoc4Light4 1.6s infinite ease-in-out;
-            animation-delay: 1.2s;
+            animation-delay: -1.2s;
         }
 
         &._5 {
@@ -1538,6 +1552,7 @@
         width: 3%;
         object-fit: contain;
         opacity: 0;
+        mix-blend-mode: plus-lighter;
         transition: 0.2s ease-in-out;
         aspect-ratio: 1;
 
@@ -1641,8 +1656,8 @@
         z-index: 11;
         width: 75%;
         object-fit: contain;
-        aspect-ratio: 1;
         animation: mapLoc5Head 3s infinite ease-in-out;
+        aspect-ratio: 1;
 
         @keyframes mapLoc5Head {
             0%,
@@ -1665,7 +1680,39 @@
         width: 180px;
         height: 96px;
         transform-origin: left top;
+        mix-blend-mode: plus-lighter;
         clip-path: url("#mapLocation5Prize");
+
+        &::before {
+            position: absolute;
+            top: 40px;
+            left: -20px;
+            z-index: -1;
+            width: 30%;
+            height: 250%;
+            background: linear-gradient(
+                to right,
+                rgba(#ffe284, 0),
+                rgba(#ffe284, 1) 40%,
+                rgba(#ffe284, 1) 60%,
+                rgba(#ffe284, 0)
+            );
+            transform: rotate(-62deg);
+            transform-origin: left top;
+            opacity: 0.3;
+            animation: mapLoc5Light 3s infinite ease-in-out;
+            content: "";
+
+            @keyframes mapLoc5Light {
+                0% {
+                    transform: translate(-120px, 0) rotate(-62deg);
+                }
+
+                100% {
+                    transform: translate(300px, 0) rotate(-62deg);
+                }
+            }
+        }
 
         &::after {
             position: absolute;
@@ -1932,7 +1979,7 @@
         height: 100%;
         object-fit: contain;
         opacity: 0;
-        filter: brightness(1.6);
+        mix-blend-mode: plus-lighter;
 
         &._1 {
             animation: mapLoc6Light1 1s infinite ease-in-out;
@@ -1944,7 +1991,7 @@
                 }
 
                 50% {
-                    opacity: 1;
+                    opacity: 0.4;
                 }
             }
         }
@@ -1960,7 +2007,7 @@
                 }
 
                 50% {
-                    opacity: 1;
+                    opacity: 0.4;
                 }
             }
         }
@@ -2055,6 +2102,7 @@
         overflow: hidden;
         transform: skewY(25deg);
         transform-origin: left top;
+        mix-blend-mode: plus-lighter;
 
         & svg {
             position: absolute;
@@ -2191,8 +2239,7 @@
         position: absolute;
         z-index: 14;
         object-fit: contain;
-        opacity: 0;
-        mix-blend-mode: hard-light;
+        mix-blend-mode: plus-lighter;
         animation: mapLoc7TopLight 1.2s infinite ease-in-out;
 
         @keyframes mapLoc7TopLight {
@@ -2203,7 +2250,7 @@
 
             40%,
             60% {
-                opacity: 1;
+                opacity: 0.5;
             }
         }
 
@@ -2217,7 +2264,7 @@
             top: 29.1%;
             left: 60.6%;
             width: 26.8%;
-            animation-delay: 0.6s;
+            animation-delay: -0.6s;
         }
     }
 
@@ -2228,7 +2275,7 @@
         width: 19%;
         object-fit: contain;
         object-position: center top;
-        mix-blend-mode: hard-light;
+        mix-blend-mode: plus-lighter;
         transition: 0.15s ease-in-out;
         aspect-ratio: 1;
 
@@ -2324,6 +2371,7 @@
         object-fit: contain;
         object-position: left top;
         opacity: 0;
+        mix-blend-mode: hard-light;
         animation: mapLoc8Window 1.5s infinite ease-in-out;
 
         @keyframes mapLoc8Window {
@@ -2343,6 +2391,7 @@
             left: 9.7%;
             width: 50.5%;
             height: 32%;
+            mix-blend-mode: plus-lighter;
         }
 
         &._2 {
@@ -2350,6 +2399,7 @@
             left: 43.2%;
             width: 29%;
             height: 29%;
+            mix-blend-mode: plus-lighter;
         }
 
         &._3 {
@@ -2403,12 +2453,12 @@
 
     &__mapLocation8Fr {
         position: absolute;
-        top: 64.7%;
-        left: 75%;
+        top: 65.8%;
+        left: 76.2%;
         z-index: 14;
-        width: 17.5%;
+        width: 15%;
         object-fit: contain;
-        filter: brightness(2);
+        mix-blend-mode: plus-lighter;
         animation: mapLoc8Fr 1.2s infinite ease-in-out;
         aspect-ratio: 1;
 
@@ -2419,7 +2469,7 @@
 
             20%,
             80% {
-                opacity: 0.4;
+                opacity: 0.3;
             }
 
             100% {
@@ -2553,10 +2603,11 @@
         z-index: 12;
         border-radius: 50%;
         transform: rotate(-55deg);
-        opacity: 0.7;
+        opacity: 0.4;
         filter: blur(1rem);
-        aspect-ratio: 1.7;
+        mix-blend-mode: plus-lighter;
         animation: mapLoc9Flash 6s infinite ease-in-out;
+        aspect-ratio: 1.7;
 
         @keyframes mapLoc9Flash {
             0%,
@@ -2707,17 +2758,22 @@
         z-index: 13;
         width: 25%;
         aspect-ratio: 1;
+        mix-blend-mode: plus-lighter;
     }
 
     &__mapLocation10Dot {
         position: absolute;
         width: 5%;
-        height: 5%;
+        aspect-ratio: 1;
         background: #ffe0b0;
         border-radius: 50%;
         box-shadow: 0 0 4rem 2rem #fff;
         opacity: 0;
         transition: 0.1s ease-in-out;
+
+        @include mob {
+            width: 3%;
+        }
 
         &._show {
             opacity: 0.8;
@@ -2798,7 +2854,7 @@
         background: rgba(#ffe2b3, 0.3);
         border-radius: 50%;
         filter: blur(4rem);
-        mix-blend-mode: hard-light;
+        mix-blend-mode: plus-lighter;
         aspect-ratio: 1;
         animation: mapLoc10Ball 1s infinite ease-in-out;
 
@@ -2824,7 +2880,7 @@
         object-fit: contain;
         object-position: center top;
         opacity: 0;
-        mix-blend-mode: hard-light;
+        mix-blend-mode: plus-lighter;
         animation: mapLoc10Star 1s infinite ease-in-out;
         aspect-ratio: 1;
 
@@ -2869,6 +2925,7 @@
         object-fit: contain;
         object-position: left bottom;
         transform-origin: left bottom;
+        mix-blend-mode: hard-light;
         transition: 0.15s ease-in-out;
         animation: 1.2s mapLoc10Light infinite ease-in-out;
         aspect-ratio: 1;
@@ -2898,6 +2955,7 @@
             bottom: 25.2%;
             left: 21.3%;
             width: 43%;
+            mix-blend-mode: plus-lighter;
             animation-delay: -0.3s;
         }
 
@@ -3357,11 +3415,321 @@
         @keyframes mapLoc11Peoples {
             0%,
             100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(-1rem, -1rem) scale(1.005);
+            }
+        }
+    }
+
+    &__mapLocation12Dynamic {
+        position: absolute;
+        z-index: 13;
+        object-fit: contain;
+        aspect-ratio: 1;
+
+        &._1 {
+            top: 36%;
+            left: 7.5%;
+            width: 28%;
+            transform-origin: right bottom;
+            animation: mapLoc12Dynamic1 1.4s infinite ease-in-out;
+
+            @keyframes mapLoc12Dynamic1 {
+                0%,
+                20%,
+                40%,
+                60%,
+                80%,
+                100% {
+                    transform: scale(1);
+                }
+
+                30%,
+                50%,
+                70% {
+                    transform: scale(1.025);
+                }
+            }
+        }
+
+        &._2 {
+            top: 16%;
+            left: 45%;
+            width: 25%;
+            transform-origin: right 25%;
+            animation: mapLoc12Dynamic2 1.4s infinite ease-in-out;
+            animation-delay: -0.7s;
+
+            @keyframes mapLoc12Dynamic2 {
+                0%,
+                20%,
+                40%,
+                60%,
+                80%,
+                100% {
+                    transform: scale(1);
+                }
+
+                30%,
+                50%,
+                70% {
+                    transform: scale(1.03);
+                }
+            }
+        }
+
+        @keyframes mapLoc12Dynamic3 {
+            0%,
+            100% {
                 transform: scale(1);
             }
 
             50% {
-                transform: scale(1.02);
+                transform: scale(1.025);
+            }
+        }
+
+        &._3,
+        &._4,
+        &._5,
+        &._6,
+        &._7,
+        &._8 {
+            transform-origin: right -20%;
+            animation: mapLoc12Dynamic3 0.4s infinite ease-in-out;
+        }
+
+        &._4,
+        &._7 {
+            animation-delay: -0.15s;
+        }
+
+        &._5,
+        &._8 {
+            animation-delay: -0.3s;
+        }
+
+        &._3 {
+            top: 60.8%;
+            left: 11.1%;
+            width: 9.5%;
+        }
+
+        &._4 {
+            top: 68.8%;
+            left: 10.6%;
+            width: 10.5%;
+        }
+
+        &._5 {
+            top: 77.1%;
+            left: 10.2%;
+            width: 11%;
+        }
+
+        &._6 {
+            top: 58.5%;
+            left: 78.6%;
+            width: 11.5%;
+        }
+
+        &._7 {
+            top: 69%;
+            left: 78.7%;
+            width: 11.2%;
+        }
+
+        &._8 {
+            top: 77.5%;
+            left: 77.8%;
+            width: 13.2%;
+        }
+    }
+
+    &__mapLocation12Decor {
+        position: absolute;
+        top: -40%;
+        left: -40%;
+        z-index: 14;
+        object-fit: contain;
+        aspect-ratio: 1;
+
+        &._1 {
+            top: 31.6%;
+            left: -0.8%;
+            width: 14%;
+            animation: mapLoc12Decor1 1.2s infinite ease-in-out;
+            animation-delay: -0.3s;
+
+            @keyframes mapLoc12Decor1 {
+                0% {
+                    transform: translate(40%, 40%);
+                    opacity: 0;
+                }
+
+                30%,
+                70% {
+                    opacity: 1;
+                }
+
+                100% {
+                    transform: translate(-20%, -20%) rotate(-12deg);
+                    opacity: 0;
+                }
+            }
+        }
+
+        &._2 {
+            top: 8.2%;
+            left: 3.4%;
+            width: 16.5%;
+            transform-origin: right bottom;
+            animation: mapLoc12Decor2 1.2s infinite ease-in-out;
+
+            @keyframes mapLoc12Decor2 {
+                0% {
+                    transform: translate(40%, 100%);
+                    opacity: 0;
+                }
+
+                30%,
+                70% {
+                    opacity: 1;
+                }
+
+                100% {
+                    transform: translate(0%, 0%) rotate(15deg);
+                    opacity: 0;
+                }
+            }
+        }
+
+        &._3 {
+            top: 25%;
+            left: 8.3%;
+            width: 11%;
+            animation: mapLoc12Decor3 1.2s infinite ease-in-out;
+            animation-delay: -0.9s;
+
+            @keyframes mapLoc12Decor3 {
+                0% {
+                    transform: translate(25%, 50%);
+                    opacity: 0;
+                }
+
+                30%,
+                70% {
+                    opacity: 1;
+                }
+
+                100% {
+                    transform: translate(-30%, -40%) rotate(15deg);
+                    opacity: 0;
+                }
+            }
+        }
+
+        &._4 {
+            top: 18.3%;
+            left: 16.8%;
+            width: 15.6%;
+            animation: mapLoc12Decor4 1.2s infinite ease-in-out;
+            animation-delay: -0.6s;
+
+            @keyframes mapLoc12Decor4 {
+                0% {
+                    transform: translate(5%, 50%);
+                    opacity: 0;
+                }
+
+                30%,
+                70% {
+                    opacity: 1;
+                }
+
+                100% {
+                    transform: translate(20%, -40%) rotate(15deg);
+                    opacity: 0;
+                }
+            }
+        }
+
+        &._5 {
+            top: 25.3%;
+            left: 41.3%;
+            width: 9.6%;
+            transform-origin: right top;
+            animation: mapLoc12Decor5 1.2s infinite ease-in-out;
+
+            @keyframes mapLoc12Decor5 {
+                0%,
+                100% {
+                    transform: translate(5%, -5%);
+                }
+
+                50% {
+                    transform: translate(-5%, 7%) rotate(4deg);
+                }
+            }
+        }
+
+        &._6 {
+            top: 4.8%;
+            left: 57.9%;
+            width: 13%;
+            animation: mapLoc12Decor6 1.2s infinite ease-in-out;
+            animation-delay: -0.3s;
+
+            @keyframes mapLoc12Decor6 {
+                0%,
+                100% {
+                    transform: translate(0, 0);
+                }
+
+                50% {
+                    transform: translate(0, -15%) rotate(4deg);
+                }
+            }
+        }
+
+        &._7 {
+            top: 42.4%;
+            left: 85.3%;
+            width: 10%;
+            animation: mapLoc12Decor7 1.2s infinite ease-in-out;
+
+            @keyframes mapLoc12Decor7 {
+                0%,
+                100% {
+                    transform: translate(0, 0);
+                }
+
+                50% {
+                    transform: translate(0, 8%) rotate(-4deg);
+                }
+            }
+        }
+
+        &._8 {
+            top: 29.3%;
+            left: 87.1%;
+            width: 15%;
+            transform-origin: right top;
+            animation: mapLoc12Decor8 1.2s infinite ease-in-out;
+            animation-delay: -0.3s;
+
+            @keyframes mapLoc12Decor8 {
+                0%,
+                100% {
+                    transform: translate(0, 0);
+                }
+
+                50% {
+                    transform: translate(0, -7%) rotate(6deg);
+                }
             }
         }
     }
