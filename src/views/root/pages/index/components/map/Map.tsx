@@ -8,6 +8,7 @@ import location3Animate from './methods/location3Animate.ts';
 import location4Animate from './methods/location4Animate.ts';
 import location7Animate from './methods/location7Animate.ts';
 import location10Animate from './methods/location10Animate.ts';
+import location13Animate from './methods/location13Animate.ts';
 import locationHoverHandler from './methods/locationHoverHandler.ts';
 import scrollHandler from './methods/scrollHandler.ts';
 import scrollToSection from './methods/scrollToSection.ts';
@@ -29,6 +30,7 @@ import renderLocation9Decor from './renders/renderLocation9Decor.tsx';
 import renderLocation10Decor from './renders/renderLocation10Decor.tsx';
 import renderLocation11Decor from './renders/renderLocation11Decor.tsx';
 import renderLocation12Decor from './renders/renderLocation12Decor.tsx';
+import renderLocation13Decor from './renders/renderLocation13Decor.tsx';
 import renderLocationBack from './renders/renderLocationBack.tsx';
 import renderLocations from './renders/renderLocations.tsx';
 import renderMap from './renders/renderMap.tsx';
@@ -64,6 +66,7 @@ class Map extends Default<MapI['props'], MapI['state']> implements MapI {
     location4Animate = location4Animate;
     location7Animate = location7Animate;
     location10Animate = location10Animate;
+    location13Animate = location13Animate;
 
     setClips = setClips;
 
@@ -85,6 +88,7 @@ class Map extends Default<MapI['props'], MapI['state']> implements MapI {
     renderLocation10Decor = renderLocation10Decor;
     renderLocation11Decor = renderLocation11Decor;
     renderLocation12Decor = renderLocation12Decor;
+    renderLocation13Decor = renderLocation13Decor;
     renderBacks = renderBacks;
     renderSections = renderSections;
 

@@ -20,6 +20,7 @@ interface MapI extends DefaultI<PropsT, StateT> {
     location4Animate(this: MapI): void;
     location7Animate(this: MapI): void;
     location10Animate(this: MapI): void;
+    location13Animate(this: MapI): void;
 
     setClips(this: MapI): void;
 
@@ -41,6 +42,7 @@ interface MapI extends DefaultI<PropsT, StateT> {
     renderLocation10Decor(this: MapI): React.ReactNode;
     renderLocation11Decor(this: MapI): React.ReactNode;
     renderLocation12Decor(this: MapI): React.ReactNode;
+    renderLocation13Decor(this: MapI): React.ReactNode;
     renderBacks(this: MapI): React.ReactNode;
     renderSections(this: MapI): React.ReactNode;
 }
