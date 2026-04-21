@@ -322,6 +322,7 @@
                 z-index: 1;
                 width: 100%;
                 height: 100%;
+                pointer-events: none;
             }
 
             &Lights {
@@ -3970,6 +3971,200 @@
         &._13 {
             top: 77%;
             left: 70%;
+        }
+    }
+
+    &__mapLocation14Guitar {
+        position: absolute;
+        top: 0%;
+        left: 24.5%;
+        z-index: 14;
+        width: 61%;
+        object-fit: contain;
+        animation: mapLoc14Guitar 1.5s infinite ease-in-out;
+
+        @keyframes mapLoc14Guitar {
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(0, -5%);
+            }
+        }
+    }
+
+    &__mapLocation14Dynamic {
+        position: absolute;
+        z-index: 14;
+        object-fit: contain;
+        object-position: center top;
+        transform-origin: right 20%;
+        aspect-ratio: 1;
+        animation: mapLoc14Dynamic 0.4s infinite ease-in-out;
+
+        @keyframes mapLoc14Dynamic {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        &._1 {
+            top: 22%;
+            left: 7.7%;
+            width: 12%;
+        }
+
+        &._2 {
+            top: 36%;
+            left: 7.1%;
+            width: 13%;
+            animation-delay: -0.1s;
+        }
+
+        &._3 {
+            top: 48%;
+            left: 7.1%;
+            width: 13%;
+            animation-delay: -0.2s;
+        }
+
+        &._4 {
+            top: 58.5%;
+            left: 69.7%;
+            width: 12%;
+        }
+
+        &._5 {
+            top: 72.5%;
+            left: 69.1%;
+            width: 13%;
+            animation-delay: -0.1s;
+        }
+
+        &._6 {
+            top: 84%;
+            left: 69.1%;
+            width: 13%;
+            animation-delay: -0.2s;
+        }
+    }
+
+    &__mapLocation14Decor {
+        position: absolute;
+        top: -30%;
+        left: -30%;
+        z-index: 15;
+        object-fit: contain;
+        object-position: center top;
+        aspect-ratio: 1;
+
+        &._1 {
+            top: 6.5%;
+            left: 22.7%;
+            width: 17.5%;
+            animation: mapLoc14Decor1 1s infinite ease-in-out;
+
+            @keyframes mapLoc14Decor1 {
+                0%,
+                100% {
+                    transform: translate(0, 0);
+                }
+
+                50% {
+                    transform: translate(-9%, 4%);
+                }
+            }
+        }
+
+        &._2 {
+            top: 1.2%;
+            left: 32.7%;
+            width: 19.5%;
+            transform-origin: left bottom;
+            animation: mapLoc14Decor2 1s infinite ease-in-out;
+            animation-delay: -0.5s;
+
+            @keyframes mapLoc14Decor2 {
+                0%,
+                100% {
+                    transform: translate(0, 0);
+                }
+
+                50% {
+                    transform: translate(2%, -9%) rotate(5deg);
+                }
+            }
+        }
+
+        &._3 {
+            top: 30.5%;
+            left: 70.2%;
+            width: 15.5%;
+            animation: mapLoc14Decor3 1s infinite ease-in-out;
+            animation-delay: -0.5s;
+
+            @keyframes mapLoc14Decor3 {
+                0%,
+                100% {
+                    transform: translate(0, 0);
+                }
+
+                50% {
+                    transform: translate(-3%, -9%) rotate(-5deg);
+                }
+            }
+        }
+
+        &._4 {
+            top: 30.5%;
+            left: 80.6%;
+            width: 13.5%;
+            animation: mapLoc14Decor4 1s infinite ease-in-out;
+
+            @keyframes mapLoc14Decor4 {
+                0%,
+                100% {
+                    transform: translate(0, 0);
+                }
+
+                50% {
+                    transform: translate(4%, -12%);
+                }
+            }
+        }
+    }
+
+    &__mapLocation14Star {
+        position: absolute;
+        bottom: 17.3%;
+        left: 37%;
+        z-index: 13;
+        width: 18.5%;
+        object-fit: contain;
+        object-position: center top;
+        mix-blend-mode: plus-lighter;
+        aspect-ratio: 1;
+        animation: mapLoc14Star 1.5s infinite ease-in-out;
+
+        @keyframes mapLoc14Star {
+            0%,
+            10%,
+            90%,
+            100% {
+                opacity: 0;
+            }
+
+            40%,
+            60% {
+                opacity: 1;
+            }
         }
     }
 }

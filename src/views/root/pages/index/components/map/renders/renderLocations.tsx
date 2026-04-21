@@ -17,11 +17,25 @@ const renderLocations: I['renderLocations'] = function () {
 
                 return (
                     <div
-                        className={this.getClass('indexMap__mapLocation', this.setClass(k))}
+                        className={this.getClass('indexMap__mapLocation _CLICK', this.setClass(k))}
                         key={k}
                         data-location={k}
                         onMouseEnter={this.locationHoverHandler.bind(this, k, 'hover')}
                         onMouseLeave={this.locationHoverHandler.bind(this, k, 'leave')}
+                        onClick={() => {
+                            if (location.pageName) {
+                                AppRouter.changePage({
+                                    pageName: location.pageName,
+                                    ids: location.pageIds,
+                                });
+                            } else if (location.popupName) {
+                                appStore.getState().setPopup({ name: location.popupName });
+                            }
+
+                            if (location.goal) {
+                                sendGoal(location.goal);
+                            }
+                        }}
                     >
                         <div className="indexMap__mapLocationInner">
                             <Lazy>
@@ -44,6 +58,7 @@ const renderLocations: I['renderLocations'] = function () {
                                 {k === '11' && this.renderLocation11Decor()}
                                 {k === '12' && this.renderLocation12Decor()}
                                 {k === '13' && this.renderLocation13Decor()}
+                                {k === '14' && this.renderLocation14Decor()}
                             </Lazy>
                         </div>
 
@@ -51,20 +66,6 @@ const renderLocations: I['renderLocations'] = function () {
                             <div
                                 className="indexMap__mapLocationTitleInner _CLICK"
                                 dangerouslySetInnerHTML={{ __html: location.title }}
-                                onClick={() => {
-                                    if (location.pageName) {
-                                        AppRouter.changePage({
-                                            pageName: location.pageName,
-                                            ids: location.pageIds,
-                                        });
-                                    } else if (location.popupName) {
-                                        appStore.getState().setPopup({ name: location.popupName });
-                                    }
-
-                                    if (location.goal) {
-                                        sendGoal(location.goal);
-                                    }
-                                }}
                             />
                             {location.alert && (
                                 <div
