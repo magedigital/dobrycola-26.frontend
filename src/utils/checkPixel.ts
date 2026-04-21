@@ -1,5 +1,5 @@
 export const checkPixel = (): boolean => {
-    if (1) {
+    if (0) {
         return false;
     }
 
