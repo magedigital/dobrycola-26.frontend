@@ -1,0 +1,11 @@
+<svg width="68" height="50" viewBox="0 0 68 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M26 20.5L1 16L7.5 12.5L19 14.5L17 7L21.5 4L26 20.5Z" fill="#222221" stroke="black" stroke-linejoin="bevel"/>
+<path d="M1 16.5V13L7.5 9.5L18.5 12.5L17 7V4L21.5 1L26 17.5V21L1 16.5Z" fill="#8200CC" stroke="black" stroke-linejoin="bevel"/>
+<path d="M26 17.5L1 13L7.5 9.5L19 11.5L17 4L21.5 1L26 17.5Z" fill="#FF49B8" stroke="black" stroke-linejoin="bevel"/>
+<path d="M46 34.5L21 30L27.5 26.5L39 28.5L37 21L41.5 18L46 34.5Z" fill="#222221" stroke="black" stroke-linejoin="bevel"/>
+<path d="M21 30.5V27L27.5 23.5L38.5 26.5L37 21V18L41.5 15L46 31.5V35L21 30.5Z" fill="#8200CC" stroke="black" stroke-linejoin="bevel"/>
+<path d="M46 31.5L21 27L27.5 23.5L39 25.5L37 18L41.5 15L46 31.5Z" fill="#FF49B8" stroke="black" stroke-linejoin="bevel"/>
+<path d="M67 48.5L42 44L48.5 40.5L60 42.5L58 35L62.5 32L67 48.5Z" fill="#222221" stroke="black" stroke-linejoin="bevel"/>
+<path d="M42 44.5V41L48.5 37.5L59.5 40.5L58 35V32L62.5 29L67 45.5V49L42 44.5Z" fill="#8200CC" stroke="black" stroke-linejoin="bevel"/>
+<path d="M67 45.5L42 41L48.5 37.5L60 39.5L58 32L62.5 29L67 45.5Z" fill="#FF49B8" stroke="black" stroke-linejoin="bevel"/>
+</svg>
