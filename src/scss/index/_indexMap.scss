@@ -3970,7 +3970,9 @@
         left: 24.5%;
         z-index: 14;
         width: 61%;
+        height: 80%;
         object-fit: contain;
+        object-position: center top;
         animation: mapLoc14Guitar 1.5s infinite ease-in-out;
 
         @keyframes mapLoc14Guitar {
@@ -3980,7 +3982,7 @@
             }
 
             50% {
-                transform: translate(0, -11rem);
+                transform: translate(0, -5%);
             }
         }
     }
