@@ -30,13 +30,13 @@ const sendForm: I['sendForm'] = async function (code) {
         await checkAuth({ redirect: true });
 
         if (checkPixel()) {
-            if (window.reachGoal) {
+            if (window.reachGoal && window.utms?.includes('mediadesk')) {
                 try {
                     window.reachGoal('Y2xpZW50SWQ9MjM3MCZjb3VudGVySWQ9MTc3MCZnb2FsSWQ9MTQzMA==');
                 } catch (e) {}
             }
 
-            if (window._tmr) {
+            if (window._tmr && window.utms?.includes('vk')) {
                 try {
                     window._tmr.push({
                         type: 'reachGoal',
@@ -46,17 +46,23 @@ const sendForm: I['sendForm'] = async function (code) {
                 } catch (error) {}
             }
 
-            try {
-                await axios.get('https://sync.opendsp.ru/match/sp?sadd=298');
-            } catch (e) {}
+            if (window.utms?.includes('enter-digital')) {
+                try {
+                    await axios.get('https://sync.opendsp.ru/match/sp?sadd=298');
+                } catch (e) {}
+            }
 
-            try {
-                await axios.get('event-1-ad424.sync.sspnet.tech/sync');
-            } catch (e) {}
+            if (window.utms?.includes('redllama')) {
+                try {
+                    await axios.get('event-1-ad424.sync.sspnet.tech/sync');
+                } catch (e) {}
+            }
 
-            try {
-                await axios.get('bu--s349.sync.t2.ru/api/v1/postback?request=sync');
-            } catch (e) {}
+            if (window.utms?.includes('yabbi')) {
+                try {
+                    await axios.get('bu--s349.sync.t2.ru/api/v1/postback?request=sync');
+                } catch (e) {}
+            }
         }
     } catch (e) {
         const error = e as RequestErrorT;

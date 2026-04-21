@@ -29,7 +29,7 @@ const sendForm: I['sendForm'] = async function () {
         });
         await checkAuth({ redirect: true });
 
-        if (checkPixel()) {
+        if (checkPixel() && window.utms?.includes('yabbi')) {
             try {
                 await axios.get('bu--s351.sync.t2.ru/api/v1/postback?request=sync');
             } catch (e) {}

@@ -54,7 +54,7 @@ const init: I['init'] = async function () {
     const content = await contentRequests.getContent({ name: 'main' });
     appStore.getState().setMainContent(content);
 
-    if (checkPixel()) {
+    if (checkPixel() && window.utms?.includes('redllama')) {
         try {
             await axios.get('page-1-ad424.sync.sspnet.tech/sync');
         } catch (e) {}

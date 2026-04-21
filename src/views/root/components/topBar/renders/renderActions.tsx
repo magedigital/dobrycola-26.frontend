@@ -34,7 +34,7 @@ const renderActions: I['renderActions'] = function () {
                         appStore.getState().setPopup({ name: 'codePopup' });
                         setMenuState(false);
 
-                        if (checkPixel()) {
+                        if (checkPixel() && window.utms?.includes('yabbi')) {
                             try {
                                 await axios.get('bu--s348.sync.t2.ru/api/v1/postback?request=sync');
                             } catch (e) {}
