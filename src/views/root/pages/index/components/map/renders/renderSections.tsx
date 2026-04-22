@@ -24,6 +24,34 @@ const renderSections: I['renderSections'] = function () {
                                     alt=""
                                     className="indexMap__mapSectionThumb"
                                 />
+                                {k === 'game' && (
+                                    <>
+                                        <img
+                                            src={require('@media/banner-map-1-light-1.png')}
+                                            alt=""
+                                            className="indexMap__mapSectionLight _1"
+                                        />
+                                        <img
+                                            src={require('@media/banner-map-1-light-2.png')}
+                                            alt=""
+                                            className="indexMap__mapSectionLight _2"
+                                        />
+                                    </>
+                                )}
+                                {k === 'partners' && (
+                                    <>
+                                        <img
+                                            src={require('@media/banner-map-2-light-1.png')}
+                                            alt=""
+                                            className="indexMap__mapSectionLight _1"
+                                        />
+                                        <img
+                                            src={require('@media/banner-map-2-light-2.png')}
+                                            alt=""
+                                            className="indexMap__mapSectionLight _2"
+                                        />
+                                    </>
+                                )}
                                 <div
                                     className="indexMap__mapSectionTitle _CLICK"
                                     dangerouslySetInnerHTML={{ __html: section.mapTitle }}

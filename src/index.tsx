@@ -70,19 +70,25 @@ document.fonts.ready.then(() => {
     }, 10);
 });
 
-window.onload = () => {
-    setTimeout(() => {
-        const style = document.querySelector('.initStyle');
+export const rootPromises: Record<'load', Promise<void>> = {} as any;
 
-        if (style) {
-            style.remove();
-        }
+rootPromises.load = new Promise((r) => {
+    window.onload = () => {
+        setTimeout(() => {
+            const style = document.querySelector('.initStyle');
 
-        loads.event = true;
+            if (style) {
+                style.remove();
+            }
 
-        checkLoad();
-    }, 10);
-};
+            loads.event = true;
+
+            checkLoad();
+            appStore.getState().setLoadImage();
+            r();
+        }, 10);
+    };
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 

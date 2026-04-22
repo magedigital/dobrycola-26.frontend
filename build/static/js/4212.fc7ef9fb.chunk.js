@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunk=globalThis.webpackChunk||[]).push([[4212],{34212:(s,e,a)=>{a.r(e),a.d(e,{default:()=>o});a(9950);var l=a(44414);const o=(0,l.jsx)("svg",{viewBox:"0 0 49 24",fill:"none",children:(0,l.jsx)("path",{d:"M0 2H49M0 12H49M0 22H49",stroke:"#DE261F",strokeWidth:"4",className:"icon__stroke"})})}}]);

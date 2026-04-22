@@ -14,11 +14,36 @@ interface MapI extends DefaultI<PropsT, StateT> {
     scrollHandler(this: MapI): Promise<void>;
     scrollToSection(this: MapI, n: keyof typeof mapSections, d?: number): void;
 
+    locationHoverHandler(this: MapI, k: string, action: 'hover' | 'leave'): void;
+    location1Animate(this: MapI): void;
+    location3Animate(this: MapI): void;
+    location4Animate(this: MapI): void;
+    location7Animate(this: MapI): void;
+    location10Animate(this: MapI): void;
+    location13Animate(this: MapI): void;
+
+    setClips(this: MapI): void;
+
     renderDecors(this: MapI): React.ReactNode;
     renderTop(this: MapI): React.ReactNode;
     renderNav(this: MapI): React.ReactNode;
     renderMap(this: MapI): React.ReactNode;
     renderLocations(this: MapI): React.ReactNode;
+    renderLocationBack(this: MapI, k: string): React.ReactNode;
+    renderLocation1Decor(this: MapI): React.ReactNode;
+    renderLocation2Decor(this: MapI): React.ReactNode;
+    renderLocation3Decor(this: MapI): React.ReactNode;
+    renderLocation4Decor(this: MapI): React.ReactNode;
+    renderLocation5Decor(this: MapI): React.ReactNode;
+    renderLocation6Decor(this: MapI): React.ReactNode;
+    renderLocation7Decor(this: MapI): React.ReactNode;
+    renderLocation8Decor(this: MapI): React.ReactNode;
+    renderLocation9Decor(this: MapI): React.ReactNode;
+    renderLocation10Decor(this: MapI): React.ReactNode;
+    renderLocation11Decor(this: MapI): React.ReactNode;
+    renderLocation12Decor(this: MapI): React.ReactNode;
+    renderLocation13Decor(this: MapI): React.ReactNode;
+    renderLocation14Decor(this: MapI): React.ReactNode;
     renderBacks(this: MapI): React.ReactNode;
     renderSections(this: MapI): React.ReactNode;
 }
