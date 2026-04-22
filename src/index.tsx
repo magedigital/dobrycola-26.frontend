@@ -23,6 +23,16 @@ const path = AppRouter.getStartUrl(window.location.pathname.slice(1));
         localStorage.setItem('inv', inv);
     }
 
+    const utmItem = window.location.search
+        .slice(1)
+        .split('&')
+        .find((item) => item.split('=')[0] === 'utm_source');
+    const utmSource = utmItem ? utmItem.split('=')[1] : undefined;
+
+    if (utmSource) {
+        localStorage.setItem('utmSource', utmSource);
+    }
+
     window.isBot = !!window.location.search
         .slice(1)
         .split('&')
