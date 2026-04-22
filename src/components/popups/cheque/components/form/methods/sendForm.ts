@@ -5,7 +5,7 @@ import I from '../types.ts';
 
 // const sendCRAGoal = () => {
 // const user = store.getState().user;
-// const utmSource = localStorage.getItem('utmSource');
+// const utmSource = localStorage.getItem('2026utmSource');
 // if (utmSource !== 'winbox' && utmSource !== 'advcake') {
 //     return;
 // }

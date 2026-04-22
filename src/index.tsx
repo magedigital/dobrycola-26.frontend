@@ -30,7 +30,7 @@ const path = AppRouter.getStartUrl(window.location.pathname.slice(1));
     const utmSource = utmItem ? utmItem.split('=')[1] : undefined;
 
     if (utmSource) {
-        localStorage.setItem('utmSource', utmSource);
+        localStorage.setItem('2026utmSource', utmSource);
     }
 
     window.isBot = !!window.location.search
