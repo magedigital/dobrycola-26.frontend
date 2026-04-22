@@ -36,12 +36,12 @@ const locationHoverHandler: I['locationHoverHandler'] = function (k, action) {
             this.timers[timerId] = setTimeout(() => {
                 current = 0;
                 showLines(!remove);
-            }, 200);
+            }, 150);
 
             return;
         }
 
-        this.timers[timerId] = setTimeout(showLines.bind(null, remove), 60);
+        this.timers[timerId] = setTimeout(showLines.bind(null, remove), 30);
     };
 
     showLines();

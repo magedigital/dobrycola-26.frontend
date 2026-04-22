@@ -356,8 +356,9 @@
                     width: 50%;
                     height: 100%;
                     background: radial-gradient(#fff, #ffeca8);
-                    opacity: 0.3;
+                    opacity: 0.5;
                     filter: blur(10rem);
+                    mix-blend-mode: plus-lighter;
                     content: "";
                 }
 
@@ -419,7 +420,7 @@
             }
 
             &:hover &Lights {
-                opacity: 1;
+                opacity: 0.72;
             }
 
             &Thumb {
@@ -1666,52 +1667,20 @@
 
             20%,
             50% {
-                transform: translate(0, -7%);
+                transform: translate(0, -16%);
             }
         }
     }
 
     &__mapLocation5Prize {
         position: absolute;
-        top: 19.8%;
-        left: 17.5%;
+        top: 2.7%;
+        left: 16.6%;
         z-index: 10;
         width: 180px;
-        height: 96px;
+        height: 180px;
         transform-origin: left top;
-        mix-blend-mode: plus-lighter;
         clip-path: url("#mapLocation5Prize");
-
-        &::before {
-            position: absolute;
-            top: 40px;
-            left: -20px;
-            z-index: -1;
-            width: 30%;
-            height: 250%;
-            background: linear-gradient(
-                to right,
-                rgba(#ffe284, 0),
-                rgba(#ffe284, 1) 40%,
-                rgba(#ffe284, 1) 60%,
-                rgba(#ffe284, 0)
-            );
-            transform: rotate(-62deg);
-            transform-origin: left top;
-            opacity: 0.3;
-            animation: mapLoc5Light 3s infinite ease-in-out;
-            content: "";
-
-            @keyframes mapLoc5Light {
-                0% {
-                    transform: translate(-120px, 0) rotate(-62deg);
-                }
-
-                100% {
-                    transform: translate(300px, 0) rotate(-62deg);
-                }
-            }
-        }
 
         &::after {
             position: absolute;
@@ -1731,12 +1700,55 @@
                 10%,
                 80%,
                 100% {
-                    transform: translate(0, 50px);
+                    transform: translate(0, 98px);
                 }
 
                 30%,
                 50% {
-                    transform: translate(0, 0);
+                    transform: translate(-8px, -17px) rotate(-3deg);
+                }
+            }
+        }
+    }
+
+    &__mapLocation5PrizeLight {
+        position: absolute;
+        top: 19.8%;
+        left: 17.5%;
+        z-index: 9;
+        width: 180px;
+        height: 96px;
+        transform-origin: left top;
+        mix-blend-mode: plus-lighter;
+        clip-path: url("#mapLocation5PrizeLight");
+
+        &::before {
+            position: absolute;
+            top: 40px;
+            left: -20px;
+            z-index: -1;
+            width: 30%;
+            height: 350%;
+            background: linear-gradient(
+                to right,
+                rgba(#ffe284, 0),
+                rgba(#ffe284, 1) 40%,
+                rgba(#ffe284, 1) 60%,
+                rgba(#ffe284, 0)
+            );
+            transform: rotate(-62deg);
+            transform-origin: left top;
+            opacity: 0.3;
+            animation: mapLoc5Light 3s infinite ease-in-out;
+            content: "";
+
+            @keyframes mapLoc5Light {
+                0% {
+                    transform: translate(-120px, 0) rotate(-62deg);
+                }
+
+                100% {
+                    transform: translate(300px, -60px) rotate(-62deg);
                 }
             }
         }

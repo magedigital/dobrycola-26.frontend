@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6c4da935.css",
-    "main.js": "/static/js/main.707a2db8.js",
+    "main.css": "/static/css/main.c81f3761.css",
+    "main.js": "/static/js/main.0cc30181.js",
     "static/js/3315.c9b25da6.chunk.js": "/static/js/3315.c9b25da6.chunk.js",
     "static/js/3648.bbe92e21.chunk.js": "/static/js/3648.bbe92e21.chunk.js",
     "static/js/6286.6f8c5b96.chunk.js": "/static/js/6286.6f8c5b96.chunk.js",
@@ -94,15 +94,16 @@
     "static/media/back-main-2.png": "/static/media/back-main-2.aa4ca800c042cde8f299.png",
     "static/media/carousel-big.png": "/static/media/carousel-big.3d4d26231d4a065fa3b5.png",
     "static/media/decor-3.jpg": "/static/media/decor-3.4f0e65abeab753be7dfb.jpg",
-    "static/media/map-leto-03.jpg": "/static/media/map-leto-03.0879b92a03f0fbeac36e.jpg",
     "static/media/banner-map-1.png": "/static/media/banner-map-1.27c0c22f35f4d2ce18c8.png",
     "static/media/back-5ka-element02.png": "/static/media/back-5ka-element02.f81917fd542824ecdcfe.png",
+    "static/media/map-leto-03.jpg": "/static/media/map-leto-03.de73d45cabef48a7513d.jpg",
     "static/media/back-5ka-element05-01.png": "/static/media/back-5ka-element05-01.147b9e19b7a8f75637f9.png",
     "static/media/game-back.jpg": "/static/media/game-back.cfaa375d5d93ab0b86cb.jpg",
     "static/media/map-loc-10.png": "/static/media/map-loc-10.98e434f1a9fef57d565a.png",
     "static/media/back-5ka-01.jpg": "/static/media/back-5ka-01.ec7c70394c956952685d.jpg",
-    "static/media/map-leto-02.jpg": "/static/media/map-leto-02.9037cb9781b6deafce85.jpg",
+    "static/media/map-leto-01.jpg": "/static/media/map-leto-01.3ec8c39b79ba5a694ee8.jpg",
     "static/media/decor-6.jpg": "/static/media/decor-6.2649e2c0ed578b9f3d19.jpg",
+    "static/media/map-leto-02.jpg": "/static/media/map-leto-02.7d8a6bd17e404e9cb151.jpg",
     "static/media/decor-5.jpg": "/static/media/decor-5.1e4017637a780f3a28bc.jpg",
     "static/media/check-prize-5ka-bg02.png": "/static/media/check-prize-5ka-bg02.30a3e257b685748af1e9.png",
     "static/media/map-loc-12.png": "/static/media/map-loc-12.9cc5a675acc4dcdd7260.png",
@@ -112,7 +113,6 @@
     "static/media/back-5ka-element04.png": "/static/media/back-5ka-element04.eb6b0cb936ca9be95655.png",
     "static/media/back-main-1.jpg": "/static/media/back-main-1.eb18d81c3aedfd22e89c.jpg",
     "static/media/back-inner-1.svg": "/static/media/back-inner-1.6c88e81174df20beb830.svg",
-    "static/media/map-leto-01.jpg": "/static/media/map-leto-01.0f071dc1f7a50123b2b1.jpg",
     "static/media/back-main-2-mob.png": "/static/media/back-main-2-mob.bc09d93563927946983b.png",
     "static/media/back-5ka-element01.png": "/static/media/back-5ka-element01.919caeecabd21a5d816b.png",
     "static/media/drukwidecyr-heavy.ttf": "/static/media/drukwidecyr-heavy.a51217475a1a3e049ae6.ttf",
@@ -131,11 +131,12 @@
     "static/media/Frame 3524.svg": "/static/media/Frame 3524.a3cc2a1e60ef027548ae.svg",
     "static/media/order-back.svg": "/static/media/order-back.1cf55f728f1fe347e4cd.svg",
     "static/media/circle-pattern.png": "/static/media/circle-pattern.e9d0ff1af60e95f9f717.png",
-    "static/media/map-leto-03-mob.jpg": "/static/media/map-leto-03-mob.c0553a20c8a988785634.jpg",
     "static/media/map-loc-11.png": "/static/media/map-loc-11.17cd881359efbc5c4abe.png",
     "static/media/decor-2.jpg": "/static/media/decor-2.a031538b734c9c948c63.jpg",
-    "static/media/map-leto-02-mob.jpg": "/static/media/map-leto-02-mob.34ef735fe76ae1eea7db.jpg",
+    "static/media/map-leto-03-mob.jpg": "/static/media/map-leto-03-mob.8a9e1885aeaca4b40642.jpg",
     "static/media/back-5ka-01-mob.jpg": "/static/media/back-5ka-01-mob.c2c82b9a6e1f78fce5bb.jpg",
+    "static/media/map-leto-01-mob.jpg": "/static/media/map-leto-01-mob.43fbd270a122c1e8247c.jpg",
+    "static/media/map-leto-02-mob.jpg": "/static/media/map-leto-02-mob.dc680c2abca4e6ee0401.jpg",
     "static/media/app-decor-right.svg": "/static/media/app-decor-right.988031e5576b9c1eb1ff.svg",
     "static/media/loc11-trees.png": "/static/media/loc11-trees.f74601f886890f9d64ae.png",
     "static/media/5ka-back.jpg": "/static/media/5ka-back.430e4c9200e8b2f6cc76.jpg",
@@ -159,7 +160,6 @@
     "static/media/Onest-Medium.ttf": "/static/media/Onest-Medium.fbd1029ceefc29dbe253.ttf",
     "static/media/Onest-Bold.ttf": "/static/media/Onest-Bold.e6f62dc971ba457a32e0.ttf",
     "static/media/Onest-Regular.ttf": "/static/media/Onest-Regular.2f8180f95c9c4f66c68c.ttf",
-    "static/media/map-leto-01-mob.jpg": "/static/media/map-leto-01-mob.7dbfcbeff77447bc2b11.jpg",
     "static/media/map-loc-09-2.png": "/static/media/map-loc-09-2.5b7e0e9b7459d8418715.png",
     "static/media/back-5ka-element05.jpg": "/static/media/back-5ka-element05.47292189c5c55b0f61c0.jpg",
     "static/media/menu-game-back.svg": "/static/media/menu-game-back.255610ff4ef5fb732bfd.svg",
@@ -314,7 +314,7 @@
     "static/media/plashka-map.svg": "/static/media/plashka-map.807bbf92b339d7fb2f4c.svg"
   },
   "entrypoints": [
-    "static/css/main.6c4da935.css",
-    "static/js/main.707a2db8.js"
+    "static/css/main.c81f3761.css",
+    "static/js/main.0cc30181.js"
   ]
 }
