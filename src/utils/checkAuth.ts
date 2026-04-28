@@ -101,7 +101,7 @@ export default async function checkAuth({ redirect }: ParamsT): Promise<UserT | 
         pageName = 'profile';
     }
 
-    if (pageName && 0) {
+    if (pageName) {
         AppRouter.changePage({ pageName, ids, saveSearch: !!window.isBot });
     }
 
