@@ -14,7 +14,7 @@ const renderContent: I['renderContent'] = function (this: I) {
                 на двоих за 500 000 рублей!
             </h3>
             <div className="popupAction__content _COL">
-                <p className="popupAction__contentSupport">С 1 мая по 30 июня 2026 года:</p>
+                <p className="popupAction__contentSupport">С 7 мая по 30 июня 2026 года:</p>
                 <div className="popupAction__contentSteps">
                     <div className="popupAction__contentStep">
                         <h4 className="popupAction__contentStepTitle">регистрируй карту №1*</h4>
