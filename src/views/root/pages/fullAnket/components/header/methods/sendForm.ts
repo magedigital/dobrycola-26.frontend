@@ -4,18 +4,7 @@ import checkAuth from '@utils/checkAuth.ts';
 import I from '../types.ts';
 
 const sendForm: I['sendForm'] = async function (d) {
-    const data = {
-        firstName: d.firstName,
-        lastName: d.lastName,
-        thirdName: d.thirdName,
-        phone: d.phone,
-        agreement: !!d.agreement,
-        mailing: d.mailing ? '1' : undefined,
-        password1: d.password,
-        password2: d.password2,
-    };
-
-    await anketRequests.send({ data });
+    await anketRequests.send({ data: d });
     await checkAuth({ redirect: true });
 };
 
