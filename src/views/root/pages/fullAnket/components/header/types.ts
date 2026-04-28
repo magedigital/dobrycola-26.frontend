@@ -1,9 +1,11 @@
 import UserT from '@api/entities/User';
 import DefaultI from '@components/default/types';
 import { FieldT } from '@components/field/types';
+import { StoreT } from '@store/store';
 
 type PropsT = {
     authUser: UserT;
+    storePages:StoreT['pages']
 };
 
 type StateT = {};

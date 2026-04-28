@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Address from '@components/address/Address.tsx';
 import Checkbox from '@components/checkbox/Checkbox.tsx';
 import Input from '@components/input/Input.tsx';
 import List from '@components/list/List.tsx';
@@ -22,6 +23,7 @@ const renderField: I['renderField'] = function () {
         checkbox,
         className,
         disabled,
+        data,
     } = this.props;
 
     if (type === 'input') {
@@ -125,6 +127,20 @@ const renderField: I['renderField'] = function () {
                     }
                 }}
                 disabled={disabled}
+            />
+        );
+    }
+
+    if (type === 'address') {
+        return (
+            <Address
+                onChange={async (p) => {
+                    await setValue({ name, value: p.value });
+                    await setValue({ name: 'pointId', value: undefined });
+                }}
+                pointId={data?.pointId as string}
+                pointAddress={data?.pointAddress as string}
+                pageData={data}
             />
         );
     }

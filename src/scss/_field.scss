@@ -59,7 +59,8 @@
         }
     }
 
-    &._checkbox &__box {
+    &._checkbox &__box,
+    &._address &__box {
         height: auto;
 
         @include mob {

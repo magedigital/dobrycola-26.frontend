@@ -4,6 +4,10 @@ import checkAuth from '@utils/checkAuth.ts';
 import I from '../types.ts';
 
 const sendForm: I['sendForm'] = async function (d) {
+    if (d.pointId) {
+        d.deliveryAddress = d.pointAddress;
+    }
+
     await anketRequests.send({ data: d });
     await checkAuth({ redirect: true });
 };

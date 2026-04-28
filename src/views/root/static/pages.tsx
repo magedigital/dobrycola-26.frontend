@@ -4,6 +4,7 @@ import I from '../types.ts';
 
 import FiveKa from '../pages/5ka/5ka.tsx';
 import Anket from '../pages/anket/Anket.tsx';
+import AnketMap from '../pages/anketMap/AnketMap.tsx';
 import BotAnket from '../pages/botAnket/BotAnket.tsx';
 import BotReg from '../pages/botReg/BotReg.tsx';
 import Faq from '../pages/faq/Faq.tsx';
@@ -46,6 +47,11 @@ export const rootPages = {
     fullAnket: {
         render(this: I) {
             return <FullAnket />;
+        },
+    },
+    anketMap: {
+        render(this: I) {
+            return <AnketMap />;
         },
     },
     winners: {

@@ -3,8 +3,9 @@ import Phone from '@services/phone/Phone.service.ts';
 import I from '../types.ts';
 
 const getUserData: I['getUserData'] = function () {
-    const { authUser } = this.props;
+    const { authUser, storePages } = this.props;
     const data: Partial<Record<string, string>> = {};
+    const anketPageData = storePages.fullAnket.data;
 
     if (authUser.extraDataRequired) {
         Object.keys(authUser.extraDataRequired).forEach((name) => {
@@ -21,6 +22,12 @@ const getUserData: I['getUserData'] = function () {
             if (field.type === 'photo') {
                 data[name] = typeof field.value === 'string' ? field.value : field.value?.name;
             }
+        });
+    }
+
+    if (anketPageData) {
+        Object.keys(anketPageData).forEach((k) => {
+            data[k] = anketPageData[k];
         });
     }
 

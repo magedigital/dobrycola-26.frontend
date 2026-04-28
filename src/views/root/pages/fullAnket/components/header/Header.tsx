@@ -2,6 +2,7 @@ import React from 'react';
 
 import Default from '@components/default/Default.tsx';
 import Form from '@components/form/Form.tsx';
+import { StoreT, WithStore } from '@store/store.tsx';
 
 import getFields from './methods/getFields.tsx';
 import getUserData from './methods/getUserData.ts';
@@ -34,7 +35,7 @@ class Header extends Default<HeaderI['props'], HeaderI['state']> implements Head
                 <div className="anketHeader__inner _INNER">
                     <div className="anketHeader__head _COL">
                         <h1 className="anketHeader__headTitle _TITLE">АНКЕТА</h1>
-                        <p className="anketHeader__headText _TITLE _sub">
+                        <p className="anketHeader__headText _TITLE _sub _inner">
                             Для получения приза заполните все поля и&nbsp;приложите необходимые
                             документы
                         </p>
@@ -61,4 +62,8 @@ class Header extends Default<HeaderI['props'], HeaderI['state']> implements Head
     }
 }
 
-export default Header;
+const mapStore = (s: StoreT) => ({
+    storePages: s.pages,
+});
+
+export default WithStore(Header, mapStore);

@@ -23,6 +23,8 @@ const getFields: I['getFields'] = function () {
 
             if (field.type === 'photo') {
                 type = 'file';
+            } else if (name === 'deliveryAddress') {
+                type = 'address';
             } else {
                 type = 'input';
             }

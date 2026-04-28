@@ -4,9 +4,10 @@ import { inputRegs } from '@components/input/static/regs';
 type PropsT = {
     value: string;
     name: string;
-    setValue: (d: { value: string | number | boolean; name: string }) => Promise<void>;
+    setValue: (d: { value: string | number | boolean | undefined; name: string }) => Promise<void>;
     uploadFile?: (d: { file: File; name: string }) => Promise<void>;
     disabled?: boolean;
+    data?: ObjT;
 } & FieldT;
 
 type StateT = {
@@ -14,7 +15,7 @@ type StateT = {
 };
 
 type FieldT = {
-    type: 'select' | 'input' | 'checkbox' | 'file';
+    type: 'select' | 'input' | 'checkbox' | 'file' | 'address';
     support?: string;
     input?: Partial<{
         reg: keyof typeof inputRegs;

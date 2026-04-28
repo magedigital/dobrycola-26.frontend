@@ -53,15 +53,16 @@ class Form extends Editor<FormI['props'], FormI['state']> implements FormI {
                                 {...fields[n]}
                                 name={n}
                                 value={form[n] ?? ''}
-                                setValue={async ({ value }) => {
+                                setValue={async ({ value, name }) => {
                                     await this.setValue({
-                                        data: { [n]: value },
+                                        data: { [name || n]: value },
                                         targetName: 'form',
                                     });
                                 }}
                                 uploadFile={uploadFile}
                                 className={this.getClass('_formField', fieldClassName)}
                                 disabled={disabled}
+                                data={{ ...form }}
                             />
                         </div>
                     ))}

@@ -63,6 +63,9 @@ const pages = {
     fullAnket: {
         links: ['full-anket'],
     },
+    anketMap: {
+        links: ['anket-map'],
+    },
     winners: {
         links: ['winners'],
     },

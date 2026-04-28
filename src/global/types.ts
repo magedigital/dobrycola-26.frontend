@@ -27,6 +27,7 @@ declare global {
         reachGoal?: (s: string) => void;
         _tmr?: any;
         utms?: string[];
+        fivepost?: any;
     }
 
     namespace NodeJS {
