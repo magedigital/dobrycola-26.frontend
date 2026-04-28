@@ -25,6 +25,10 @@ type PopupsT = {
     prizeOrderPopup: PopupT<{ code: string }>;
     pyterochkaPopup: PopupT;
     magnitPopup: PopupT;
+    lentaPopup: PopupT;
+    kbPopup: PopupT;
+    diksiPopup: PopupT;
+    perekrestokPopup: PopupT;
 };
 
 type PopupsReducersT = {
@@ -79,6 +83,10 @@ const popups = {
     },
     pyterochkaPopup: { isOverlay: true },
     magnitPopup: { isOverlay: true },
+    lentaPopup: { isOverlay: true },
+    kbPopup: { isOverlay: true },
+    diksiPopup: { isOverlay: true },
+    perekrestokPopup: { isOverlay: true },
 } as const;
 
 type PopupDataT = Partial<{

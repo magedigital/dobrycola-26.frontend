@@ -175,7 +175,11 @@
     }
 
     &._pyterochkaPopup &__inner,
-    &._magnitPopup &__inner {
+    &._magnitPopup &__inner,
+    &._lentaPopup &__inner,
+    &._kbPopup &__inner,
+    &._diksiPopup &__inner,
+    &._perekrestokPopup &__inner {
         width: 826rem;
 
         @include mob {

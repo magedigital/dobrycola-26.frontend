@@ -24,6 +24,38 @@
         }
     }
 
+    &._lenta {
+        @include bg("/media/popups/popup-lenta-image.jpg", contain, left top);
+
+        @include mob {
+            @include bg("/media/popups/popup-lenta-image-mob.jpg", 100% auto, center top);
+        }
+    }
+
+    &._kb {
+        @include bg("/media/popups/popup-kb-image.jpg", contain, left top);
+
+        @include mob {
+            @include bg("/media/popups/popup-kb-image-mob.jpg", 100% auto, center top);
+        }
+    }
+
+    &._diksi {
+        @include bg("/media/popups/popup-diksi-image.jpg", contain, left top);
+
+        @include mob {
+            @include bg("/media/popups/popup-diksi-image-mob.jpg", 100% auto, center top);
+        }
+    }
+
+    &._perekrestok {
+        @include bg("/media/popups/popup-perek-image.jpg", contain, left top);
+
+        @include mob {
+            @include bg("/media/popups/popup-perek-image-mob.jpg", 100% auto, center top);
+        }
+    }
+
     & {
         background-color: #e11f26 !important;
     }
@@ -173,6 +205,11 @@
         }
     }
 
+    &._lenta &__contentStepTitle {
+        font-size: 17rem;
+        white-space: nowrap;
+    }
+
     &__prizes {
         display: flex;
         flex-direction: column;
@@ -278,6 +315,78 @@
         @include mob {
             width: 100%;
             margin: 0;
+        }
+    }
+
+    &._lenta &__prizes {
+        margin: 0 0 0 auto;
+
+        @include mob {
+            width: 100%;
+            margin: 0;
+        }
+
+        &Items {
+            justify-content: space-between;
+
+            @include mob {
+                justify-content: center;
+            }
+        }
+
+        &Item:last-child {
+            margin-right: 28rem;
+            margin-left: 80rem;
+
+            @include mob {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+    }
+
+    &._kb &__prizes {
+        margin: 0 20rem 0 auto;
+
+        @include mob {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    &._diksi &__prizes {
+        width: 240rem;
+        margin: 0 40rem 0 auto;
+
+        @include mob {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    &._perekrestok &__prizes {
+        width: 240rem;
+        margin: 0 40rem 0 auto;
+
+        @include mob {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    &._lenta &__prizesSupport {
+        width: 374rem;
+        margin-left: auto;
+        font-weight: 600;
+        font-size: 10rem;
+        font-family: Onest;
+        text-transform: none;
+
+        @include mob {
+            width: 100%;
+            margin-top: 28rem;
+            font-size: 13rem;
+            line-height: 1.3;
         }
     }
 }

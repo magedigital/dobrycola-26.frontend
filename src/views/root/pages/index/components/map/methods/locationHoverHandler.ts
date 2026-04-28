@@ -1,6 +1,12 @@
+import { appStore } from '@store/store.tsx';
+
 import I from '../types.ts';
 
 const locationHoverHandler: I['locationHoverHandler'] = function (k, action) {
+    if (appStore.getState().device === 'mobile') {
+        return;
+    }
+
     const locationNode = this.parent.current!.querySelector<HTMLElement>(
         `.indexMap__mapLocation[data-location="${k}"]`,
     );
