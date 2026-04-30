@@ -56,6 +56,18 @@
         }
     }
 
+    &._inviteFriend {
+        padding-top: 34rem;
+
+        @include bg("/media/popups/invite-back.jpg", auto 100%, left top);
+
+        @include mob {
+            padding-top: 372rem;
+
+            @include bg("/media/popups/invite-back-mob.jpg", 100% auto, center top);
+        }
+    }
+
     & {
         background-color: #e11f26 !important;
     }
@@ -185,12 +197,14 @@
                     line-height: 1.23;
                 }
 
-                & a {
+                & a,
+                & span._link {
                     display: inline-block;
                     color: #fff;
                     font-family: Onest;
                     line-height: 0.9;
                     border-bottom: 1rem solid rgba(#fff, 0.72);
+                    cursor: pointer;
                 }
             }
         }
@@ -208,6 +222,26 @@
     &._lenta &__contentStepTitle {
         font-size: 17rem;
         white-space: nowrap;
+    }
+
+    &._inviteFriend &__title {
+        @include mob {
+            margin-bottom: 16rem;
+        }
+    }
+
+    &._inviteFriend &__content {
+        width: 410rem;
+        margin-top: 2rem;
+        margin-bottom: 0;
+
+        @include mob {
+            width: 100%;
+        }
+
+        &Support {
+            margin-bottom: 16rem;
+        }
     }
 
     &__prizes {
@@ -387,6 +421,23 @@
             margin-top: 28rem;
             font-size: 13rem;
             line-height: 1.3;
+        }
+    }
+
+    &__offer {
+        position: absolute;
+        bottom: 48rem;
+        left: 32rem;
+        z-index: 10;
+        color: #fff;
+        font-size: 18rem;
+        line-height: 1.2;
+        text-transform: uppercase;
+
+        @include mob {
+            bottom: 32rem;
+            left: 24rem;
+            font-size: 13rem;
         }
     }
 }

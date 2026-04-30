@@ -3,13 +3,13 @@ import { StoreT } from '@store/store';
 
 type PropsT = {
     authUser: StoreT['authUser'];
+    profileData: StoreT['profileData'];
 };
 
 type StateT = {
     loadingKey?: string;
     pagesRenderKey?: string;
     isCopy?: boolean;
-    data?: ProfileDataT;
     content?: ProfileContentT;
     isReady?: boolean;
 };

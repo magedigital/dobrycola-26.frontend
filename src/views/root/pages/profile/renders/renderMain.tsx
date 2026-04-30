@@ -12,11 +12,12 @@ import sendGoal from '@utils/sendGoal.ts';
 import I from '../types.ts';
 
 const renderMain: I['renderMain'] = function () {
-    const { loadingKey, isCopy, data } = this.state;
+    const { loadingKey, isCopy, content } = this.state;
+    const { profileData } = this.props;
     const authUser = this.props.authUser!;
 
     return (
-        <div className={`profile__main ${data ? '_ready' : ''}`}>
+        <div className={`profile__main ${profileData && content ? '_ready' : ''}`}>
             <div className="profile__mainBlocks">
                 <div className="profile__mainBlock _info _COL">
                     <div className="profile__mainName">
@@ -100,8 +101,9 @@ const renderMain: I['renderMain'] = function () {
                 </div>
                 <div className="profile__mainBlock _COL _score">
                     <div className="profile__mainScore">
-                        У тебя <span className="profile__mainScoreCount">{data?.balance || 0}</span>{' '}
-                        {data?.balanceTitle}
+                        У тебя{' '}
+                        <span className="profile__mainScoreCount">{profileData?.balance || 0}</span>{' '}
+                        {profileData?.balanceTitle}
                     </div>
                     <div
                         className="profile__mainLink _blue _CLICK"

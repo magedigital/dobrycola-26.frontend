@@ -29,6 +29,7 @@ type PopupsT = {
     kbPopup: PopupT;
     diksiPopup: PopupT;
     perekrestokPopup: PopupT;
+    inviteFriendPopup: PopupT;
 };
 
 type PopupsReducersT = {
@@ -87,6 +88,7 @@ const popups = {
     kbPopup: { isOverlay: true },
     diksiPopup: { isOverlay: true },
     perekrestokPopup: { isOverlay: true },
+    inviteFriendPopup: { isOverlay: true },
 } as const;
 
 type PopupDataT = Partial<{

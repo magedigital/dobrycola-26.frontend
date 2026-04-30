@@ -28,6 +28,7 @@ declare global {
         _tmr?: any;
         utms?: string[];
         fivepost?: any;
+        profileDataPromise?: Promise<void>;
     }
 
     namespace NodeJS {

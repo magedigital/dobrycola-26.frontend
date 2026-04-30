@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9a6fb298.css",
-    "main.js": "/static/js/main.f3821b65.js",
+    "main.css": "/static/css/main.aa0be3a7.css",
+    "main.js": "/static/js/main.900d508d.js",
     "static/js/3315.c9b25da6.chunk.js": "/static/js/3315.c9b25da6.chunk.js",
     "static/js/3648.bbe92e21.chunk.js": "/static/js/3648.bbe92e21.chunk.js",
     "static/js/6286.6f8c5b96.chunk.js": "/static/js/6286.6f8c5b96.chunk.js",
@@ -54,6 +54,8 @@
     "static/js/5070.39145692.chunk.js": "/static/js/5070.39145692.chunk.js",
     "static/js/5309.3be2b754.chunk.js": "/static/js/5309.3be2b754.chunk.js",
     "static/js/9075.d5015144.chunk.js": "/static/js/9075.d5015144.chunk.js",
+    "static/js/4775.8ac50688.chunk.js": "/static/js/4775.8ac50688.chunk.js",
+    "static/js/5819.1ab239ce.chunk.js": "/static/js/5819.1ab239ce.chunk.js",
     "static/js/2855.016d4ed2.chunk.js": "/static/js/2855.016d4ed2.chunk.js",
     "static/js/443.01fb863b.chunk.js": "/static/js/443.01fb863b.chunk.js",
     "static/js/1987.4015d409.chunk.js": "/static/js/1987.4015d409.chunk.js",
@@ -70,8 +72,8 @@
     "static/js/1534.8a30b89c.chunk.js": "/static/js/1534.8a30b89c.chunk.js",
     "static/js/7647.5bfd8b48.chunk.js": "/static/js/7647.5bfd8b48.chunk.js",
     "static/js/6474.2aa74a35.chunk.js": "/static/js/6474.2aa74a35.chunk.js",
-    "static/js/1639.f01fea9d.chunk.js": "/static/js/1639.f01fea9d.chunk.js",
-    "static/js/6419.c34b5b3d.chunk.js": "/static/js/6419.c34b5b3d.chunk.js",
+    "static/js/1639.91c69935.chunk.js": "/static/js/1639.91c69935.chunk.js",
+    "static/js/6419.c5e9c0e9.chunk.js": "/static/js/6419.c5e9c0e9.chunk.js",
     "static/js/9296.ca4a9ba5.chunk.js": "/static/js/9296.ca4a9ba5.chunk.js",
     "static/js/7753.4e52af9e.chunk.js": "/static/js/7753.4e52af9e.chunk.js",
     "static/js/2018.fa272219.chunk.js": "/static/js/2018.fa272219.chunk.js",
@@ -100,6 +102,7 @@
     "static/media/Regular.ttf": "/static/media/Regular.3e6423cef8188d3106d3.ttf",
     "static/media/back-5ka-element05.png": "/static/media/back-5ka-element05.1d3dc42ed581d76e1efc.png",
     "static/media/back-main-2.png": "/static/media/back-main-2.aa4ca800c042cde8f299.png",
+    "static/media/invite-back.jpg": "/static/media/invite-back.6a8baee1f42e01d40d6e.jpg",
     "static/media/carousel-big.png": "/static/media/carousel-big.3d4d26231d4a065fa3b5.png",
     "static/media/decor-3.jpg": "/static/media/decor-3.4f0e65abeab753be7dfb.jpg",
     "static/media/banner-map-1.png": "/static/media/banner-map-1.27c0c22f35f4d2ce18c8.png",
@@ -107,6 +110,7 @@
     "static/media/map-leto-03.jpg": "/static/media/map-leto-03.de73d45cabef48a7513d.jpg",
     "static/media/back-5ka-element05-01.png": "/static/media/back-5ka-element05-01.147b9e19b7a8f75637f9.png",
     "static/media/game-back.jpg": "/static/media/game-back.cfaa375d5d93ab0b86cb.jpg",
+    "static/media/invite-back-mob.jpg": "/static/media/invite-back-mob.608928868105adb7c18a.jpg",
     "static/media/map-loc-10.png": "/static/media/map-loc-10.98e434f1a9fef57d565a.png",
     "static/media/back-5ka-01.jpg": "/static/media/back-5ka-01.ec7c70394c956952685d.jpg",
     "static/media/map-leto-01.jpg": "/static/media/map-leto-01.3ec8c39b79ba5a694ee8.jpg",
@@ -334,7 +338,7 @@
     "static/media/plashka-map.svg": "/static/media/plashka-map.807bbf92b339d7fb2f4c.svg"
   },
   "entrypoints": [
-    "static/css/main.9a6fb298.css",
-    "static/js/main.f3821b65.js"
+    "static/css/main.aa0be3a7.css",
+    "static/js/main.900d508d.js"
   ]
 }

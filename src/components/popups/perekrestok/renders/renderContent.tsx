@@ -14,7 +14,7 @@ const renderContent: I['renderContent'] = function (this: I) {
                 ФЕСТИВАЛЬ НА ДВОИХ
             </h3>
             <div className="popupAction__content _COL">
-                <p className="popupAction__contentSupport">С 1 мая по 30 июня 2026 года::</p>
+                <p className="popupAction__contentSupport">С 1 мая по 30 июня 2026 года:</p>
                 <div className="popupAction__contentSteps">
                     <div className="popupAction__contentStep">
                         <h4 className="popupAction__contentStepTitle">активируй</h4>
@@ -41,10 +41,7 @@ const renderContent: I['renderContent'] = function (this: I) {
                     <Button
                         className="_boldBorder _purpleColor"
                         onClick={() => {
-                            // window.open(
-                            //     'https://2814495.redirect.appmetrica.yandex.com/raffles/raffle/multon_priz?analytics_promo_id=multon_priz&analytics_promo_type=raffle&source=banner&appmetrica_tracking_id=1110633687315139443&referrer=reattribution%3D1',
-                            //     '_blank',
-                            // );
+                            window.open('https://x5l.ru/ml3q2', '_blank');
                             // sendGoal('mapPopupMagnitToBtn');
                         }}
                     >

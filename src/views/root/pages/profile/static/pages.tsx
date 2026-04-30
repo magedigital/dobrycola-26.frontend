@@ -10,12 +10,13 @@ export const profilePages = {
     'profile-codes': {
         title: 'Коды',
         render(this: RootI) {
-            const { data, content } = this.state;
+            const { content } = this.state;
+            const { profileData } = this.props;
 
             return (
                 <Index
                     content={content!}
-                    data={data!}
+                    data={profileData!}
                     setRenderKey={this.setPagesRenderKey.bind(this)}
                 />
             );
@@ -24,11 +25,12 @@ export const profilePages = {
     'profile-cheques': {
         title: 'Акция в «Пятёрочке»',
         render(this: RootI) {
-            const { data, content } = this.state;
+            const { content } = this.state;
+            const { profileData } = this.props;
 
             return (
                 <Cheques
-                    data={data!}
+                    data={profileData!}
                     content={content!}
                     setRenderKey={this.setPagesRenderKey.bind(this)}
                 />
@@ -38,10 +40,9 @@ export const profilePages = {
     'profile-prizes': {
         title: 'Призы',
         render(this: RootI) {
-            const { data } = this.state;
-            const { authUser } = this.props;
+            const { authUser, profileData } = this.props;
 
-            return <Prizes authUser={authUser!} data={data!} />;
+            return <Prizes authUser={authUser!} data={profileData!} />;
         },
     },
 } as const;

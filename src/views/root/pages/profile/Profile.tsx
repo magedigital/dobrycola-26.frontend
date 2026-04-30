@@ -51,11 +51,11 @@ class Profile extends Page<ProfileI['props'], ProfileI['state']> implements Prof
     renderPages = renderPages;
 
     render() {
-        const { content, data } = this.state;
-        const { authUser } = this.props;
+        const { content } = this.state;
+        const { authUser, profileData } = this.props;
 
         return this.renderPage({
-            render: () => (authUser && content && data ? <>{this.renderContent()}</> : null),
+            render: () => (authUser && content && profileData ? <>{this.renderContent()}</> : null),
             className: '_profile',
         });
     }
@@ -63,6 +63,7 @@ class Profile extends Page<ProfileI['props'], ProfileI['state']> implements Prof
 
 const mapStore = (store: StoreT) => ({
     authUser: store.authUser,
+    profileData: store.profileData,
 });
 
 export default WithStore(Profile, mapStore);

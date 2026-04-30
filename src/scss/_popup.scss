@@ -179,7 +179,8 @@
     &._lentaPopup &__inner,
     &._kbPopup &__inner,
     &._diksiPopup &__inner,
-    &._perekrestokPopup &__inner {
+    &._perekrestokPopup &__inner,
+    &._inviteFriendPopup &__inner {
         width: 826rem;
 
         @include mob {
