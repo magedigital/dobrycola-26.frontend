@@ -167,7 +167,7 @@
 
         &Button {
             width: 240rem;
-            margin-top: 50rem;
+            margin: 50rem auto 0;
 
             @include mob {
                 margin-top: 40rem;
