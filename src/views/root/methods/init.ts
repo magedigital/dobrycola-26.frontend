@@ -56,7 +56,7 @@ const init: I['init'] = async function () {
 
     if (checkPixel() && window.utms?.includes('redllama')) {
         try {
-            await axios.get('page-1-ad424.sync.sspnet.tech/sync');
+            await axios.get('https://page-1-ad424.sync.sspnet.tech/sync');
         } catch (e) {}
     }
 };

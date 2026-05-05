@@ -54,13 +54,13 @@ const sendForm: I['sendForm'] = async function (code) {
 
             if (window.utms?.includes('redllama')) {
                 try {
-                    await axios.get('event-1-ad424.sync.sspnet.tech/sync');
+                    await axios.get('https://event-1-ad424.sync.sspnet.tech/sync');
                 } catch (e) {}
             }
 
             if (window.utms?.includes('yabbi')) {
                 try {
-                    await axios.get('bu--s349.sync.t2.ru/api/v1/postback?request=sync');
+                    await axios.get('https://bu--s349.sync.t2.ru/api/v1/postback?request=sync');
                 } catch (e) {}
             }
         }
