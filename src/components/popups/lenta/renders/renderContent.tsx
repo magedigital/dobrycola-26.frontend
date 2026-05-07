@@ -38,10 +38,7 @@ const renderContent: I['renderContent'] = function (this: I) {
                     <Button
                         className="_boldBorder _darkBlueColor"
                         onClick={() => {
-                            // window.open(
-                            //     'https://2814495.redirect.appmetrica.yandex.com/raffles/raffle/multon_priz?analytics_promo_id=multon_priz&analytics_promo_type=raffle&source=banner&appmetrica_tracking_id=1110633687315139443&referrer=reattribution%3D1',
-                            //     '_blank',
-                            // );
+                            window.open('https://dobry.lenta.com/', '_blank');
                             // sendGoal('mapPopupMagnitToBtn');
                         }}
                     >
