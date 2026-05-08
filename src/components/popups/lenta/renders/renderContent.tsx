@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Button from '@components/button/Button.tsx';
+import sendGoal from '@utils/sendGoal.ts';
 
 import I from '../types.ts';
 
@@ -39,7 +40,7 @@ const renderContent: I['renderContent'] = function (this: I) {
                         className="_boldBorder _darkBlueColor"
                         onClick={() => {
                             window.open('https://dobry.lenta.com/', '_blank');
-                            // sendGoal('mapPopupMagnitToBtn');
+                            sendGoal('mapPopupLentaToBtn');
                         }}
                     >
                         Участвовать

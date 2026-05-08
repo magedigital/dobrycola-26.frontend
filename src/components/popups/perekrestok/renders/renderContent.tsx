@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Button from '@components/button/Button.tsx';
+import sendGoal from '@utils/sendGoal.ts';
 
 import I from '../types.ts';
 
@@ -42,7 +43,7 @@ const renderContent: I['renderContent'] = function (this: I) {
                         className="_boldBorder _purpleColor"
                         onClick={() => {
                             window.open('https://x5l.ru/ml3q2', '_blank');
-                            // sendGoal('mapPopupMagnitToBtn');
+                            sendGoal('mapPopupPerekToBtn');
                         }}
                     >
                         Участвовать

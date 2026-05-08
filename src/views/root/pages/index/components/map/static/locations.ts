@@ -79,21 +79,25 @@ export const mapLocations: Record<
         thumb: 'map-loc-11.png',
         title: 'Лента',
         popupName: 'lentaPopup',
+        goal: 'mapPopupLenta',
     },
     '12': {
         thumb: 'map-loc-12.png',
         title: 'Перекрёсток',
         popupName: 'perekrestokPopup',
+        goal: 'mapPopupPerek',
     },
     '13': {
         thumb: 'map-loc-13.png',
         title: 'Дикси',
         popupName: 'diksiPopup',
+        goal: 'mapPopupDixy',
     },
     '14': {
         thumb: 'map-loc-14.png',
         title: 'Красное <br/>и БЕлое',
         popupName: 'kbPopup',
+        goal: 'mapPopupKB',
     },
 };
 
