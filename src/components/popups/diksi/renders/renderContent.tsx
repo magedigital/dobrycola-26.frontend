@@ -14,7 +14,7 @@ const renderContent: I['renderContent'] = function (this: I) {
                 нА&nbsp;500 000 РУБЛЕЙ НА&nbsp;МУЗЫКАЛЬНЫЙ ФЕСТИВАЛЬ НА ДВОИХ
             </h3>
             <div className="popupAction__content _COL">
-                <p className="popupAction__contentSupport">С 14 мая по 21 июня 2026 года:</p>
+                <p className="popupAction__contentSupport">С 14 мая по 24 июня 2026 года:</p>
                 <div className="popupAction__contentSteps">
                     <div className="popupAction__contentStep">
                         <h4 className="popupAction__contentStepTitle">Подтверди</h4>
