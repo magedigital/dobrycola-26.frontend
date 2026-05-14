@@ -56,9 +56,9 @@ const path = AppRouter.getStartUrl(window.location.pathname.slice(1));
     appStore.getState().rootInit();
 })();
 
-document.oncontextmenu = (e) => {
-    e.preventDefault();
-};
+// document.oncontextmenu = (e) => {
+//     e.preventDefault();
+// };
 
 const loads: {
     event?: boolean;
