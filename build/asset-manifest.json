@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.db728c2d.css",
-    "main.js": "/static/js/main.0d9096e8.js",
+    "main.js": "/static/js/main.b341ca8e.js",
     "static/js/3315.c9b25da6.chunk.js": "/static/js/3315.c9b25da6.chunk.js",
     "static/js/3648.bbe92e21.chunk.js": "/static/js/3648.bbe92e21.chunk.js",
     "static/js/6286.6f8c5b96.chunk.js": "/static/js/6286.6f8c5b96.chunk.js",
@@ -34,9 +34,9 @@
     "static/js/1668.7dc08619.chunk.js": "/static/js/1668.7dc08619.chunk.js",
     "static/js/4917.312ab898.chunk.js": "/static/js/4917.312ab898.chunk.js",
     "static/js/5308.ab2b10db.chunk.js": "/static/js/5308.ab2b10db.chunk.js",
-    "static/js/2893.fccf9a48.chunk.js": "/static/js/2893.fccf9a48.chunk.js",
+    "static/js/2893.3128cac0.chunk.js": "/static/js/2893.3128cac0.chunk.js",
     "static/js/6990.e3c1c142.chunk.js": "/static/js/6990.e3c1c142.chunk.js",
-    "static/js/2757.5d773ffe.chunk.js": "/static/js/2757.5d773ffe.chunk.js",
+    "static/js/2757.78008268.chunk.js": "/static/js/2757.78008268.chunk.js",
     "static/js/6029.a5391219.chunk.js": "/static/js/6029.a5391219.chunk.js",
     "static/js/9904.6b0daad0.chunk.js": "/static/js/9904.6b0daad0.chunk.js",
     "static/js/9603.d6920f0c.chunk.js": "/static/js/9603.d6920f0c.chunk.js",
@@ -44,7 +44,7 @@
     "static/js/7066.93e6fec3.chunk.js": "/static/js/7066.93e6fec3.chunk.js",
     "static/js/3354.5ab00126.chunk.js": "/static/js/3354.5ab00126.chunk.js",
     "static/js/4961.008e8371.chunk.js": "/static/js/4961.008e8371.chunk.js",
-    "static/js/754.372e5354.chunk.js": "/static/js/754.372e5354.chunk.js",
+    "static/js/754.056ddf7c.chunk.js": "/static/js/754.056ddf7c.chunk.js",
     "static/js/7268.f1a819b5.chunk.js": "/static/js/7268.f1a819b5.chunk.js",
     "static/js/1160.d3e40af8.chunk.js": "/static/js/1160.d3e40af8.chunk.js",
     "static/js/1106.bbffea81.chunk.js": "/static/js/1106.bbffea81.chunk.js",
@@ -339,6 +339,6 @@
   },
   "entrypoints": [
     "static/css/main.db728c2d.css",
-    "static/js/main.0d9096e8.js"
+    "static/js/main.b341ca8e.js"
   ]
 }

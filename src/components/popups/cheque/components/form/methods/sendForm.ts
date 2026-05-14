@@ -73,8 +73,16 @@ const sendForm: I['sendForm'] = async function () {
 
     await this.asyncSetState({ loadingKey: 'send', error: undefined });
 
+    console.log('Pre send reg cheque request', {
+        utm_source: localStorage.getItem('2026utmSource'),
+    });
+
     try {
         const r = await chequeRequests.regCheque({ data: this.formData });
+
+        console.log('After send reg cheque request', {
+            utm_source: localStorage.getItem('2026utmSource'),
+        });
 
         sendGoal('regCheckSuccess', true);
 
