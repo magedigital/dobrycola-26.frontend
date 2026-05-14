@@ -40,10 +40,10 @@ const renderContent: I['renderContent'] = function (this: I) {
                     <Button
                         className="_boldBorder _pinkColor"
                         onClick={() => {
-                            // window.open(
-                            //     'https://2814495.redirect.appmetrica.yandex.com/raffles/raffle/multon_priz?analytics_promo_id=multon_priz&analytics_promo_type=raffle&source=banner&appmetrica_tracking_id=1110633687315139443&referrer=reattribution%3D1',
-                            //     '_blank',
-                            // );
+                            window.open(
+                                'dixyapp://app/coupons?id=941e61e7-24bc-4f69-964e-1a462e6271c1&type=activated',
+                                '_blank',
+                            );
                             sendGoal('mapPopupDixyToBtn');
                         }}
                     >
