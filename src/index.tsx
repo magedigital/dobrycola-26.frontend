@@ -31,7 +31,6 @@ const path = AppRouter.getStartUrl(window.location.pathname.slice(1));
 
     if (utmSource) {
         localStorage.setItem('2026utmSource', utmSource);
-        console.log('Save local utm_source:', utmSource);
     }
 
     window.isBot = !!window.location.search
@@ -55,10 +54,6 @@ const path = AppRouter.getStartUrl(window.location.pathname.slice(1));
     appStore.getState().setShowPages(showPages!);
     appStore.getState().rootInit();
 })();
-
-// document.oncontextmenu = (e) => {
-//     e.preventDefault();
-// };
 
 const loads: {
     event?: boolean;
