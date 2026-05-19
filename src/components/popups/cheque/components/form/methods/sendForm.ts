@@ -1,30 +1,31 @@
+import { v4 } from 'uuid';
+
 import { chequeRequests } from '@api/requests/cheque.ts';
 import sendGoal from '@utils/sendGoal.ts';
 
 import I from '../types.ts';
 
-// const sendCRAGoal = () => {
-// const user = store.getState().user;
-// const utmSource = localStorage.getItem('2026utmSource');
-// if (utmSource !== 'winbox' && utmSource !== 'advcake') {
-//     return;
-// }
-// window.advcake_data = window.advcake_data || [];
-// window.advcake_data.push({
-//     pageType: 6,
-//     user: {
-//         email: v4(),
-//         type,
-//     },
-//     leadInfo: {
-//         id: 'e9adccc96c051de0ae5997a3bd624b36',
-//         leadid: '1',
-//         name: 'Регистрация чека',
-//         totalPrice: 0,
-//         coupon: 'NO',
-//     },
-// });
-// };
+const sendCRAGoal = (type: string) => {
+    const utmSource = localStorage.getItem('2026utmSource');
+    if (utmSource !== 'winbox' && utmSource !== 'advcake') {
+        return;
+    }
+    window.advcake_data = window.advcake_data || [];
+    window.advcake_data.push({
+        pageType: 6,
+        user: {
+            email: v4(),
+            type,
+        },
+        leadInfo: {
+            id: 'e9adccc96c051de0ae5997a3bd624b36',
+            leadid: '1',
+            name: 'Регистрация чека',
+            totalPrice: 0,
+            coupon: 'NO',
+        },
+    });
+};
 
 const sendForm: I['sendForm'] = async function () {
     const { form } = this.state;
@@ -90,7 +91,7 @@ const sendForm: I['sendForm'] = async function () {
             sendGoal('regFirstCheck', true);
         }
 
-        // sendCRAGoal(response.data?.isFirstCheck ? 'new' : 'old');
+        sendCRAGoal(r?.isFirstCheck ? 'new' : 'old');
     } catch (e) {
         const error = e as { errorText?: string };
 

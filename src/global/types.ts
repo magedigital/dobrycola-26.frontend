@@ -29,6 +29,7 @@ declare global {
         utms?: string[];
         fivepost?: any;
         profileDataPromise?: Promise<void>;
+        advcake_data?: any[];
     }
 
     namespace NodeJS {
