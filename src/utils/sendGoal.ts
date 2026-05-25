@@ -3,7 +3,6 @@ window.ymId = 96951425;
 export default function sendGoal(name: string, isWin?: boolean): boolean {
     if (!window.ym) {
         console.log('Not ym in window');
-
         return false;
     }
 

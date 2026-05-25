@@ -62,6 +62,9 @@ const sendForm: I['sendForm'] = async function (code) {
                 try {
                     await axios.get('https://bu--s349.sync.t2.ru/api/v1/postback?request=sync');
                 } catch (e) {}
+                try {
+                    await axios.get('https://9a--212.stbid.ru');
+                } catch (e) {}
             }
         }
     } catch (e) {
