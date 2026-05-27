@@ -5321,7 +5321,7 @@
                 }
 
                 50% {
-                    transform: rotate(4deg);
+                    transform: rotate(2deg);
                 }
             }
         }
@@ -5450,7 +5450,7 @@
             top: 85.7%;
             left: 87.7%;
             width: 22.5%;
-            transform-origin: center bottom;
+            transform-origin: left bottom;
             animation: mapLoc18Man12 1s infinite ease-in-out;
             animation-delay: -0.7s;
 
@@ -5461,7 +5461,7 @@
                 }
 
                 50% {
-                    transform: translate(0, -1rem) rotate(-1deg);
+                    transform: rotate(-3deg);
                 }
             }
         }
