@@ -9,6 +9,8 @@ import location4Animate from './methods/location4Animate.ts';
 import location7Animate from './methods/location7Animate.ts';
 import location10Animate from './methods/location10Animate.ts';
 import location13Animate from './methods/location13Animate.ts';
+import location16Animate from './methods/location16Animate.ts';
+import location17Animate from './methods/location17Animate.ts';
 import locationHoverHandler from './methods/locationHoverHandler.ts';
 import scrollHandler from './methods/scrollHandler.ts';
 import scrollToSection from './methods/scrollToSection.ts';
@@ -32,6 +34,9 @@ import renderLocation11Decor from './renders/renderLocation11Decor.tsx';
 import renderLocation12Decor from './renders/renderLocation12Decor.tsx';
 import renderLocation13Decor from './renders/renderLocation13Decor.tsx';
 import renderLocation14Decor from './renders/renderLocation14Decor.tsx';
+import renderLocation15Decor from './renders/renderLocation15Decor.tsx';
+import renderLocation16Decor from './renders/renderLocation16Decor.tsx';
+import renderLocation17Decor from './renders/renderLocation17Decor.tsx';
 import renderLocationBack from './renders/renderLocationBack.tsx';
 import renderLocations from './renders/renderLocations.tsx';
 import renderMap from './renders/renderMap.tsx';
@@ -68,6 +73,8 @@ class Map extends Default<MapI['props'], MapI['state']> implements MapI {
     location7Animate = location7Animate;
     location10Animate = location10Animate;
     location13Animate = location13Animate;
+    location16Animate = location16Animate;
+    location17Animate = location17Animate;
 
     setClips = setClips;
 
@@ -91,6 +98,10 @@ class Map extends Default<MapI['props'], MapI['state']> implements MapI {
     renderLocation12Decor = renderLocation12Decor;
     renderLocation13Decor = renderLocation13Decor;
     renderLocation14Decor = renderLocation14Decor;
+    renderLocation15Decor = renderLocation15Decor;
+    renderLocation16Decor = renderLocation16Decor;
+    renderLocation17Decor = renderLocation17Decor;
+
     renderBacks = renderBacks;
     renderSections = renderSections;
 

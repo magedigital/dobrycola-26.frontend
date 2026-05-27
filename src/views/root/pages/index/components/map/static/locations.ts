@@ -99,6 +99,22 @@ export const mapLocations: Record<
         popupName: 'kbPopup',
         goal: 'mapPopupKB',
     },
+    '15': {
+        thumb: 'map-loc-15.png',
+        title: 'Лукойл',
+    },
+    '16': {
+        thumb: 'map-loc-16.png',
+        title: 'Яндекс. еда',
+    },
+    '17': {
+        thumb: 'map-loc-17.png',
+        title: 'Яндекс. лавка',
+    },
+    '18': {
+        thumb: 'map-loc-18.png',
+        title: 'Самокат',
+    },
 };
 
 export const mapSections = {

@@ -59,6 +59,9 @@ const renderLocations: I['renderLocations'] = function () {
                                 {k === '12' && this.renderLocation12Decor()}
                                 {k === '13' && this.renderLocation13Decor()}
                                 {k === '14' && this.renderLocation14Decor()}
+                                {k === '15' && this.renderLocation15Decor()}
+                                {k === '16' && this.renderLocation16Decor()}
+                                {k === '17' && this.renderLocation17Decor()}
                             </Lazy>
                         </div>
 
