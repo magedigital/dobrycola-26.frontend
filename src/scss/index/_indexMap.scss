@@ -4330,7 +4330,7 @@
         position: absolute;
         z-index: 12;
         aspect-ratio: 1;
-        animation: mapLoc15Car 0.35s infinite ease-in-out;
+        animation: mapLoc15Car 0.3s infinite ease-in-out;
 
         & img {
             display: block;
@@ -4370,7 +4370,7 @@
             }
 
             50% {
-                transform: scale(1.025);
+                transform: scale(1.021);
             }
         }
 
