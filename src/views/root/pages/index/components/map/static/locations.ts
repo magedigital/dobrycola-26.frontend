@@ -102,18 +102,22 @@ export const mapLocations: Record<
     '15': {
         thumb: 'map-loc-15.png',
         title: 'Лукойл',
+        alert: 'Cтарт акции с 1.06',
     },
     '16': {
         thumb: 'map-loc-16.png',
         title: 'Яндекс. еда',
+        alert: 'Cтарт акции с 4.06',
     },
     '17': {
         thumb: 'map-loc-17.png',
         title: 'Яндекс. лавка',
+        alert: 'Cтарт акции с 1.06',
     },
     '18': {
         thumb: 'map-loc-18.png',
         title: 'Самокат',
+        alert: 'Cтарт акции с 17.06',
     },
 };
 
