@@ -42,6 +42,9 @@ const location17Animate: I['location17Animate'] = function () {
                     curDir = 'end';
                 }
             },
+            getId: (i) => {
+                this.animatesIds.loc17 = i;
+            },
             callback: back,
         });
     };
@@ -59,6 +62,9 @@ const location17Animate: I['location17Animate'] = function () {
                     endManNode.classList.remove('_trash');
                     curDir = 'start';
                 }
+            },
+            getId: (i) => {
+                this.animatesIds.loc17 = i;
             },
             callback: start,
         });

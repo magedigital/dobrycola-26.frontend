@@ -10,7 +10,7 @@ const init: I['init'] = async function (this: I) {
     if (pageScrollNode) {
         pageScrollNode.addEventListener('scroll', this.scrollHandler);
 
-        this.unmountHandlers.all = () => {
+        this.unmountHandlers.scroll = () => {
             pageScrollNode.removeEventListener('scroll', this.scrollHandler);
         };
     }
@@ -29,6 +29,7 @@ const init: I['init'] = async function (this: I) {
     this.location13Animate();
     this.location16Animate();
     this.location17Animate();
+    this.location18Animate();
 
     this.setClips();
 
@@ -36,6 +37,10 @@ const init: I['init'] = async function (this: I) {
 
     this.unmountHandlers.all = () => {
         document.removeEventListener('customResize', this.setClips);
+
+        Object.keys(this.animatesIds).forEach((k) => {
+            cancelAnimationFrame(this.animatesIds[k]);
+        });
     };
 };
 

@@ -11,6 +11,8 @@ type StateT = {
 interface MapI extends DefaultI<PropsT, StateT> {
     currentSection: keyof typeof mapSections;
 
+    animatesIds: Record<string, number>;
+
     scrollHandler(this: MapI): Promise<void>;
     scrollToSection(this: MapI, n: keyof typeof mapSections, d?: number): void;
 
@@ -23,6 +25,7 @@ interface MapI extends DefaultI<PropsT, StateT> {
     location13Animate(this: MapI): void;
     location16Animate(this: MapI): void;
     location17Animate(this: MapI): void;
+    location18Animate(this: MapI): void;
 
     setClips(this: MapI): void;
 
@@ -49,6 +52,7 @@ interface MapI extends DefaultI<PropsT, StateT> {
     renderLocation15Decor(this: MapI): React.ReactNode;
     renderLocation16Decor(this: MapI): React.ReactNode;
     renderLocation17Decor(this: MapI): React.ReactNode;
+    renderLocation18Decor(this: MapI): React.ReactNode;
 
     renderBacks(this: MapI): React.ReactNode;
     renderSections(this: MapI): React.ReactNode;
