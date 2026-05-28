@@ -17,6 +17,7 @@ const renderSlider: I['renderSlider'] = function () {
                                     alt=""
                                     className="indexHeader__sliderItemThumb"
                                 />
+                                <p className="indexHeader__sliderItemTitle">{i.title}</p>
                             </div>
                         </div>
                     ))}

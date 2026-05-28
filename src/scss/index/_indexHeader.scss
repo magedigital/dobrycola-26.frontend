@@ -660,6 +660,29 @@
                 user-select: none;
                 pointer-events: none;
             }
+
+            &Title {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                width: 200rem;
+                margin-top: -16rem;
+                color: #fff;
+                font-size: 11rem;
+                text-align: center;
+                text-transform: uppercase;
+                transform: translate(-50%, 0);
+                opacity: 0;
+                transition: $trans;
+
+                @include mob {
+                    display: none;
+                }
+            }
+
+            &[data-active] &Title {
+                opacity: 1;
+            }
         }
     }
 

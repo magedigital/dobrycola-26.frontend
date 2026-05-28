@@ -16,7 +16,7 @@ interface HeaderI extends DefaultI<PropsT, StateT> {
 
     sliderInit(this: HeaderI): void;
 
-    getSliderItems(this: HeaderI): { thumb: string }[];
+    getSliderItems(this: HeaderI): { thumb: string; title: string }[];
 
     startRotate(this: HeaderI): void;
     forceRotate(this: HeaderI, s: boolean): void;

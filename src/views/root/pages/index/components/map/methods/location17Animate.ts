@@ -20,15 +20,18 @@ const location17Animate: I['location17Animate'] = function () {
 
     let curProgress = 0;
     let curDir: 'start' | 'end' = 'start';
+    let drawK = 1 + Math.random() * 0.5;
 
     const draw = () => {
         const ang = curProgress * 180;
-        const y = -Math.sin((Math.PI * ang) / 180);
+        const y = -Math.sin((Math.PI * ang) / 180) * drawK;
 
         ballNode.style.transform = `translate(${curProgress * 320}%,${y * 150}%) rotate(${curProgress * 300}deg)`;
     };
 
     const start = () => {
+        drawK = 1 + Math.random() * 0.5;
+
         setAnimate({
             duration: 1_000,
             timing: (t) => t,
@@ -50,6 +53,8 @@ const location17Animate: I['location17Animate'] = function () {
     };
 
     const back = () => {
+        drawK = 1 + Math.random() * 0.5;
+
         setAnimate({
             duration: 1_000,
             timing: (t) => t,

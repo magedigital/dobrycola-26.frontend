@@ -29,7 +29,7 @@ type MainContentT = {
             carousel: {
                 title: string;
                 thumbs: string[];
-                thumbsExtra: string[];
+                thumbsExtra: string[][];
             };
         };
         howto: {
