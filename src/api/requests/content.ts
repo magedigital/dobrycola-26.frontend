@@ -7,7 +7,7 @@ import { MainContentT } from '../../views/root/pages/index/types';
 import { ProductsContentT } from '../../views/root/pages/products/types';
 import { ProfileContentT } from '../../views/root/pages/profile/types';
 
-const version = 3;
+const version = 4;
 
 type ContentNamesT = keyof typeof urls;
 type ContentDatasT = {
