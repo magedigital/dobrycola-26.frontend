@@ -676,7 +676,9 @@
                 transition: $trans;
 
                 @include mob {
-                    display: none;
+                    width: 170rem;
+                    margin-top: -27rem;
+                    font-size: 9rem;
                 }
             }
 

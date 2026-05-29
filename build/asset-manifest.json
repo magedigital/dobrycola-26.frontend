@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.cb874c2c.css",
-    "main.js": "/static/js/main.a2c6a176.js",
+    "main.css": "/static/css/main.8ea677ba.css",
+    "main.js": "/static/js/main.e6cd3845.js",
     "static/js/3315.c9b25da6.chunk.js": "/static/js/3315.c9b25da6.chunk.js",
     "static/js/3648.bbe92e21.chunk.js": "/static/js/3648.bbe92e21.chunk.js",
     "static/js/6286.6f8c5b96.chunk.js": "/static/js/6286.6f8c5b96.chunk.js",
@@ -379,7 +379,7 @@
     "static/media/plashka-map.svg": "/static/media/plashka-map.807bbf92b339d7fb2f4c.svg"
   },
   "entrypoints": [
-    "static/css/main.cb874c2c.css",
-    "static/js/main.a2c6a176.js"
+    "static/css/main.8ea677ba.css",
+    "static/js/main.e6cd3845.js"
   ]
 }
