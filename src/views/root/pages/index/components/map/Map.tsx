@@ -39,6 +39,7 @@ import renderLocation15Decor from './renders/renderLocation15Decor.tsx';
 import renderLocation16Decor from './renders/renderLocation16Decor.tsx';
 import renderLocation17Decor from './renders/renderLocation17Decor.tsx';
 import renderLocation18Decor from './renders/renderLocation18Decor.tsx';
+import renderLocation19Decor from './renders/renderLocation19Decor.tsx';
 import renderLocationBack from './renders/renderLocationBack.tsx';
 import renderLocations from './renders/renderLocations.tsx';
 import renderMap from './renders/renderMap.tsx';
@@ -106,6 +107,7 @@ class Map extends Default<MapI['props'], MapI['state']> implements MapI {
     renderLocation16Decor = renderLocation16Decor;
     renderLocation17Decor = renderLocation17Decor;
     renderLocation18Decor = renderLocation18Decor;
+    renderLocation19Decor = renderLocation19Decor;
 
     renderBacks = renderBacks;
     renderSections = renderSections;

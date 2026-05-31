@@ -103,6 +103,7 @@ export const mapLocations: Record<
         thumb: 'map-loc-15.png',
         title: 'Лукойл',
         alert: 'Cтарт акции с 1.06',
+        popupName: 'lukoilPopup',
     },
     '16': {
         thumb: 'map-loc-16.png',
@@ -118,6 +119,11 @@ export const mapLocations: Record<
         thumb: 'map-loc-18.png',
         title: 'Самокат',
         alert: 'Cтарт акции с 17.06',
+    },
+    '19': {
+        thumb: 'map-loc-19.png',
+        title: 'Разгуляйка',
+        alert: 'Cтарт акции с 1.06',
     },
 };
 

@@ -30,6 +30,7 @@ type PopupsT = {
     diksiPopup: PopupT;
     perekrestokPopup: PopupT;
     inviteFriendPopup: PopupT;
+    lukoilPopup: PopupT;
 };
 
 type PopupsReducersT = {
@@ -88,6 +89,7 @@ const popups = {
     kbPopup: { isOverlay: true },
     diksiPopup: { isOverlay: true },
     perekrestokPopup: { isOverlay: true },
+    lukoilPopup: { isOverlay: true },
     inviteFriendPopup: { isOverlay: true },
 } as const;
 

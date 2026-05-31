@@ -20,7 +20,15 @@ const location17Animate: I['location17Animate'] = function () {
 
     let curProgress = 0;
     let curDir: 'start' | 'end' = 'start';
-    let drawK = 0.5 + Math.random() * 1;
+    let drawK = 0;
+    let dur = 0;
+
+    const setOptions = () => {
+        drawK = 0.2 + Math.random() * 1.5;
+        dur = 400 + drawK * (1000 / 3);
+    };
+
+    setOptions();
 
     const draw = () => {
         const ang = curProgress * 180;
@@ -30,10 +38,9 @@ const location17Animate: I['location17Animate'] = function () {
     };
 
     const start = () => {
-        drawK = 0.5 + Math.random() * 1;
-
+        setOptions();
         setAnimate({
-            duration: 1_000,
+            duration: dur,
             timing: (t) => t,
             draw: (p) => {
                 curProgress = p;
@@ -53,10 +60,9 @@ const location17Animate: I['location17Animate'] = function () {
     };
 
     const back = () => {
-        drawK = 0.5 + Math.random() * 1;
-
+        setOptions();
         setAnimate({
-            duration: 1_000,
+            duration: dur,
             timing: (t) => t,
             draw: (p) => {
                 curProgress = 1 - p;
