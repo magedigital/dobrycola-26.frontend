@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.97d2f9c1.css",
-    "main.js": "/static/js/main.1c4c5783.js",
+    "main.css": "/static/css/main.d696c481.css",
+    "main.js": "/static/js/main.038a6b24.js",
     "static/js/3315.c9b25da6.chunk.js": "/static/js/3315.c9b25da6.chunk.js",
     "static/js/3648.bbe92e21.chunk.js": "/static/js/3648.bbe92e21.chunk.js",
     "static/js/6286.6f8c5b96.chunk.js": "/static/js/6286.6f8c5b96.chunk.js",
@@ -103,7 +103,6 @@
     "static/js/2153.300e05eb.chunk.js": "/static/js/2153.300e05eb.chunk.js",
     "static/media/Regular.ttf": "/static/media/Regular.3e6423cef8188d3106d3.ttf",
     "static/media/back-5ka-element05.png": "/static/media/back-5ka-element05.1d3dc42ed581d76e1efc.png",
-    "static/media/popup-lukoil-image.jpg": "/static/media/popup-lukoil-image.40be35622d135256485f.jpg",
     "static/media/back-main-2.png": "/static/media/back-main-2.aa4ca800c042cde8f299.png",
     "static/media/invite-back.jpg": "/static/media/invite-back.6a8baee1f42e01d40d6e.jpg",
     "static/media/carousel-big.png": "/static/media/carousel-big.3d4d26231d4a065fa3b5.png",
@@ -128,7 +127,6 @@
     "static/media/back-5ka-hand-1.png": "/static/media/back-5ka-hand-1.713efdad9087d7e1b564.png",
     "static/media/back-5ka-element03.png": "/static/media/back-5ka-element03.4ef00b2aa0c42d83780e.png",
     "static/media/app-phone.png": "/static/media/app-phone.cf7f15db3bc19dacdd13.png",
-    "static/media/popup-lukoil-image-mob.jpg": "/static/media/popup-lukoil-image-mob.95b1740030abb2b4b747.jpg",
     "static/media/popup-lenta-image-mob.jpg": "/static/media/popup-lenta-image-mob.0108681f14edb9de7b46.jpg",
     "static/media/back-5ka-element04.png": "/static/media/back-5ka-element04.eb6b0cb936ca9be95655.png",
     "static/media/back-main-1.jpg": "/static/media/back-main-1.eb18d81c3aedfd22e89c.jpg",
@@ -188,6 +186,7 @@
     "static/media/map-loc-07.png": "/static/media/map-loc-07.e4e3c41c5010049379e8.png",
     "static/media/map-loc-14.png": "/static/media/map-loc-14.7a315e7a5b776d0530b9.png",
     "static/media/map-loc-16.png": "/static/media/map-loc-16.0cf84bf5eb94d24da5f6.png",
+    "static/media/popup-lukoil-image.jpg": "/static/media/popup-lukoil-image.5c0e2e13dc43cd1ca95f.jpg",
     "static/media/Onest-Medium.ttf": "/static/media/Onest-Medium.fbd1029ceefc29dbe253.ttf",
     "static/media/Onest-Bold.ttf": "/static/media/Onest-Bold.e6f62dc971ba457a32e0.ttf",
     "static/media/Onest-Regular.ttf": "/static/media/Onest-Regular.2f8180f95c9c4f66c68c.ttf",
@@ -219,6 +218,7 @@
     "static/media/banner-map-1-light-2.png": "/static/media/banner-map-1-light-2.1e956c677581ce4112bf.png",
     "static/media/5ka-back-mob.jpg": "/static/media/5ka-back-mob.dd992e92454662285177.jpg",
     "static/media/map-loc-16-man-5.png": "/static/media/map-loc-16-man-5.abb5dff3fa4c551b325b.png",
+    "static/media/popup-lukoil-image-mob.jpg": "/static/media/popup-lukoil-image-mob.9a02d3b41aec02fd4bdc.jpg",
     "static/media/back-5ka-hand-2.png": "/static/media/back-5ka-hand-2.64bcd41f36aa05d05ecd.png",
     "static/media/invite-decor-1.png": "/static/media/invite-decor-1.3274afea75e9c0bdc238.png",
     "static/media/weekly-decor-13.png": "/static/media/weekly-decor-13.18514ddf2dd7b49a76a8.png",
@@ -236,7 +236,6 @@
     "static/media/loc13-light-1.png": "/static/media/loc13-light-1.9b5e543be34dd859635e.png",
     "static/media/spec-prize.jpg": "/static/media/spec-prize.9c082d4b5f631c9a3e05.jpg",
     "static/media/loc10-star.png": "/static/media/loc10-star.37e2b5444ace5c487e10.png",
-    "static/media/prizes-pp-lukoil-1.png": "/static/media/prizes-pp-lukoil-1.4bbc26e2a05ac5e086c5.png",
     "static/media/step-01-5ka.jpg": "/static/media/step-01-5ka.0ea6010947edc0c51916.jpg",
     "static/media/weekly-decor-9.png": "/static/media/weekly-decor-9.eaf5b10c806a6406a1b6.png",
     "static/media/raffle-back-decors.png": "/static/media/raffle-back-decors.7637b4bdd752ca08604a.png",
@@ -389,7 +388,7 @@
     "static/media/plashka-map.svg": "/static/media/plashka-map.807bbf92b339d7fb2f4c.svg"
   },
   "entrypoints": [
-    "static/css/main.97d2f9c1.css",
-    "static/js/main.1c4c5783.js"
+    "static/css/main.d696c481.css",
+    "static/js/main.038a6b24.js"
   ]
 }
