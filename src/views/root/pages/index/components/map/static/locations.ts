@@ -102,7 +102,6 @@ export const mapLocations: Record<
     '15': {
         thumb: 'map-loc-15.png',
         title: 'Лукойл',
-        alert: 'Cтарт акции с 1.06',
         popupName: 'lukoilPopup',
     },
     '16': {
