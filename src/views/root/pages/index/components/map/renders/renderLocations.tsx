@@ -30,6 +30,8 @@ const renderLocations: I['renderLocations'] = function () {
                                 });
                             } else if (location.popupName) {
                                 appStore.getState().setPopup({ name: location.popupName });
+                            } else if (location.link) {
+                                window.open(location.link, '_blank');
                             }
 
                             if (location.goal) {

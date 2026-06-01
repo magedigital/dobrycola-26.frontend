@@ -11,6 +11,7 @@ export const mapLocations: Record<
         popupName?: keyof PopupsT;
         goal?: string;
         alert?: string;
+        link?: string;
     }
 > = {
     '1': {
@@ -113,6 +114,7 @@ export const mapLocations: Record<
         thumb: 'map-loc-17.png',
         title: 'Яндекс. лавка',
         alert: 'Cтарт акции с 1.06',
+        link: 'https://lavka.yandex.ru/catalog/promo/category/dobriy',
     },
     '18': {
         thumb: 'map-loc-18.png',
