@@ -113,7 +113,6 @@ export const mapLocations: Record<
     '17': {
         thumb: 'map-loc-17.png',
         title: 'Яндекс. лавка',
-        alert: 'Cтарт акции с 1.06',
         link: 'https://lavka.yandex.ru/catalog/promo/category/dobriy',
     },
     '18': {
@@ -124,7 +123,7 @@ export const mapLocations: Record<
     '19': {
         thumb: 'map-loc-19.png',
         title: 'Разгуляйка',
-        alert: 'Cтарт акции с 1.06',
+        link: 'https://русский-разгуляйка.рф/giveaway/31',
     },
 };
 
