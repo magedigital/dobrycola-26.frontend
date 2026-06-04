@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Button from '@components/button/Button.tsx';
+import sendGoal from '@utils/sendGoal.ts';
 
 import I from '../types.ts';
 
@@ -37,7 +38,7 @@ const renderContent: I['renderContent'] = function (this: I) {
                                 'https://redirect.appmetrica.yandex.com/serve/1182784531787242932',
                                 '_blank',
                             );
-                            // sendGoal('mapPopupPerekToBtn');
+                            sendGoal('mapPopupLukoilToBtn');
                         }}
                     >
                         Участвовать
