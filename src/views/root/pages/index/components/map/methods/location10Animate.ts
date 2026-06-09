@@ -21,111 +21,80 @@ const location10Animate: I['location10Animate'] = function () {
             n.classList.remove('_show');
         });
 
-        let current = 0;
-        let loopCount = 0;
+        let current = -1;
 
-        const show = () => {
-            const isOdd = Math.ceil(loopCount / 3) % 2 === 1;
-            let max = Math.ceil(lightsNodes.length / (isOdd ? 2 : 1));
+        const showLines = () => {
+            const max = Math.ceil(lightsNodes.length / 1);
 
-            if (!isOdd) {
-                max = 4;
-            }
+            current += 1;
 
             lightsNodes.forEach((n) => {
                 n.classList.remove('_show');
             });
 
             lightsNodes[current]?.classList.add('_show');
-            if (isOdd) {
-                lightsNodes[lightsNodes.length - current - 1]?.classList.add('_show');
-            } else {
-                lightsNodes.forEach((n) => {
-                    n.classList.add('_show');
-                });
-            }
-
-            current += 1;
 
             if (current >= max) {
-                loopCount += 1;
-                current = 0;
+                current = -1;
 
-                // if (isOdd) {
-                //     lightsNodes.forEach((n) => {
-                //         n.classList.remove('_show');
-                //     });
-                // }
-
-                this.timers[timerId] = setTimeout(show, isOdd ? 300 : 100);
+                this.timers[timerId] = setTimeout(showLines, 0);
 
                 return;
             }
 
-            this.timers[timerId] = setTimeout(show, isOdd ? 300 : 100);
+            this.timers[timerId] = setTimeout(showLines, 400);
         };
 
-        show();
+        showLines();
     }
 
     if (1) {
-        const items = locationNode.querySelectorAll<HTMLElement>('.indexMap__mapLocation10Dot');
+        const timerId = 'lights-10-flash';
+        const lightsNodes = locationNode.querySelectorAll<HTMLElement>(
+            '.indexMap__mapLocation10Flash',
+        );
 
-        let prevs: number[] = [];
+        clearTimeout(this.timers[timerId]);
 
-        const show = () => {
-            const curs: number[] = [];
+        lightsNodes.forEach((n) => {
+            n.classList.remove('_show');
+        });
 
-            [1, 2, 3, 4, 5].forEach(() => {
-                let cur: number | undefined;
+        let current = -1;
 
-                while (cur === undefined || prevs.includes(cur)) {
-                    cur = Math.round(Math.random() * (items.length - 1));
+        const showLines = () => {
+            const max = Math.ceil(lightsNodes.length / 1.5);
+
+            current += 1;
+
+            lightsNodes.forEach((n) => {
+                n.classList.remove('_show');
+            });
+
+            const thisKey = current % 2;
+
+            lightsNodes.forEach((n, i) => {
+                if (thisKey === 0 ? i < 4 : i >= 4) {
+                    n.classList.add('_show');
                 }
-
-                curs.push(cur);
             });
 
-            prevs = [];
+            if (current >= max) {
+                current = -1;
 
-            locationNode.querySelectorAll('.indexMap__mapLocation10Dot._show').forEach((n) => {
-                n.classList.remove('_show');
-            });
+                lightsNodes.forEach((n) => {
+                    n.classList.add('_show');
+                });
 
-            curs.forEach((cur) => {
-                items[cur]?.classList.add('_show');
-            });
+                this.timers[timerId] = setTimeout(showLines, 2_000);
 
-            prevs.push(...curs);
-
-            this.timers['loc10-2'] = setTimeout(show, 250);
-        };
-
-        show();
-    }
-
-    if (1) {
-        const items = locationNode.querySelectorAll<HTMLElement>('.indexMap__mapLocation10Decor');
-
-        let cur = 0;
-
-        const show = () => {
-            locationNode.querySelectorAll('.indexMap__mapLocation10Decor._show').forEach((n) => {
-                n.classList.remove('_show');
-            });
-
-            items[cur]?.classList.add('_show');
-
-            cur += 1;
-
-            if (cur >= items.length) {
-                cur = 0;
+                return;
             }
 
-            this.timers['loc10-2'] = setTimeout(show, 200);
+            this.timers[timerId] = setTimeout(showLines, 300);
         };
 
-        show();
+        showLines();
     }
 };
 

@@ -31,6 +31,9 @@ type PopupsT = {
     perekrestokPopup: PopupT;
     inviteFriendPopup: PopupT;
     lukoilPopup: PopupT;
+    yandexEdaPopup: PopupT;
+    yandexLavkaPopup: PopupT;
+    razgulPopup: PopupT;
 };
 
 type PopupsReducersT = {
@@ -91,6 +94,9 @@ const popups = {
     perekrestokPopup: { isOverlay: true },
     lukoilPopup: { isOverlay: true },
     inviteFriendPopup: { isOverlay: true },
+    yandexEdaPopup: { isOverlay: true },
+    yandexLavkaPopup: { isOverlay: true },
+    razgulPopup: { isOverlay: true },
 } as const;
 
 type PopupDataT = Partial<{

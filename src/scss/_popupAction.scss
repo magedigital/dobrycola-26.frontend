@@ -78,8 +78,40 @@
         }
     }
 
+    &._yandexEda {
+        @include bg("/media/popups/popup-eda-image.jpg", contain, left top);
+
+        @include mob {
+            @include bg("/media/popups/popup-eda-image-mob.jpg", 100% auto, center top);
+        }
+    }
+
+    &._yandexLavka {
+        padding-bottom: 60rem;
+
+        @include bg("/media/popups/popup-lavka-image.jpg", contain, left top);
+
+        @include mob {
+            @include bg("/media/popups/popup-lavka-image-mob.jpg", 100% auto, center top);
+
+            padding-bottom: 32rem;
+        }
+    }
+
+    &._razgul {
+        @include bg("/media/popups/popup-razgul-image.jpg", contain, left top);
+
+        @include mob {
+            @include bg("/media/popups/popup-razgul-image-mob.jpg", 100% auto, center top);
+        }
+    }
+
     & {
         background-color: #e11f26 !important;
+    }
+
+    &._magnit {
+        background-color: #000 !important;
     }
 
     &__support {
@@ -228,7 +260,7 @@
 
             @include mob {
                 height: 68rem;
-                margin-left: 54rem;
+                margin: 0 auto;
             }
         }
     }
@@ -260,6 +292,60 @@
 
         &Support {
             margin-bottom: 16rem;
+        }
+    }
+
+    &._magnit &__title {
+        @include mob {
+            margin-top: 78rem;
+        }
+    }
+
+    &._magnit &__content {
+        position: relative;
+        width: 366rem;
+
+        @include mob {
+            width: 100%;
+        }
+
+        &::before {
+            position: absolute;
+            top: -72rem;
+            left: -10rem;
+            width: 202rem;
+            height: 56rem;
+            content: "";
+
+            @include bg("/media/popups/mag-logo-1.svg", contain, left top);
+
+            @include mob {
+                top: -124rem;
+                left: 0;
+                width: 200rem;
+            }
+        }
+
+        &Step::before {
+            background: #c50018;
+        }
+    }
+
+    &._yandexLavka &__content {
+        margin-top: 24rem;
+
+        @include mob {
+            margin-top: 0;
+        }
+    }
+
+    &._razgul &__content {
+        width: 378rem;
+        margin-top: -70rem;
+
+        @include mob {
+            width: 100%;
+            margin-top: 0;
         }
     }
 
@@ -368,12 +454,24 @@
         }
     }
 
+    &._magnit &__prizeHead {
+        background: #ff9c00;
+    }
+
     &._magnit &__prizes {
         margin: 0 20rem 0 auto;
 
         @include mob {
             width: 100%;
             margin: 0;
+        }
+    }
+
+    &._magnit &__prizesItem + &__prizesItem {
+        margin-left: 32rem;
+
+        @include mob {
+            margin-left: 0;
         }
     }
 
@@ -465,6 +563,46 @@
         }
     }
 
+    &._yandexEda &__prizes {
+        width: 300rem;
+        margin: 0 40rem 0 auto;
+        padding: 0 40rem 0 20rem;
+
+        @include mob {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        &Item:last-child {
+            margin-left: auto;
+        }
+    }
+
+    &._yandexLavka &__prizes {
+        width: 330rem;
+        margin: 0 0 0 auto;
+
+        @include mob {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        &Items {
+            justify-content: center;
+        }
+    }
+
+    &._razgul &__prizes {
+        margin: 0 24rem 0 auto;
+
+        @include mob {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
     &__offer {
         position: absolute;
         bottom: 48rem;
@@ -494,6 +632,101 @@
             width: 100%;
             margin: 20rem 0 0;
             font-size: 9rem;
+        }
+    }
+
+    &._magnit &__disclaimer {
+        width: 100%;
+        margin: 14rem 0 -12rem;
+
+        @include mob {
+            margin: 16rem 0 -20rem;
+        }
+    }
+
+    &._razgul &__disclaimer {
+        width: 100%;
+        margin: 0;
+    }
+
+    &__magnit {
+        display: flex;
+        width: 100%;
+        margin: 10rem 0 0;
+        padding: 0 12rem 0 0;
+
+        @include mob {
+            flex-direction: column;
+            margin: 24rem 0 0;
+            padding: 0;
+        }
+
+        &Logo {
+            width: 312rem;
+
+            @include mob {
+                width: 100%;
+            }
+        }
+
+        &Disclaimer {
+            width: 354rem;
+            margin-left: auto;
+
+            @include mob {
+                width: 100%;
+                margin-top: 12rem;
+            }
+        }
+    }
+
+    &__razgul {
+        width: 365rem;
+        margin: 20rem 12rem 0 auto;
+
+        @include mob {
+            width: 100%;
+            margin: 20rem 0 -12rem;
+        }
+
+        &Disclaimer {
+            width: 100%;
+            margin-bottom: 16rem;
+        }
+
+        &Logos {
+            position: absolute;
+            top: 100rem;
+            left: 32rem;
+            z-index: 2;
+            display: flex;
+
+            @include mob {
+                position: relative;
+                top: 0;
+                left: 0;
+                justify-content: center;
+                width: 100%;
+                margin: 32rem 0 20rem;
+            }
+        }
+
+        &Logo {
+            width: 48rem;
+            height: 48rem;
+
+            @include mob {
+                width: 80rem;
+                height: 80rem;
+            }
+
+            & + & {
+                margin-left: 16rem;
+
+                @include mob {
+                    margin-left: 28rem;
+                }
+            }
         }
     }
 }

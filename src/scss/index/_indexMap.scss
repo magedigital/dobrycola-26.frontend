@@ -689,9 +689,9 @@
         }
 
         &Location._10 {
-            top: 1849rem;
-            width: 274rem;
-            margin-left: 173rem;
+            top: 1840rem;
+            width: 295rem;
+            margin-left: 186rem;
 
             @include mob {
                 top: 1256rem;
@@ -2871,114 +2871,107 @@
         object-fit: contain;
     }
 
-    &__mapLocation10Dots {
+    &__mapLocation10Window {
         position: absolute;
-        top: 31%;
-        left: 34%;
-        z-index: 13;
-        width: 25%;
-        aspect-ratio: 1;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
         mix-blend-mode: plus-lighter;
-    }
+        animation: mapLoc10Window 1s infinite ease-in-out;
 
-    &__mapLocation10Dot {
-        position: absolute;
-        width: 5%;
-        aspect-ratio: 1;
-        background: #ffe0b0;
-        border-radius: 50%;
-        box-shadow: 0 0 4rem 2rem #fff;
-        opacity: 0;
-        transition: 0.1s ease-in-out;
+        @keyframes mapLoc10Window {
+            0%,
+            100% {
+                opacity: 0.5;
+            }
 
-        @include mob {
-            width: 3%;
-        }
-
-        &._show {
-            opacity: 0.8;
-        }
-
-        &._1 {
-            top: 20%;
-            left: 25%;
+            50% {
+                opacity: 0;
+            }
         }
 
         &._2 {
-            top: 26%;
-            left: 51%;
-        }
-
-        &._3 {
-            top: 34%;
-            left: 39%;
-        }
-
-        &._4 {
-            top: 37%;
-            left: 62%;
-        }
-
-        &._5 {
-            top: 46%;
-            left: 28%;
-        }
-
-        &._6 {
-            top: 54%;
-            left: 50%;
-        }
-
-        &._7 {
-            top: 56%;
-            left: 75%;
-        }
-
-        &._8 {
-            top: 52%;
-            left: 15%;
-        }
-
-        &._9 {
-            top: 63%;
-            left: 36%;
-        }
-
-        &._10 {
-            top: 68%;
-            left: 21%;
-        }
-
-        &._11 {
-            top: 68%;
-            left: 60%;
-        }
-
-        &._12 {
-            top: 79%;
-            left: 48%;
-        }
-
-        &._13 {
-            top: 71%;
-            left: 76%;
+            animation-delay: -0.5s;
         }
     }
 
-    &__mapLocation10Ball {
+    &__mapLocation10Dynamic {
         position: absolute;
-        top: 31%;
-        left: 34%;
-        z-index: 12;
-        width: 25%;
-        background: rgba(#ffe2b3, 0.3);
-        border-radius: 50%;
-        filter: blur(4rem);
-        mix-blend-mode: plus-lighter;
-        aspect-ratio: 1;
-        animation: mapLoc10Ball 1s infinite ease-in-out;
+        z-index: 5;
+        object-fit: contain;
 
-        @keyframes mapLoc10Ball {
+        &._1 {
+            top: 27.5%;
+            left: 0.5%;
+            z-index: 0;
+            width: 15.5%;
+            transform-origin: right 70%;
+            animation: mapLoc10Dynamic1 0.3s infinite ease;
+
+            @keyframes mapLoc10Dynamic1 {
+                0%,
+                100% {
+                    transform: scale(1);
+                }
+
+                50% {
+                    transform: scale(1.04);
+                }
+            }
+        }
+
+        &._2 {
+            top: 57.5%;
+            left: 72%;
+            z-index: 20;
+            width: 16%;
+            transform-origin: right 70%;
+            animation: mapLoc10Dynamic2 0.3s infinite ease;
+
+            @keyframes mapLoc10Dynamic2 {
+                0%,
+                100% {
+                    transform: scale(1);
+                }
+
+                50% {
+                    transform: scale(1.04);
+                }
+            }
+        }
+    }
+
+    &__mapLocation10Light {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        mix-blend-mode: plus-lighter;
+        transition: 0.3s ease-in-out;
+
+        &:not(._show) {
+            opacity: 0;
+        }
+    }
+
+    &__mapLocation10MinLight {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        mix-blend-mode: plus-lighter;
+        animation: mapLoc10Light 1s infinite ease-in-out;
+
+        @keyframes mapLoc10Light {
             0%,
             100% {
                 opacity: 0;
@@ -2991,232 +2984,208 @@
         }
     }
 
-    &__mapLocation10Star {
-        position: absolute;
-        top: 6.1%;
-        left: 9.1%;
-        z-index: 13;
-        width: 76.4%;
-        object-fit: contain;
-        object-position: center top;
-        opacity: 0;
-        mix-blend-mode: plus-lighter;
-        animation: mapLoc10Star 1s infinite ease-in-out;
-        aspect-ratio: 1;
-
-        @keyframes mapLoc10Star {
-            0%,
-            100% {
-                opacity: 0;
-            }
-
-            35%,
-            65% {
-                opacity: 1;
-            }
-        }
-    }
-
     &__mapLocation10Man {
         position: absolute;
-        top: 55.5%;
-        left: 23%;
-        z-index: 15;
-        display: block;
-        width: 23.5%;
+        z-index: 10;
+        object-fit: contain;
         transform-origin: right bottom;
-        animation: mapLoc10Man 1s infinite ease-in-out;
+        animation: mapLoc10Man2 1s infinite ease-in-out;
 
-        @keyframes mapLoc10Man {
+        @keyframes mapLoc10Man2 {
             0%,
             100% {
                 transform: translate(0, 0);
             }
 
             50% {
-                transform: translate(-1rem, -2.5rem) rotate(-1deg);
+                transform: rotate(5deg);
             }
+        }
+
+        &._1 {
+            top: 37.8%;
+            left: 52.7%;
+            width: 7.5%;
+            transform-origin: right bottom;
+            animation: mapLoc10Man1 1s infinite ease-in-out;
+
+            @keyframes mapLoc10Man1 {
+                0%,
+                100% {
+                    transform: translate(0, 0);
+                }
+
+                50% {
+                    transform: rotate(-5deg);
+                }
+            }
+        }
+
+        &._2 {
+            top: 62.5%;
+            left: 0.7%;
+            width: 8.5%;
+        }
+
+        &._3 {
+            top: 60.5%;
+            left: 9.5%;
+            width: 8%;
+            animation-delay: -0.1s;
+        }
+
+        &._4 {
+            top: 72.5%;
+            left: 4.7%;
+            width: 6.8%;
+            animation-delay: -0.2s;
+        }
+
+        &._5 {
+            top: 65.1%;
+            left: 11.3%;
+            width: 6.8%;
+            animation-delay: -0.3s;
+        }
+
+        &._6 {
+            top: 76.6%;
+            left: 11.7%;
+            width: 7.5%;
+            animation-delay: -0.4s;
+        }
+
+        &._7 {
+            top: 67.1%;
+            left: 19.3%;
+            width: 8%;
+            animation-delay: -0.5s;
+        }
+
+        &._8 {
+            top: 78%;
+            left: 27.2%;
+            width: 8%;
+            animation-delay: -0.6s;
+        }
+
+        &._9 {
+            top: 74.2%;
+            left: 35.5%;
+            width: 8%;
+            animation-delay: -0.7s;
+        }
+
+        &._10 {
+            top: 76.5%;
+            left: 45%;
+            width: 8%;
+            animation-delay: -0.8s;
         }
     }
 
-    &__mapLocation10Light {
+    &__mapLocation10Flash {
         position: absolute;
         z-index: 14;
         object-fit: contain;
-        object-position: left bottom;
-        transform-origin: left bottom;
-        mix-blend-mode: hard-light;
+        mix-blend-mode: plus-lighter;
         transition: 0.15s ease-in-out;
-        animation: 1.2s mapLoc10Light infinite ease-in-out;
-        aspect-ratio: 1;
 
         &:not(._show) {
             opacity: 0;
         }
 
-        @keyframes mapLoc10Light {
+        @keyframes mapLoc10FlashLeft {
             0%,
             100% {
-                transform: rotate(0deg);
+                transform: translate(0);
             }
 
             50% {
-                transform: rotate(6deg);
+                transform: rotate(-15deg);
+            }
+        }
+
+        @keyframes mapLoc10FlashRight {
+            0%,
+            100% {
+                transform: translate(0);
+            }
+
+            50% {
+                transform: rotate(15deg);
             }
         }
 
         &._1 {
-            bottom: 35.2%;
-            left: 20.8%;
-            width: 40%;
+            top: 8.5%;
+            left: 26%;
+            width: 19%;
+            transform-origin: right top;
+            animation: mapLoc10FlashLeft 1s infinite ease-in-out;
         }
 
         &._2 {
-            bottom: 25.2%;
-            left: 21.3%;
-            width: 43%;
-            mix-blend-mode: plus-lighter;
+            top: 9.7%;
+            left: 36.4%;
+            width: 18%;
+            transform-origin: right top;
+            animation: mapLoc10FlashLeft 1s infinite ease-in-out;
+            animation-delay: -0.1s;
+        }
+
+        &._3 {
+            top: 19.7%;
+            left: 53.4%;
+            width: 25%;
+            transform-origin: right top;
+            animation: mapLoc10FlashRight 1s infinite ease-in-out;
+            animation-delay: -0.2s;
+        }
+
+        &._4 {
+            top: 23.7%;
+            left: 57.4%;
+            width: 25%;
+            transform-origin: right top;
+            animation: mapLoc10FlashRight 1s infinite ease-in-out;
             animation-delay: -0.3s;
         }
 
-        &._3 {
-            bottom: 17.6%;
-            left: 39.3%;
-            width: 48%;
-            animation-delay: -0.6s;
-        }
-
-        &._4 {
-            right: 38.8%;
-            bottom: 17.2%;
-            width: 48%;
-            object-position: right bottom;
-            transform-origin: right bottom;
-            animation-delay: -0.9s;
-        }
-    }
-
-    &__mapLocation10Decor {
-        position: absolute;
-        z-index: 10;
-        aspect-ratio: 1;
-        object-fit: contain;
-        transform-origin: right top;
-        transition: 0.2s ease-in-out;
-        will-change: transform;
-
-        &._show {
-            transform: scale(1.1);
-        }
-
-        &._1 {
-            top: 70.7%;
-            left: 4%;
-            width: 7%;
-        }
-
-        &._2 {
-            top: 44.9%;
-            left: 2.8%;
-            width: 10%;
-        }
-
-        &._3 {
-            top: 30.7%;
-            left: 12.8%;
-            width: 10%;
-        }
-
-        &._4 {
-            top: 10.1%;
-            left: 8.4%;
-            width: 8%;
-        }
-
         &._5 {
-            top: 11.3%;
-            left: 17.3%;
-            z-index: 13;
-            width: 9%;
+            top: 22.8%;
+            left: 16.4%;
+            width: 25%;
+            transform-origin: left bottom;
+            animation: mapLoc10FlashRight 1s infinite ease-in-out;
+            animation-delay: -0.4s;
         }
 
         &._6 {
-            top: 3.5%;
-            left: 26%;
-            width: 11.5%;
+            top: 21%;
+            left: 25.8%;
+            width: 25%;
+            transform-origin: left bottom;
+            animation: mapLoc10FlashRight 1s infinite ease-in-out;
+            animation-delay: -0.5s;
         }
 
         &._7 {
-            top: 2.5%;
-            left: 54.7%;
-            width: 8.6%;
+            top: 30.5%;
+            left: 56.6%;
+            width: 10%;
+            transform-origin: 50% bottom;
+            animation: mapLoc10FlashLeft 1s infinite ease-in-out;
+            animation-delay: -0.6s;
         }
 
         &._8 {
-            top: 21.3%;
-            left: 59.3%;
-            z-index: 13;
-            width: 11%;
-        }
-
-        &._9 {
-            top: 17.1%;
-            left: 79.2%;
-            width: 11.3%;
-        }
-
-        &._10 {
-            top: 54.5%;
-            left: 65.8%;
-            z-index: 13;
-            width: 9.9%;
-        }
-
-        &._11 {
-            top: 65.5%;
-            left: 86.9%;
-            width: 7.2%;
-        }
-
-        &._12 {
-            top: 89.2%;
-            left: 49.3%;
-            z-index: 13;
-            width: 7.4%;
-        }
-    }
-
-    &__mapLocation10Parts {
-        position: absolute;
-        z-index: 13;
-        object-fit: contain;
-        object-position: left top;
-        animation: mapLoc10Parts 1s infinite ease-in-out;
-        will-change: transform;
-
-        @keyframes mapLoc10Parts {
-            0%,
-            100% {
-                transform: translate(0, 0);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
-        }
-
-        &._1 {
-            top: 18%;
-            left: 2.1%;
-            width: 20%;
-            transform-origin: left center;
-        }
-
-        &._2 {
-            top: 33.2%;
-            right: 2.3%;
-            width: 38%;
-            transform-origin: right center;
+            top: 36.5%;
+            left: 60%;
+            width: 13%;
+            transform-origin: 85% bottom;
+            animation: mapLoc10FlashLeft 1s infinite ease-in-out;
+            animation-delay: -0.7s;
         }
     }
 

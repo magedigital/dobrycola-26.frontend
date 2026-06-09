@@ -110,12 +110,14 @@ export const mapLocations: Record<
         thumb: 'map-loc-16.png',
         title: 'Яндекс. еда',
         alert: 'Cтарт акции с 4.06',
+        goal: 'mapPopupYandexeda',
+        popupName: 'yandexEdaPopup',
     },
     '17': {
         thumb: 'map-loc-17.png',
         title: 'Яндекс. лавка',
-        link: 'https://lavka.yandex.ru/catalog/promo/category/dobriy',
         goal: 'mapPopupYandexlavka',
+        popupName: 'yandexLavkaPopup',
     },
     '18': {
         thumb: 'map-loc-18.png',
@@ -125,8 +127,8 @@ export const mapLocations: Record<
     '19': {
         thumb: 'map-loc-19.png',
         title: 'Разгуляйка',
-        link: 'https://русский-разгуляйка.рф/giveaway/31',
         goal: 'mapPopupRazgul',
+        popupName: 'razgulPopup',
     },
 };
 
