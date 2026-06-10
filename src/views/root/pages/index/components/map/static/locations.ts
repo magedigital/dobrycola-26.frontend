@@ -109,7 +109,6 @@ export const mapLocations: Record<
     '16': {
         thumb: 'map-loc-16.png',
         title: 'Яндекс. еда',
-        alert: 'Cтарт акции с 4.06',
         goal: 'mapPopupYandexeda',
         popupName: 'yandexEdaPopup',
     },
