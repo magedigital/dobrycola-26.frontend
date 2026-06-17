@@ -121,7 +121,7 @@ export const mapLocations: Record<
     '18': {
         thumb: 'map-loc-18.png',
         title: 'Самокат',
-        alert: 'Cтарт акции с 17.06',
+        link: 'https://samokat.ru/promo/82f1b662-c7ac-4402-a951-c52e38b63ae9?adjust_referrer=adjust_reftag%3DcZbFOY0lomJvS&utm_campaign=apr23&utm_medium=partner_univ&utm_source=promoaction_marketing',
     },
     '19': {
         thumb: 'map-loc-19.png',
