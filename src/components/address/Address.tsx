@@ -90,7 +90,7 @@ class Address extends Default<AddressI['props'], AddressI['state']> implements A
                         }}
                     >
                         <i className="addressPoint__point" />
-                        Доставить почтой на адрес:
+                        Указать полный адрес для доставки другим способом (Магнит Пост/СДЭК):
                     </p>
                     <div className="addressPoint__field _FULL_W">
                         <Input
