@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ab63f643.css",
-    "main.js": "/static/js/main.848b1988.js",
+    "main.css": "/static/css/main.835980e6.css",
+    "main.js": "/static/js/main.4c299901.js",
     "static/js/3315.c9b25da6.chunk.js": "/static/js/3315.c9b25da6.chunk.js",
     "static/js/3648.bbe92e21.chunk.js": "/static/js/3648.bbe92e21.chunk.js",
     "static/js/6286.6f8c5b96.chunk.js": "/static/js/6286.6f8c5b96.chunk.js",
@@ -103,6 +103,8 @@
     "static/js/6713.4251b6e9.chunk.js": "/static/js/6713.4251b6e9.chunk.js",
     "static/js/5150.9ed93392.chunk.js": "/static/js/5150.9ed93392.chunk.js",
     "static/js/2153.300e05eb.chunk.js": "/static/js/2153.300e05eb.chunk.js",
+    "static/js/5023.04c9448a.chunk.js": "/static/js/5023.04c9448a.chunk.js",
+    "static/js/5506.3137b122.chunk.js": "/static/js/5506.3137b122.chunk.js",
     "static/js/8535.a5b43dff.chunk.js": "/static/js/8535.a5b43dff.chunk.js",
     "static/js/9739.d1374b88.chunk.js": "/static/js/9739.d1374b88.chunk.js",
     "static/js/1519.530cad56.chunk.js": "/static/js/1519.530cad56.chunk.js",
@@ -128,6 +130,7 @@
     "static/media/map-leto-02.jpg": "/static/media/map-leto-02.7d8a6bd17e404e9cb151.jpg",
     "static/media/decor-5.jpg": "/static/media/decor-5.1e4017637a780f3a28bc.jpg",
     "static/media/check-prize-5ka-bg02.png": "/static/media/check-prize-5ka-bg02.30a3e257b685748af1e9.png",
+    "static/media/image-song-samokat.jpg": "/static/media/image-song-samokat.7bcd36bbf97ef1dd2f6f.jpg",
     "static/media/map-loc-12.png": "/static/media/map-loc-12.9cc5a675acc4dcdd7260.png",
     "static/media/popup-lenta-image.jpg": "/static/media/popup-lenta-image.efcb04a4b8dd584338ab.jpg",
     "static/media/back-5ka-hand-1.png": "/static/media/back-5ka-hand-1.713efdad9087d7e1b564.png",
@@ -147,6 +150,7 @@
     "static/media/popup-diksi-image.jpg": "/static/media/popup-diksi-image.076438a08b22c4c96dab.jpg",
     "static/media/popup-lavka-image.jpg": "/static/media/popup-lavka-image.46e4a8c54f3fa2c6e8d4.jpg",
     "static/media/special-prize-5ka-element03.png": "/static/media/special-prize-5ka-element03.753a64daea134aa1c1cc.png",
+    "static/media/popup-samokat-image.jpg": "/static/media/popup-samokat-image.227ca0f5bb91479668eb.jpg",
     "static/media/popup-eda-image-mob.jpg": "/static/media/popup-eda-image-mob.0fb8734fa9673cc5aff9.jpg",
     "static/media/carousel-big-shadow.png": "/static/media/carousel-big-shadow.a49ac857fa1ebfcaca8b.png",
     "static/media/back-5ka-element06.png": "/static/media/back-5ka-element06.f31792b6ef0098fb5298.png",
@@ -168,6 +172,7 @@
     "static/media/decor-2.jpg": "/static/media/decor-2.a031538b734c9c948c63.jpg",
     "static/media/map-leto-03-mob.jpg": "/static/media/map-leto-03-mob.776b9cc5c4c2c46afe8f.jpg",
     "static/media/popup-kb-image-mob.jpg": "/static/media/popup-kb-image-mob.e66bc15aaa4bd436abb3.jpg",
+    "static/media/popup-samokat-image-mob.jpg": "/static/media/popup-samokat-image-mob.f28a6be35e9fe10c4212.jpg",
     "static/media/popup-razgul-image.jpg": "/static/media/popup-razgul-image.993c1f4402f94b567ba4.jpg",
     "static/media/back-5ka-01-mob.jpg": "/static/media/back-5ka-01-mob.c2c82b9a6e1f78fce5bb.jpg",
     "static/media/map-leto-01-mob.jpg": "/static/media/map-leto-01-mob.43fbd270a122c1e8247c.jpg",
@@ -201,6 +206,7 @@
     "static/media/popup-lukoil-image.jpg": "/static/media/popup-lukoil-image.5c0e2e13dc43cd1ca95f.jpg",
     "static/media/Onest-Medium.ttf": "/static/media/Onest-Medium.fbd1029ceefc29dbe253.ttf",
     "static/media/Onest-Bold.ttf": "/static/media/Onest-Bold.e6f62dc971ba457a32e0.ttf",
+    "static/media/Onest-ExtraBold.ttf": "/static/media/Onest-ExtraBold.c56df5657b0aae6a56fb.ttf",
     "static/media/Onest-Regular.ttf": "/static/media/Onest-Regular.2f8180f95c9c4f66c68c.ttf",
     "static/media/map-loc-10-window-1.png": "/static/media/map-loc-10-window-1.3b7b10c7bcdfada8caf8.png",
     "static/media/map-loc-09-2.png": "/static/media/map-loc-09-2.5b7e0e9b7459d8418715.png",
@@ -412,7 +418,7 @@
     "static/media/plashka-map.svg": "/static/media/plashka-map.807bbf92b339d7fb2f4c.svg"
   },
   "entrypoints": [
-    "static/css/main.ab63f643.css",
-    "static/js/main.848b1988.js"
+    "static/css/main.835980e6.css",
+    "static/js/main.4c299901.js"
   ]
 }

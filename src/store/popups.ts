@@ -34,6 +34,7 @@ type PopupsT = {
     yandexEdaPopup: PopupT;
     yandexLavkaPopup: PopupT;
     razgulPopup: PopupT;
+    samokatPopup: PopupT;
 };
 
 type PopupsReducersT = {
@@ -97,6 +98,7 @@ const popups = {
     yandexEdaPopup: { isOverlay: true },
     yandexLavkaPopup: { isOverlay: true },
     razgulPopup: { isOverlay: true },
+    samokatPopup: { isOverlay: true },
 } as const;
 
 type PopupDataT = Partial<{

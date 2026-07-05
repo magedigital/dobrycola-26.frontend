@@ -106,6 +106,14 @@
         }
     }
 
+    &._samokat {
+        @include bg("/media/popups/popup-samokat-image.jpg", contain, left top);
+
+        @include mob {
+            @include bg("/media/popups/popup-samokat-image-mob.jpg", 100% auto, center top);
+        }
+    }
+
     & {
         background-color: #e11f26 !important;
     }
@@ -150,6 +158,12 @@
 
     &._lukoil &__title {
         margin-bottom: 6rem;
+    }
+
+    &._samokat &__title {
+        @include mob {
+            padding-top: 26rem;
+        }
     }
 
     &__content {
@@ -347,6 +361,10 @@
             width: 100%;
             margin-top: 0;
         }
+    }
+
+    &._samokat &__content {
+        margin-right: 42rem;
     }
 
     &__prizes {
@@ -603,6 +621,22 @@
         }
     }
 
+    &._samokat &__prizes {
+        width: 330rem;
+        margin: 0 32rem 0 auto;
+        padding: 0 30rem 0 20rem;
+
+        @include mob {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        &Item:last-child {
+            margin-left: auto;
+        }
+    }
+
     &__offer {
         position: absolute;
         bottom: 48rem;
@@ -647,6 +681,26 @@
     &._razgul &__disclaimer {
         width: 100%;
         margin: 0;
+    }
+
+    &._samokat &__disclaimer {
+        position: absolute;
+        bottom: 24rem;
+        left: 32rem;
+        z-index: 2;
+        width: 333rem;
+        margin: 0;
+        font-weight: 600;
+        font-size: 11rem;
+
+        @include mob {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            margin: 32rem 0 -8rem;
+            font-size: 14.5rem;
+        }
     }
 
     &__magnit {
@@ -726,6 +780,73 @@
                 @include mob {
                     margin-left: 28rem;
                 }
+            }
+        }
+    }
+
+    &__track {
+        position: absolute;
+        bottom: 82rem;
+        left: 32rem;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        width: 336rem;
+        padding: 8rem;
+        background: #ff49b8;
+        border-radius: 12rem;
+
+        @include mob {
+            top: 280rem;
+            bottom: auto;
+            left: 20rem;
+            width: calc(100% - 40rem);
+            padding: 5rem;
+        }
+
+        &Preview {
+            position: relative;
+            z-index: 1;
+            width: 100rem;
+            height: 100rem;
+            overflow: hidden;
+            border-radius: 5rem;
+
+            @include mob {
+                width: 92rem;
+                height: 92rem;
+            }
+
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &Title {
+            width: calc(100% - 100rem);
+            padding-left: 10rem;
+            color: #fff;
+            font-weight: 900;
+            font-size: 13rem;
+            font-family: Onest;
+            line-height: 1.35;
+            text-transform: uppercase;
+
+            @include mob {
+                width: calc(100% - 92rem);
+                padding-right: 32rem;
+                padding-left: 12rem;
+                font-size: 11.5rem;
+            }
+
+            & a {
+                display: inline-block;
+                color: #7a2799;
+                font-weight: 900;
+                font-family: Onest;
+                line-height: 1;
+                border-bottom: 1px solid rgba(#7a2799, 0.64);
             }
         }
     }

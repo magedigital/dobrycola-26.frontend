@@ -184,7 +184,8 @@
     &._yandexEdaPopup &__inner,
     &._yandexLavkaPopup &__inner,
     &._razgulPopup &__inner,
-    &._inviteFriendPopup &__inner {
+    &._inviteFriendPopup &__inner,
+    &._samokatPopup &__inner {
         width: 826rem;
 
         @include mob {
