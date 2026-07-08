@@ -63,6 +63,11 @@ export default async function checkAuth({ redirect }: ParamsT): Promise<UserT | 
     }
 
     window.profileDataPromise = new Promise((resolve) => {
+        if (user.status === 'EMAIL_CONFIRM_REQUIRED') {
+            resolve();
+            return;
+        }
+
         try {
             authRequests.getInfo().then((d) => {
                 appStore.getState().setProfileData(d);
