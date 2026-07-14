@@ -10,8 +10,8 @@ const renderContent: I['renderContent'] = function (this: I) {
             <h3 className="popupAction__title">Дополнительные баллы от Добрый®!</h3>
             <div className="popupAction__content _COL">
                 <p className="popupAction__contentSupport">
-                    Только с 1 по 11 мая 2026 получи +2&nbsp;балла за каждого приглашенного друга,
-                    который зарегистрирует код с&nbsp;упаковок Добрый®.
+                    Только <span>с 15 по 31 июля 2026</span> получи +2&nbsp;балла за каждого
+                    приглашенного друга, который зарегистрирует код с&nbsp;упаковок Добрый®.
                 </p>
                 <div className="popupAction__contentSteps">
                     <div className="popupAction__contentStep">
