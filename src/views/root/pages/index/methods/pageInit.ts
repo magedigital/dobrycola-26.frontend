@@ -1,3 +1,4 @@
+import { appStore } from '@store/store.tsx';
 import getLocation from '@utils/getLocation.ts';
 import scrollToBlock from '@utils/scrollToBlock.ts';
 
@@ -17,11 +18,11 @@ const pageInit: I['pageInit'] = async function (this: I) {
         }
     }
 
-    // if (1) {
-    //     setTimeout(() => {
-    //         appStore.getState().setPopup({ name: 'inviteFriendPopup' });
-    //     }, 1_000);
-    // }
+    if (1) {
+        this.timers.pop = setTimeout(() => {
+            appStore.getState().setPopup({ name: 'inviteFriendPopup' });
+        }, 1_000);
+    }
 
     // if (process.env.REACT_APP_ENV !== 'local' && !localStorage.getItem('5ka-popup')) {
     //     setTimeout(() => {
