@@ -94,7 +94,7 @@ const popups = {
     diksiPopup: { isOverlay: true },
     perekrestokPopup: { isOverlay: true },
     lukoilPopup: { isOverlay: true },
-    inviteFriendPopup: { isOverlay: true },
+    inviteFriendPopup: { isOverlay: true, pushHistory: false },
     yandexEdaPopup: { isOverlay: true },
     yandexLavkaPopup: { isOverlay: true },
     razgulPopup: { isOverlay: true },
@@ -105,6 +105,7 @@ type PopupDataT = Partial<{
     check: (s: StoreT) => boolean;
     redirectPageName: PageNamesT;
     isOverlay: boolean;
+    pushHistory: boolean;
 }>;
 
 const getPopupSearch = (name: string, data: ObjT | undefined): string => {
@@ -165,13 +166,15 @@ const createPopupsStore = (set: (data: Partial<StoreT>) => void): PopupsT & Popu
             currentPopup: name,
         });
 
-        if (pushHistory) {
+        if (pushHistory && popupData.pushHistory !== false) {
             window.history.pushState(null, '', newUrl);
         }
 
         document.dispatchEvent(new CustomEvent('changePopup', { detail: { currentPopup: name } }));
     },
     closePopup: ({ name, pushHistory = true }) => {
+        const popupData = popups[name!] as PopupDataT | undefined;
+
         setTimeout(() => {
             const currentPopup = appStore.getState().currentPopup;
 
@@ -183,7 +186,7 @@ const createPopupsStore = (set: (data: Partial<StoreT>) => void): PopupsT & Popu
                 set({ [name]: { isShow: false }, currentPopup: undefined });
             }
 
-            if (pushHistory) {
+            if (pushHistory && popupData?.pushHistory !== false) {
                 window.history.pushState(null, '', window.location.pathname);
             }
 
