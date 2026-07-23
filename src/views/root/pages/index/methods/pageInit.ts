@@ -20,7 +20,9 @@ const pageInit: I['pageInit'] = async function (this: I) {
 
     if (1) {
         this.timers.pop = setTimeout(() => {
-            appStore.getState().setPopup({ name: 'inviteFriendPopup' });
+            if (!appStore.getState().currentPopup) {
+                appStore.getState().setPopup({ name: 'inviteFriendPopup' });
+            }
         }, 1_000);
     }
 
