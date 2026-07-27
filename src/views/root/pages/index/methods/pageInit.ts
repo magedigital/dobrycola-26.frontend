@@ -19,11 +19,14 @@ const pageInit: I['pageInit'] = async function (this: I) {
     }
 
     if (1) {
-        this.timers.pop = setTimeout(() => {
-            if (!appStore.getState().currentPopup) {
-                appStore.getState().setPopup({ name: 'inviteFriendPopup' });
-            }
-        }, 1_000);
+        if (!localStorage.getItem('inviteFriendPopup')) {
+            this.timers.pop = setTimeout(() => {
+                if (!appStore.getState().currentPopup) {
+                    localStorage.setItem('inviteFriendPopup', 't');
+                    appStore.getState().setPopup({ name: 'inviteFriendPopup' });
+                }
+            }, 1_000);
+        }
     }
 
     // if (process.env.REACT_APP_ENV !== 'local' && !localStorage.getItem('5ka-popup')) {
