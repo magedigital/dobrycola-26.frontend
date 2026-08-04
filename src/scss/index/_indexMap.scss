@@ -195,7 +195,7 @@
         &Nav {
             position: sticky;
             position: -webkit-sticky;
-            top: 108rem;
+            top: 108rem + 60rem;
             z-index: 11;
             display: flex;
             margin: 24rem auto;
@@ -206,7 +206,7 @@
             @include blur(10rem);
 
             @include mob {
-                top: 76rem;
+                top: 76rem + 80rem;
                 width: calc(100% - 20rem);
                 margin: 10rem auto;
                 padding: 5rem;

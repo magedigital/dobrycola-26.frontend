@@ -4,7 +4,7 @@ import I from '../types.ts';
 
 const renderDecors: I['renderDecors'] = function () {
     return (
-        <>
+        <div className="indexHeader__decors">
             <svg className="indexHeader__decor _01" viewBox="0 0 707 578" fill="none">
                 <path
                     d="M706.103 384.825C706.103 384.825 659.253 372.036 603.08 397.581C546.907 423.126 503.995 434.789 462.988 387.447C421.982 340.105 373.42 221.141 250.056 187.033C126.692 152.924 0 192.492 0 192.492L17.185 244.088C17.185 244.088 165.112 184.039 281.37 247.33C376.253 298.987 411.631 379.301 460.78 410.792C502.894 437.778 533.57 442.607 599.512 405.086C649.707 376.53 706.107 384.817 706.107 384.817L706.103 384.825Z"
@@ -50,7 +50,7 @@ const renderDecors: I['renderDecors'] = function () {
             {this.renderDecor6()}
 
             <div className="indexHeader__decorCircle"></div>
-        </>
+        </div>
     );
 };
 

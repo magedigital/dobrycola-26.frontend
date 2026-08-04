@@ -23,6 +23,12 @@ const renderPage: I['renderPage'] = function ({ render, className, withClose = t
                 this.mode === 'inner' && '_inner',
             )}
         >
+            <div className="page__info">
+                <span>
+                    Срок регистрации кодов завершен. Выдача призов производится в срок до 15.10.2026
+                    г. включительно, см. <a href="/upload/docs/rules.pdf">Правила акции</a>.
+                </span>
+            </div>
             {!window.isBot && (
                 <>
                     <div

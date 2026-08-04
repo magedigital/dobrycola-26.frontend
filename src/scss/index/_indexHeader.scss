@@ -2,59 +2,73 @@
     position: relative;
     z-index: 1;
     width: 100%;
-    padding: 196rem 0 84rem;
+    padding: 196rem + 60rem 0 84rem;
     overflow: hidden;
 
-    @include bg("/media/animate/back-main-1.jpg", 100% auto, center top);
+    @include bg("/media/animate/back-main-1.jpg", 100% auto, center 60rem);
 
     @include mob {
         height: auto;
-        padding: 90rem 0 80rem;
+        padding: 90rem + 80rem 0 80rem;
 
-        @include bg("/media/animate/back-main-1-mob.jpg", 100% auto, center top);
+        @include bg("/media/animate/back-main-1-mob.jpg", 100% auto, center 80rem);
     }
 
     & {
         background-color: #c50018;
     }
 
-    &::after {
+    &__decors {
         position: absolute;
-        top: 0;
+        top: 60rem;
         left: 0;
-        z-index: 100;
+        z-index: 2;
         width: 100%;
         height: 100%;
-        content: "";
         pointer-events: none;
 
-        @include bg("/media/back-main-1-sub.png", 100% auto, center top);
-
         @include mob {
-            @include bg("/media/back-main-1-sub-mob.png", 100% auto, center top);
+            top: 80rem;
         }
-    }
 
-    &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        content: "";
-        pointer-events: none;
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            width: 100%;
+            height: 100%;
+            content: "";
+            pointer-events: none;
 
-        @include bg("/media/animate/back-main-2.png", 100% auto, center top);
+            @include bg("/media/back-main-1-sub.png", 100% auto, center top);
 
-        @include mob {
-            @include bg("/media/animate/back-main-2-mob.png", 100% auto, center top);
+            @include mob {
+                @include bg("/media/back-main-1-sub-mob.png", 100% auto, center top);
+            }
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            content: "";
+            pointer-events: none;
+
+            @include bg("/media/animate/back-main-2.png", 100% auto, center top);
+
+            @include mob {
+                @include bg("/media/animate/back-main-2-mob.png", 100% auto, center top);
+            }
         }
     }
 
     &__decorCircle {
         position: absolute;
-        bottom: -16rem;
+        bottom: -16rem + 60rem;
         left: 477rem;
         z-index: -2;
         width: 452rem;
@@ -66,7 +80,7 @@
 
         @include mob {
             right: -73rem;
-            bottom: 250rem;
+            bottom: 250rem + 80rem;
             left: auto;
             width: 260rem;
             height: 260rem;
